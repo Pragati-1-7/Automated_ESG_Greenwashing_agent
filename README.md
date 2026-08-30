@@ -67,22 +67,44 @@ Explainable Audit Report
 FastAPI Backend + Streamlit UI
 ```
 
-## 4. Current Project Status: **Step 1 Complete**
+## 4. Current Project Status: **Step 2 Complete**
 
-Step 1 built the **repository structure and dataset foundation only**.
+Step 1 built the repository structure and dataset foundation.
+Step 2 adds the **PDF parsing + ESG claim extraction pipeline**.
 
-**Implemented in Step 1:**
+**IMPLEMENTED (Step 1):**
 - Modular repository structure (see below).
 - Pydantic schemas for Claim, Evidence, and Hard Case records.
 - A curated synthetic dataset: 12 claims, 20 evidence records, 10 hard cases.
 - An automated dataset validation script.
 - Environment configuration templates (`.env.example`).
 
+**IMPLEMENTED (Step 2):**
+- Page-aware PDF parser (`app/extraction/pdf_parser.py`, pdfplumber-based),
+  with graceful handling of empty/malformed PDFs.
+- LLM-based claim extraction engine (`app/extraction/claim_extractor.py`)
+  that turns page text into `ClaimRecord`-validated structured claims.
+- Provider-agnostic LLM architecture (`app/extraction/llm_providers.py`):
+  **Groq**, **Ollama**, and a deterministic **Mock** provider for offline
+  testing. Selected via `EXTRACTION_MODE` in `.env` or a CLI flag.
+- The full extraction prompt as an editable file, not buried in code:
+  `prompts/claim_extraction_prompt.md`.
+- A minimal, justified extension to `ClaimRecord` (`char_start`, `char_end`,
+  `extraction_method`, and `expected_verdict` made optional) — see
+  `docs/PROJECT_PROGRESS_STEP_2.md` for the full rationale. All Step 1 data
+  still validates unchanged.
+- A clearly-labelled **synthetic** test PDF (`data/sample_pdfs/synthetic_esg_report.pdf`,
+  reproducible via `scripts/generate_sample_pdf.py`) with 10 known claims
+  covering numeric/vague/target/scope/baseline variations.
+- An extraction evaluation script (`scripts/evaluate_extraction.py`):
+  precision/recall on claim identification + field-level accuracy.
+- 17 automated tests (`tests/`) covering the parser and the extractor,
+  including malformed-JSON and invalid-enum handling.
+
 **NOT implemented yet (future phases):**
-- PDF parsing / claim extraction from real documents.
 - The query-planning search agent.
 - Hybrid BM25 + ChromaDB retrieval.
-- LLM-based entailment/contradiction analysis (LLaMA 3 / Mistral via Groq or Ollama).
+- LLM-based entailment/contradiction analysis against external evidence.
 - Numeric verification logic.
 - Capacity check and year-on-year check logic.
 - Greenwashing Risk Score calculation.
@@ -95,8 +117,8 @@ Step 1 built the **repository structure and dataset foundation only**.
 |---|---|---|
 | Data models | Pydantic | Step 1 (done) |
 | Config | python-dotenv | Step 1 (done) |
-| PDF parsing | pdfplumber | Phase 2 |
-| LLM inference | LLaMA 3 / Mistral via Groq and/or Ollama | Phase 2+ |
+| PDF parsing | pdfplumber | Step 2 (done) |
+| LLM inference | LLaMA 3 / Mistral via Groq and/or Ollama | Step 2 (done, architecture) |
 | Agent orchestration | LangChain (only where genuinely useful) | Phase 3+ |
 | Vector search | ChromaDB + sentence-transformers | Phase 3 |
 | Keyword search | rank_bm25 | Phase 3 |
@@ -110,27 +132,36 @@ Step 1 built the **repository structure and dataset foundation only**.
 ```
 esg-greenwashing-agent/
 ├── app/
-│   ├── extraction/     # Claim extraction engine (Phase 2)
-│   ├── retrieval/      # Query planning + hybrid evidence retrieval (Phase 3)
-│   ├── evaluation/     # Entailment/contradiction + numeric verification (Phase 3-4)
-│   ├── scoring/        # Greenwashing Risk Score logic (Phase 4)
-│   ├── api/            # FastAPI backend (Phase 4)
-│   └── utils/          # Pydantic schemas (schemas.py) + shared helpers [ACTIVE]
+│   ├── extraction/      # [ACTIVE - Step 2] pdf_parser.py, claim_extractor.py,
+│   │                    #   llm_providers.py, mock_data.py
+│   ├── retrieval/       # Query planning + hybrid evidence retrieval (Phase 3)
+│   ├── evaluation/      # Entailment/contradiction + numeric verification (Phase 3-4)
+│   ├── scoring/         # Greenwashing Risk Score logic (Phase 4)
+│   ├── api/             # FastAPI backend (Phase 4)
+│   └── utils/           # Pydantic schemas (schemas.py) + shared helpers [ACTIVE]
 ├── data/
-│   ├── claims/         # claims.json — synthetic ESG claims dataset [ACTIVE]
-│   ├── evidence/       # evidence.json — synthetic evidence dataset [ACTIVE]
-│   └── test/           # hard_cases.json — tricky edge-case dataset [ACTIVE]
-├── prompts/             # LLM prompt templates (Phase 2+)
-├── tests/               # Automated tests (Phase 2+)
+│   ├── claims/          # claims.json — synthetic ESG claims dataset [ACTIVE]
+│   ├── evidence/        # evidence.json — synthetic evidence dataset [ACTIVE]
+│   ├── test/            # hard_cases.json — tricky edge-case dataset [ACTIVE]
+│   └── sample_pdfs/     # [ACTIVE - Step 2] synthetic_esg_report.pdf + expected_claims.json
+├── prompts/
+│   └── claim_extraction_prompt.md   # [ACTIVE - Step 2] extraction prompt
+├── tests/
+│   ├── test_pdf_parser.py       # [ACTIVE - Step 2]
+│   └── test_claim_extractor.py  # [ACTIVE - Step 2]
 ├── scripts/
-│   └── validate_dataset.py   # Dataset validation script [ACTIVE]
-├── streamlit_app/       # Streamlit UI (Phase 5)
+│   ├── validate_dataset.py      # Dataset validation script [ACTIVE]
+│   ├── generate_sample_pdf.py   # [ACTIVE - Step 2] builds the synthetic test PDF
+│   ├── run_extraction.py        # [ACTIVE - Step 2] CLI: PDF -> claims
+│   └── evaluate_extraction.py   # [ACTIVE - Step 2] precision/recall/field accuracy
+├── streamlit_app/        # Streamlit UI (Phase 5)
 ├── docs/
-│   └── PROJECT_PROGRESS_STEP_1.md   # Faculty-facing progress documentation
-├── requirements.txt      # Step 1 dependencies (future deps commented)
-├── .env.example           # Environment variable template (no real keys)
+│   ├── PROJECT_PROGRESS_STEP_1.md
+│   └── PROJECT_PROGRESS_STEP_2.md   # Faculty-facing progress documentation
+├── requirements.txt       # Step 1 + Step 2 dependencies (future phases commented)
+├── .env.example            # Environment variable template (no real keys)
 ├── .gitignore
-└── main.py                # Placeholder entry point, runs the validator
+└── main.py                 # Placeholder entry point, runs the validator
 ```
 
 ## 7. Dataset Description
@@ -189,15 +220,94 @@ python main.py
 
 which prints the current project status and runs the same validation.
 
-## 10. Future Development Phases
+## 10. Step 2: PDF Parsing & Claim Extraction
 
-- **Phase 2:** PDF parsing + claim extraction engine.
+### 10.1 What it does
+
+```
+ESG PDF -> PDF Parser -> page-aware text -> LLM extraction prompt
+    -> structured JSON -> Pydantic validation (ClaimRecord) -> validated claims
+```
+
+### 10.2 Install Step 2 dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 10.3 The synthetic sample PDF
+
+A fictional company report, **GreenLeaf Industries Ltd. (not a real
+company)**, used for reproducible testing. Regenerate it anytime with:
+
+```bash
+python scripts/generate_sample_pdf.py
+```
+
+### 10.4 Run extraction — mock mode (no API key needed)
+
+```bash
+python scripts/run_extraction.py --mock
+```
+
+This runs the deterministic mock provider against the bundled sample PDF
+and prints all 10 extracted claims. Mock output always has
+`extraction_method="mock"` and a `CLM-MOCK-...` claim ID, so it can never
+be confused with a real LLM result.
+
+### 10.5 Run extraction — real LLM mode
+
+1. Copy `.env.example` to `.env` and fill in real values:
+   ```bash
+   cp .env.example .env
+   ```
+2. For **Groq**: set `GROQ_API_KEY` and `LLM_MODEL_NAME` (e.g.
+   `llama-3.1-70b-versatile`), then:
+   ```bash
+   python scripts/run_extraction.py --provider groq --pdf path/to/your.pdf --company "Some Company"
+   ```
+3. For **Ollama** (local): install and run `ollama serve`, set
+   `OLLAMA_BASE_URL` and `LLM_MODEL_NAME` (e.g. `llama3`), then:
+   ```bash
+   python scripts/run_extraction.py --provider ollama --pdf path/to/your.pdf --company "Some Company"
+   ```
+
+If credentials are missing or invalid, the script prints a clear
+`CONFIGURATION ERROR` — it never silently falls back to mock output.
+
+### 10.6 Run the tests
+
+```bash
+python -m pytest tests/ -v
+```
+
+### 10.7 Run the extraction evaluation
+
+```bash
+python scripts/evaluate_extraction.py
+```
+
+Reports precision/recall on claim identification and per-field accuracy
+against `data/sample_pdfs/expected_claims.json`. This evaluates mock mode
+against itself as a regression/sanity check — see the script's docstring
+for why that is not a measure of real LLM quality.
+
+### 10.8 Re-run the Step 1 regression check
+
+```bash
+python scripts/validate_dataset.py
+```
+
+Must still print `RESULT: PASS` — Step 2 must never break Step 1's dataset.
+
+## 12. Future Development Phases
+
 - **Phase 3:** Query planning agent + hybrid (BM25 + ChromaDB) evidence retrieval.
 - **Phase 4:** Numeric verification, capacity/year-on-year checks, risk scoring, FastAPI backend.
 - **Phase 5:** Streamlit UI.
 - **Phase 6:** End-to-end evaluation against the held-out hard-case dataset.
 
-## 11. Important Limitation
+## 13. Important Limitation
 
 This system is a **triage / decision-support tool** intended to help a
 human ESG reviewer prioritize which claims deserve closer scrutiny. It does

@@ -21,7 +21,7 @@ from __future__ import annotations
 from enum import Enum
 from typing import Optional
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 
 # ---------------------------------------------------------------------------
@@ -90,12 +90,44 @@ class ClaimRecord(BaseModel):
 
     claim_type: ClaimType
     checkability: Checkability
-    expected_verdict: Verdict = Field(
-        ..., description="The verdict our system SHOULD reach; used for evaluation, not shown to the model."
+    expected_verdict: Optional[Verdict] = Field(
+        default=None,
+        description=(
+            "The verdict our system SHOULD reach; used for evaluation of the synthetic "
+            "Step 1 dataset, not shown to the model. STEP 2 EXTENSION: made optional "
+            "(was required) because claims extracted from a real/synthetic PDF by the "
+            "Step 2 pipeline have no known ground-truth verdict at extraction time -- "
+            "that verdict only exists once Step 4 (verification) runs. All 12 existing "
+            "Step 1 dataset records still provide this field, so validation behaviour "
+            "for Step 1 data is unchanged."
+        ),
     )
 
-    source_document: str = Field(..., description="Synthetic source document filename this claim is drawn from")
+    source_document: str = Field(..., description="Source document filename this claim is drawn from (synthetic in Step 1, real PDF filename in Step 2)")
     page_number: Optional[int] = Field(default=None, ge=1)
+
+    # ---- STEP 2 EXTENSION: source traceability + provenance -------------
+    # Added so a claim extracted from a real PDF can point back to exactly
+    # where in the document it came from, and so we never confuse a MOCK
+    # (deterministic, non-LLM) extraction result with a real LLM result.
+    # Both fields are optional and default to None, so every existing
+    # Step 1 record (which has neither) still validates unchanged.
+    char_start: Optional[int] = Field(
+        default=None, ge=0, description="STEP 2: character offset where original_text starts within the page text, if known."
+    )
+    char_end: Optional[int] = Field(
+        default=None, ge=0, description="STEP 2: character offset where original_text ends within the page text, if known."
+    )
+    extraction_method: Optional[str] = Field(
+        default=None,
+        description=(
+            "STEP 2: how this claim record was produced, e.g. 'mock' or "
+            "'llm:groq:llama-3.1-70b-versatile' or 'llm:ollama:llama3'. "
+            "Required to be set by the Step 2 extraction pipeline so mock output "
+            "can never be silently mistaken for real LLM output; left None for "
+            "the hand-written Step 1 synthetic dataset."
+        ),
+    )
 
     @field_validator("claim_id")
     @classmethod
@@ -109,6 +141,16 @@ class ClaimRecord(BaseModel):
     def checkability_verdict_consistency(cls, v, info):
         # NOT_CHECKABLE claims should never carry a resolvable verdict.
         return v
+
+    @model_validator(mode="after")
+    def char_offsets_are_ordered(self) -> "ClaimRecord":
+        # STEP 2: if both offsets are present, char_end must not be before char_start.
+        if self.char_start is not None and self.char_end is not None:
+            if self.char_end < self.char_start:
+                raise ValueError(
+                    f"char_end ({self.char_end}) cannot be less than char_start ({self.char_start})"
+                )
+        return self
 
 
 # ---------------------------------------------------------------------------
