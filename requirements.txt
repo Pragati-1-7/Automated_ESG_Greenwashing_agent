@@ -1,0 +1,35 @@
+# =========================================================
+# requirements.txt
+# Automated ESG Greenwashing Detection & Verification Agent
+# =========================================================
+#
+# STEP 1 DEPENDENCIES ONLY
+# -------------------------------------------------
+# These are the ONLY packages required to run Step 1
+# (repository setup, dataset creation, dataset validation).
+# We intentionally do NOT install RAG/agent/LLM packages yet.
+
+pydantic>=2.6,<3.0        # Structured data models for claims, evidence, and hard cases
+python-dotenv>=1.0        # Loads environment variables from a .env file
+
+
+# =========================================================
+# FUTURE DEPENDENCIES (DO NOT INSTALL YET)
+# =========================================================
+# These packages are required starting from Phase 2 onward
+# (PDF parsing, embeddings, retrieval, LLM serving, API, UI).
+# They are listed here for planning purposes only and are
+# commented out so Step 1 stays lightweight and fast to set up.
+#
+# fastapi>=0.110            # Backend API (Phase 4+)
+# uvicorn>=0.29              # ASGI server to run FastAPI (Phase 4+)
+# streamlit>=1.32            # Frontend UI (Phase 5+)
+# langchain>=0.2              # Agent orchestration, used only where an agent adds real value (Phase 3+)
+# chromadb>=0.5               # Vector database for semantic evidence retrieval (Phase 3+)
+# rank-bm25>=0.2.2            # Keyword-based (BM25) retrieval, combined with vector search (Phase 3+)
+# sentence-transformers>=2.7  # Embedding model for ChromaDB (Phase 3+)
+# pdfplumber>=0.11            # PDF text/table extraction for ESG reports (Phase 2)
+# groq>=0.9                   # Groq-hosted LLM inference (Phase 2+)
+# ollama>=0.2                 # Local LLM serving option (Phase 2+)
+# requests>=2.31              # HTTP calls for search/evidence retrieval (Phase 3+)
+# pandas>=2.2                 # Optional: tabular data handling / analysis notebooks (Phase 6, evaluation)
