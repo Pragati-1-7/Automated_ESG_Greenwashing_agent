@@ -21,17 +21,8 @@ pytest>=8.0                # Test runner for tests/ (dev dependency)
 
 
 # =========================================================
-# FUTURE DEPENDENCIES (DO NOT INSTALL YET)
+# STEP 4 / 5 DEPENDENCIES (evidence retrieval + verification)
 # =========================================================
-# These packages are required starting from Phase 3 onward
-# (embeddings, retrieval, API, UI). Listed here for planning
-# purposes only and commented out so Step 2 stays lightweight.
-#
-# fastapi>=0.110            # Backend API (Phase 4+)
-# uvicorn>=0.29              # ASGI server to run FastAPI (Phase 4+)
-# streamlit>=1.32            # Frontend UI (Phase 5+)
-# langchain>=0.2              # Agent orchestration, used only where an agent adds real value (Phase 3+)
-# chromadb>=0.5               # Vector database for semantic evidence retrieval (Phase 3+)
-# rank-bm25>=0.2.2            # Keyword-based (BM25) retrieval, combined with vector search (Phase 3+)
-# sentence-transformers>=2.7  # Embedding model for ChromaDB (Phase 3+)
-# pandas>=2.2                 # Optional: tabular data handling / analysis notebooks (Phase 6, evaluation)
+rank-bm25>=0.2.2           # Keyword-based (BM25) retrieval (app/retrieval/bm25_retriever.py)
+chromadb>=0.5              # Vector database for semantic evidence retrieval (app/retrieval/chroma_retriever.py)
+sentence-transformers>=2.7 # Lightweight local embedding model (all-MiniLM-L6-v2, ~22 MB)

@@ -67,49 +67,37 @@ Explainable Audit Report
 FastAPI Backend + Streamlit UI
 ```
 
-## 4. Current Project Status: **Step 2 Complete**
+## 4. Current Project Status: **Steps 1, 2, 3, 4, & 5 Complete**
 
-Step 1 built the repository structure and dataset foundation.
-Step 2 adds the **PDF parsing + ESG claim extraction pipeline**.
+Step 1 built the repository structure and dataset foundation.  
+Step 2 added the **PDF parsing + ESG claim extraction pipeline**.  
+Step 3 added the **rule-based claim checkability engine**.  
+Steps 4 & 5 add the **hybrid evidence retrieval, deterministic verification engine, and Greenwashing Risk Scoring system**.
 
-**IMPLEMENTED (Step 1):**
-- Modular repository structure (see below).
-- Pydantic schemas for Claim, Evidence, and Hard Case records.
-- A curated synthetic dataset: 12 claims, 20 evidence records, 10 hard cases.
-- An automated dataset validation script.
-- Environment configuration templates (`.env.example`).
+**IMPLEMENTED (Steps 1 & 2):**
+- Modular repository structure and Pydantic schemas.
+- Curated synthetic datasets: 12 claims, 20 evidence records, 10 hard cases.
+- Page-aware PDF parser (`app/extraction/pdf_parser.py`).
+- LLM claim extraction engine (`app/extraction/claim_extractor.py`) with Groq, Ollama, and deterministic Mock providers.
+- Extraction evaluation and automated test suites.
 
-**IMPLEMENTED (Step 2):**
-- Page-aware PDF parser (`app/extraction/pdf_parser.py`, pdfplumber-based),
-  with graceful handling of empty/malformed PDFs.
-- LLM-based claim extraction engine (`app/extraction/claim_extractor.py`)
-  that turns page text into `ClaimRecord`-validated structured claims.
-- Provider-agnostic LLM architecture (`app/extraction/llm_providers.py`):
-  **Groq**, **Ollama**, and a deterministic **Mock** provider for offline
-  testing. Selected via `EXTRACTION_MODE` in `.env` or a CLI flag.
-- The full extraction prompt as an editable file, not buried in code:
-  `prompts/claim_extraction_prompt.md`.
-- A minimal, justified extension to `ClaimRecord` (`char_start`, `char_end`,
-  `extraction_method`, and `expected_verdict` made optional) — see
-  `docs/PROJECT_PROGRESS_STEP_2.md` for the full rationale. All Step 1 data
-  still validates unchanged.
-- A clearly-labelled **synthetic** test PDF (`data/sample_pdfs/synthetic_esg_report.pdf`,
-  reproducible via `scripts/generate_sample_pdf.py`) with 10 known claims
-  covering numeric/vague/target/scope/baseline variations.
-- An extraction evaluation script (`scripts/evaluate_extraction.py`):
-  precision/recall on claim identification + field-level accuracy.
-- 17 automated tests (`tests/`) covering the parser and the extractor,
-  including malformed-JSON and invalid-enum handling.
+**IMPLEMENTED (Step 3):**
+- Rule-based checkability assessment (`app/evaluation/checkability.py`) evaluating structural falsifiability without LLM reliance.
+
+**IMPLEMENTED (Steps 4 & 5):**
+- **Query Planner (`app/retrieval/query_planner.py`):** Deterministic search query generation per checkable claim.
+- **BM25 Retriever (`app/retrieval/bm25_retriever.py`):** Fast, offline lexical search with min-max score normalisation.
+- **ChromaDB Retriever (`app/retrieval/chroma_retriever.py`):** Dense semantic search using `sentence-transformers` (`all-MiniLM-L6-v2`).
+- **Hybrid Retriever (`app/retrieval/hybrid_retriever.py`):** Weighted fusion of BM25 and vector scores into a combined ranking.
+- **Deterministic Numeric Verification (`app/evaluation/numeric_checks.py`):** Exact Python arithmetic for percentage changes, count checks, capacity checks, and unit/scope validations with tolerance.
+- **Verification Engine (`app/evaluation/verification.py`):** Evidence aggregation with source-tier weighting (Tier 1 regulatory filings override lower-tier claims) producing `ALIGN`, `CONTRADICT`, or `INSUFFICIENT_EVIDENCE` verdicts.
+- **Greenwashing Risk Scoring (`app/scoring/risk_score.py`):** Explainable 0–100 risk score breakdown with Low, Moderate, High, and Very High risk bands.
+- **Verification CLI (`scripts/run_verification.py`):** End-to-end pipeline execution with rich audit trails and disclaimers.
+- **Full Test Suite:** 123 automated pytest tests passing across all components.
 
 **NOT implemented yet (future phases):**
-- The query-planning search agent.
-- Hybrid BM25 + ChromaDB retrieval.
-- LLM-based entailment/contradiction analysis against external evidence.
-- Numeric verification logic.
-- Capacity check and year-on-year check logic.
-- Greenwashing Risk Score calculation.
-- FastAPI backend.
-- Streamlit frontend.
+- FastAPI REST backend (`app/api/`).
+- Streamlit web interface (`streamlit_app/`).
 
 ## 5. Technology Stack
 
@@ -118,13 +106,16 @@ Step 2 adds the **PDF parsing + ESG claim extraction pipeline**.
 | Data models | Pydantic | Step 1 (done) |
 | Config | python-dotenv | Step 1 (done) |
 | PDF parsing | pdfplumber | Step 2 (done) |
-| LLM inference | LLaMA 3 / Mistral via Groq and/or Ollama | Step 2 (done, architecture) |
-| Agent orchestration | LangChain (only where genuinely useful) | Phase 3+ |
-| Vector search | ChromaDB + sentence-transformers | Phase 3 |
-| Keyword search | rank_bm25 | Phase 3 |
-| Storage | SQLite | Phase 3+ |
-| Backend API | FastAPI | Phase 4 |
-| Frontend | Streamlit | Phase 5 |
+| LLM inference | LLaMA 3 / Mistral via Groq, Ollama, or Mock | Step 2 (done) |
+| Checkability | Rule-based Python engine | Step 3 (done) |
+| Keyword search | rank_bm25 | Step 4 (done) |
+| Vector search | ChromaDB + sentence-transformers | Step 4 (done) |
+| Hybrid retrieval | Score normalisation + weighted fusion | Step 4 (done) |
+| Numeric checks | Deterministic Python arithmetic | Step 5 (done) |
+| Verification | Tier-weighted rule engine | Step 5 (done) |
+| Risk scoring | Explainable 0–100 additive factor model | Step 5 (done) |
+| Backend API | FastAPI | Next Phase |
+| Frontend | Streamlit | Next Phase |
 | Version control | Git / GitHub | Throughout |
 
 ## 6. Repository Structure
@@ -132,37 +123,42 @@ Step 2 adds the **PDF parsing + ESG claim extraction pipeline**.
 ```
 esg-greenwashing-agent/
 ├── app/
-│   ├── extraction/      # [ACTIVE - Step 2] pdf_parser.py, claim_extractor.py,
-│   │                    #   llm_providers.py, mock_data.py
-│   ├── retrieval/       # Query planning + hybrid evidence retrieval (Phase 3)
-│   ├── evaluation/      # Entailment/contradiction + numeric verification (Phase 3-4)
-│   ├── scoring/         # Greenwashing Risk Score logic (Phase 4)
-│   ├── api/             # FastAPI backend (Phase 4)
+│   ├── extraction/      # [ACTIVE] pdf_parser.py, claim_extractor.py, llm_providers.py, mock_data.py
+│   ├── retrieval/       # [ACTIVE - Step 4] query_planner.py, bm25_retriever.py, chroma_retriever.py, hybrid_retriever.py
+│   ├── evaluation/      # [ACTIVE - Step 3 & 5] checkability.py, numeric_checks.py, verification.py
+│   ├── scoring/         # [ACTIVE - Step 5] risk_score.py (0-100 Greenwashing Risk Score)
+│   ├── api/             # FastAPI backend (future phase)
 │   └── utils/           # Pydantic schemas (schemas.py) + shared helpers [ACTIVE]
 ├── data/
 │   ├── claims/          # claims.json — synthetic ESG claims dataset [ACTIVE]
 │   ├── evidence/        # evidence.json — synthetic evidence dataset [ACTIVE]
 │   ├── test/            # hard_cases.json — tricky edge-case dataset [ACTIVE]
-│   └── sample_pdfs/     # [ACTIVE - Step 2] synthetic_esg_report.pdf + expected_claims.json
+│   └── sample_pdfs/     # synthetic_esg_report.pdf + expected_claims.json
 ├── prompts/
-│   └── claim_extraction_prompt.md   # [ACTIVE - Step 2] extraction prompt
+│   └── claim_extraction_prompt.md   # Extraction prompt template
 ├── tests/
-│   ├── test_pdf_parser.py       # [ACTIVE - Step 2]
-│   └── test_claim_extractor.py  # [ACTIVE - Step 2]
+│   ├── test_pdf_parser.py       # PDF parsing unit tests (8 tests)
+│   ├── test_claim_extractor.py  # Claim extractor unit tests (9 tests)
+│   ├── test_retrieval.py        # BM25, Chroma, Hybrid, and Planner tests (34 tests)
+│   ├── test_numeric_checks.py   # Arithmetic and dimensional checks (21 tests)
+│   ├── test_verification.py     # Verdict aggregation and tier weighting (19 tests)
+│   └── test_risk_score.py       # Risk scoring factors and banding (32 tests)
 ├── scripts/
-│   ├── validate_dataset.py      # Dataset validation script [ACTIVE]
-│   ├── generate_sample_pdf.py   # [ACTIVE - Step 2] builds the synthetic test PDF
-│   ├── run_extraction.py        # [ACTIVE - Step 2] CLI: PDF -> claims
-│   └── evaluate_extraction.py   # [ACTIVE - Step 2] precision/recall/field accuracy
-├── streamlit_app/        # Streamlit UI (Phase 5)
+│   ├── validate_dataset.py      # Dataset validation script
+│   ├── generate_sample_pdf.py   # Builds the synthetic test PDF
+│   ├── run_extraction.py        # CLI: PDF -> claims
+│   ├── evaluate_extraction.py   # Precision/recall/field accuracy
+│   └── run_verification.py      # [ACTIVE - Steps 4+5] CLI for end-to-end verification pipeline
+├── streamlit_app/        # Streamlit UI (future phase)
 ├── docs/
 │   ├── PROJECT_PROGRESS_STEP_1.md
-│   └── PROJECT_PROGRESS_STEP_2.md   # Faculty-facing progress documentation
-├── requirements.txt       # Step 1 + Step 2 dependencies (future phases commented)
-├── .env.example            # Environment variable template (no real keys)
-├── .gitignore
-└── main.py                 # Placeholder entry point, runs the validator
+│   ├── PROJECT_PROGRESS_STEP_2.md
+│   └── PROJECT_PROGRESS_STEP_4_5.md # Documentation for Steps 4 & 5
+├── requirements.txt       # All active dependencies
+├── .env.example            # Environment variable template
+└── main.py                 # Project status and dataset validation entry point
 ```
+
 
 ## 7. Dataset Description
 
@@ -298,14 +294,44 @@ for why that is not a measure of real LLM quality.
 python scripts/validate_dataset.py
 ```
 
-Must still print `RESULT: PASS` — Step 2 must never break Step 1's dataset.
+Must still print `RESULT: PASS` — later steps must never break the underlying dataset.
+
+## 11. Steps 4 & 5: Evidence Retrieval, Verification & Risk Scoring
+
+### 11.1 Run the Full Verification Pipeline
+
+Run the end-to-end pipeline across all checkable claims:
+
+```bash
+python scripts/run_verification.py
+```
+
+### 11.2 Run for a Specific Claim
+
+Inspect the detailed audit trail for a single claim (e.g. `CLM-002`):
+
+```bash
+python scripts/run_verification.py --claim CLM-002
+```
+
+### 11.3 Quiet Mode (Summary Table Only)
+
+```bash
+python scripts/run_verification.py --quiet
+```
+
+### 11.4 Enable Hybrid ChromaDB Semantic Retrieval
+
+```bash
+python scripts/run_verification.py --semantic
+```
 
 ## 12. Future Development Phases
 
-- **Phase 3:** Query planning agent + hybrid (BM25 + ChromaDB) evidence retrieval.
-- **Phase 4:** Numeric verification, capacity/year-on-year checks, risk scoring, FastAPI backend.
-- **Phase 5:** Streamlit UI.
-- **Phase 6:** End-to-end evaluation against the held-out hard-case dataset.
+- **FastAPI Backend:** Expose REST endpoints (`/extract`, `/checkability`, `/retrieve`, `/verify`, `/risk-score`).
+- **Streamlit Frontend:** Interactive user interface for document upload, claim inspection, and report generation.
+- **End-to-End Evaluation:** Formal benchmark evaluation over the 10 held-out hard cases.
+
 
 ## 13. Important Limitation
 
