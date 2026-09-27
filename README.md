@@ -67,12 +67,15 @@ Explainable Audit Report
 FastAPI Backend + Streamlit UI
 ```
 
-## 4. Current Project Status: **Steps 1, 2, 3, 4, & 5 Complete**
+## 4. Current Project Status: **Steps 1–6 Complete**
 
 Step 1 built the repository structure and dataset foundation.  
 Step 2 added the **PDF parsing + ESG claim extraction pipeline**.  
 Step 3 added the **rule-based claim checkability engine**.  
 Steps 4 & 5 add the **hybrid evidence retrieval, deterministic verification engine, and Greenwashing Risk Scoring system**.
+Step 6 adds the **FastAPI backend and Streamlit dashboard**, turning the pipeline into an
+end-to-end, PDF-upload-to-risk-score application. See `docs/FINAL_PROJECT_DOCUMENTATION.md`
+and `docs/DEMO_FLOW.md`.
 
 **IMPLEMENTED (Steps 1 & 2):**
 - Modular repository structure and Pydantic schemas.
@@ -95,9 +98,12 @@ Steps 4 & 5 add the **hybrid evidence retrieval, deterministic verification engi
 - **Verification CLI (`scripts/run_verification.py`):** End-to-end pipeline execution with rich audit trails and disclaimers.
 - **Full Test Suite:** 123 automated pytest tests passing across all components.
 
-**NOT implemented yet (future phases):**
-- FastAPI REST backend (`app/api/`).
-- Streamlit web interface (`streamlit_app/`).
+**IMPLEMENTED (Step 6):**
+- **FastAPI backend (`app/api/main.py`, `app/api/pipeline.py`):** `/health`, `/analyze`
+  (PDF upload or demo mode), `/demo/dataset` (curated dataset demo), `/claims/{claim_id}`.
+- **Streamlit dashboard (`streamlit_app/app.py`):** PDF upload, executive summary, claim
+  table, per-claim detail (checkability / evidence / verification / numerical checks /
+  risk score / audit trail).
 
 ## 5. Technology Stack
 
@@ -114,8 +120,8 @@ Steps 4 & 5 add the **hybrid evidence retrieval, deterministic verification engi
 | Numeric checks | Deterministic Python arithmetic | Step 5 (done) |
 | Verification | Tier-weighted rule engine | Step 5 (done) |
 | Risk scoring | Explainable 0–100 additive factor model | Step 5 (done) |
-| Backend API | FastAPI | Next Phase |
-| Frontend | Streamlit | Next Phase |
+| Backend API | FastAPI | Step 6 (done) |
+| Frontend | Streamlit | Step 6 (done) |
 | Version control | Git / GitHub | Throughout |
 
 ## 6. Repository Structure
@@ -149,11 +155,14 @@ esg-greenwashing-agent/
 │   ├── run_extraction.py        # CLI: PDF -> claims
 │   ├── evaluate_extraction.py   # Precision/recall/field accuracy
 │   └── run_verification.py      # [ACTIVE - Steps 4+5] CLI for end-to-end verification pipeline
-├── streamlit_app/        # Streamlit UI (future phase)
+├── streamlit_app/
+│   └── app.py            # [ACTIVE - Step 6] Streamlit dashboard (calls the FastAPI backend)
 ├── docs/
 │   ├── PROJECT_PROGRESS_STEP_1.md
 │   ├── PROJECT_PROGRESS_STEP_2.md
-│   └── PROJECT_PROGRESS_STEP_4_5.md # Documentation for Steps 4 & 5
+│   ├── PROJECT_PROGRESS_STEP_4_5.md # Documentation for Steps 4 & 5
+│   ├── FINAL_PROJECT_DOCUMENTATION.md # Full Step 1-6 documentation
+│   └── DEMO_FLOW.md                 # How to demo the app to the professor
 ├── requirements.txt       # All active dependencies
 ├── .env.example            # Environment variable template
 └── main.py                 # Project status and dataset validation entry point
@@ -326,11 +335,44 @@ python scripts/run_verification.py --quiet
 python scripts/run_verification.py --semantic
 ```
 
-## 12. Future Development Phases
+## 12. Step 6: FastAPI Backend + Streamlit Dashboard
 
-- **FastAPI Backend:** Expose REST endpoints (`/extract`, `/checkability`, `/retrieve`, `/verify`, `/risk-score`).
-- **Streamlit Frontend:** Interactive user interface for document upload, claim inspection, and report generation.
-- **End-to-End Evaluation:** Formal benchmark evaluation over the 10 held-out hard cases.
+### 12.1 Install Step 6 dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 12.2 Run the FastAPI backend
+
+```bash
+uvicorn app.api.main:app --reload
+```
+
+API docs: `http://127.0.0.1:8000/docs`. Endpoints: `GET /health`, `POST /analyze`,
+`GET /demo/dataset`, `GET /claims/{claim_id}`.
+
+### 12.3 Run the Streamlit dashboard (in a second terminal)
+
+```bash
+streamlit run streamlit_app/app.py
+```
+
+Open `http://localhost:8501`.
+
+### 12.4 Run the demo offline (no API key needed)
+
+In the dashboard, check **"Use Demo ESG Report"** and click **"Analyze Report"** — this runs
+the bundled synthetic sample PDF through the full pipeline using the deterministic Mock LLM
+provider. For a demo that reliably shows all three verdict types (ALIGN / CONTRADICT /
+INSUFFICIENT_EVIDENCE), open the **"Full Dataset Demo"** page and click **"Run Dataset Demo"**.
+See `docs/DEMO_FLOW.md` for a full presentation script.
+
+### 12.5 Future Development
+
+- Connect the retrieval layer to real, verified external ESG/regulatory data sources.
+- Formal benchmark evaluation over the 10 held-out hard cases.
+- Persist analysis runs so a report can be revisited without re-uploading the PDF.
 
 
 ## 13. Important Limitation
