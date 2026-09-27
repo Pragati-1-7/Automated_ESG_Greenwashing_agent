@@ -52,3 +52,7 @@ htmlcov/
 
 # ---- OS files ----
 Thumbs.db
+
+# ---- Local AI tooling (Claude Code skill caches, not project source) ----
+.claude/
+.agents/
