@@ -26,3 +26,12 @@ pytest>=8.0                # Test runner for tests/ (dev dependency)
 rank-bm25>=0.2.2           # Keyword-based (BM25) retrieval (app/retrieval/bm25_retriever.py)
 chromadb>=0.5              # Vector database for semantic evidence retrieval (app/retrieval/chroma_retriever.py)
 sentence-transformers>=2.7 # Lightweight local embedding model (all-MiniLM-L6-v2, ~22 MB)
+
+# =========================================================
+# STEP 6 DEPENDENCIES (FastAPI backend + Streamlit dashboard)
+# =========================================================
+fastapi>=0.110             # REST API layer (app/api/main.py)
+uvicorn>=0.29              # ASGI server to run the FastAPI app
+python-multipart>=0.0.9    # Required by FastAPI for file-upload (PDF) form parsing
+streamlit>=1.32            # Dashboard UI (streamlit_app/app.py)
+requests>=2.31             # Streamlit -> FastAPI HTTP client (already listed above for LLM calls)
