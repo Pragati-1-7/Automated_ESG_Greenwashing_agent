@@ -68,6 +68,25 @@ def test_blank_scanned_pdf_reports_no_extractable_text():
     assert body["status"] == "no_claims"
     assert "no extractable text" in body["message"].lower()
     assert body["summary"]["total_claims"] == 0
+    # Regression: the response must echo the ORIGINAL uploaded filename, never
+    # the server's internal tempfile name (found via live curl testing).
+    assert body["source_document"] == "blank_scanned_report.pdf"
+    assert not body["source_document"].startswith("tmp")
+
+
+def test_analyze_response_echoes_original_filename_not_tempfile_name():
+    """The server saves uploads to a NamedTemporaryFile before parsing; the API
+    response must report the filename the user actually uploaded, not the
+    server-generated temp path. Caught via live HTTP testing, not TestClient."""
+    path = _edge_case("unrelated_content.pdf")
+    with path.open("rb") as f:
+        resp = client.post(
+            "/analyze",
+            data={"use_demo": "false", "mode": "mock"},
+            files={"file": ("my_company_report_2025.pdf", f, "application/pdf")},
+        )
+    assert resp.status_code == 200
+    assert resp.json()["source_document"] == "my_company_report_2025.pdf"
 
 
 # ---------------------------------------------------------------------------

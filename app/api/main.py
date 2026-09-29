@@ -119,6 +119,10 @@ async def analyze(
         if is_bundled_sample:
             result["source_document"] = SAMPLE_PDF_FILENAME
             result.setdefault("company", DEMO_COMPANY_NAME)
+        else:
+            # analyze_pdf_file only sees the server-side temp file path; restore
+            # the real uploaded filename the user actually sees in the response.
+            result["source_document"] = file.filename
         return result
     except PipelineError as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
