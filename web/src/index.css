@@ -1,0 +1,120 @@
+:root {
+  --text: #374151;
+  --text-h: #111827;
+  --bg: #f7f8fa;
+  --panel-bg: #ffffff;
+  --border: #d9dce1;
+  --accent: #1f4e5f;
+  --hint: #6b7280;
+
+  font: 15px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+
+h2 {
+  font-size: 19px;
+  margin: 24px 0 12px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 20px 0 8px;
+}
+
+h4 {
+  font-size: 15px;
+  margin: 12px 0 6px;
+}
+
+p {
+  margin: 6px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px;
+  text-align: left;
+}
+
+th {
+  color: var(--hint);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 12px 0 4px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-bg);
+  font-size: 14px;
+  color: var(--text);
+}
+
+pre {
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+  font-size: 12px;
+  max-height: 500px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}

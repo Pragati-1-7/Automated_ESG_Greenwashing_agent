@@ -360,6 +360,19 @@ streamlit run streamlit_app/app.py
 
 Open `http://localhost:8501`.
 
+### 12.3b Run the React frontend instead (optional, in a second terminal)
+
+An alternative to the Streamlit dashboard — same backend, same data, different
+UI. Both are kept; use whichever you prefer for a given demo.
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`. See `web/README.md` for details.
+
 ### 12.4 Run the demo offline (no API key needed)
 
 In the dashboard, check **"Use Demo ESG Report"** and click **"Analyze Report"** — this runs
