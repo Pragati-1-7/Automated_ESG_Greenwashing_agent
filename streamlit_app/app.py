@@ -41,6 +41,10 @@ VERDICT_COLORS = {
     "NOT_APPLICABLE": "#6b7280",
 }
 
+# Order matters: must match VERDICT_BADGE_OPTIONS <-> VERDICT_BADGE_COLORS index-for-index.
+VERDICT_BADGE_OPTIONS = ["ALIGN", "CONTRADICT", "INSUFFICIENT_EVIDENCE", "NOT_APPLICABLE", "-"]
+VERDICT_BADGE_COLORS = ["green", "red", "orange", "gray", "gray"]
+
 
 # ---------------------------------------------------------------------------
 # Backend calls
@@ -99,25 +103,37 @@ def check_health() -> bool:
 
 
 def render_disclaimer_banner(result: dict) -> None:
-    st.info(
-        f"{result.get('disclaimer', '')}\n\n**Evidence corpus:** {result.get('synthetic_evidence_notice', '')}"
+    st.warning(
+        f"**Synthetic evidence corpus:** {result.get('synthetic_evidence_notice', '')}\n\n"
+        f"{result.get('disclaimer', '')}",
+        icon=":material/policy:",
     )
 
 
+def render_analysis_context(result: dict, mode: str) -> None:
+    """Persistent strip so it's always clear, no matter how deep into the
+    tabs someone is, exactly what was analyzed and how."""
+    with st.container(border=True, horizontal=True):
+        st.markdown(f"**Analyzing:** {result.get('source_document', 'unknown')}")
+        st.markdown(f"**Company:** {result.get('company', 'unknown')}")
+        st.markdown(f"**Extraction mode:** {mode}")
+
+
 def render_executive_summary(summary: dict) -> None:
-    st.subheader("Executive Summary")
-    cols = st.columns(6)
-    cols[0].metric("Total Claims", summary["total_claims"])
-    cols[1].metric("Checkable", summary["checkable_claims"])
-    cols[2].metric("Not Checkable", summary["not_checkable_claims"])
-    cols[3].metric("Aligned", summary["align_count"])
-    cols[4].metric("Contradicted", summary["contradict_count"])
-    cols[5].metric("Insufficient Evidence", summary["insufficient_evidence_count"])
+    st.subheader("Executive summary")
+    with st.container(horizontal=True):
+        st.metric("Total claims", summary["total_claims"], border=True)
+        st.metric("Checkable", summary["checkable_claims"], border=True)
+        st.metric("Not checkable", summary["not_checkable_claims"], border=True)
+        st.metric("Aligned", summary["align_count"], border=True)
+        st.metric("Contradicted", summary["contradict_count"], border=True)
+        st.metric("Insufficient evidence", summary["insufficient_evidence_count"], border=True)
 
     if summary["average_risk_score"] is not None:
         st.metric(
-            "Average Greenwashing Risk Score (checkable claims)",
+            "Average greenwashing risk score (checkable claims)",
             f"{summary['average_risk_score']:.1f} / 100",
+            border=True,
         )
         st.caption(
             "The risk score is a rule-based triage indicator used to prioritize claims "
@@ -143,12 +159,22 @@ def render_claims_table(records: list[dict]) -> None:
                     (r["claim_text"][:90] + "...") if len(r["claim_text"]) > 90 else r["claim_text"]
                 ),
                 "Checkability": cr.get("checkability", "-"),
-                "Verification": vr.get("verdict", "-"),
+                "Verification": [vr.get("verdict", "-")],
                 "Risk Score": rs.get("risk_score", None),
                 "Risk Band": rs.get("risk_band", "-"),
             }
         )
-    st.dataframe(rows, use_container_width=True, hide_index=True)
+    st.dataframe(
+        rows,
+        hide_index=True,
+        column_config={
+            "Verification": st.column_config.MultiselectColumn(
+                "Verification",
+                options=VERDICT_BADGE_OPTIONS,
+                color=VERDICT_BADGE_COLORS,
+            ),
+        },
+    )
 
     claim_ids = [r["claim_id"] for r in records]
     selected = st.selectbox("Select a claim to inspect in detail", claim_ids)
@@ -405,6 +431,7 @@ def page_upload_and_analyze() -> None:
                     use_semantic=st.session_state.get("use_semantic", False),
                 )
                 st.session_state["last_result"] = result
+                st.session_state["last_mode"] = st.session_state.get("mode", "mock")
             except RuntimeError as e:
                 st.error(f"Analysis failed: {e}")
             except requests.RequestException as e:
@@ -415,7 +442,7 @@ def page_upload_and_analyze() -> None:
     result = st.session_state.get("last_result")
     if result:
         st.divider()
-        st.write(f"**Source:** {result['source_document']}  |  **Company:** {result['company']}")
+        render_analysis_context(result, st.session_state.get("last_mode", "mock"))
         render_disclaimer_banner(result)
         if result["status"] == "no_claims":
             st.error(result["message"])
@@ -453,6 +480,7 @@ def page_dataset_demo() -> None:
     result = st.session_state.get("dataset_result")
     if result:
         st.divider()
+        render_analysis_context(result, "n/a (curated dataset, no extraction)")
         render_disclaimer_banner(result)
         render_executive_summary(result["summary"])
         render_claims_table(result["audit_records"])
