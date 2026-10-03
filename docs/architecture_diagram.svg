@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1050" viewBox="0 0 1300 1050" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1300" height="1050" fill="#f7f8fa"/>
+
+  <text x="650" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#111827">Automated ESG Greenwashing Detection and Verification Agent</text>
+  <text x="650" y="64" text-anchor="middle" font-size="14" fill="#6b7280">System architecture</text>
+
+  <!-- Frontends row -->
+  <g>
+    <rect x="80" y="100" width="260" height="70" rx="8" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="210" y="128" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Streamlit dashboard</text>
+    <text x="210" y="148" text-anchor="middle" font-size="12" fill="#6b7280">localhost:8501</text>
+
+    <rect x="520" y="100" width="260" height="70" rx="8" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="650" y="128" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">React + Vite frontend</text>
+    <text x="650" y="148" text-anchor="middle" font-size="12" fill="#6b7280">localhost:5173</text>
+
+    <rect x="960" y="100" width="260" height="70" rx="8" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="1090" y="128" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Plain HTML/CSS/JS</text>
+    <text x="1090" y="148" text-anchor="middle" font-size="12" fill="#6b7280">localhost:5500</text>
+  </g>
+
+  <!-- Arrows down to backend -->
+  <line x1="210" y1="170" x2="640" y2="225" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="170" x2="650" y2="225" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1090" y1="170" x2="660" y2="225" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Backend box -->
+  <rect x="430" y="230" width="440" height="80" rx="8" fill="#1f4e5f"/>
+  <text x="650" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">FastAPI backend (localhost:8000)</text>
+  <text x="650" y="284" text-anchor="middle" font-size="12" fill="#dbe7ec">/health  /analyze  /demo/dataset  /claims/id  /runs</text>
+  <text x="650" y="300" text-anchor="middle" font-size="11" fill="#b9d2db">validates input and shapes HTTP responses only, no business logic here</text>
+
+  <line x1="650" y1="310" x2="650" y2="345" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Orchestration box -->
+  <rect x="430" y="350" width="440" height="60" rx="8" fill="#ffffff" stroke="#1f4e5f" stroke-width="2"/>
+  <text x="650" y="378" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Orchestration layer: app/api/pipeline.py</text>
+  <text x="650" y="398" text-anchor="middle" font-size="12" fill="#6b7280">build_audit_records() runs every stage below, per claim</text>
+
+  <line x1="650" y1="410" x2="650" y2="440" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline stages row -->
+  <g font-size="12">
+    <rect x="30" y="445" width="150" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="105" y="470" text-anchor="middle" font-weight="600" fill="#111827">PDF parsing</text>
+    <text x="105" y="488" text-anchor="middle" fill="#6b7280">pdfplumber</text>
+    <text x="105" y="504" text-anchor="middle" fill="#6b7280">page-aware text</text>
+
+    <rect x="200" y="445" width="160" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="280" y="465" text-anchor="middle" font-weight="600" fill="#111827">Claim extraction</text>
+    <text x="280" y="483" text-anchor="middle" fill="#6b7280">Real LLM (Groq)</text>
+    <text x="280" y="499" text-anchor="middle" fill="#6b7280">or offline mock</text>
+    <text x="280" y="515" text-anchor="middle" fill="#6b7280">structured JSON out</text>
+
+    <rect x="380" y="445" width="150" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="455" y="470" text-anchor="middle" font-weight="600" fill="#111827">Checkability</text>
+    <text x="455" y="488" text-anchor="middle" fill="#6b7280">rule engine</text>
+    <text x="455" y="504" text-anchor="middle" fill="#6b7280">no LLM call</text>
+
+    <rect x="550" y="445" width="150" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="625" y="470" text-anchor="middle" font-weight="600" fill="#111827">Query planning</text>
+    <text x="625" y="488" text-anchor="middle" fill="#6b7280">rule engine</text>
+    <text x="625" y="504" text-anchor="middle" fill="#6b7280">2-4 search strings</text>
+
+    <rect x="720" y="445" width="180" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="810" y="465" text-anchor="middle" font-weight="600" fill="#111827">Evidence retrieval</text>
+    <text x="810" y="483" text-anchor="middle" fill="#6b7280">BM25 (always on)</text>
+    <text x="810" y="499" text-anchor="middle" fill="#6b7280">+ semantic (opt-in,</text>
+    <text x="810" y="515" text-anchor="middle" fill="#6b7280">ChromaDB)</text>
+
+    <rect x="920" y="445" width="180" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="1010" y="465" text-anchor="middle" font-weight="600" fill="#111827">Verification</text>
+    <text x="1010" y="483" text-anchor="middle" fill="#6b7280">rule engine +</text>
+    <text x="1010" y="499" text-anchor="middle" fill="#6b7280">real Python math</text>
+    <text x="1010" y="515" text-anchor="middle" fill="#6b7280">(never LLM arithmetic)</text>
+
+    <rect x="1120" y="445" width="150" height="80" rx="6" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+    <text x="1195" y="470" text-anchor="middle" font-weight="600" fill="#111827">Risk scoring</text>
+    <text x="1195" y="488" text-anchor="middle" fill="#6b7280">additive, explainable</text>
+    <text x="1195" y="504" text-anchor="middle" fill="#6b7280">0 to 100</text>
+  </g>
+
+  <!-- chain arrows across stages -->
+  <g stroke="#9ca3af" stroke-width="2">
+    <line x1="180" y1="485" x2="198" y2="485" marker-end="url(#arrow)"/>
+    <line x1="360" y1="485" x2="378" y2="485" marker-end="url(#arrow)"/>
+    <line x1="530" y1="485" x2="548" y2="485" marker-end="url(#arrow)"/>
+    <line x1="700" y1="485" x2="718" y2="485" marker-end="url(#arrow)"/>
+    <line x1="900" y1="485" x2="918" y2="485" marker-end="url(#arrow)"/>
+    <line x1="1100" y1="485" x2="1118" y2="485" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Data corpus feeding retrieval -->
+  <rect x="760" y="580" width="260" height="90" rx="8" fill="#eef0f2" stroke="#d9dce1" stroke-width="2"/>
+  <text x="890" y="602" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Synthetic data corpus</text>
+  <text x="890" y="622" text-anchor="middle" font-size="11" fill="#6b7280">claims.json (12) . evidence.json (20)</text>
+  <text x="890" y="638" text-anchor="middle" font-size="11" fill="#6b7280">hard_cases.json (10 adversarial)</text>
+  <text x="890" y="656" text-anchor="middle" font-size="11" fill="#946800">no real company data anywhere</text>
+  <line x1="890" y1="580" x2="880" y2="528" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Output row -->
+  <line x1="1195" y1="528" x2="1195" y2="580" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1050" y="585" width="290" height="80" rx="8" fill="#ffffff" stroke="#1f4e5f" stroke-width="2"/>
+  <text x="1195" y="610" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Audit record per claim</text>
+  <text x="1195" y="628" text-anchor="middle" font-size="11" fill="#6b7280">claim + evidence + verdict + reason</text>
+  <text x="1195" y="644" text-anchor="middle" font-size="11" fill="#6b7280">+ risk score, returned as JSON</text>
+
+  <line x1="1195" y1="665" x2="1195" y2="700" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1050" y="705" width="290" height="70" rx="8" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+  <text x="1195" y="730" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">SQLite persistence</text>
+  <text x="1195" y="748" text-anchor="middle" font-size="11" fill="#6b7280">app/storage.py . GET/DELETE /runs</text>
+  <text x="1195" y="762" text-anchor="middle" font-size="10" fill="#6b7280">storage/app.db, gitignored</text>
+
+  <!-- Legend / notes -->
+  <rect x="30" y="800" width="1240" height="220" rx="8" fill="#ffffff" stroke="#d9dce1" stroke-width="2"/>
+  <text x="50" y="828" font-size="14" font-weight="700" fill="#111827">What is real vs rule-based here</text>
+  <text x="50" y="852" font-size="12" fill="#374151">- The ONLY step that calls an LLM is claim extraction (PDF text to structured JSON claims).</text>
+  <text x="50" y="872" font-size="12" fill="#374151">- Checkability, query planning, verification, and risk scoring are deterministic Python rule engines, not LLM calls.</text>
+  <text x="50" y="892" font-size="12" fill="#374151">- This is a deliberate choice: the verdict step (ALIGN / CONTRADICT / INSUFFICIENT_EVIDENCE) can never hallucinate evidence it did not retrieve,</text>
+  <text x="68" y="910" font-size="12" fill="#374151">because it is not an LLM decision at all.</text>
+  <text x="50" y="932" font-size="12" fill="#374151">- No LangChain or CrewAI agent framework is used anywhere in this codebase (verified by grep and pip check).</text>
+  <text x="50" y="952" font-size="12" fill="#374151">- All three frontends are pure renderers: they call the FastAPI backend and display exactly what it returns, computing nothing themselves.</text>
+  <text x="50" y="972" font-size="12" fill="#374151">- Evidence is a small synthetic corpus authored for this project, not live regulatory filings or news; every response says so explicitly.</text>
+  <text x="50" y="992" font-size="12" fill="#946800" font-weight="600">This is a triage / decision-support tool for human review, not a legal determination of greenwashing.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>
