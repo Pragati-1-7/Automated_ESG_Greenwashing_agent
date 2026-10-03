@@ -3,7 +3,7 @@
 ## 1. Problem Statement
 
 Companies publish ESG (Environmental, Social, Governance) reports containing
-sustainability claims — emission reductions, renewable energy usage, worker
+sustainability claims - emission reductions, renewable energy usage, worker
 safety records, and more. Some of these claims are accurate; others are
 vague, exaggerated, or contradicted by independent evidence ("greenwashing").
 Manually checking every claim in every report against regulatory filings,
@@ -136,9 +136,9 @@ esg-greenwashing-agent/
 │   ├── api/             # FastAPI backend (future phase)
 │   └── utils/           # Pydantic schemas (schemas.py) + shared helpers [ACTIVE]
 ├── data/
-│   ├── claims/          # claims.json — synthetic ESG claims dataset [ACTIVE]
-│   ├── evidence/        # evidence.json — synthetic evidence dataset [ACTIVE]
-│   ├── test/            # hard_cases.json — tricky edge-case dataset [ACTIVE]
+│   ├── claims/          # claims.json - synthetic ESG claims dataset [ACTIVE]
+│   ├── evidence/        # evidence.json - synthetic evidence dataset [ACTIVE]
+│   ├── test/            # hard_cases.json - tricky edge-case dataset [ACTIVE]
 │   └── sample_pdfs/     # synthetic_esg_report.pdf + expected_claims.json
 ├── prompts/
 │   └── claim_extraction_prompt.md   # Extraction prompt template
@@ -171,20 +171,20 @@ esg-greenwashing-agent/
 
 ## 7. Dataset Description
 
-All data in this repository is **synthetic** — fictional companies and
+All data in this repository is **synthetic** - fictional companies and
 figures created for development and testing. It is clearly labeled as such
 in each file's `_meta` block and must never be presented as real-world data.
 
-- **`data/claims/claims.json`** — 12 ESG claims covering Environmental
+- **`data/claims/claims.json`** - 12 ESG claims covering Environmental
   (emissions, renewable energy, waste, water, deforestation), Social
   (workforce diversity, worker safety), and Governance (regulatory
   disclosure) topics. Includes checkable and non-checkable claims, and
   covers all four verdict outcomes (ALIGN, CONTRADICT,
   INSUFFICIENT_EVIDENCE, NOT_APPLICABLE).
-- **`data/evidence/evidence.json`** — 20 evidence records spanning all five
+- **`data/evidence/evidence.json`** - 20 evidence records spanning all five
   source-reliability tiers (regulatory filing → regulator record → audited
   report → company PR → news), linked to claims via `claim_id`.
-- **`data/test/hard_cases.json`** — 10 deliberately tricky cases: vague
+- **`data/test/hard_cases.json`** - 10 deliberately tricky cases: vague
   claims, false-but-precise claims, period mismatches, shifted baselines,
   scope confusion, absolute-vs-intensity confusion, boundary mismatches,
   unit mismatches, unsupported future targets, and capacity mismatches.
@@ -249,7 +249,7 @@ company)**, used for reproducible testing. Regenerate it anytime with:
 python scripts/generate_sample_pdf.py
 ```
 
-### 10.4 Run extraction — mock mode (no API key needed)
+### 10.4 Run extraction - mock mode (no API key needed)
 
 ```bash
 python scripts/run_extraction.py --mock
@@ -260,7 +260,7 @@ and prints all 10 extracted claims. Mock output always has
 `extraction_method="mock"` and a `CLM-MOCK-...` claim ID, so it can never
 be confused with a real LLM result.
 
-### 10.5 Run extraction — real LLM mode
+### 10.5 Run extraction - real LLM mode
 
 1. Copy `.env.example` to `.env` and fill in real values:
    ```bash
@@ -278,7 +278,7 @@ be confused with a real LLM result.
    ```
 
 If credentials are missing or invalid, the script prints a clear
-`CONFIGURATION ERROR` — it never silently falls back to mock output.
+`CONFIGURATION ERROR` - it never silently falls back to mock output.
 
 ### 10.6 Run the tests
 
@@ -294,7 +294,7 @@ python scripts/evaluate_extraction.py
 
 Reports precision/recall on claim identification and per-field accuracy
 against `data/sample_pdfs/expected_claims.json`. This evaluates mock mode
-against itself as a regression/sanity check — see the script's docstring
+against itself as a regression/sanity check - see the script's docstring
 for why that is not a measure of real LLM quality.
 
 ### 10.8 Re-run the Step 1 regression check
@@ -303,7 +303,7 @@ for why that is not a measure of real LLM quality.
 python scripts/validate_dataset.py
 ```
 
-Must still print `RESULT: PASS` — later steps must never break the underlying dataset.
+Must still print `RESULT: PASS` - later steps must never break the underlying dataset.
 
 ## 11. Steps 4 & 5: Evidence Retrieval, Verification & Risk Scoring
 
@@ -362,7 +362,7 @@ Open `http://localhost:8501`.
 
 ### 12.3b Run the React frontend instead (optional, in a second terminal)
 
-An alternative to the Streamlit dashboard — same backend, same data, different
+An alternative to the Streamlit dashboard - same backend, same data, different
 UI. Both are kept; use whichever you prefer for a given demo.
 
 ```bash
@@ -373,9 +373,20 @@ npm run dev
 
 Open `http://localhost:5173`. See `web/README.md` for details.
 
+### 12.3c Run the plain HTML/CSS/JS frontend instead (optional)
+
+A third option with no build step and no framework.
+
+```bash
+cd simple-ui
+python -m http.server 5500
+```
+
+Open `http://localhost:5500`. See `simple-ui/README.md` for details.
+
 ### 12.4 Run the demo offline (no API key needed)
 
-In the dashboard, check **"Use Demo ESG Report"** and click **"Analyze Report"** — this runs
+In the dashboard, check **"Use Demo ESG Report"** and click **"Analyze Report"** - this runs
 the bundled synthetic sample PDF through the full pipeline using the deterministic Mock LLM
 provider. For a demo that reliably shows all three verdict types (ALIGN / CONTRADICT /
 INSUFFICIENT_EVIDENCE), open the **"Full Dataset Demo"** page and click **"Run Dataset Demo"**.

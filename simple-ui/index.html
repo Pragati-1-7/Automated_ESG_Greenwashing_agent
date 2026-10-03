@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESG Claim Verification and Greenwashing Risk Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <h3>Configuration</h3>
+
+    <label for="backendUrl">Backend API URL</label>
+    <input id="backendUrl" type="text" value="http://127.0.0.1:8000">
+    <p class="hint">Backend status: <strong id="healthStatus" class="status-bad">checking</strong></p>
+
+    <label for="modeSelect">Extraction mode</label>
+    <select id="modeSelect">
+      <option value="mock">mock (offline)</option>
+      <option value="groq">groq</option>
+      <option value="ollama">ollama</option>
+    </select>
+    <p class="hint">Use mock for the offline demo. Groq and Ollama need credentials set on the backend.</p>
+
+    <label for="topKRange">Evidence items per claim: <span id="topKValue">5</span></label>
+    <input id="topKRange" type="range" min="1" max="10" value="5">
+
+    <label class="checkbox-row">
+      <input id="semanticCheck" type="checkbox">
+      Enable semantic (ChromaDB) retrieval
+    </label>
+
+    <hr>
+
+    <h4>Page</h4>
+    <label class="radio-row">
+      <input type="radio" name="page" value="analyze" checked>
+      Upload and analyze
+    </label>
+    <label class="radio-row">
+      <input type="radio" name="page" value="dataset">
+      Full dataset demo
+    </label>
+  </aside>
+
+  <main class="main-content">
+    <section id="analyzePage">
+      <h1>ESG Claim Verification and Greenwashing Risk Analyzer</h1>
+      <p class="subtitle">Evidence-based ESG claim analysis for human review</p>
+      <div class="banner banner-warning">
+        This tool provides evidence-based triage and decision support. It does not constitute a
+        legal determination of greenwashing.
+      </div>
+
+      <div class="upload-row">
+        <div class="upload-col">
+          <label for="pdfFile">Upload ESG PDF</label>
+          <input id="pdfFile" type="file" accept="application/pdf">
+        </div>
+        <div class="upload-col">
+          <label class="checkbox-row">
+            <input id="useDemo" type="checkbox">
+            Use demo ESG report (bundled synthetic sample, works offline)
+          </label>
+        </div>
+      </div>
+
+      <label for="companyInput">Company name (optional)</label>
+      <input id="companyInput" type="text" placeholder="Company name">
+
+      <p id="fileInfo" class="hint" style="display:none;"></p>
+
+      <button id="analyzeBtn" class="primary-button">Analyze report</button>
+      <p id="analyzeStatus" class="hint" style="display:none;"></p>
+
+      <div id="analyzeResults"></div>
+    </section>
+
+    <section id="datasetPage" style="display:none;">
+      <h1>Full dataset demo</h1>
+      <p class="subtitle">
+        Runs the curated synthetic dataset so ALIGN, CONTRADICT and INSUFFICIENT_EVIDENCE
+        examples are all reliably shown, independent of PDF extraction.
+      </p>
+      <button id="datasetBtn" class="primary-button">Run dataset demo</button>
+      <p id="datasetStatus" class="hint" style="display:none;"></p>
+      <div id="datasetResults"></div>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
