@@ -3,6 +3,7 @@ import type { AuditRecord } from "../lib/types";
 import { SOURCE_TIER_LABELS, VERDICT_COLORS } from "../lib/constants";
 
 const TABS = [
+  "Full report",
   "Checkability",
   "Evidence",
   "Verification",
@@ -14,7 +15,7 @@ const TABS = [
 type Tab = (typeof TABS)[number];
 
 export function ClaimDetail({ record }: { record: AuditRecord }) {
-  const [tab, setTab] = useState<Tab>("Checkability");
+  const [tab, setTab] = useState<Tab>("Full report");
   const { checkability_result: cr, retrieval_result: rr, verification_result: vr, risk_score_result: rs } =
     record;
 
@@ -37,6 +38,70 @@ export function ClaimDetail({ record }: { record: AuditRecord }) {
       </div>
 
       <div className="tab-panel">
+        {tab === "Full report" && (
+          <div>
+            <h4>Claim</h4>
+            <p>{record.claim_text}</p>
+            <p className="hint">Company: {record.company}</p>
+
+            <h4>Checkability</h4>
+            {cr ? (
+              <p>
+                <strong>{cr.checkability}</strong> - {cr.reason}
+              </p>
+            ) : (
+              <p>No checkability result available.</p>
+            )}
+
+            {vr && (
+              <>
+                <h4>Verification</h4>
+                <p style={{ color: VERDICT_COLORS[vr.verdict] ?? "#374151" }}>
+                  <strong>{vr.verdict}</strong>
+                </p>
+                <p>{vr.reason}</p>
+              </>
+            )}
+
+            {rs && (
+              <>
+                <h4>Risk score</h4>
+                <p>
+                  {rs.risk_score.toFixed(0)} / 100 - {rs.risk_band} risk
+                </p>
+                {[...rs.factors]
+                  .sort((a, b) => b.points - a.points)
+                  .slice(0, 3)
+                  .map((f, i) => (
+                    <p key={i}>
+                      +{f.points.toFixed(0)} pts - <strong>{f.factor}</strong>: {f.reason}
+                    </p>
+                  ))}
+              </>
+            )}
+
+            {rr && rr.evidence.length > 0 && (
+              <>
+                <h4>External evidence found</h4>
+                {rr.evidence.map((ev) => (
+                  <div key={ev.evidence_id} className="evidence-item">
+                    <p>
+                      <strong>{ev.source}</strong> -{" "}
+                      {SOURCE_TIER_LABELS[ev.source_tier] ?? `Tier ${ev.source_tier}`}
+                    </p>
+                    <p>{ev.retrieved_text}</p>
+                  </div>
+                ))}
+              </>
+            )}
+
+            <p className="hint">
+              {rs?.disclaimer ??
+                "This is a triage indicator for human review, not a legal determination of greenwashing."}
+            </p>
+          </div>
+        )}
+
         {tab === "Checkability" && (
           <>
             {cr ? (

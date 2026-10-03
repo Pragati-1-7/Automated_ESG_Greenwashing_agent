@@ -25,7 +25,7 @@ let lastAnalyzeMode = "mock";
 let lastDatasetResult = null;
 let selectedAnalyzeClaim = null;
 let selectedDatasetClaim = null;
-let activeTab = "Checkability";
+let activeTab = "Full report";
 
 function backendUrl() {
   return document.getElementById("backendUrl").value.replace(/\/$/, "");
@@ -179,7 +179,7 @@ function claimsTableHtml(records, selectedId) {
   return html;
 }
 
-const TABS = ["Checkability", "Evidence", "Verification", "Numerical checks", "Risk score", "Audit trail"];
+const TABS = ["Full report", "Checkability", "Evidence", "Verification", "Numerical checks", "Risk score", "Audit trail"];
 
 function claimDetailHtml(record) {
   const cr = record.checkability_result;
@@ -200,6 +200,48 @@ function claimDetailHtml(record) {
   html += '</div>';
 
   html += '<div class="tab-panel">';
+
+  if (activeTab === "Full report") {
+    html += '<h4>Claim</h4>';
+    html += '<p>' + record.claim_text + '</p>';
+    html += '<p class="hint">Company: ' + record.company + '</p>';
+
+    html += '<h4>Checkability</h4>';
+    if (cr) {
+      html += '<p><strong>' + cr.checkability + '</strong> - ' + cr.reason + '</p>';
+    } else {
+      html += '<p>No checkability result available.</p>';
+    }
+
+    if (vr) {
+      const color = VERDICT_COLORS[vr.verdict] || "#374151";
+      html += '<h4>Verification</h4>';
+      html += '<p style="color:' + color + '"><strong>' + vr.verdict + '</strong></p>';
+      html += '<p>' + vr.reason + '</p>';
+    }
+
+    if (rs) {
+      html += '<h4>Risk score</h4>';
+      html += '<p>' + rs.risk_score.toFixed(0) + ' / 100 - ' + rs.risk_band + ' risk</p>';
+      const topFactors = [...rs.factors].sort((a, b) => b.points - a.points).slice(0, 3);
+      for (const f of topFactors) {
+        html += '<p>+' + f.points.toFixed(0) + ' pts - <strong>' + f.factor + '</strong>: ' + f.reason + '</p>';
+      }
+    }
+
+    if (rr && rr.evidence.length > 0) {
+      html += '<h4>External evidence found</h4>';
+      for (const ev of rr.evidence) {
+        const tierLabel = TIER_LABELS[ev.source_tier] || ("Tier " + ev.source_tier);
+        html += '<div class="evidence-item">';
+        html += '<p><strong>' + ev.source + '</strong> - ' + tierLabel + '</p>';
+        html += '<p>' + ev.retrieved_text + '</p>';
+        html += '</div>';
+      }
+    }
+
+    html += '<p class="hint">' + (rs ? rs.disclaimer : "This is a triage indicator for human review, not a legal determination of greenwashing.") + '</p>';
+  }
 
   if (activeTab === "Checkability") {
     if (cr) {

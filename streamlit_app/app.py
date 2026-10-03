@@ -27,11 +27,11 @@ st.set_page_config(
 DEFAULT_BACKEND = "http://127.0.0.1:8000"
 
 SOURCE_TIER_LABELS = {
-    1: "Tier 1 — Regulatory filing",
-    2: "Tier 2 — Regulator / tribunal",
-    3: "Tier 3 — Audited report",
-    4: "Tier 4 — Company PR",
-    5: "Tier 5 — News",
+    1: "Tier 1 - Regulatory filing",
+    2: "Tier 2 - Regulator / tribunal",
+    3: "Tier 3 - Audited report",
+    4: "Tier 4 - Company PR",
+    5: "Tier 5 - News",
 }
 
 VERDICT_COLORS = {
@@ -196,7 +196,7 @@ def render_audit_trail(record: dict) -> None:
     rs = record.get("risk_score_result")
 
     st.caption(
-        "Full step-by-step trace of how this result was produced. Nothing below is invented by the dashboard — it is the exact backend output for this claim."
+        "Full step-by-step trace of how this result was produced. Nothing below is invented by the dashboard - it is the exact backend output for this claim."
     )
 
     with st.container(border=True):
@@ -210,7 +210,7 @@ def render_audit_trail(record: dict) -> None:
     with st.container(border=True):
         _audit_step(3, "Checkability decision", "checklist")
         if cr:
-            st.write(f"**{cr['checkability']}** — {cr['reason']}")
+            st.write(f"**{cr['checkability']}** - {cr['reason']}")
         else:
             st.write("Not evaluated.")
 
@@ -258,7 +258,7 @@ def render_audit_trail(record: dict) -> None:
     with st.container(border=True):
         _audit_step(8, "Verification", "gavel")
         if vr:
-            st.write(f"**{vr['verdict']}** — {vr['reason']}")
+            st.write(f"**{vr['verdict']}** - {vr['reason']}")
         else:
             st.write("Not applicable.")
 
@@ -266,14 +266,14 @@ def render_audit_trail(record: dict) -> None:
         _audit_step(9, "Risk factors", "warning")
         if rs and rs.get("factors"):
             for f in sorted(rs["factors"], key=lambda x: x["points"], reverse=True):
-                st.write(f"+{f['points']:.0f} pts — {f['factor']}: {f['reason']}")
+                st.write(f"+{f['points']:.0f} pts - {f['factor']}: {f['reason']}")
         else:
             st.write("No risk factors (claim not checkable).")
 
     with st.container(border=True):
         _audit_step(10, "Final score", "speed")
         if rs:
-            st.write(f"**{rs['risk_score']:.0f} / 100 — {rs['risk_band']} risk**")
+            st.write(f"**{rs['risk_score']:.0f} / 100 - {rs['risk_band']} risk**")
         else:
             st.write("No score computed.")
 
@@ -282,7 +282,7 @@ def render_audit_trail(record: dict) -> None:
 
 
 def render_claim_detail(record: dict) -> None:
-    st.subheader(f"Claim Detail — {record['claim_id']}")
+    st.subheader(f"Claim Detail - {record['claim_id']}")
 
     st.markdown("**Original Claim Text**")
     st.write(record["claim_text"])
@@ -301,6 +301,7 @@ def render_claim_detail(record: dict) -> None:
             "Numerical Checks",
             "Risk Score",
             "Audit Trail",
+            "Full Report",
         ]
     )
 
@@ -319,19 +320,19 @@ def render_claim_detail(record: dict) -> None:
                     status = (
                         "PASS" if rule["passed"] else ("N/A" if not rule["applicable"] else "FAIL")
                     )
-                    st.write(f"[{status}] **{rule['rule_name']}** — {rule['detail']}")
+                    st.write(f"[{status}] **{rule['rule_name']}** - {rule['detail']}")
         else:
             st.write("No checkability result available.")
 
     with tabs[1]:
         if rr and rr.get("evidence"):
-            st.caption("Development / synthetic evidence corpus — not real regulatory records.")
+            st.caption("Development / synthetic evidence corpus - not real regulatory records.")
             with st.expander("Search queries generated"):
                 for q in rr["query_plan"]["queries"]:
                     st.write(f"- {q}")
             for ev in rr["evidence"]:
                 tier_label = SOURCE_TIER_LABELS.get(ev["source_tier"], f"Tier {ev['source_tier']}")
-                st.markdown(f"**[{ev['rank']}] {ev['source']}** — {tier_label}")
+                st.markdown(f"**[{ev['rank']}] {ev['source']}** - {tier_label}")
                 st.write(ev["retrieved_text"])
                 st.caption(
                     f"Publication date: {ev.get('publication_date', 'N/A')} | "
@@ -379,16 +380,61 @@ def render_claim_detail(record: dict) -> None:
 
     with tabs[4]:
         if rs:
-            st.markdown(f"### {rs['risk_score']:.0f} / 100 — {rs['risk_band']} Risk")
+            st.markdown(f"### {rs['risk_score']:.0f} / 100 - {rs['risk_band']} Risk")
             st.write(rs["summary"])
             for f in sorted(rs["factors"], key=lambda x: x["points"], reverse=True):
-                st.write(f"+{f['points']:.0f} pts — **{f['factor']}**: {f['reason']}")
+                st.write(f"+{f['points']:.0f} pts - **{f['factor']}**: {f['reason']}")
             st.caption(rs["disclaimer"])
         else:
             st.write("No risk score computed (claim not checkable).")
 
     with tabs[5]:
         render_audit_trail(record)
+
+    with tabs[6]:
+        st.markdown("**Original claim**")
+        st.write(record["claim_text"])
+        st.caption(f"Company: {record['company']}")
+
+        st.markdown("**Checkability**")
+        if cr:
+            st.write(f"{cr['checkability']} - {cr['reason']}")
+        else:
+            st.write("No checkability result available.")
+
+        st.markdown("**Verdict and reasoning**")
+        if vr:
+            color = VERDICT_COLORS.get(vr["verdict"], "#374151")
+            st.markdown(
+                f"<span style='color:{color}'>**{vr['verdict']}**</span> - {vr['reason']}",
+                unsafe_allow_html=True,
+            )
+        else:
+            st.write("No verification result available for this claim.")
+
+        st.markdown("**Risk score**")
+        if rs:
+            st.write(f"{rs['risk_score']:.0f} / 100 - {rs['risk_band']} risk")
+            top_factors = sorted(rs["factors"], key=lambda x: x["points"], reverse=True)[:3]
+            for f in top_factors:
+                st.write(f"+{f['points']:.0f} pts - {f['factor']}: {f['reason']}")
+        else:
+            st.write("No risk score computed for this claim.")
+
+        st.markdown("**External evidence used**")
+        if rr and rr.get("evidence"):
+            for ev in rr["evidence"]:
+                tier_label = SOURCE_TIER_LABELS.get(ev["source_tier"], f"Tier {ev['source_tier']}")
+                st.write(f"{ev['source']} ({tier_label})")
+                st.caption(ev["retrieved_text"])
+        else:
+            st.write("No external evidence was used for this claim.")
+
+        st.caption(
+            rs["disclaimer"]
+            if rs
+            else "This is a triage indicator for human review, not a legal determination of greenwashing."
+        )
 
 
 # ---------------------------------------------------------------------------
