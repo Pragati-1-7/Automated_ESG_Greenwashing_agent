@@ -1,4 +1,4 @@
-# Demo Flow — Presenting to the Professor
+# Demo Flow - Presenting to the Professor
 
 This document describes exactly how to demonstrate the completed project.
 
@@ -25,7 +25,7 @@ legal determination.
 ## 2. Upload the synthetic ESG PDF
 
 Check "Use Demo ESG Report" (or upload `data/sample_pdfs/synthetic_esg_report.pdf` manually).
-This runs entirely offline using the deterministic Mock LLM provider — no API key needed.
+This runs entirely offline using the deterministic Mock LLM provider - no API key needed.
 
 ## 3. Show extracted claims
 
@@ -36,7 +36,7 @@ not checkable, verdict counts, average risk score).
 
 In the Claim Analysis table, select a claim. Open the **Checkability** tab: show the
 CHECKABLE/NOT_CHECKABLE decision, the completeness score, and the satisfied/missing field
-list — explain this is a rule-based decision, not an LLM guess.
+list - explain this is a rule-based decision, not an LLM guess.
 
 ## 5. Select a claim
 
@@ -51,8 +51,8 @@ BM25 / semantic / combined retrieval scores.
 ## 7. Show source tier
 
 Explain the five-tier hierarchy shown next to each evidence item:
-`Tier 1 — Regulatory filing`, `Tier 2 — Regulator/tribunal`, `Tier 3 — Audited report`,
-`Tier 4 — Company PR`, `Tier 5 — News`. Higher tiers are weighted more heavily during
+`Tier 1 - Regulatory filing`, `Tier 2 - Regulator/tribunal`, `Tier 3 - Audited report`,
+`Tier 4 - Company PR`, `Tier 5 - News`. Higher tiers are weighted more heavily during
 verification.
 
 ## 8. Show verification
@@ -63,7 +63,7 @@ supporting/contradicting evidence IDs, and the plain-English reason.
 ## 9. Show numerical check
 
 Open the **Numerical Checks** tab for a claim with a percentage or quantity claim: claimed
-value vs. evidence value vs. tolerance, and the PASS/MISMATCH/SKIPPED result — emphasize this
+value vs. evidence value vs. tolerance, and the PASS/MISMATCH/SKIPPED result - emphasize this
 arithmetic is done in Python, never by an LLM.
 
 ## 10. Show risk score
@@ -75,7 +75,7 @@ probability, not a legal verdict.
 ## 11. Open the audit trail
 
 Open the **Audit Trail** tab: the full underlying JSON for that claim, so the professor can see
-that nothing shown earlier was invented by the frontend — it is exactly what the backend
+that nothing shown earlier was invented by the frontend - it is exactly what the backend
 returned.
 
 ## 12. Explain why the result was generated

@@ -1,4 +1,4 @@
-# UI Plan — ESG Claim Verification & Greenwashing Risk Analyzer
+# UI Plan - ESG Claim Verification & Greenwashing Risk Analyzer
 
 **Audience for this plan:** the dashboard will be reviewed by an EY senior
 partner. That changes the bar: it must read as a serious analytical tool a
@@ -18,11 +18,11 @@ and exactly what's left to make it "done and dusted."
 | **Technical demo operator** (whoever drives the laptop in the room) | Get through the demo without a crash, error, or dead screen | Backend down with no indication; upload silently doing nothing; long unexplained waits |
 
 The UI plan below is organized around **the auditor/partner persona as the
-hardest bar** — if it satisfies them, it satisfies everyone else.
+hardest bar** - if it satisfies them, it satisfies everyone else.
 
 ---
 
-## 2. Current UI inventory — what's already built
+## 2. Current UI inventory - what's already built
 
 | Screen / element | Status | Notes |
 |---|---|---|
@@ -31,12 +31,12 @@ hardest bar** — if it satisfies them, it satisfies everyone else.
 | Sidebar: backend URL, live health indicator, mode, top-k, semantic toggle | Done | Health check hits `/health` on every rerun |
 | Executive summary (6 metrics + average risk score) | Done | Uses `st.metric`, plain columns |
 | Claims table with row selection | Done | `st.dataframe`, plain text columns |
-| Claim detail — Checkability tab | Done | Satisfied/missing fields, full rule list in expander |
-| Claim detail — Evidence tab | Done | Source tier label, all 3 retrieval scores, synthetic-corpus caption |
-| Claim detail — Verification tab | Done | Verdict in color, reason, supporting/contradicting IDs |
-| Claim detail — Numerical Checks tab | Done | Claimed vs. evidence value, tolerance, PASS/MISMATCH/SKIPPED |
-| Claim detail — Risk Score tab | Done | Score, band, factor breakdown, disclaimer |
-| Claim detail — Audit Trail tab | Done (fixed this pass) | 10-step human-readable trace + raw JSON expander |
+| Claim detail - Checkability tab | Done | Satisfied/missing fields, full rule list in expander |
+| Claim detail - Evidence tab | Done | Source tier label, all 3 retrieval scores, synthetic-corpus caption |
+| Claim detail - Verification tab | Done | Verdict in color, reason, supporting/contradicting IDs |
+| Claim detail - Numerical Checks tab | Done | Claimed vs. evidence value, tolerance, PASS/MISMATCH/SKIPPED |
+| Claim detail - Risk Score tab | Done | Score, band, factor breakdown, disclaimer |
+| Claim detail - Audit Trail tab | Done (fixed this pass) | 10-step human-readable trace + raw JSON expander |
 | Full Dataset Demo page | Done | Guarantees all 3 verdict types |
 | Error states: no file, non-PDF, empty file, corrupted PDF, no claims | Done | All surfaced as `st.error`, no crashes (re-verified live, §5 of ARCHITECTURE.md) |
 
@@ -46,7 +46,7 @@ trust-signaling for a partner-level audience**, not missing functionality.
 
 ---
 
-## 3. Gap analysis — what "done and dusted" still needs
+## 3. Gap analysis - what "done and dusted" still needs
 
 ### 3a. Must-fix before an EY review (credibility, not cosmetics)
 
@@ -71,22 +71,22 @@ trust-signaling for a partner-level audience**, not missing functionality.
 ### 3b. Worth doing, lower urgency
 
 5. Material icons instead of plain text section labels (subtle, professional,
-   not decorative) — e.g. a small icon next to "Evidence", "Verification".
+   not decorative) - e.g. a small icon next to "Evidence", "Verification".
 6. A visible request/response timing indicator during analysis (spinner text
    is generic; a partner watching a live demo benefits from "Parsing PDF...
    Extracting claims... Retrieving evidence..." matching the actual pipeline
    stages, not just one static spinner message).
 7. Empty-state polish: what the Evidence tab looks like for a NOT_CHECKABLE
-   claim currently says "no evidence retrieval was run" — good — but the same
+   claim currently says "no evidence retrieval was run" - good - but the same
    treatment should be visually consistent across all 4 result tabs (currently
    each writes its own slightly different sentence).
 
 ### 3c. Explicitly out of scope for this pass
 
-- Custom CSS/branding — not requested, and the spec explicitly says
+- Custom CSS/branding - not requested, and the spec explicitly says
   "functionality over decoration."
-- Authentication/login screens — out of scope per the original Step 6 spec.
-- Mobile-responsive redesign — this is a laptop-demo tool, not a public app
+- Authentication/login screens - out of scope per the original Step 6 spec.
+- Mobile-responsive redesign - this is a laptop-demo tool, not a public app
   (though the existing layout already doesn't break at narrow widths, since
   Streamlit's defaults handle that).
 
@@ -117,9 +117,9 @@ new external integration, any authentication, any custom theme/branding.
 3. Start FastAPI (`uvicorn app.api.main:app --reload`), confirm
    `http://127.0.0.1:8000/health` returns `200` in a browser tab.
 4. Start Streamlit (`streamlit run streamlit_app/app.py`), confirm the sidebar
-   shows "Backend status: **online**" — if it says unreachable, the backend
+   shows "Backend status: **online**" - if it says unreachable, the backend
    isn't actually running and the demo will silently fail on "Analyze Report."
-5. Run the Full Dataset Demo page once, live, before the meeting — confirms
+5. Run the Full Dataset Demo page once, live, before the meeting - confirms
    all three verdict types render correctly on this machine, not just in CI.
 6. Have `data/sample_pdfs/edge_cases/` PDFs ready as a backup if the partner
    wants to see an error path handled gracefully (corrupted file, blank scan).

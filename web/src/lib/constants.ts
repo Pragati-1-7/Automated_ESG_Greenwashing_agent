@@ -1,11 +1,11 @@
 export const DEFAULT_BACKEND = "http://127.0.0.1:8000";
 
 export const SOURCE_TIER_LABELS: Record<number, string> = {
-  1: "Tier 1 — Regulatory filing",
-  2: "Tier 2 — Regulator / tribunal",
-  3: "Tier 3 — Audited report",
-  4: "Tier 4 — Company PR",
-  5: "Tier 5 — News",
+  1: "Tier 1 - Regulatory filing",
+  2: "Tier 2 - Regulator / tribunal",
+  3: "Tier 3 - Audited report",
+  4: "Tier 4 - Company PR",
+  5: "Tier 5 - News",
 };
 
 export const VERDICT_COLORS: Record<string, string> = {

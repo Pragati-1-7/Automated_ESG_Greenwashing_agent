@@ -20,7 +20,7 @@ export function ClaimDetail({ record }: { record: AuditRecord }) {
 
   return (
     <div className="claim-detail">
-      <h3>Claim detail — {record.claim_id}</h3>
+      <h3>Claim detail - {record.claim_id}</h3>
       <p className="claim-text">{record.claim_text}</p>
       <p className="hint">Company: {record.company}</p>
 
@@ -71,7 +71,7 @@ export function ClaimDetail({ record }: { record: AuditRecord }) {
                       const status = rule.passed ? "PASS" : !rule.applicable ? "N/A" : "FAIL";
                       return (
                         <li key={i}>
-                          [{status}] <strong>{rule.rule_name}</strong> — {rule.detail}
+                          [{status}] <strong>{rule.rule_name}</strong> - {rule.detail}
                         </li>
                       );
                     })}
@@ -89,7 +89,7 @@ export function ClaimDetail({ record }: { record: AuditRecord }) {
             {rr && rr.evidence.length > 0 ? (
               <>
                 <p className="hint">
-                  Development / synthetic evidence corpus — not real regulatory records.
+                  Development / synthetic evidence corpus - not real regulatory records.
                 </p>
                 <details>
                   <summary>Search queries generated</summary>
@@ -105,7 +105,7 @@ export function ClaimDetail({ record }: { record: AuditRecord }) {
                       <strong>
                         [{ev.rank}] {ev.source}
                       </strong>{" "}
-                      — {SOURCE_TIER_LABELS[ev.source_tier] ?? `Tier ${ev.source_tier}`}
+                      - {SOURCE_TIER_LABELS[ev.source_tier] ?? `Tier ${ev.source_tier}`}
                     </p>
                     <p>{ev.retrieved_text}</p>
                     <p className="hint">
@@ -182,14 +182,14 @@ export function ClaimDetail({ record }: { record: AuditRecord }) {
             {rs ? (
               <>
                 <h4>
-                  {rs.risk_score.toFixed(0)} / 100 — {rs.risk_band} risk
+                  {rs.risk_score.toFixed(0)} / 100 - {rs.risk_band} risk
                 </h4>
                 <p>{rs.summary}</p>
                 {[...rs.factors]
                   .sort((a, b) => b.points - a.points)
                   .map((f, i) => (
                     <p key={i}>
-                      +{f.points.toFixed(0)} pts — <strong>{f.factor}</strong>: {f.reason}
+                      +{f.points.toFixed(0)} pts - <strong>{f.factor}</strong>: {f.reason}
                     </p>
                   ))}
                 <p className="hint">{rs.disclaimer}</p>
@@ -218,7 +218,7 @@ function AuditTrail({ record }: { record: AuditRecord }) {
       title: "3. Checkability decision",
       body: cr ? (
         <span>
-          <strong>{cr.checkability}</strong> — {cr.reason}
+          <strong>{cr.checkability}</strong> - {cr.reason}
         </span>
       ) : (
         "Not evaluated."
@@ -294,7 +294,7 @@ function AuditTrail({ record }: { record: AuditRecord }) {
       title: "8. Verification",
       body: vr ? (
         <span>
-          <strong>{vr.verdict}</strong> — {vr.reason}
+          <strong>{vr.verdict}</strong> - {vr.reason}
         </span>
       ) : (
         "Not applicable."
@@ -309,7 +309,7 @@ function AuditTrail({ record }: { record: AuditRecord }) {
               .sort((a, b) => b.points - a.points)
               .map((f, i) => (
                 <li key={i}>
-                  +{f.points.toFixed(0)} pts — {f.factor}: {f.reason}
+                  +{f.points.toFixed(0)} pts - {f.factor}: {f.reason}
                 </li>
               ))}
           </ul>
@@ -319,7 +319,7 @@ function AuditTrail({ record }: { record: AuditRecord }) {
     },
     {
       title: "10. Final score",
-      body: rs ? `${rs.risk_score.toFixed(0)} / 100 — ${rs.risk_band} risk` : "No score computed.",
+      body: rs ? `${rs.risk_score.toFixed(0)} / 100 - ${rs.risk_band} risk` : "No score computed.",
     },
   ];
 
@@ -327,7 +327,7 @@ function AuditTrail({ record }: { record: AuditRecord }) {
     <div>
       <p className="hint">
         Full step-by-step trace of how this result was produced. Nothing below is invented by the
-        frontend — it is the exact backend output for this claim.
+        frontend - it is the exact backend output for this claim.
       </p>
       {steps.map((s, i) => (
         <div key={i} className="audit-step">

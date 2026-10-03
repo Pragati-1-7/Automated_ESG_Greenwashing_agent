@@ -8,7 +8,7 @@ verification/risk scoring → FastAPI + Streamlit application)
 
 This file is the single source of truth for "what does this project actually do,
 what has been checked, and what is still open." It is written to be read on its
-own — no need to re-read prior chat history to trust these numbers; every number
+own - no need to re-read prior chat history to trust these numbers; every number
 in this file was re-run and confirmed while writing it.
 
 ---
@@ -21,7 +21,7 @@ synthetic evidence corpus using hybrid (keyword + semantic) retrieval, compares
 each claim against the evidence it finds using deterministic Python logic (never
 an LLM doing arithmetic), and produces an explainable 0–100 "Greenwashing Risk
 Score" per claim plus a full audit trail. It is a **human-review triage tool**,
-not a legal verdict — every output surface says so explicitly.
+not a legal verdict - every output surface says so explicitly.
 
 ---
 
@@ -42,16 +42,16 @@ not a legal verdict — every output surface says so explicitly.
 
 Every successful `/analyze` or `/demo/dataset` call returns one JSON object containing:
 
-- `status` — `"ok"` or `"no_claims"` (never a silent empty success)
-- `summary` — total / checkable / not-checkable claim counts, verdict counts, average risk score
-- `audit_records[]` — one per extracted claim, each containing:
+- `status` - `"ok"` or `"no_claims"` (never a silent empty success)
+- `summary` - total / checkable / not-checkable claim counts, verdict counts, average risk score
+- `audit_records[]` - one per extracted claim, each containing:
   - `checkability_result` (always present)
   - `retrieval_result`, `verification_result`, `risk_score_result` (present only if the claim was CHECKABLE)
-- `synthetic_evidence_notice` and `disclaimer` — carried on **every** response, not just the UI
+- `synthetic_evidence_notice` and `disclaimer` - carried on **every** response, not just the UI
 
 The Streamlit dashboard renders this JSON as: an executive summary, a sortable claims
 table, and per-claim tabs (Checkability / Evidence / Verification / Numerical Checks /
-Risk Score / step-by-step Audit Trail). Nothing is computed client-side — the frontend
+Risk Score / step-by-step Audit Trail). Nothing is computed client-side - the frontend
 is a pure renderer of backend output.
 
 ---
@@ -69,7 +69,7 @@ Orchestration (app/api/pipeline.py)
       ├── LLM provider adapter    (Mock offline / Groq HTTP API / Ollama local HTTP API)
       ├── Rule-based checkability engine (pure Python, no external calls)
       ├── rank_bm25                (keyword retrieval)
-      ├── ChromaDB + sentence-transformers (all-MiniLM-L6-v2)  — optional, opt-in
+      ├── ChromaDB + sentence-transformers (all-MiniLM-L6-v2)  - optional, opt-in
       ├── Deterministic numeric-check engine (pure Python arithmetic)
       ├── Rule-based verification + risk-scoring engines (pure Python)
       └── Pydantic schemas          (validate every object at every boundary)
@@ -82,7 +82,7 @@ calls the system can make, and both are opt-in and off by default (`mode=mock`).
 
 ---
 
-## 4. Data used — is it synthetic? Yes, entirely.
+## 4. Data used - is it synthetic? Yes, entirely.
 
 | File                                        | Contents                                                                                       | Real or synthetic                                                              |
 |---------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
@@ -95,7 +95,7 @@ calls the system can make, and both are opt-in and off by default (`mode=mock`).
 No real company names, real filings, or real regulatory records are used anywhere in
 this repository. This is stated in the dashboard, in every API response
 (`synthetic_evidence_notice`), and in the README/final documentation. **This is an
-academic prototype, not a production greenwashing detector** — treat every verdict it
+academic prototype, not a production greenwashing detector** - treat every verdict it
 produces as a demonstration of the method, not a real finding about a real company.
 
 ---
@@ -106,11 +106,11 @@ produces as a demonstration of the method, not a real finding about a real compa
 
 1. Open dashboard → check "Use Demo ESG Report" → "Analyze Report".
 2. Result (re-run just now, offline, mock provider): 10 claims extracted from the
-   sample PDF, 7 checkable, all 7 came back `CONTRADICT` (avg risk 72/100) —
+   sample PDF, 7 checkable, all 7 came back `CONTRADICT` (avg risk 72/100) -
    correct, because the fictional "GreenLeaf" report was authored with inflated
    figures against the same-named claims in the evidence corpus. This is the
    intended "obvious greenwashing" demo path.
-3. Open a claim's Evidence / Verification / Risk Score / Audit Trail tabs — confirmed
+3. Open a claim's Evidence / Verification / Risk Score / Audit Trail tabs - confirmed
    to render exactly the backend JSON, with the audit trail as a readable 10-step
    trace (not raw JSON) plus a raw-JSON expander for drill-down.
 
@@ -133,7 +133,7 @@ report's slant. Re-run just now against the curated 12-claim dataset (BM25-only)
 | CLM-010 | Suryodaya Solar Energy Ltd    | ALIGN                 | 0          | Low      |
 
 All three verdict types (ALIGN, CONTRADICT, INSUFFICIENT_EVIDENCE) are reachable and
-demonstrated — this is what `docs/DEMO_FLOW.md` walks a professor through. This is
+demonstrated - this is what `docs/DEMO_FLOW.md` walks a professor through. This is
 also asserted by an automated test
 (`test_edge_cases.py::test_dataset_demo_produces_all_three_verdict_types`).
 
@@ -183,17 +183,17 @@ Run it yourself: `python -m pytest -q` and `python scripts/validate_dataset.py`
 - **No automated benchmark against `data/test/hard_cases.json`.** The 10 hard cases
   are schema-validated (`scripts/validate_dataset.py` checks they parse correctly)
   but **nothing currently runs them through the full pipeline and checks the output
-  verdict against `expected_verdict`.** This is the single biggest validation gap —
+  verdict against `expected_verdict`.** This is the single biggest validation gap -
   see recommendation #1 below.
 - **No real regulatory/news data.** Retrieval only ever searches the 20 synthetic
   evidence records. An uploaded PDF from a company not in that synthetic set will
-  almost always return `INSUFFICIENT_EVIDENCE` — this is correct, expected behavior
+  almost always return `INSUFFICIENT_EVIDENCE` - this is correct, expected behavior
   for a prototype, not a bug, but it means the system cannot yet demonstrate value on
   an arbitrary real-world PDF.
 - **No multi-year / multi-filing year-on-year comparison** (the "same metric restated
   differently across 3 years of filings" check described in the original project plan
   docx). Only single-document, single-snapshot comparison is implemented.
-- **No CI pipeline.** Tests are not run automatically on push/PR — someone has to
+- **No CI pipeline.** Tests are not run automatically on push/PR - someone has to
   remember to run `pytest` locally before pushing.
 - **No persistence.** Each `/analyze` call is stateless; closing the browser loses
   the run. There is no run history or export.
@@ -202,7 +202,7 @@ Run it yourself: `python -m pytest -q` and `python scripts/validate_dataset.py`
 
 ---
 
-## 8. Recommendations — what would make this project stronger / more defensible
+## 8. Recommendations - what would make this project stronger / more defensible
 
 Ranked by effort-to-value for an academic submission:
 
@@ -210,14 +210,14 @@ Ranked by effort-to-value for an academic submission:
    runs `build_audit_records()` over `data/test/hard_cases.json` and reports
    precision/recall of `verification_result.verdict` against `expected_verdict`. This
    turns "we handled tricky cases" from a claim into a number a professor can check.
-   *(Highest value, lowest effort — this is the one gap most worth closing before
+   *(Highest value, lowest effort - this is the one gap most worth closing before
    presenting.)*
 2. **Add a citation-validator test** asserting that every `supporting_evidence_ids`/
    `contradicting_evidence_ids` in a `VerificationResult` is a subset of the IDs that
-   were actually retrieved for that claim — proves by test, not just by code
+   were actually retrieved for that claim - proves by test, not just by code
    inspection, that the system never "cites" evidence it didn't pull.
 3. **Add GitHub Actions CI** (`.github/workflows/tests.yml`) running
-   `pytest` + `validate_dataset.py` on every push — protects against silent
+   `pytest` + `validate_dataset.py` on every push - protects against silent
    regressions, especially important once more than one person is committing.
 4. **Pin dependency versions** in `requirements.txt` (currently all `>=`). An
    unrelated upstream release (e.g. a ChromaDB or FastAPI major bump) could break the
@@ -226,12 +226,12 @@ Ranked by effort-to-value for an academic submission:
    so a mis-click doesn't hang the demo machine.
 6. **Add a `Dockerfile` / `docker-compose.yml`** so the whole app (API + dashboard)
    starts with one command on any machine, independent of the presenter's local
-   Python setup — removes "works on my machine" risk on presentation day.
+   Python setup - removes "works on my machine" risk on presentation day.
 7. **Keep committing in small, logical commits** (as done for Step 6) rather than one
-   giant commit per step — makes it far easier for a professor or teammate to review
+   giant commit per step - makes it far easier for a professor or teammate to review
    what changed and why, and gives you a recovery point if something breaks.
 8. **Never upload a real, confidential company ESG report** to this prototype without
-   that company's consent — the pipeline sends page text to whichever LLM provider is
+   that company's consent - the pipeline sends page text to whichever LLM provider is
    configured (Groq/Ollama), and although mock mode is fully offline, real-provider
    mode is not.
 
@@ -242,7 +242,7 @@ Ranked by effort-to-value for an academic submission:
 Steps 1–6 are complete, integrated, and passing 154/154 automated tests plus 14
 explicit edge-case scenarios and 2 full end-to-end use-case walkthroughs (general
 user + corporate reviewer) confirmed live in this report. The system is an honest,
-clearly-labeled **triage prototype** built entirely on synthetic data — it does
+clearly-labeled **triage prototype** built entirely on synthetic data - it does
 exactly what it claims to do and does not overstate itself anywhere in the UI, API,
 or documentation. The most valuable next step, if more time is available, is
 recommendation #1 above: turning the hard-case dataset into an automated accuracy

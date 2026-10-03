@@ -1,9 +1,9 @@
-# Automated ESG Greenwashing Detection & Verification Agent — Final Project Documentation
+# Automated ESG Greenwashing Detection & Verification Agent - Final Project Documentation
 
 ## 1. Problem Statement
 
 Companies publish ESG (Environmental, Social, Governance) reports containing sustainability
-claims — emission reductions, renewable energy usage, worker safety records, and more. Some
+claims - emission reductions, renewable energy usage, worker safety records, and more. Some
 of these claims are accurate; others are vague, exaggerated, or contradicted by independent
 evidence ("greenwashing"). Manually cross-checking every claim in every report against
 regulatory filings, audits, and news is slow, expensive, and inconsistent between reviewers.
@@ -15,7 +15,7 @@ Verification Agent."**
 
 Build a decision-support system that takes a company's ESG report (PDF) and, for each
 falsifiable claim it contains, produces an explainable, evidence-based triage signal that
-helps a human reviewer decide where to focus scrutiny — without pretending to replace that
+helps a human reviewer decide where to focus scrutiny - without pretending to replace that
 reviewer's judgment.
 
 ## 3. Why Greenwashing Detection Matters
@@ -60,7 +60,7 @@ Company ESG PDF
       -> Streamlit Dashboard
 ```
 
-## 6. Step 1 — Dataset / Foundation
+## 6. Step 1 - Dataset / Foundation
 
 - Pydantic schemas (`app/utils/schemas.py`) define every data structure used by every later
   phase: `ClaimRecord`, `EvidenceRecord`, `CheckabilityResult`, `RetrievalResult`,
@@ -72,41 +72,41 @@ Company ESG PDF
 - `scripts/validate_dataset.py` enforces schema compliance, ID uniqueness, and referential
   integrity between claims and evidence.
 
-## 7. Step 2 — PDF Parsing & Claim Extraction
+## 7. Step 2 - PDF Parsing & Claim Extraction
 
 - `app/extraction/pdf_parser.py` uses `pdfplumber` to turn a PDF into page-aware text, keeping
   every page (even empty ones) so page numbers never drift.
 - `app/extraction/claim_extractor.py` sends each page's text to an LLM provider (Groq, Ollama,
   or a deterministic Mock) with a strict prompt (`prompts/claim_extraction_prompt.md`) that
   forbids inventing field values. Output is parsed as JSON and validated against
-  `ClaimRecord` — anything invalid is reported and skipped, never silently guessed.
+  `ClaimRecord` - anything invalid is reported and skipped, never silently guessed.
 - The Mock provider is deterministic and offline: it is used for the bundled sample PDF
   (`data/sample_pdfs/synthetic_esg_report.pdf`, a fictional "GreenLeaf Industries Ltd." report)
   and for automated tests, so the whole system is runnable with zero API keys.
 
-## 8. Step 3 — Checkability
+## 8. Step 3 - Checkability
 
 `app/evaluation/checkability.py` answers exactly one question per claim: *does this claim
 contain enough specific information (metric, value, unit, scope, reporting period, etc.) to be
-worth sending to evidence retrieval at all?* This is a **rule-based** engine, not an LLM call —
+worth sending to evidence retrieval at all?* This is a **rule-based** engine, not an LLM call -
 by the time a claim reaches this stage its fields are already structured and already `None`
 when genuinely absent, so checkability reduces to a structural completeness question that a
 deterministic rule set answers more reliably, cheaply, and reproducibly than an LLM would.
 Every decision traces to a named rule (`RuleCheckResult`) with a human-readable reason.
 
-## 9. Step 4 — Evidence Retrieval
+## 9. Step 4 - Evidence Retrieval
 
 - **Query Planner** (`app/retrieval/query_planner.py`): deterministically builds 2-4 targeted
   search queries per checkable claim from its structured fields.
-- **BM25 Retriever** (`app/retrieval/bm25_retriever.py`): fast, offline lexical search — good
+- **BM25 Retriever** (`app/retrieval/bm25_retriever.py`): fast, offline lexical search - good
   at exact matches on company names, years, scope labels, and units.
 - **ChromaDB Retriever** (`app/retrieval/chroma_retriever.py`): semantic search using the local
-  `all-MiniLM-L6-v2` sentence-transformers embedding model — good at paraphrased evidence.
+  `all-MiniLM-L6-v2` sentence-transformers embedding model - good at paraphrased evidence.
 - **Hybrid Retriever** (`app/retrieval/hybrid_retriever.py`): normalizes both scores to [0,1]
   and combines them as `0.6 * BM25 + 0.4 * semantic`, deduplicating by evidence ID and
   re-ranking. Every score (BM25, semantic, combined) is kept visible for auditability.
 
-## 10. Step 5 — Verification & Risk Scoring
+## 10. Step 5 - Verification & Risk Scoring
 
 - **Deterministic Numerical Checks** (`app/evaluation/numeric_checks.py`): all arithmetic
   (percentage-reduction comparisons, capacity checks, unit/scope validation) is plain Python,
@@ -120,21 +120,21 @@ Every decision traces to a named rule (`RuleCheckResult`) with a human-readable 
   evidence, baseline mismatch) with its own reason string, banded into Low / Moderate / High /
   Very High. This is a **triage indicator**, never described as a probability or legal verdict.
 
-## 11. Step 6 — Final Application
+## 11. Step 6 - Final Application
 
 Step 6 adds the application layer around the unchanged Steps 1–5 backend:
 
-- **`app/api/pipeline.py`** — the orchestration layer. `build_audit_records()` runs every
+- **`app/api/pipeline.py`** - the orchestration layer. `build_audit_records()` runs every
   existing stage (checkability -> retrieval -> verification -> risk scoring) over a list of
   claims and returns one `AuditRecord` per claim, including `NOT_CHECKABLE` claims (with only a
   checkability result, so the UI can explain why a claim was excluded). `analyze_pdf_file()`
   wires in PDF parsing and claim extraction ahead of that. `analyze_dataset()` runs the curated
   `data/claims/claims.json` dataset directly, which reliably demonstrates all three verdict
   types since its evidence corpus was authored to match it.
-- **`app/api/main.py`** — a thin FastAPI layer (`/health`, `/analyze`, `/demo/dataset`,
+- **`app/api/main.py`** - a thin FastAPI layer (`/health`, `/analyze`, `/demo/dataset`,
   `/claims/{claim_id}`) that validates input and shapes HTTP responses; it contains no
   pipeline logic of its own.
-- **`streamlit_app/app.py`** — a professional dashboard that calls the FastAPI backend over
+- **`streamlit_app/app.py`** - a professional dashboard that calls the FastAPI backend over
   HTTP and renders exactly what it returns: executive summary, claims table, per-claim detail
   (checkability / evidence / verification / numerical checks / risk score / full audit trail).
   No verdicts or scores are computed in the frontend.
@@ -175,7 +175,7 @@ BM25 (Best Matching 25) is a classic keyword-ranking function that scores how we
 matches a query based on term frequency, inverse document frequency, and document length
 normalization. It excels at exact-term matches (company names, "Scope 1", "FY2024",
 "tCO2e") which are common and important in ESG text, is fully deterministic, and requires no
-model download — making it the reliable offline default in this project.
+model download - making it the reliable offline default in this project.
 
 ## 15. ChromaDB Explanation
 
@@ -191,7 +191,7 @@ Both retrievers' scores are normalized to `[0, 1]` and combined as
 `combined_score = 0.6 * bm25_score + 0.4 * semantic_score` (weights documented and tunable in
 `hybrid_retriever.py`). Results are deduplicated by evidence ID (keeping the best combined
 score) and re-ranked. When semantic retrieval is disabled (the offline default), semantic
-scores are 0 and the combined score equals the BM25 score — the same formula, just with a zero
+scores are 0 and the combined score equals the BM25 score - the same formula, just with a zero
 semantic contribution.
 
 ## 17. Verification Methodology
@@ -199,7 +199,7 @@ semantic contribution.
 For each checkable claim, retrieved evidence is grouped by its expected relationship to the
 claim (supports / contradicts / partial / unrelated, informed by numeric checks and field
 comparisons such as company, period, scope, unit, and boundary matches). Higher source-reliability
-tiers are weighted more heavily — a single Tier 1 regulatory filing can outweigh several lower-tier
+tiers are weighted more heavily - a single Tier 1 regulatory filing can outweigh several lower-tier
 sources. The engine returns `ALIGN` when evidence supports the claim, `CONTRADICT` when
 higher-authority evidence conflicts with it, and `INSUFFICIENT_EVIDENCE` when there isn't enough
 reliable evidence either way. Every verdict carries a human-readable `reason` string generated
@@ -220,7 +220,7 @@ The Greenwashing Risk Score is a deterministic, additive 0–100 score. Each con
 (e.g. numerical inconsistency, scope mismatch, weak/low-tier evidence, unsupported baseline) has
 a documented maximum point contribution and a specific reason for why it applied to this claim.
 The total is clamped to `[0, 100]` and banded: 0–29 Low, 30–59 Moderate, 60–79 High, 80–100 Very
-High. It is explicitly **not** a probability and **not** a legal determination — see the
+High. It is explicitly **not** a probability and **not** a legal determination - see the
 disclaimer carried on every `RiskScoreResult`.
 
 ## 20. Audit Trail
@@ -229,7 +229,7 @@ Every claim's `AuditRecord` links the full chain of intermediate results: the or
 text, the checkability decision and its rule-by-rule breakdown, the search queries generated,
 every piece of evidence retrieved with its individual and combined scores, the verification
 verdict and its supporting/contradicting evidence, the numerical checks performed, and the final
-risk score with its factor breakdown. Nothing in this chain is invented by the frontend — the
+risk score with its factor breakdown. Nothing in this chain is invented by the frontend - the
 Streamlit "Audit Trail" tab renders the exact JSON the backend produced.
 
 ## 21. Testing Results
@@ -247,16 +247,16 @@ Run `python -m pytest -q` to reproduce.
 
 ## 22. Current Limitations
 
-- The evidence corpus is **synthetic** — authored for development/testing, not real regulatory
+- The evidence corpus is **synthetic** - authored for development/testing, not real regulatory
   or news data. This is clearly labeled throughout the UI and API responses.
 - Claim extraction quality depends on the chosen LLM provider; the offline Mock provider only
-  produces claims for the bundled sample PDF (by design — it must never fabricate matching
+  produces claims for the bundled sample PDF (by design - it must never fabricate matching
   content for an arbitrary uploaded document).
 - Verification and risk scoring are rule-based triage signals, not adjudications; every result
   is meant for human review before any conclusion is acted on.
 - Uploaded PDFs from companies outside the curated dataset will typically return
   `INSUFFICIENT_EVIDENCE` for most claims, since the synthetic evidence corpus only covers the
-  dataset's fictional companies — this is expected behavior for an academic prototype, not a bug.
+  dataset's fictional companies - this is expected behavior for an academic prototype, not a bug.
 
 ## 23. Future Scope
 
