@@ -4,7 +4,7 @@
 **Status as of:** 2026-09-27
 **Phase:** Steps 1–6 complete (dataset → extraction → checkability → retrieval →
 verification/risk scoring → FastAPI + Streamlit application)
-**Test suite:** 154/154 automated tests passing · dataset validation passing
+**Test suite:** 168/168 automated tests passing · dataset validation passing
 
 This file is the single source of truth for "what does this project actually do,
 what has been checked, and what is still open." It is written to be read on its
@@ -158,7 +158,7 @@ also asserted by an automated test
 
 ---
 
-## 6. Automated test coverage (154 tests)
+## 6. Automated test coverage (168 tests)
 
 | Test file                 | Tests | Covers                                                       |
 |---------------------------|-------|--------------------------------------------------------------|
@@ -169,9 +169,10 @@ also asserted by an automated test
 | `test_verification.py`    | 19    | ALIGN/CONTRADICT/INSUFFICIENT_EVIDENCE logic, tier weighting |
 | `test_risk_score.py`      | 32    | Factor scoring, banding, disclaimers                         |
 | `test_pipeline.py`        | 9     | Step 6 orchestration layer (`app/api/pipeline.py`)           |
-| `test_api.py`             | 8     | Step 6 FastAPI endpoints                                     |
-| `test_edge_cases.py`      | 14    | Everything in Section 5c above                               |
-| Total                     | 154   | All tests above combined                                     |
+| `test_api.py`             | 13    | FastAPI endpoints, including run persistence round-trips     |
+| `test_edge_cases.py`      | 15    | Everything in Section 5c above, plus upload filename echo    |
+| `test_storage.py`         | 8     | SQLite persistence layer (`app/storage.py`), isolated DB     |
+| Total                     | 168   | All tests above combined                                     |
 
 Run it yourself: `python -m pytest -q` and `python scripts/validate_dataset.py`
 (both re-confirmed passing while writing this report).
@@ -180,11 +181,43 @@ Run it yourself: `python -m pytest -q` and `python scripts/validate_dataset.py`
 
 ## 7. What is explicitly NOT validated / NOT built (be honest about this)
 
-- **No automated benchmark against `data/test/hard_cases.json`.** The 10 hard cases
-  are schema-validated (`scripts/validate_dataset.py` checks they parse correctly)
-  but **nothing currently runs them through the full pipeline and checks the output
-  verdict against `expected_verdict`.** This is the single biggest validation gap -
-  see recommendation #1 below.
+Closed since the last pass:
+
+- **Hard-case benchmark is now automated** (`scripts/evaluate_hard_cases.py`). Result:
+  **8/10 (80%) verdict accuracy** on the 10 deliberately adversarial cases, 10/10
+  checkability agreement. The two misses are real, documented findings, not bugs
+  hidden from this report: HC-006 (absolute vs. intensity) is predicted CONTRADICT
+  instead of the expected ALIGN, and HC-007 (boundary mismatch) is predicted ALIGN
+  instead of the expected CONTRADICT. Both point at the same root cause: the
+  deterministic verification rules do not yet separate "intensity claim" and
+  "boundary-scoped claim" semantics from plain result claims.
+- **Four-way retrieval comparison is now automated** (`scripts/evaluate_retrieval_methods.py`),
+  exactly as described in the original project plan: no-retrieval baseline vs.
+  keyword-only (BM25) vs. vector-only (semantic) vs. the full hybrid agent, over the
+  curated 12-claim dataset's checkable claims. Result: no-retrieval 2/10 (20%),
+  keyword-only 8/10 (80%), vector-only 8/10 (80%), hybrid 8/10 (80%). Retrieval
+  clearly matters (20% to 80%); BM25 alone already matches the hybrid result on this
+  small synthetic corpus, which is expected since the corpus's terminology overlaps
+  the claims almost exactly - a less controlled real corpus would likely separate
+  the three retrieval methods more.
+- **Persistence is now implemented** (`app/storage.py`, SQLite, matching the
+  `SQLITE_DB_PATH` placeholder that had existed unused in `.env.example` since Step
+  1). Every `/analyze` and `/demo/dataset` call now saves its full result and
+  returns a `run_id`; `GET /runs`, `GET /runs/{id}`, and `DELETE /runs/{id}` let a
+  past run be listed, reopened, or removed. Covered by 13 new tests
+  (`tests/test_storage.py`, plus persistence tests in `tests/test_api.py`), each
+  isolated to a throwaway database file so the test suite never touches the real one.
+- **Real LLM extraction is now live-tested**, not just theoretically wired up. A real
+  Groq API key was configured, and a genuine bug was caught and fixed in the process:
+  the FastAPI server never called `load_dotenv()`, so `.env` was silently ignored by
+  the running API even though the CLI script read it correctly. Fixed in
+  `app/api/main.py`. Re-verified afterward: a real `openai/gpt-oss-120b` call
+  (the available large model on this account; classic Llama-70B models were not
+  present) correctly extracted 9 structured claims from the sample PDF with zero
+  errors, end to end through `/analyze` with `mode=groq`.
+
+Still open:
+
 - **No real regulatory/news data.** Retrieval only ever searches the 20 synthetic
   evidence records. An uploaded PDF from a company not in that synthetic set will
   almost always return `INSUFFICIENT_EVIDENCE` - this is correct, expected behavior
@@ -195,10 +228,11 @@ Run it yourself: `python -m pytest -q` and `python scripts/validate_dataset.py`
   docx). Only single-document, single-snapshot comparison is implemented.
 - **No CI pipeline.** Tests are not run automatically on push/PR - someone has to
   remember to run `pytest` locally before pushing.
-- **No persistence.** Each `/analyze` call is stateless; closing the browser loses
-  the run. There is no run history or export.
 - **No auth, no rate limiting, no upload size cap.** Fine for a local academic demo;
-  not fine if this were ever exposed on the open internet.
+  not fine if this were ever exposed on the open internet. This now matters slightly
+  more than before since a real API key is configured in `.env` - that file is
+  gitignored and was never committed, but it is a live credential sitting on this
+  machine's disk.
 
 ---
 
@@ -206,12 +240,10 @@ Run it yourself: `python -m pytest -q` and `python scripts/validate_dataset.py`
 
 Ranked by effort-to-value for an academic submission:
 
-1. **Automate the hard-case benchmark.** Write `scripts/evaluate_hard_cases.py` that
-   runs `build_audit_records()` over `data/test/hard_cases.json` and reports
-   precision/recall of `verification_result.verdict` against `expected_verdict`. This
-   turns "we handled tricky cases" from a claim into a number a professor can check.
-   *(Highest value, lowest effort - this is the one gap most worth closing before
-   presenting.)*
+1. **Investigate the two hard-case misses (HC-006, HC-007)** before presenting. An 80%
+   score with two named, understood failure modes is far stronger in front of a
+   reviewer than silence on the topic - be ready to explain the absolute-vs-intensity
+   and boundary-mismatch gaps if asked.
 2. **Add a citation-validator test** asserting that every `supporting_evidence_ids`/
    `contradicting_evidence_ids` in a `VerificationResult` is a subset of the IDs that
    were actually retrieved for that claim - proves by test, not just by code
@@ -234,12 +266,15 @@ Ranked by effort-to-value for an academic submission:
    that company's consent - the pipeline sends page text to whichever LLM provider is
    configured (Groq/Ollama), and although mock mode is fully offline, real-provider
    mode is not.
+9. **Rotate the configured Groq API key before any public sharing of this machine or
+   repo.** It lives only in the local, gitignored `.env` file and was never
+   committed, but treat it as sensitive since it was shared in plaintext once.
 
 ---
 
 ## 9. Bottom line
 
-Steps 1–6 are complete, integrated, and passing 154/154 automated tests plus 14
+Steps 1–6 are complete, integrated, and passing 168/168 automated tests plus 15
 explicit edge-case scenarios and 2 full end-to-end use-case walkthroughs (general
 user + corporate reviewer) confirmed live in this report. The system is an honest,
 clearly-labeled **triage prototype** built entirely on synthetic data - it does

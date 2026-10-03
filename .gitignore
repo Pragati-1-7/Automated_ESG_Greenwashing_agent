@@ -29,6 +29,7 @@ storage/
 *.sqlite
 *.sqlite3
 chromadb/
+.chroma_db/
 data/chroma/
 
 # ---- Jupyter ----

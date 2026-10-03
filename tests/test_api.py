@@ -84,3 +84,50 @@ def test_get_claim_found():
 def test_get_claim_not_found():
     resp = client.get("/claims/CLM-NOPE-999")
     assert resp.status_code == 404
+
+
+def test_analyze_persists_a_run_and_it_is_retrievable():
+    resp = client.post("/analyze", data={"use_demo": "true"})
+    assert resp.status_code == 200
+    run_id = resp.json()["run_id"]
+    assert run_id
+
+    list_resp = client.get("/runs")
+    assert list_resp.status_code == 200
+    run_ids = [r["run_id"] for r in list_resp.json()["runs"]]
+    assert run_id in run_ids
+
+    get_resp = client.get(f"/runs/{run_id}")
+    assert get_resp.status_code == 200
+    assert get_resp.json()["source_document"] == "synthetic_esg_report.pdf"
+
+
+def test_demo_dataset_persists_a_run():
+    resp = client.get("/demo/dataset")
+    assert resp.status_code == 200
+    run_id = resp.json()["run_id"]
+
+    get_resp = client.get(f"/runs/{run_id}")
+    assert get_resp.status_code == 200
+    assert get_resp.json()["summary"]["total_claims"] == 12
+
+
+def test_get_run_not_found():
+    resp = client.get("/runs/does-not-exist")
+    assert resp.status_code == 404
+
+
+def test_delete_run_then_it_is_gone():
+    analyze_resp = client.post("/analyze", data={"use_demo": "true"})
+    run_id = analyze_resp.json()["run_id"]
+
+    delete_resp = client.delete(f"/runs/{run_id}")
+    assert delete_resp.status_code == 200
+
+    get_resp = client.get(f"/runs/{run_id}")
+    assert get_resp.status_code == 404
+
+
+def test_delete_run_not_found():
+    resp = client.delete("/runs/does-not-exist")
+    assert resp.status_code == 404

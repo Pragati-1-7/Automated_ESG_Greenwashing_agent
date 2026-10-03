@@ -14,9 +14,14 @@ GET  /demo/dataset               run the curated data/claims/claims.json
                                  INSUFFICIENT_EVIDENCE examples for demos)
 GET  /claims/{claim_id}          look up one claim's full audit record in the
                                  curated dataset
+GET  /runs                      list past analysis runs (SQLite-backed)
+GET  /runs/{run_id}             full stored result for one past run
+DELETE /runs/{run_id}           delete one stored run
 
 This module contains NO business logic of its own -- it only validates
-input, calls app.api.pipeline, and shapes HTTP responses/errors.
+input, calls app.api.pipeline, and shapes HTTP responses/errors. Persistence
+(app/storage.py) is a thin SQLite layer that stores completed results; it
+never recomputes or alters anything the pipeline already produced.
 """
 
 from __future__ import annotations
@@ -29,6 +34,10 @@ from typing import Optional
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
+
+from dotenv import load_dotenv
+
+load_dotenv(PROJECT_ROOT / ".env")
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -45,6 +54,7 @@ from app.api.pipeline import (
     SYNTHETIC_EVIDENCE_NOTICE,
     TRIAGE_DISCLAIMER,
 )
+from app import storage
 
 app = FastAPI(
     title="ESG Claim Verification & Greenwashing Risk Analyzer API",
@@ -123,6 +133,8 @@ async def analyze(
             # analyze_pdf_file only sees the server-side temp file path; restore
             # the real uploaded filename the user actually sees in the response.
             result["source_document"] = file.filename
+        run_id = storage.save_run(source_type="pdf", mode=mode, result=result)
+        result["run_id"] = run_id
         return result
     except PipelineError as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
@@ -140,9 +152,12 @@ def demo_dataset(top_k: int = 5, use_semantic: bool = False) -> dict:
     examples without depending on PDF extraction matching the evidence corpus.
     """
     try:
-        return analyze_dataset(top_k=top_k, use_semantic=use_semantic)
+        result = analyze_dataset(top_k=top_k, use_semantic=use_semantic)
     except PipelineError as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
+    run_id = storage.save_run(source_type="dataset", mode="n/a", result=result)
+    result["run_id"] = run_id
+    return result
 
 
 @app.get("/claims/{claim_id}")
@@ -167,3 +182,27 @@ def get_claim(claim_id: str) -> dict:
         "synthetic_evidence_notice": SYNTHETIC_EVIDENCE_NOTICE,
         "disclaimer": TRIAGE_DISCLAIMER,
     }
+
+
+@app.get("/runs")
+def list_runs(limit: int = 50) -> dict:
+    """List past analysis runs, newest first, summary fields only."""
+    return {"runs": storage.list_runs(limit=limit)}
+
+
+@app.get("/runs/{run_id}")
+def get_run(run_id: str) -> dict:
+    """Return the full stored result for one past run."""
+    result = storage.get_run(run_id)
+    if result is None:
+        raise HTTPException(status_code=404, detail=f"Run '{run_id}' not found.")
+    return result
+
+
+@app.delete("/runs/{run_id}")
+def delete_run(run_id: str) -> dict:
+    """Delete one stored run."""
+    deleted = storage.delete_run(run_id)
+    if not deleted:
+        raise HTTPException(status_code=404, detail=f"Run '{run_id}' not found.")
+    return {"status": "deleted", "run_id": run_id}

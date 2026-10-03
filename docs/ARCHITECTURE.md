@@ -119,6 +119,7 @@ stub, and what silently degrades.
 | `risk_score.py` | Explainable additive 0-100 score | **Real**, deterministic, hand-re-derivable from the factor table in its own docstring | N/A |
 | `pipeline.py` (Step 6) | Orchestrates all of the above | **Real** | Loud - raises `PipelineError` with a specific message on any stage failure |
 | `main.py` (Step 6) | FastAPI HTTP layer | **Real** | Loud - every failure maps to a specific HTTP status (400/404/422/500), never a silent 200 with fake data |
+| `storage.py` (Step 6) | SQLite persistence for completed runs | **Real** - plain stdlib `sqlite3`, no ORM | Loud - a missing run_id returns 404, never a silent empty success |
 
 **Bottom line on fakery:** there is no module in this system that fabricates a
 verdict, invents a number, or returns a fake "success" when something actually
@@ -243,11 +244,41 @@ is why this pass was done that way.
   human-readable reason - never a fabricated success.
 - **Step 4's BM25 path is fully fail-loud** (pure computation, no network).
 - **Step 4's semantic (ChromaDB) path has one silent-degrade spot** (§4a),
-  but it is off by default and has never been exercised in production use of
-  this app so far.
+  but it is off by default. It has since been exercised successfully (see §7
+  below) without hitting that failure path, which is expected since nothing
+  was actually broken - the spot is a risk for a future failure, not a
+  symptom of a current one.
 - **The Mock LLM provider is intentionally restrictive**, not intentionally
   deceptive: it only ever produces claims for the one file it was built for.
 
 If you want, the next step is applying the two narrow logging fixes in §4 -
 they're small, isolated, and don't touch any scoring/verdict logic, just make
 existing silent paths visible.
+
+---
+
+## 7. Updates since the first pass (live Groq test, two new benchmarks, persistence)
+
+- **Real LLM extraction, live-tested.** A real Groq API key was configured. In the
+  process, a genuine bug was found and fixed: the FastAPI server never called
+  `load_dotenv()`, so `.env` was silently ignored by the running API even though the
+  CLI script read it correctly (`app/api/main.py` now loads it at startup). The
+  classic Llama-70B models were not available on this account; `openai/gpt-oss-120b`
+  (120B, larger) was used instead and verified end to end: 9 claims correctly
+  extracted from the sample PDF with zero errors, through a real `/analyze` call
+  with `mode=groq`.
+- **`scripts/evaluate_hard_cases.py`** (new): runs all 10 entries in
+  `data/test/hard_cases.json` through the real pipeline and scores verdict accuracy
+  against `expected_verdict`. Result: 8/10 (80%), with the two misses (HC-006,
+  HC-007) documented rather than hidden - see
+  `docs/PROJECT_STATUS_AND_VALIDATION.md` §7 for the specifics.
+- **`scripts/evaluate_retrieval_methods.py`** (new): the four-way comparison named in
+  the original project plan (no retrieval / keyword-only / vector-only / hybrid),
+  run over the curated dataset's checkable claims. Result: no-retrieval 20%,
+  keyword-only 80%, vector-only 80%, hybrid 80% - retrieval clearly matters, and on
+  this small synthetic corpus BM25 alone already matches the hybrid result.
+- **`app/storage.py`** (new): SQLite persistence for completed runs, matching the
+  `SQLITE_DB_PATH` placeholder that had sat unused in `.env.example` since Step 1.
+  `/analyze` and `/demo/dataset` now return a `run_id`; `GET /runs`,
+  `GET /runs/{id}`, and `DELETE /runs/{id}` list, reopen, or remove a past run. 13
+  new tests, each isolated to a throwaway database file.
