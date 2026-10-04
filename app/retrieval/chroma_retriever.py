@@ -41,7 +41,7 @@ from typing import Optional
 from app.utils.schemas import EvidenceRecord, RetrievedEvidence
 
 _DEFAULT_EVIDENCE_PATH = (
-    Path(__file__).resolve().parent.parent.parent / "data" / "evidence" / "evidence.json"
+    Path(__file__).resolve().parent.parent.parent / "legacy" / "v1_data" / "evidence" / "evidence.json"
 )
 
 # Default ChromaDB persistence directory (inside the project, gitignored).

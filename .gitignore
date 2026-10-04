@@ -58,3 +58,11 @@ Thumbs.db
 .claude/
 .agents/
 ~$*
+
+# v2: the synthetic world DB is a deliverable (rebuild: python -m data_gen.build_world)
+!data/world/world.db
+web/node_modules/
+web/dist/
+report_gen/_build/
+
+Claude outputs/

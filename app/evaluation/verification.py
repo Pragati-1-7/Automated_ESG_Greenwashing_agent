@@ -89,7 +89,7 @@ def _load_corpus_relationships() -> dict[str, ExpectedRelationship]:
     """Load expected_relationship for all records in evidence.json at import time."""
     import json
     from pathlib import Path
-    path = Path(__file__).resolve().parent.parent.parent / "data" / "evidence" / "evidence.json"
+    path = Path(__file__).resolve().parent.parent.parent / "legacy" / "v1_data" / "evidence" / "evidence.json"
     if not path.exists():
         return {}
     try:

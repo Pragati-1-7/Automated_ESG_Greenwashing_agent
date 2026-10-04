@@ -2,7 +2,7 @@
 mock_data.py
 
 STEP 2 / Part 8: Deterministic canned extraction results for the bundled
-synthetic sample PDF (data/sample_pdfs/synthetic_esg_report.pdf).
+synthetic sample PDF (legacy/v1_data/sample_pdfs/synthetic_esg_report.pdf).
 
 WHY THIS FILE EXISTS
 ---------------------
@@ -20,7 +20,7 @@ normalizes whitespace when it looks up character offsets in the page text
 (see claim_extractor.py::_find_char_offsets). They are NOT copy-pasted raw
 pdfplumber output, which contains mid-sentence line-wrap newlines.
 
-If data/sample_pdfs/synthetic_esg_report.pdf ever changes, this file and
+If legacy/v1_data/sample_pdfs/synthetic_esg_report.pdf ever changes, this file and
 data/sample_pdfs/expected_claims.json must be updated to match.
 """
 
@@ -206,7 +206,7 @@ _PAGE_4_CLAIMS = {
 
 def get_canned_responses_for_sample_pdf() -> dict[int, str]:
     """Returns the page_number -> JSON-string mapping for MockLLMProvider,
-    matching data/sample_pdfs/synthetic_esg_report.pdf exactly."""
+    matching legacy/v1_data/sample_pdfs/synthetic_esg_report.pdf exactly."""
     return {
         1: json.dumps(_PAGE_1_CLAIMS),
         2: json.dumps(_PAGE_2_CLAIMS),

@@ -47,7 +47,7 @@ from app.utils.schemas import EvidenceRecord, RetrievedEvidence
 
 # Default path to the evidence corpus relative to the project root.
 _DEFAULT_EVIDENCE_PATH = (
-    Path(__file__).resolve().parent.parent.parent / "data" / "evidence" / "evidence.json"
+    Path(__file__).resolve().parent.parent.parent / "legacy" / "v1_data" / "evidence" / "evidence.json"
 )
 
 
@@ -72,7 +72,7 @@ class BM25Retriever:
     """BM25-based evidence retriever backed by the local evidence.json corpus.
 
     Usage:
-        retriever = BM25Retriever()        # loads data/evidence/evidence.json
+        retriever = BM25Retriever()        # loads legacy/v1_data/evidence/evidence.json
         results = retriever.retrieve("GreenLeaf Scope 1 emissions FY2024", top_k=5)
     """
 
@@ -84,7 +84,7 @@ class BM25Retriever:
         """Initialise the retriever.
 
         Args:
-            evidence_path: Path to evidence.json. Defaults to data/evidence/evidence.json.
+            evidence_path: Path to evidence.json. Defaults to legacy/v1_data/evidence/evidence.json.
             records: Pre-loaded list of EvidenceRecord objects. If supplied,
                      evidence_path is ignored. Useful for testing.
         """

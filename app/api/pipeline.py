@@ -33,9 +33,9 @@ from app.evaluation.verification import verify_claim
 from app.scoring.risk_score import calculate_risk_score
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-SAMPLE_PDF_PATH = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+SAMPLE_PDF_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
 SAMPLE_PDF_FILENAME = SAMPLE_PDF_PATH.name
-CLAIMS_DATASET_PATH = PROJECT_ROOT / "data" / "claims" / "claims.json"
+CLAIMS_DATASET_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "claims" / "claims.json"
 
 DEMO_COMPANY_NAME = "GreenLeaf Industries Ltd. (synthetic demo company)"
 
@@ -244,7 +244,7 @@ def _empty_result(
 
 
 # ---------------------------------------------------------------------------
-# Curated-dataset entry point (data/claims/claims.json) — used by the
+# Curated-dataset entry point (legacy/v1_data/claims/claims.json) — used by the
 # "full dataset" demo, which reliably shows ALIGN / CONTRADICT /
 # INSUFFICIENT_EVIDENCE examples because its evidence corpus was authored
 # to match it.
@@ -272,7 +272,7 @@ def analyze_dataset(
     records = build_audit_records(all_claims, top_k=top_k, use_semantic=use_semantic)
     return {
         "status": "ok",
-        "source_document": "data/claims/claims.json (curated synthetic dataset)",
+        "source_document": "legacy/v1_data/claims/claims.json (curated synthetic dataset)",
         "company": "Multiple synthetic companies",
         "page_count": None,
         "extraction_errors": [],

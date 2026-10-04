@@ -40,7 +40,7 @@ from app.api.pipeline import (
 
 client = TestClient(app)
 
-EDGE_CASE_DIR = PROJECT_ROOT / "data" / "sample_pdfs" / "edge_cases"
+EDGE_CASE_DIR = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "edge_cases"
 
 
 def _edge_case(name: str) -> Path:

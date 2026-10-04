@@ -2,7 +2,7 @@
 """
 evaluate_hard_cases.py
 
-Benchmark evaluation of the full pipeline against data/test/hard_cases.json.
+Benchmark evaluation of the full pipeline against legacy/v1_data/test/hard_cases.json.
 
 WHY THIS EXISTS
 ---------------
@@ -41,7 +41,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from app.utils.schemas import ClaimRecord, ClaimType, HardCaseRecord, HardCaseType, Verdict
 from app.api.pipeline import build_audit_records
 
-HARD_CASES_PATH = PROJECT_ROOT / "data" / "test" / "hard_cases.json"
+HARD_CASES_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "test" / "hard_cases.json"
 
 # UNSUPPORTED_TARGET cases describe a future commitment; TRUE_BUT_VAGUE cases
 # are vague values statements. Every other hard-case type describes a
@@ -121,7 +121,7 @@ def run_benchmark(top_k: int = 5, use_semantic: bool = False) -> None:
     accuracy = (correct / total * 100) if total else 0.0
 
     print("=" * 100)
-    print("  HARD-CASE BENCHMARK (data/test/hard_cases.json)")
+    print("  HARD-CASE BENCHMARK (legacy/v1_data/test/hard_cases.json)")
     print("=" * 100)
     header = f"  {'Case':<8} {'Type':<22} {'Expected verdict':<24} {'Predicted verdict':<24} {'Match'}"
     print(header)

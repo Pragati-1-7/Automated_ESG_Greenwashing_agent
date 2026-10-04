@@ -13,7 +13,7 @@ HOW TO RUN
 ----------
     python scripts/generate_edge_case_pdfs.py
 
-Writes into data/sample_pdfs/edge_cases/. Also committed to the repo so
+Writes into legacy/v1_data/sample_pdfs/edge_cases/. Also committed to the repo so
 tests don't need to regenerate them, but kept reproducible here.
 """
 
@@ -24,7 +24,7 @@ from pathlib import Path
 from fpdf import FPDF
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-OUT_DIR = PROJECT_ROOT / "data" / "sample_pdfs" / "edge_cases"
+OUT_DIR = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "edge_cases"
 
 
 def _write_text_pdf(filename: str, paragraphs: list[str]) -> Path:
@@ -89,7 +89,7 @@ def generate_renamed_sample_pdf() -> Path:
     filename -- it must never guess that a differently-named file is the
     sample report. This is intentional, documented behavior (see
     app/api/pipeline.py: analyze_pdf_file), not a bug."""
-    sample = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+    sample = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
     out_path = OUT_DIR / "renamed_sample_report.pdf"
     out_path.write_bytes(sample.read_bytes())
     return out_path

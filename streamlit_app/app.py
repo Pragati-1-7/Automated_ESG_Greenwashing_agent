@@ -504,7 +504,7 @@ def page_upload_and_analyze() -> None:
 def page_dataset_demo() -> None:
     st.title("Full Dataset Demo")
     st.caption(
-        "Runs the curated synthetic dataset (data/claims/claims.json) so ALIGN, "
+        "Runs the curated synthetic dataset (legacy/v1_data/claims/claims.json) so ALIGN, "
         "CONTRADICT, and INSUFFICIENT_EVIDENCE examples are all reliably shown, "
         "independent of PDF extraction."
     )

@@ -7,7 +7,7 @@ the extraction pipeline's tests and evaluation script.
 WHY A GENERATED PDF INSTEAD OF A REAL COMPANY REPORT
 -------------------------------------------------------
 We need a PDF with KNOWN, exact claim text so we can evaluate extraction
-quality against a ground-truth answer key (see data/sample_pdfs/expected_claims.json).
+quality against a ground-truth answer key (see legacy/v1_data/sample_pdfs/expected_claims.json).
 Using a real company's report would mean we don't actually know the "right"
 answer, and could also raise attribution/usage concerns. So this script
 builds a clearly-labelled FICTIONAL company report instead: "GreenLeaf
@@ -17,7 +17,7 @@ HOW TO RUN
 ----------
     python scripts/generate_sample_pdf.py
 
-This overwrites data/sample_pdfs/synthetic_esg_report.pdf. The generated
+This overwrites legacy/v1_data/sample_pdfs/synthetic_esg_report.pdf. The generated
 PDF is also committed to the repo so the test suite does not require
 regenerating it, but this script keeps it reproducible if it ever needs
 to change.
@@ -30,13 +30,13 @@ from pathlib import Path
 from fpdf import FPDF
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-OUTPUT_PATH = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+OUTPUT_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
 
 # Each page's paragraphs, in reading order. Blank strings become spacing.
 # NOTE: these sentences are duplicated in app/extraction/mock_data.py so the
 # mock extraction provider can return the exact expected original_text for
 # each claim -- if you change wording here, update mock_data.py and
-# data/sample_pdfs/expected_claims.json to match.
+# legacy/v1_data/sample_pdfs/expected_claims.json to match.
 PAGES: list[list[str]] = [
     # Page 1 - Cover / Leadership message
     [

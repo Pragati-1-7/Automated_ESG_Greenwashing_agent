@@ -6,7 +6,7 @@ Pydantic data models for the ESG Greenwashing Detection & Verification Agent.
 WHY THIS FILE EXISTS (Step 1):
 We need a single, shared, strongly-typed definition of what a "claim" and
 a piece of "evidence" look like, so that:
-  1. Our dataset files (data/claims/claims.json, data/evidence/evidence.json)
+  1. Our dataset files (legacy/v1_data/claims/claims.json, legacy/v1_data/evidence/evidence.json)
      can be validated automatically (see scripts/validate_dataset.py).
   2. Every later phase (extraction, retrieval, scoring, API) imports these
      SAME models instead of re-defining fields inconsistently.

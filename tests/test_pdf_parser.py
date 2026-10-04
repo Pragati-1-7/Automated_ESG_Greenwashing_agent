@@ -24,7 +24,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.extraction.pdf_parser import PDFParsingError, PageText, parse_pdf  # noqa: E402
 
-SAMPLE_PDF = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+SAMPLE_PDF = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
 
 
 def _make_pdf(tmp_path: Path, pages_text: list[str], filename: str = "test.pdf") -> Path:

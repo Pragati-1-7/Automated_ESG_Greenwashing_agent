@@ -5,7 +5,7 @@ run_verification.py
 STEP 4 + 5 CLI demonstration.
 
 Runs the complete backend pipeline:
-  1. Load claims from data/claims/claims.json
+  1. Load claims from legacy/v1_data/claims/claims.json
   2. Filter CHECKABLE claims (Step 3 rule engine)
   3. Generate search queries for each CHECKABLE claim
   4. Retrieve evidence using BM25 (offline, deterministic)
@@ -138,7 +138,7 @@ def print_audit_record(record: AuditRecord, verbose: bool = True) -> None:
 # ---------------------------------------------------------------------------
 
 def load_claims() -> list[ClaimRecord]:
-    path = PROJECT_ROOT / "data" / "claims" / "claims.json"
+    path = PROJECT_ROOT / "legacy" / "v1_data" / "claims" / "claims.json"
     raw = json.loads(path.read_text(encoding="utf-8"))
     return [ClaimRecord(**c) for c in raw["claims"]]
 

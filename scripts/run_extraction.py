@@ -34,7 +34,7 @@ from app.extraction.llm_providers import LLMConfigurationError, MockLLMProvider,
 from app.extraction.mock_data import get_canned_responses_for_sample_pdf  # noqa: E402
 from app.extraction.pdf_parser import PDFParsingError, parse_pdf  # noqa: E402
 
-DEFAULT_PDF = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+DEFAULT_PDF = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
 
 
 def main() -> int:

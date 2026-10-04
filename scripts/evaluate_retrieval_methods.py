@@ -86,7 +86,7 @@ def run_comparison() -> None:
             all_results[name] = evaluate_with_retriever(checkable, retriever)
 
     print("=" * 100)
-    print("  FOUR-WAY RETRIEVAL COMPARISON (data/claims/claims.json, checkable claims only)")
+    print("  FOUR-WAY RETRIEVAL COMPARISON (legacy/v1_data/claims/claims.json, checkable claims only)")
     print("=" * 100)
     col_width = 24
     header = f"  {'Claim':<10} {'Expected':<{col_width}}"

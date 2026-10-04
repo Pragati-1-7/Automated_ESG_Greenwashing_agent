@@ -1,0 +1,19 @@
+{
+  "fitted_at": "2026-10-03T23:31:31+00:00",
+  "method": "logistic regression (L2, C=1)",
+  "train_n": 140,
+  "test_n": 60,
+  "auc_train": 0.989,
+  "auc_test": 1.0,
+  "target": "label == CONTRADICT or gw_type == vague_claim",
+  "weights": {
+    "bias": -2.002895374702455,
+    "p_contradict": 1.858946458306112,
+    "p_insufficient": -1.1127448050190094,
+    "severity": 2.0522926042891636,
+    "materiality": -1.4275993420851225,
+    "vagueness": 1.6825072568785384,
+    "p_indeterminate": 2.347152417828684,
+    "high_tier_contradiction": 1.1591534387228675
+  }
+}

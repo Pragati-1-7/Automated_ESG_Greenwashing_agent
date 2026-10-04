@@ -55,8 +55,8 @@ from app.extraction.claim_extractor import extract_claims_from_pages  # noqa: E4
 from app.extraction.pdf_parser import parse_pdf  # noqa: E402
 from app.utils.schemas import ClaimRecord  # noqa: E402
 
-SAMPLE_PDF = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
-EXPECTED_CLAIMS_PATH = PROJECT_ROOT / "data" / "sample_pdfs" / "expected_claims.json"
+SAMPLE_PDF = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+EXPECTED_CLAIMS_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "expected_claims.json"
 
 FIELDS_TO_CHECK = ["metric", "value", "unit", "scope", "reporting_period", "baseline_year"]
 

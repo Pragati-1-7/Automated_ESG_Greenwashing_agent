@@ -9,7 +9,7 @@ Endpoints
 GET  /health                    liveness/status check
 POST /analyze                   upload a PDF (or use_demo=true) and run the
                                  full pipeline, returning claims + audit trail
-GET  /demo/dataset               run the curated data/claims/claims.json
+GET  /demo/dataset               run the curated legacy/v1_data/claims/claims.json
                                  dataset (guaranteed ALIGN/CONTRADICT/
                                  INSUFFICIENT_EVIDENCE examples for demos)
 GET  /claims/{claim_id}          look up one claim's full audit record in the
@@ -55,6 +55,7 @@ from app.api.pipeline import (
     TRIAGE_DISCLAIMER,
 )
 from app import storage
+from app.api.v2 import router as v2_router
 
 app = FastAPI(
     title="ESG Claim Verification & Greenwashing Risk Analyzer API",
@@ -74,11 +75,22 @@ app.add_middleware(
 )
 
 
+app.include_router(v2_router)
+
+
 @app.get("/health")
-def health() -> dict:
+async def health() -> dict:
+    from app.decision.jev import engine
+    from app.llm.providers import get_llm
+    from app.tools import sources as _sources
+
+    jev = engine()
     return {
         "status": "ok",
         "service": "esg-greenwashing-agent-api",
+        "decision_engine": f"jev ({jev.mode})" if jev.mode != "off" else "offline",
+        "llm": get_llm().name,
+        "sources": "up" if await _sources.health() else "down",
         "disclaimer": TRIAGE_DISCLAIMER,
     }
 
@@ -147,7 +159,7 @@ async def analyze(
 
 @app.get("/demo/dataset")
 def demo_dataset(top_k: int = 5, use_semantic: bool = False) -> dict:
-    """Run the curated synthetic dataset (data/claims/claims.json) so a
+    """Run the curated synthetic dataset (legacy/v1_data/claims/claims.json) so a
     professor can reliably see ALIGN, CONTRADICT, and INSUFFICIENT_EVIDENCE
     examples without depending on PDF extraction matching the evidence corpus.
     """

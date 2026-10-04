@@ -29,7 +29,7 @@ from app.extraction.llm_providers import BaseLLMProvider, MockLLMProvider  # noq
 from app.extraction.mock_data import get_canned_responses_for_sample_pdf  # noqa: E402
 from app.extraction.pdf_parser import PageText, parse_pdf  # noqa: E402
 
-SAMPLE_PDF = PROJECT_ROOT / "data" / "sample_pdfs" / "synthetic_esg_report.pdf"
+SAMPLE_PDF = PROJECT_ROOT / "legacy" / "v1_data" / "sample_pdfs" / "synthetic_esg_report.pdf"
 
 
 class _FixedResponseProvider(BaseLLMProvider):

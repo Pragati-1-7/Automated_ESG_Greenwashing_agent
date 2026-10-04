@@ -1,37 +1,42 @@
-# =========================================================
-# requirements.txt
-# Automated ESG Greenwashing Detection & Verification Agent
-# =========================================================
-#
-# STEP 1 DEPENDENCIES
-# -------------------------------------------------
-pydantic>=2.6,<3.0        # Structured data models for claims, evidence, and hard cases
-python-dotenv>=1.0        # Loads environment variables from a .env file
+# ---- core ----
+pydantic>=2.6,<3.0
+python-dotenv>=1.0
+requests>=2.31
+httpx>=0.27
 
-# STEP 2 DEPENDENCIES (PDF parsing + claim extraction only)
-# -------------------------------------------------
-pdfplumber>=0.11           # PDF text extraction, page-aware (app/extraction/pdf_parser.py)
-requests>=2.31             # HTTP calls to Groq / local Ollama server (app/extraction/llm_providers.py)
-fpdf2>=2.7                 # Generates the reproducible synthetic sample ESG PDF (scripts/generate_sample_pdf.py)
-pytest>=8.0                # Test runner for tests/ (dev dependency)
+# ---- ingest ----
+pdfplumber>=0.11          # v1 parser (kept for legacy routes)
+pymupdf>=1.24             # v2 layout-aware parser
 
-# We deliberately do NOT add the official groq/ollama SDK packages: both
-# providers are called with plain `requests` against their HTTP APIs, which
-# keeps the dependency footprint small and avoids SDK version churn.
+# ---- orchestration + decision engine ----
+langgraph>=1.0
+langchain-core>=1.0
+langchain-groq>=1.0       # optional generative slot (LLM_PROVIDER=groq)
+typesafe-sdk>=0.7         # TypeSafe Jev SDK (the adapter calls the REST API directly with httpx)
 
+# ---- retrieval / data ----
+rank-bm25>=0.2.2
+scikit-learn>=1.4         # risk-weight fitting (eval/fit_risk.py)
+numpy>=1.26
 
-# =========================================================
-# STEP 4 / 5 DEPENDENCIES (evidence retrieval + verification)
-# =========================================================
-rank-bm25>=0.2.2           # Keyword-based (BM25) retrieval (app/retrieval/bm25_retriever.py)
-chromadb>=0.5              # Vector database for semantic evidence retrieval (app/retrieval/chroma_retriever.py)
-sentence-transformers>=2.7 # Lightweight local embedding model (all-MiniLM-L6-v2, ~22 MB)
+# ---- API ----
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+sse-starlette>=2.0
+mcp>=2.0                  # MCP server for mock_sources (optional)
 
-# =========================================================
-# STEP 6 DEPENDENCIES (FastAPI backend + Streamlit dashboard)
-# =========================================================
-fastapi>=0.110             # REST API layer (app/api/main.py)
-uvicorn>=0.29              # ASGI server to run the FastAPI app
-python-multipart>=0.0.9    # Required by FastAPI for file-upload (PDF) form parsing
-streamlit>=1.32            # Dashboard UI (streamlit_app/app.py)
-requests>=2.31             # Streamlit -> FastAPI HTTP client (already listed above for LLM calls)
+# ---- report generation (only to rebuild demo PDFs) ----
+matplotlib>=3.8
+playwright>=1.45
+fpdf2>=2.7
+
+# ---- legacy v1 UI ----
+streamlit>=1.32
+
+# ---- tests ----
+pytest>=8.0
+
+# optional, v1 semantic retrieval:
+# chromadb>=0.5
+# sentence-transformers>=2.7

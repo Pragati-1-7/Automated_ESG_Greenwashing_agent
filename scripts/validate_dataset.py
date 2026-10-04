@@ -2,9 +2,9 @@
 validate_dataset.py
 
 Validates the Step 1 dataset foundation:
-  - data/claims/claims.json
-  - data/evidence/evidence.json
-  - data/test/hard_cases.json
+  - legacy/v1_data/claims/claims.json
+  - legacy/v1_data/evidence/evidence.json
+  - legacy/v1_data/test/hard_cases.json
 
 WHAT IT CHECKS
 --------------
@@ -44,9 +44,9 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.utils.schemas import ClaimRecord, EvidenceRecord, HardCaseRecord  # noqa: E402
 
-CLAIMS_PATH = PROJECT_ROOT / "data" / "claims" / "claims.json"
-EVIDENCE_PATH = PROJECT_ROOT / "data" / "evidence" / "evidence.json"
-HARD_CASES_PATH = PROJECT_ROOT / "data" / "test" / "hard_cases.json"
+CLAIMS_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "claims" / "claims.json"
+EVIDENCE_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "evidence" / "evidence.json"
+HARD_CASES_PATH = PROJECT_ROOT / "legacy" / "v1_data" / "test" / "hard_cases.json"
 
 
 class ValidationReport:
