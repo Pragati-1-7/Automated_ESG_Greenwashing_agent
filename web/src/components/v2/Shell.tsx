@@ -8,7 +8,6 @@ export const NAV: { path: string; label: string }[] = [
   { path: "/verify", label: "Verify a claim" },
   { path: "/sources", label: "Data sources" },
   { path: "/benchmark", label: "Benchmark" },
-  { path: "/legacy", label: "Legacy v1" },
 ];
 
 function HealthIndicator({ base }: { base: string }) {

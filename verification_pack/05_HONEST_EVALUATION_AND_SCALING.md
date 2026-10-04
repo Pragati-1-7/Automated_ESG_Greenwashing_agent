@@ -38,7 +38,7 @@ Short version: the pipeline is sound, and it works on data it has never seen **f
     - with nothing decisive the system abstains, and the citation validator checks every cited id
 
     Arithmetic is done in code.
-5. **"Is it reproducible?"** Yes. Every engine answer is recorded; replay mode reruns the 253 tests offline.
+5. **"Is it reproducible?"** Yes. Every engine answer is recorded; replay mode reruns all 85 tests offline.
 6. **"What doesn't it read?"** Charts, images and table rows (skipped on purpose). Claims outside the 20-metric catalogue end up INSUFFICIENT.
 7. **"What does the risk score mean?"** A logistic model over engine outputs, fitted on 140 cases. It treats vague cheap talk as risky, which is why the honest company still scores 34 (Moderate).
 

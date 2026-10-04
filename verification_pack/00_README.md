@@ -28,7 +28,7 @@ pip install -r requirements.txt
 # put TYPESAFE_API_KEY=... in .env   (or JEV_MODE=replay to run the demo reports offline)
 .\scripts\run_backend.ps1      # http://127.0.0.1:8000/docs
 .\scripts\run_frontend.ps1     # http://localhost:5173
-python -m pytest -q            # 253 tests, offline
+python -m pytest -q            # 85 v2 tests, offline
 python -m eval.run_robustness  # held-out + stress tests (needs the key)
-.\scripts\push_v2.ps1          # 3 commits under your name, pushes branch v2-agentic
+
 ```

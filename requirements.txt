@@ -5,7 +5,7 @@ requests>=2.31
 httpx>=0.27
 
 # ---- ingest ----
-pdfplumber>=0.11          # v1 parser (kept for legacy routes)
+pdfplumber>=0.11          # used by report_gen/verify_reports.py
 pymupdf>=1.24             # v2 layout-aware parser
 
 # ---- orchestration + decision engine ----
@@ -31,12 +31,6 @@ matplotlib>=3.8
 playwright>=1.45
 fpdf2>=2.7
 
-# ---- legacy v1 UI ----
-streamlit>=1.32
 
 # ---- tests ----
 pytest>=8.0
-
-# optional, v1 semantic retrieval:
-# chromadb>=0.5
-# sentence-transformers>=2.7

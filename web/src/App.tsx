@@ -6,7 +6,6 @@ import { AnalysesList } from "./components/v2/AnalysesList";
 import { SourcesPage } from "./components/v2/SourcesPage";
 import { BenchmarkPage } from "./components/v2/BenchmarkPage";
 import { VerifyPage } from "./components/v2/VerifyPage";
-import { LegacyPage } from "./components/v2/LegacyPage";
 import { BackendContext, loadBackendUrl } from "./lib/v2api";
 import { useRoute } from "./lib/route";
 import "./App.css";
@@ -23,7 +22,6 @@ export default function App() {
   else if (route === "/sources") page = <SourcesPage />;
   else if (route === "/benchmark") page = <BenchmarkPage />;
   else if (route === "/verify") page = <VerifyPage />;
-  else if (route === "/legacy") page = <LegacyPage />;
   else page = <AnalyzePage />;
 
   return (

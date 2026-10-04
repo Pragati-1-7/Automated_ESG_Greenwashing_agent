@@ -66,3 +66,6 @@ web/dist/
 report_gen/_build/
 
 Claude outputs/
+
+.env
+Claude outputs/

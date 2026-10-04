@@ -128,7 +128,7 @@ async def part_b() -> dict:
 
 async def part_c() -> list[dict]:
     out = []
-    for f in sorted((ROOT / "legacy/v1_data/sample_pdfs/edge_cases").glob("*.pdf")):
+    for f in sorted((ROOT / "scrap/legacy/v1_data/sample_pdfs/edge_cases").glob("*.pdf")):
         a, _ = await run_analysis(f, new_analysis(f.name), EventSink())
         out.append({"file": f.name, "status": a.status, "error": a.error,
                     "claims": a.summary.total_claims if a.summary else 0,

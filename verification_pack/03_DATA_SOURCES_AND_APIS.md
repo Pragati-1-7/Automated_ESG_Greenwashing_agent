@@ -62,7 +62,7 @@ There are 9,745 rows in total (`db_export/row_counts.json`). The whole world is 
 **TypeSafe Jev** (`POST https://api.typesafe.ai/v1/systemone`, model `jev-1.13.0`) is the decision engine.
 
 - Every answer is written to `data/cassettes/jev/jev_cassette.jsonl`, keyed by a hash of the exact question.
-- `JEV_MODE=replay` reruns everything offline from that file. This is how the 253 tests run without a key.
+- `JEV_MODE=replay` reruns everything offline from that file. This is how the 85 tests run without a key.
 - Proof that it is live: `proof/` holds the robustness run, where part D asks the API the same questions 3 times without the cassette.
 - Cost: one 28-page report cold took 450 calls, about 377K input tokens, roughly $0.02, in 33 s (`benchmark/robustness_latest.json`, part E).
 

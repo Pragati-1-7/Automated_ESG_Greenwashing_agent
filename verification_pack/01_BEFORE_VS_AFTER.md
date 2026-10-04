@@ -23,14 +23,15 @@ v1 = the repo as it was on 3 Oct 2026. v2 = what was built on the night of 3-4 O
 | Evaluation | 8/10 hard cases | 196/200 benchmark, 46/46 claims in the demo PDFs, ablations |
 | API | `/analyze`, `/demo/dataset`, `/claims`, `/runs` | + `/v2/analyses` (async jobs), SSE live event stream, `/v2/verify-claim`, `/v2/sources/*`, `/v2/benchmark/latest`, report endpoint |
 | UI | React results table (+ Streamlit, simple-ui) | React v2: live agent trace, claim drill-down with evidence and relevance, verify-a-claim, data explorer, benchmark page |
-| Tests | 168 | 253 (offline; Jev answers recorded once and replayed) |
+| Tests | 168 (v1, now in scrap/) | 85 v2 tests (offline; Jev answers recorded once and replayed) |
 | Interop | none | `mock_sources` also runs as an MCP server |
 
 ## File by file
 
 **Moved (proof that v2 does not need them)**
 
-- `data/claims/`, `data/evidence/`, `data/test/`, `data/sample_pdfs/` moved to `legacy/v1_data/`. v1 code paths were updated to the new location so v1 still runs. See `proof/v2_tests_with_old_json_moved.txt`.
+- `data/claims/`, `data/evidence/`, `data/test/`, `data/sample_pdfs/` moved to `legacy/v1_data/` (now `scrap/legacy/v1_data/`). v2 never reads them. See `proof/v2_tests_with_old_json_moved.txt`.
+- All v1 code, Streamlit, simple-ui, v1 scripts/tests/docs were later moved to `scrap/` (see `scrap/README.md`).
 - `README.md` moved to `docs/README_v1.md` (a new README replaces it).
 - `docs/TECHNICAL_SUMMARY.docx` moved to `docs/TECHNICAL_SUMMARY_v1.docx` (new .md + .docx replace it).
 
@@ -87,4 +88,4 @@ v1 = the repo as it was on 3 Oct 2026. v2 = what was built on the night of 3-4 O
 - `docs/PS_coverage_review.pdf`
 - `verification_pack/`
 
-**New: scripts:** `scripts/run_backend.ps1`, `run_frontend.ps1`, `run_mock_sources.ps1`, `push_v2.ps1`.
+**New: scripts:** `scripts/run_backend.ps1`, `run_frontend.ps1`, `run_mock_sources.ps1`, `cleanup_to_scrap.py`.
