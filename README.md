@@ -1,104 +1,303 @@
-# Automated ESG Greenwashing Detection & Verification Agent
+# ESG Greenwashing Agent
+> agentic system that reads ESG reports and checks every claim against real-world evidence
 
-Reads a company sustainability report (PDF), pulls out every ESG claim, checks each one against external sources fetched at runtime and returns **ALIGN / CONTRADICT / INSUFFICIENT_EVIDENCE** (or NOT_CHECKABLE for vague talk and future targets), plus a **0-100 Greenwashing Risk Score** and a full audit trail.
+companies publish 30-page sustainability reports full of claims like "40% less emissions" or "zero deforestation". nobody can check all of them by hand. this system does: it reads the PDF, pulls out every claim, goes and fetches evidence from filings, regulator records, satellite alerts and news, and decides **ALIGN / CONTRADICT / INSUFFICIENT_EVIDENCE** for each one. you get a **0-100 Greenwashing Risk Score** plus a full audit trail.
 
-EY problem statement. All companies and data are synthetic. It's a triage tool for a human reviewer, not a legal finding.
+not a chatbot reading a PDF. claims get broken into atomic checks, evidence comes from tools, maths runs in a calculator, and every decision is a typed question with a probability behind it.
 
-## Architecture
+built for the EY problem statement *Automated ESG Greenwashing Detection & Verification Agent*. all companies and data are synthetic. it's a triage tool for a human analyst, not a legal finding.
 
-```mermaid
-flowchart LR
-    UI["React UI<br/>upload, live trace, report"] -- "REST + SSE" --> API["FastAPI<br/>app/api"]
-    API --> G["LangGraph pipeline<br/>app/graph"]
-    G -- "typed questions" --> JEV["TypeSafe Jev<br/>decision engine"]
-    G -- "text only" --> LLM["LLM slot<br/>Mock (default) / Groq"]
-    G -- "HTTP tools" --> MS["mock_sources<br/>FastAPI + MCP"]
-    G --> CALC["Calculator tool<br/>all arithmetic"]
-    MS --> DB[("world.db<br/>~9.7K rows")]
-    MS --> NEWS[("BM25 news index<br/>500 articles")]
-    JEV -. "record / replay" .-> CAS[("cassette.jsonl")]
+---
+
+## how it works
+
+```
+                ┌──────────────────────────────────────────────┐
+                │                  ANY REPORT                  │
+                │     sustainability report PDF · claim text   │
+                └──────────────────────┬───────────────────────┘
+                                       │
+                                       ▼
+                ┌──────────────────────────────────────────────┐
+                │             LAYER 1 · INGEST                 │
+                │  layout-aware PDF parse → sentences with     │
+                │  page + section · columns re-joined          │
+                └──────────────────────┬───────────────────────┘
+                                       │
+                                       ▼
+                ┌──────────────────────────────────────────────┐
+                │          LAYER 2 · UNDERSTAND                │
+                │  resolve company → extract claims → triage   │
+                │  (done / future plan / vague talk)           │
+                └──────────────────────┬───────────────────────┘
+                                       │
+                                       ▼
+                ┌──────────────────────────────────────────────┐
+                │          LAYER 3 · INVESTIGATE               │
+                │  decompose → route → fetch evidence          │
+                │  one sub-graph per claim, all in parallel    │
+                │                                              │
+                │  ┌──────────┐  ┌──────────┐  ┌────────────┐  │
+                │  │  source  │  │calculator│  │   claim    │  │
+                │  │  tools   │  │   tool   │  │   parser   │  │
+                │  │ 8 APIs   │  │ all maths│  │ lakh·crore │  │
+                │  └──────────┘  └──────────┘  └────────────┘  │
+                └──────────────────────┬───────────────────────┘
+                                       │
+                                       ▼
+                ┌──────────────────────────────────────────────┐
+                │            LAYER 4 · DECIDE                  │
+                │  relevance gate → stance → verdict           │
+                │  ALIGN / CONTRADICT / INSUFFICIENT           │
+                │  grounding guard · citation validator        │
+                └──────────────────────┬───────────────────────┘
+                                       │
+                                       ▼
+                ┌──────────────────────────────────────────────┐
+                │            LAYER 5 · REPORT                  │
+                │  risk score 0-100 · per-claim reasoning      │
+                │  audit trail streamed live to the UI         │
+                │                                              │
+                │  ┌──────────┐  ┌──────────┐  ┌────────────┐  │
+                │  │ React UI │  │ REST+SSE │  │ MCP server │  │
+                │  │live trace│  │ FastAPI  │  │ data tools │  │
+                │  └──────────┘  └──────────┘  └────────────┘  │
+                └──────────────────────────────────────────────┘
 ```
 
-| Block | What it does |
-|---|---|
-| **LangGraph pipeline** | One node = one agent (`app/agents/`). Claims fan out in parallel into a per-claim sub-graph |
-| **Jev** | Makes every decision as a typed question (yes/no probability, choice, score). No free-text parsing, no if/else rules |
-| **LLM slot** | Only writes text (queries, explanations) from the facts it's given. Never decides |
-| **mock_sources** | Stand-in for SEBI BRSR, CPCB OCEMS, NGT/SPCB orders, Global Forest Watch, REC registry, assurance statements, news |
-| **Calculator** | % change, share, unit conversion, claimed-vs-filed gap. The expression is shown in the audit trail |
+---
 
-## LangGraph workflow
+## system architecture
 
-```mermaid
-flowchart TD
-    S((start)) --> I[ingest<br/>PDF to sentences]
-    I --> R[resolve<br/>which company?]
-    R --> E[extract<br/>is it an ESG claim? which metric?]
-    E --> T[triage<br/>done / planned / vague]
-    T -- "Send() per checkable claim" --> C
-    T -- "nothing checkable" --> A
-    subgraph C [per-claim sub-graph, runs in parallel]
-        D[decompose<br/>split into atomic checks] --> RO[route<br/>pick sources]
-        RO --> INV[investigate<br/>fetch evidence, round 2 if thin]
-        INV --> J[judge<br/>relevant? supports or contradicts?]
-        J --> V[verdict<br/>ALIGN / CONTRADICT / INSUFFICIENT]
-    end
-    C --> A[aggregate<br/>risk score 0-100]
-    A --> REP[report<br/>summary + audit trail] --> X((end))
+```
+  ┌──────────┐  REST + SSE   ┌──────────┐        ┌──────────────────────┐
+  │ React UI │ ◄───────────► │ FastAPI  │ ─────► │  LangGraph pipeline  │
+  └──────────┘               │ jobs +   │        │  one node = one agent│
+                             │ events   │        └──────────┬───────────┘
+                             └──────────┘                   │
+              ┌──────────────────────┬──────────────────────┼───────────────────┐
+              ▼                      ▼                      ▼                   ▼
+     ┌────────────────┐    ┌──────────────────┐   ┌────────────────┐  ┌────────────────┐
+     │  TypeSafe Jev  │    │   mock_sources   │   │   calculator   │  │    LLM slot    │
+     │ decision engine│    │  FastAPI + MCP   │   │  % change ·    │  │ mock (default) │
+     │ typed questions│    │  SEBI · CPCB ·   │   │  share · units │  │ / Groq         │
+     │ + probabilities│    │  NGT · GFW · REC │   │  · gaps        │  │ writes text,   │
+     └───────┬────────┘    │  · news (BM25)   │   └────────────────┘  │ never decides  │
+             │             └────────┬─────────┘                       └────────────────┘
+             ▼                      ▼
+     ┌────────────────┐    ┌──────────────────┐
+     │   cassette     │    │    world.db      │
+     │ every answer   │    │ 150 companies    │
+     │ recorded,      │    │ ~9.7K rows       │
+     │ offline replay │    │ (SQLite)         │
+     └────────────────┘    └──────────────────┘
 ```
 
-Every step emits an event that streams live to the UI and is saved as the audit trail.
+---
 
-## Problem statement coverage
+## langgraph workflow
 
-| PS asks for | Where it is |
+```
+  START
+    │
+    ▼
+  ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌───────────┐
+  │  ingest   │──►│  resolve  │──►│  extract  │──►│  triage   │
+  │ PDF→text  │   │ which co? │   │ is claim? │   │done/plan/ │
+  └───────────┘   └───────────┘   │ metric?   │   │  vague    │
+                                  └───────────┘   └─────┬─────┘
+                    ┌───────────────────────────────────┴──────────────────┐
+                    │ Send() one per checkable claim                       │
+                    ▼                                                      │   not checkable
+  ┌────────────── per-claim sub-graph (runs in parallel) ──────────────┐   │
+  │                                                                    │   │
+  │  decompose ──► route ──► investigate ──► judge ──► verdict         │   │
+  │  atomic        8 yes/no   fetch +         relevant?  ALIGN /       │   │
+  │  sub-claims    per source calculate,      supports?  CONTRADICT /  │   │
+  │                           round 2 if thin            INSUFFICIENT  │   │
+  │                                                                    │   │
+  └─────────────────────────────────┬──────────────────────────────────┘   │
+                                    │ claim_results (reducer merge)        │
+                                    ▼                                      │
+                             ┌─────────────┐                               │
+                             │  aggregate  │◄──────────────────────────────┘
+                             │ risk 0-100  │
+                             └──────┬──────┘
+                                    ▼
+                             ┌─────────────┐
+                             │   report    │──► END
+                             │ + audit log │
+                             └─────────────┘
+```
+
+every node emits an event → streamed live to the UI → saved as the audit trail.
+
+---
+
+## how a claim gets decided
+
+```
+  "50% of our electricity came from renewable sources"   (Vajra Steel, FY2025)
+        │
+        ▼
+  ┌──────────────┐
+  │   route      │  Jev, per source: BRSR 0.86 · assurance 0.84 · news 0.82 · REC 0.76
+  └──────┬───────┘
+         ▼
+  ┌──────────────┐  /sebi/brsr          → re_pct FY2025 = 18.0      (tier 1 filing)
+  │ investigate  │  /registry/rec       → 2.1M MWh active, 0.31M retired
+  │              │  /news/search        → press release says 50%   (tier 4 PR)
+  │              │  calculator          → claimed 50 vs filed 18 = 32 pts gap
+  │              │  Jev: evidence sufficient? p = 0.83 → no round 2
+  └──────┬───────┘
+         ▼
+  ┌──────────────┐
+  │    judge     │  relevance gate drops off-topic hits · stance contradict (0.99)
+  └──────┬───────┘
+         ▼
+  ┌──────────────┐
+  │   verdict    │  CONTRADICT (p = 1.00) · filing outweighs PR
+  └──────────────┘  every cited evidence id checked against what was fetched
+```
+
+---
+
+## problem statement coverage
+
+| PS asks for | where it is |
 |---|---|
-| Ingest sustainability reports / PDFs | `app/ingest/pdf.py`, layout-aware (columns, page breaks) |
-| Extract key, falsifiable ESG claims with prompt engineering | `extractor.py` + `triage.py`, versioned prompts in `app/agents/prompts.py` |
-| Agent breaks complex claims into searchable queries | `decomposer.py` splits into atomic sub-claims, `router.py` picks sources |
-| Autonomously search external sources (mock DBs, news API, env datasets) | `investigator.py` calling `mock_sources/` over HTTP, 8 sources |
-| Align / Contradict / Lack sufficient evidence | `judge.py`, 3-way verdict with probabilities |
-| Hallucination control | relevance gate, grounding guard (abstains with no evidence), citation validator, arithmetic in a tool |
-| Greenwashing Risk Score 0-100 (algorithmic) | `risk.py`, logistic model fitted on the benchmark |
-| Transparent report: claim + evidence + reasoning | `reporter.py` + live audit trail in the UI |
-| Modular, agent-based code | one agent per file, LangGraph orchestration, tools separated |
-| Curated synthetic dataset of claims + news | `data_gen/`: 150 companies, ~9.7K rows, 500 news, 200-case benchmark, 4 report PDFs (23-28 pages) |
-| Lightweight UI: upload, real-time extraction, reasoning, score | React (`web/`) instead of Streamlit, with a live agent trace |
-| 2-3 page technical summary | `docs/TECHNICAL_SUMMARY.md` (agent design, prompts, limitations) |
+| parse sustainability PDFs | `app/ingest/pdf.py` |
+| extract falsifiable claims, prompt engineering | `extractor.py`, `triage.py`, versioned prompts in `app/agents/prompts.py` |
+| break complex claims into searchable queries | `decomposer.py` + `router.py` |
+| search mock DBs, news API, env datasets | `investigator.py` → `mock_sources/` (8 sources) |
+| align / contradict / lack sufficient evidence | `judge.py` |
+| hallucination control | relevance gate · grounding guard · citation validator · maths in a tool |
+| Greenwashing Risk Score 0-100 | `risk.py`, logistic model fitted on the benchmark |
+| report with claim + evidence + reasoning | `reporter.py` + live audit trail |
+| modular agent-based code | one agent per file, LangGraph wiring in `app/graph/` |
+| synthetic dataset of claims + news | `data_gen/`, 200-case benchmark, 4 report PDFs (23-28 pages) |
+| UI: upload, live extraction, reasoning, score | React (`web/`) with a live agent trace |
+| 2-3 page technical summary | `docs/TECHNICAL_SUMMARY.md` |
 
-## Results
+---
 
-| Test | Result |
-|---|---|
-| 4 demo PDFs, 46 planted claims | extracted 46/46, verdicts correct 46/46 |
-| Company risk | greenwasher 56 > mixed 45 > honest 34 > unknown 24 |
-| Benchmark (200 cases) / held-out (172 fresh) | 0.98 / 0.977 accuracy |
-| Ablation | no retrieval 0.35, news-only RAG 0.45, full agent 1.00 (test split) |
-
-Data is synthetic and self-generated, so these show the method works, not real-world accuracy. Details: `docs/TECHNICAL_SUMMARY.md`, `verification_pack/`.
-
-## Run it (PowerShell)
+## quick start
 
 ```powershell
 python -m venv venv; .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-# .env  ->  TYPESAFE_API_KEY=your_key   (no key? set JEV_MODE=replay)
-.\scripts\run_backend.ps1     # http://127.0.0.1:8000/docs
-.\scripts\run_frontend.ps1    # http://localhost:5173
-python -m pytest -q           # 85 tests, offline
+uvicorn app.api.main:app --port 8000 --reload      # terminal 1 · API on http://127.0.0.1:8000
+
+cd web; npm install; npm run dev                   # terminal 2 · UI on http://localhost:5173
 ```
 
-## Folders
+open **Analyze (v2)**, pick a demo report, hit **Run analysis**. no Jev key? set `$env:JEV_MODE="replay"` and the 4 demo reports run offline from recorded answers.
+
+---
+
+## API
 
 ```
-app/            agents/, graph/, decision/jev.py, tools/, ingest/, llm/, api/
-mock_sources/   data source APIs + MCP server
-data_gen/       synthetic world + benchmark generator
-report_gen/     builds the demo PDFs
-eval/           benchmark, report eval, risk fitting, robustness
-data/           world.db, reports, benchmark, Jev cassettes
-web/            React UI
-docs/           technical summary, architecture, API contract
-verification_pack/  proof, DB exports, honest evaluation
-scrap/          old v1 code, not used
+POST   /v2/analyses                 start an analysis (demo report or PDF upload)
+GET    /v2/analyses/{id}/events     live agent events (SSE)
+GET    /v2/analyses/{id}/report     final report + audit trail
+POST   /v2/verify-claim             check a single claim
+GET    /v2/demo-reports             the 4 demo PDFs
+GET    /v2/sources/overview         data source tables + row counts
+GET    /v2/benchmark/latest         latest benchmark results
+GET    /health                      engine · llm · sources status
 ```
+
+data source APIs (`mock_sources/`): `/sebi/brsr` · `/ghg/facility` · `/cpcb/ocems/exceedances` · `/regulatory/actions` · `/gfw/alerts/near` · `/registry/rec` · `/assurance/statements` · `/news/search`
+
+interactive docs at `http://127.0.0.1:8000/docs`
+
+---
+
+## tech stack
+
+| layer | tech |
+|---|---|
+| orchestration | LangGraph · StateGraph + Send fan-out + reducers |
+| decisions | TypeSafe Jev · typed questions (yes/no · choice · score) · record/replay |
+| text | MockLLM (writes only from given facts) · Groq optional |
+| data | SQLite world.db · BM25 news index · MCP server |
+| PDF | PyMuPDF, layout-aware |
+| api | FastAPI · Pydantic · SSE |
+| ui | React · Vite · TypeScript |
+
+---
+
+## data
+
+| table | rows | acts like |
+|---|---|---|
+| companies / facilities | 150 / 422 | MCA master + plant registry with lat/lon |
+| brsr_filings | 900 | SEBI BRSR Core |
+| facility_ghg | 2,532 | facility GHG reporting |
+| ocems_exceedances | 2,000 | CPCB emission monitoring |
+| regulatory_actions | 400 | NGT / CPCB / SPCB orders |
+| land_alerts | 1,500 | Global Forest Watch |
+| re_certificates | 932 | REC / I-REC registry |
+| audited_reports | 409 | assurance statements |
+| news_articles | 500 | news + press releases |
+
+---
+
+## results
+
+| test | result |
+|---|---|
+| 4 demo PDFs, 46 planted claims | 46/46 extracted · 46/46 correct verdicts |
+| company risk | greenwasher 56 > mixed 45 > honest 34 > unknown 24 |
+| benchmark (200) / held-out (172 fresh) | 0.98 / 0.977 accuracy |
+| stress set (hand-written) | 23/24 |
+| ablation | no retrieval 0.35 · news-only RAG 0.45 · full agent 1.00 (test split) |
+
+synthetic, self-generated data, so this proves the method, not real-world accuracy. details in `docs/TECHNICAL_SUMMARY.md` and `verification_pack/`.
+
+---
+
+## .env
+
+```env
+TYPESAFE_API_KEY=your_jev_key
+JEV_MODE=live                # or replay (offline)
+LLM_PROVIDER=mock            # or groq
+MOCK_SOURCES_URL=inproc      # or http://127.0.0.1:8100
+```
+
+---
+
+## run tests
+
+```bash
+python -m pytest -q          # 85 passed, fully offline
+```
+
+---
+
+## folders
+
+```
+app/                agents/ · graph/ · decision/jev.py · tools/ · ingest/ · llm/ · api/
+mock_sources/       data source APIs + MCP server
+data_gen/           synthetic world + benchmark generator
+report_gen/         builds the demo PDFs
+eval/               benchmark · robustness · risk fitting
+data/               world.db · reports · benchmark · Jev cassettes
+web/                React UI
+docs/               technical summary · architecture · API contract
+verification_pack/  proof · DB exports · honest evaluation
+scrap/              old v1 code, not used
+```
+
+---
+
+## status
+
+- [x] v2 agentic pipeline + live UI
+- [x] synthetic world, 4 report PDFs, benchmark + held-out eval
+- [ ] plug real BRSR / CPCB / news feeds into the same tools
+- [ ] read charts and image-only tables
+- [ ] human review step on every CONTRADICT
