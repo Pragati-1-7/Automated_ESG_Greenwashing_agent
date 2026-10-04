@@ -1,0 +1,1568 @@
+[
+  {
+    "company_id": "CMP-0073",
+    "company_name": "Apatani Green Power Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2025",
+    "kind": "regulatory_penalty",
+    "true_value": 55500000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00338"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0200"
+    }
+  },
+  {
+    "company_id": "CMP-0038",
+    "company_name": "Khasi Forgings Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2024",
+    "kind": "regulatory_penalty",
+    "true_value": 62300000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00235",
+      "REG-00270",
+      "REG-00297"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 3,
+      "facility_id": "FAC-0104"
+    }
+  },
+  {
+    "company_id": "CMP-0042",
+    "company_name": "Ao Autotech Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 98300000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00173"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0116"
+    }
+  },
+  {
+    "company_id": "CMP-0148",
+    "company_name": "Alaknanda Rolling Mills Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 44000000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00176",
+      "REG-00201"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0412"
+    }
+  },
+  {
+    "company_id": "CMP-0143",
+    "company_name": "Varuna Ores Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 58900000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00140",
+      "REG-00165"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0399"
+    }
+  },
+  {
+    "company_id": "CMP-0023",
+    "company_name": "Matsya Fertilisers Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2025",
+    "kind": "regulatory_penalty",
+    "true_value": 51200000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00326",
+      "REG-00337"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0066"
+    }
+  },
+  {
+    "company_id": "CMP-0018",
+    "company_name": "Girnar Fabrics Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 104100000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00164"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0051"
+    }
+  },
+  {
+    "company_id": "CMP-0043",
+    "company_name": "Mandakini Spinning Mills Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2025",
+    "kind": "regulatory_penalty",
+    "true_value": 35000000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00376"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0118"
+    }
+  },
+  {
+    "company_id": "CMP-0106",
+    "company_name": "Tungabhadra Consumer Products Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 19800000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00157",
+      "REG-00171"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0294"
+    }
+  },
+  {
+    "company_id": "CMP-0050",
+    "company_name": "Malwa Motors Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2024",
+    "kind": "regulatory_penalty",
+    "true_value": 77900000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00266",
+      "REG-00267"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0139"
+    }
+  },
+  {
+    "company_id": "CMP-0066",
+    "company_name": "Karna Formulations Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2025",
+    "kind": "regulatory_penalty",
+    "true_value": 36500000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00344"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0180"
+    }
+  },
+  {
+    "company_id": "CMP-0035",
+    "company_name": "Vindhya Manganese & Minerals Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2024",
+    "kind": "regulatory_penalty",
+    "true_value": 58200000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00289"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0097"
+    }
+  },
+  {
+    "company_id": "CMP-0061",
+    "company_name": "Kamboja Dairy Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 100700000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00149",
+      "REG-00221"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0166"
+    }
+  },
+  {
+    "company_id": "CMP-0093",
+    "company_name": "Naga Cements Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2024",
+    "kind": "regulatory_penalty",
+    "true_value": 78800000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00264"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 1,
+      "facility_id": "FAC-0256"
+    }
+  },
+  {
+    "company_id": "CMP-0046",
+    "company_name": "Zanskar Beverages Ltd",
+    "metric": "regulatory_actions",
+    "fy": "FY2023",
+    "kind": "regulatory_penalty",
+    "true_value": 116600000.0,
+    "unit": "INR",
+    "refs": [
+      "REG-00210",
+      "REG-00218"
+    ],
+    "table": "regulatory_actions",
+    "details": {
+      "n_actions": 2,
+      "facility_id": "FAC-0125"
+    }
+  },
+  {
+    "company_id": "CMP-0137",
+    "company_name": "Mahi Steel & Alloys Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2025",
+    "kind": "ocems",
+    "true_value": 37,
+    "unit": "count",
+    "refs": [
+      "OCE-001557",
+      "OCE-001558",
+      "OCE-001570",
+      "OCE-001574",
+      "OCE-001626",
+      "OCE-001629",
+      "OCE-001637",
+      "OCE-001641",
+      "OCE-001647",
+      "OCE-001653",
+      "OCE-001657",
+      "OCE-001676",
+      "OCE-001712",
+      "OCE-001713",
+      "OCE-001717",
+      "OCE-001720",
+      "OCE-001727",
+      "OCE-001746",
+      "OCE-001748",
+      "OCE-001760",
+      "OCE-001785",
+      "OCE-001796",
+      "OCE-001822",
+      "OCE-001846",
+      "OCE-001859",
+      "OCE-001880",
+      "OCE-001891",
+      "OCE-001901",
+      "OCE-001902",
+      "OCE-001905",
+      "OCE-001919",
+      "OCE-001921",
+      "OCE-001924",
+      "OCE-001931",
+      "OCE-001935",
+      "OCE-001946",
+      "OCE-001954"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0378",
+      "parameters": [
+        "NOx",
+        "PM",
+        "SO2"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0007",
+    "company_name": "Subansiri Agrochem Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2023",
+    "kind": "ocems",
+    "true_value": 25,
+    "unit": "count",
+    "refs": [
+      "OCE-000721",
+      "OCE-000751",
+      "OCE-000767",
+      "OCE-000772",
+      "OCE-000774",
+      "OCE-000783",
+      "OCE-000789",
+      "OCE-000793",
+      "OCE-000822",
+      "OCE-000826",
+      "OCE-000845",
+      "OCE-000862",
+      "OCE-000869",
+      "OCE-000876",
+      "OCE-000889",
+      "OCE-000893",
+      "OCE-000963",
+      "OCE-000972",
+      "OCE-000989",
+      "OCE-000991",
+      "OCE-000992",
+      "OCE-000997",
+      "OCE-001054",
+      "OCE-001055",
+      "OCE-001110"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0024",
+      "parameters": [
+        "NOx",
+        "PM",
+        "SO2"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0142",
+    "company_name": "Drona Energy Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2024",
+    "kind": "ocems",
+    "true_value": 26,
+    "unit": "count",
+    "refs": [
+      "OCE-001124",
+      "OCE-001130",
+      "OCE-001142",
+      "OCE-001154",
+      "OCE-001182",
+      "OCE-001194",
+      "OCE-001199",
+      "OCE-001224",
+      "OCE-001270",
+      "OCE-001280",
+      "OCE-001307",
+      "OCE-001308",
+      "OCE-001332",
+      "OCE-001338",
+      "OCE-001348",
+      "OCE-001353",
+      "OCE-001374",
+      "OCE-001383",
+      "OCE-001409",
+      "OCE-001429",
+      "OCE-001439",
+      "OCE-001455",
+      "OCE-001459",
+      "OCE-001481",
+      "OCE-001509",
+      "OCE-001519"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0394",
+      "parameters": [
+        "NOx",
+        "PM",
+        "SO2"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0010",
+    "company_name": "Kim Fertilisers Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2024",
+    "kind": "ocems",
+    "true_value": 24,
+    "unit": "count",
+    "refs": [
+      "OCE-001125",
+      "OCE-001148",
+      "OCE-001155",
+      "OCE-001160",
+      "OCE-001175",
+      "OCE-001215",
+      "OCE-001221",
+      "OCE-001228",
+      "OCE-001266",
+      "OCE-001271",
+      "OCE-001287",
+      "OCE-001295",
+      "OCE-001322",
+      "OCE-001327",
+      "OCE-001329",
+      "OCE-001334",
+      "OCE-001359",
+      "OCE-001375",
+      "OCE-001384",
+      "OCE-001442",
+      "OCE-001480",
+      "OCE-001494",
+      "OCE-001500",
+      "OCE-001510"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0032",
+      "parameters": [
+        "BOD",
+        "COD",
+        "NOx",
+        "PM",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0033",
+    "company_name": "Sindh Weaves Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2025",
+    "kind": "ocems",
+    "true_value": 19,
+    "unit": "count",
+    "refs": [
+      "OCE-001544",
+      "OCE-001550",
+      "OCE-001568",
+      "OCE-001578",
+      "OCE-001636",
+      "OCE-001661",
+      "OCE-001666",
+      "OCE-001702",
+      "OCE-001706",
+      "OCE-001744",
+      "OCE-001781",
+      "OCE-001798",
+      "OCE-001832",
+      "OCE-001836",
+      "OCE-001933",
+      "OCE-001955",
+      "OCE-001976",
+      "OCE-001988",
+      "OCE-001996"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0093",
+      "parameters": [
+        "BOD",
+        "COD",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0141",
+    "company_name": "Manjira Resources Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2024",
+    "kind": "ocems",
+    "true_value": 21,
+    "unit": "count",
+    "refs": [
+      "OCE-001140",
+      "OCE-001141",
+      "OCE-001174",
+      "OCE-001180",
+      "OCE-001188",
+      "OCE-001232",
+      "OCE-001250",
+      "OCE-001269",
+      "OCE-001291",
+      "OCE-001294",
+      "OCE-001313",
+      "OCE-001326",
+      "OCE-001402",
+      "OCE-001404",
+      "OCE-001422",
+      "OCE-001423",
+      "OCE-001427",
+      "OCE-001434",
+      "OCE-001477",
+      "OCE-001518",
+      "OCE-001524"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0393",
+      "parameters": [
+        "BOD",
+        "COD",
+        "PM",
+        "SO2",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0077",
+    "company_name": "Rajgir Fertilisers Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2025",
+    "kind": "ocems",
+    "true_value": 15,
+    "unit": "count",
+    "refs": [
+      "OCE-001545",
+      "OCE-001562",
+      "OCE-001566",
+      "OCE-001567",
+      "OCE-001654",
+      "OCE-001655",
+      "OCE-001687",
+      "OCE-001700",
+      "OCE-001747",
+      "OCE-001759",
+      "OCE-001778",
+      "OCE-001792",
+      "OCE-001797",
+      "OCE-001899",
+      "OCE-001915"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0213",
+      "parameters": [
+        "BOD",
+        "COD",
+        "PM",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0116",
+    "company_name": "Parvati Coal & Minerals Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2025",
+    "kind": "ocems",
+    "true_value": 9,
+    "unit": "count",
+    "refs": [
+      "OCE-001548",
+      "OCE-001625",
+      "OCE-001631",
+      "OCE-001652",
+      "OCE-001707",
+      "OCE-001718",
+      "OCE-001763",
+      "OCE-001886",
+      "OCE-001940"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0321",
+      "parameters": [
+        "BOD",
+        "COD",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0074",
+    "company_name": "Konark API Industries Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2024",
+    "kind": "ocems",
+    "true_value": 14,
+    "unit": "count",
+    "refs": [
+      "OCE-001138",
+      "OCE-001149",
+      "OCE-001186",
+      "OCE-001190",
+      "OCE-001203",
+      "OCE-001245",
+      "OCE-001265",
+      "OCE-001355",
+      "OCE-001403",
+      "OCE-001408",
+      "OCE-001421",
+      "OCE-001452",
+      "OCE-001483",
+      "OCE-001485"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0201",
+      "parameters": [
+        "BOD",
+        "COD",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0030",
+    "company_name": "Saurashtra Cement Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2023",
+    "kind": "ocems",
+    "true_value": 11,
+    "unit": "count",
+    "refs": [
+      "OCE-000724",
+      "OCE-000769",
+      "OCE-000842",
+      "OCE-000850",
+      "OCE-000866",
+      "OCE-000883",
+      "OCE-000922",
+      "OCE-000946",
+      "OCE-000973",
+      "OCE-001085",
+      "OCE-001098"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0084",
+      "parameters": [
+        "PM"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0119",
+    "company_name": "Mahakoshal Rolling Mills Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2025",
+    "kind": "ocems",
+    "true_value": 25,
+    "unit": "count",
+    "refs": [
+      "OCE-001537",
+      "OCE-001552",
+      "OCE-001589",
+      "OCE-001667",
+      "OCE-001681",
+      "OCE-001683",
+      "OCE-001690",
+      "OCE-001691",
+      "OCE-001719",
+      "OCE-001755",
+      "OCE-001766",
+      "OCE-001791",
+      "OCE-001821",
+      "OCE-001824",
+      "OCE-001835",
+      "OCE-001858",
+      "OCE-001887",
+      "OCE-001888",
+      "OCE-001909",
+      "OCE-001910",
+      "OCE-001938",
+      "OCE-001945",
+      "OCE-001948",
+      "OCE-001972",
+      "OCE-001991"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0327",
+      "parameters": [
+        "NOx",
+        "PM",
+        "SO2"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0080",
+    "company_name": "Gundar Renewable Power Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2023",
+    "kind": "ocems",
+    "true_value": 13,
+    "unit": "count",
+    "refs": [
+      "OCE-000730",
+      "OCE-000737",
+      "OCE-000761",
+      "OCE-000787",
+      "OCE-000796",
+      "OCE-000832",
+      "OCE-000856",
+      "OCE-000858",
+      "OCE-000884",
+      "OCE-000921",
+      "OCE-001010",
+      "OCE-001075",
+      "OCE-001119"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0219",
+      "parameters": [
+        "NOx",
+        "PM",
+        "SO2"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0147",
+    "company_name": "Satpura Polymers Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2023",
+    "kind": "ocems",
+    "true_value": 29,
+    "unit": "count",
+    "refs": [
+      "OCE-000785",
+      "OCE-000802",
+      "OCE-000808",
+      "OCE-000816",
+      "OCE-000831",
+      "OCE-000860",
+      "OCE-000863",
+      "OCE-000871",
+      "OCE-000879",
+      "OCE-000896",
+      "OCE-000901",
+      "OCE-000928",
+      "OCE-000930",
+      "OCE-000937",
+      "OCE-000939",
+      "OCE-000941",
+      "OCE-000952",
+      "OCE-000955",
+      "OCE-000957",
+      "OCE-000958",
+      "OCE-000980",
+      "OCE-000993",
+      "OCE-001005",
+      "OCE-001059",
+      "OCE-001063",
+      "OCE-001084",
+      "OCE-001099",
+      "OCE-001105",
+      "OCE-001118"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0410",
+      "parameters": [
+        "BOD",
+        "COD",
+        "NOx",
+        "PM",
+        "SO2"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0051",
+    "company_name": "Penganga API Industries Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2023",
+    "kind": "ocems",
+    "true_value": 10,
+    "unit": "count",
+    "refs": [
+      "OCE-000753",
+      "OCE-000760",
+      "OCE-000829",
+      "OCE-000949",
+      "OCE-000967",
+      "OCE-001007",
+      "OCE-001043",
+      "OCE-001047",
+      "OCE-001051",
+      "OCE-001065"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0140",
+      "parameters": [
+        "BOD",
+        "COD",
+        "TSS"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0150",
+    "company_name": "Beas Concrete & Cement Ltd",
+    "metric": "ocems_exceedances",
+    "fy": "FY2023",
+    "kind": "ocems",
+    "true_value": 11,
+    "unit": "count",
+    "refs": [
+      "OCE-000740",
+      "OCE-000817",
+      "OCE-000904",
+      "OCE-000974",
+      "OCE-000975",
+      "OCE-001001",
+      "OCE-001027",
+      "OCE-001066",
+      "OCE-001074",
+      "OCE-001076",
+      "OCE-001079"
+    ],
+    "table": "ocems_exceedances",
+    "details": {
+      "facility_id": "FAC-0420",
+      "parameters": [
+        "NOx",
+        "PM"
+      ]
+    }
+  },
+  {
+    "company_id": "CMP-0076",
+    "company_name": "Garuda Energy Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2024",
+    "kind": "land_alerts",
+    "true_value": 26.4,
+    "unit": "ha",
+    "refs": [
+      "LA-000962",
+      "LA-000965",
+      "LA-000989",
+      "LA-001005",
+      "LA-001026",
+      "LA-001067",
+      "LA-001071",
+      "LA-001084",
+      "LA-001113",
+      "LA-001115",
+      "LA-001132",
+      "LA-001161",
+      "LA-001175"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0209",
+      "radius_km": 5,
+      "n_alerts": 13
+    }
+  },
+  {
+    "company_id": "CMP-0027",
+    "company_name": "Chenab Ores Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2025",
+    "kind": "land_alerts",
+    "true_value": 10.3,
+    "unit": "ha",
+    "refs": [
+      "LA-001237",
+      "LA-001274",
+      "LA-001306",
+      "LA-001325",
+      "LA-001352",
+      "LA-001381",
+      "LA-001400",
+      "LA-001418"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0076",
+      "radius_km": 5,
+      "n_alerts": 8
+    }
+  },
+  {
+    "company_id": "CMP-0028",
+    "company_name": "Palar Rolling Mills Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2025",
+    "kind": "land_alerts",
+    "true_value": 20.1,
+    "unit": "ha",
+    "refs": [
+      "LA-001217",
+      "LA-001228",
+      "LA-001235",
+      "LA-001248",
+      "LA-001249",
+      "LA-001257",
+      "LA-001275",
+      "LA-001294",
+      "LA-001395"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0078",
+      "radius_km": 5,
+      "n_alerts": 9
+    }
+  },
+  {
+    "company_id": "CMP-0100",
+    "company_name": "Vayu Metallics Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2025",
+    "kind": "land_alerts",
+    "true_value": 9.6,
+    "unit": "ha",
+    "refs": [
+      "LA-001242",
+      "LA-001263",
+      "LA-001278",
+      "LA-001349",
+      "LA-001363",
+      "LA-001380",
+      "LA-001404"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0275",
+      "radius_km": 5,
+      "n_alerts": 7
+    }
+  },
+  {
+    "company_id": "CMP-0036",
+    "company_name": "Wainganga Minerals Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2024",
+    "kind": "land_alerts",
+    "true_value": 33.5,
+    "unit": "ha",
+    "refs": [
+      "LA-000944",
+      "LA-000999",
+      "LA-001007",
+      "LA-001031",
+      "LA-001032",
+      "LA-001036",
+      "LA-001040",
+      "LA-001047",
+      "LA-001125",
+      "LA-001126",
+      "LA-001135",
+      "LA-001156",
+      "LA-001168"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0099",
+      "radius_km": 5,
+      "n_alerts": 13
+    }
+  },
+  {
+    "company_id": "CMP-0103",
+    "company_name": "Takshashila Metallics Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2025",
+    "kind": "land_alerts",
+    "true_value": 28.3,
+    "unit": "ha",
+    "refs": [
+      "LA-001239",
+      "LA-001267",
+      "LA-001283",
+      "LA-001292",
+      "LA-001316",
+      "LA-001322",
+      "LA-001367",
+      "LA-001375",
+      "LA-001407",
+      "LA-001423",
+      "LA-001449",
+      "LA-001492"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0285",
+      "radius_km": 5,
+      "n_alerts": 12
+    }
+  },
+  {
+    "company_id": "CMP-0068",
+    "company_name": "Ghaghara Manganese & Minerals Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2024",
+    "kind": "land_alerts",
+    "true_value": 17.5,
+    "unit": "ha",
+    "refs": [
+      "LA-000960",
+      "LA-000988",
+      "LA-001080",
+      "LA-001086",
+      "LA-001103",
+      "LA-001129",
+      "LA-001134",
+      "LA-001195",
+      "LA-001211"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0186",
+      "radius_km": 5,
+      "n_alerts": 9
+    }
+  },
+  {
+    "company_id": "CMP-0089",
+    "company_name": "Vidarbha Iron & Steel Works Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2023",
+    "kind": "land_alerts",
+    "true_value": 50.5,
+    "unit": "ha",
+    "refs": [
+      "LA-000720",
+      "LA-000730",
+      "LA-000745",
+      "LA-000752",
+      "LA-000824",
+      "LA-000846",
+      "LA-000852",
+      "LA-000870",
+      "LA-000875",
+      "LA-000891",
+      "LA-000893",
+      "LA-000902",
+      "LA-000913",
+      "LA-000916"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0247",
+      "radius_km": 5,
+      "n_alerts": 14
+    }
+  },
+  {
+    "company_id": "CMP-0063",
+    "company_name": "Pataliputra Hydro & Power Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2024",
+    "kind": "land_alerts",
+    "true_value": 20.3,
+    "unit": "ha",
+    "refs": [
+      "LA-000983",
+      "LA-000986",
+      "LA-001021",
+      "LA-001041",
+      "LA-001123",
+      "LA-001124",
+      "LA-001181"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0172",
+      "radius_km": 5,
+      "n_alerts": 7
+    }
+  },
+  {
+    "company_id": "CMP-0004",
+    "company_name": "Surasena Steel & Alloys Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2024",
+    "kind": "land_alerts",
+    "true_value": 24.3,
+    "unit": "ha",
+    "refs": [
+      "LA-000945",
+      "LA-000977",
+      "LA-000980",
+      "LA-000981",
+      "LA-001002",
+      "LA-001018",
+      "LA-001066",
+      "LA-001096",
+      "LA-001102",
+      "LA-001138",
+      "LA-001151",
+      "LA-001162"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0012",
+      "radius_km": 5,
+      "n_alerts": 12
+    }
+  },
+  {
+    "company_id": "CMP-0006",
+    "company_name": "Loktak Sponge & Steel Ltd",
+    "metric": "deforestation_ha",
+    "fy": "FY2024",
+    "kind": "land_alerts",
+    "true_value": 40.5,
+    "unit": "ha",
+    "refs": [
+      "LA-000941",
+      "LA-000979",
+      "LA-000990",
+      "LA-001030",
+      "LA-001052",
+      "LA-001055",
+      "LA-001063",
+      "LA-001089",
+      "LA-001109",
+      "LA-001117",
+      "LA-001131",
+      "LA-001140",
+      "LA-001143",
+      "LA-001150",
+      "LA-001165",
+      "LA-001193",
+      "LA-001203",
+      "LA-001205",
+      "LA-001213"
+    ],
+    "table": "land_alerts",
+    "details": {
+      "facility_id": "FAC-0019",
+      "radius_km": 5,
+      "n_alerts": 19
+    }
+  },
+  {
+    "company_id": "CMP-0072",
+    "company_name": "Himavan Denim Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 4700.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000471",
+      "REC-000472",
+      "REC-000473",
+      "REC-000474"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 4700.0,
+      "active_mwh": 37000.0
+    }
+  },
+  {
+    "company_id": "CMP-0088",
+    "company_name": "Sharda Cotton Mills Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 14100.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000540",
+      "REC-000541",
+      "REC-000542",
+      "REC-000543"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 14100.0,
+      "active_mwh": 60600.0
+    }
+  },
+  {
+    "company_id": "CMP-0090",
+    "company_name": "Chera Dyes & Pigments Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 6900.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000550",
+      "REC-000551",
+      "REC-000552",
+      "REC-000553"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 6900.0,
+      "active_mwh": 51600.0
+    }
+  },
+  {
+    "company_id": "CMP-0045",
+    "company_name": "Braj Green Power Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 21900.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000285",
+      "REC-000286",
+      "REC-000287",
+      "REC-000288"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 21900.0,
+      "active_mwh": 77300.0
+    }
+  },
+  {
+    "company_id": "CMP-0070",
+    "company_name": "Narmada Software Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 5800.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000451",
+      "REC-000452",
+      "REC-000453",
+      "REC-000454"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 5800.0,
+      "active_mwh": 31900.0
+    }
+  },
+  {
+    "company_id": "CMP-0047",
+    "company_name": "Wardha Textiles Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 6100.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000304",
+      "REC-000305",
+      "REC-000306",
+      "REC-000307"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 6100.0,
+      "active_mwh": 31000.0
+    }
+  },
+  {
+    "company_id": "CMP-0114",
+    "company_name": "Awadh API Industries Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 6500.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000706",
+      "REC-000707",
+      "REC-000708",
+      "REC-000709"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 6500.0,
+      "active_mwh": 32900.0
+    }
+  },
+  {
+    "company_id": "CMP-0012",
+    "company_name": "Dibang Mining & Minerals Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 4100.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000081",
+      "REC-000082",
+      "REC-000083",
+      "REC-000084"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 4100.0,
+      "active_mwh": 13100.0
+    }
+  },
+  {
+    "company_id": "CMP-0105",
+    "company_name": "Musi Renewable Power Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 47200.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000652",
+      "REC-000653",
+      "REC-000654",
+      "REC-000655"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 47200.0,
+      "active_mwh": 286500.0
+    }
+  },
+  {
+    "company_id": "CMP-0095",
+    "company_name": "Spiti Infotech Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 9800.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000587",
+      "REC-000588",
+      "REC-000589",
+      "REC-000590"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 9800.0,
+      "active_mwh": 65600.0
+    }
+  },
+  {
+    "company_id": "CMP-0134",
+    "company_name": "Vatsa Energy Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 6400.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000811",
+      "REC-000812",
+      "REC-000813",
+      "REC-000814"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 6400.0,
+      "active_mwh": 19500.0
+    }
+  },
+  {
+    "company_id": "CMP-0019",
+    "company_name": "Bhagirathi Forgings Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 31000.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000142",
+      "REC-000143",
+      "REC-000144",
+      "REC-000145"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 31000.0,
+      "active_mwh": 228600.0
+    }
+  },
+  {
+    "company_id": "CMP-0026",
+    "company_name": "Khandesh Formulations Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 1400.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000188",
+      "REC-000189",
+      "REC-000190",
+      "REC-000191"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 1400.0,
+      "active_mwh": 6600.0
+    }
+  },
+  {
+    "company_id": "CMP-0140",
+    "company_name": "Teesta Foods Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 7200.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000856",
+      "REC-000857",
+      "REC-000858",
+      "REC-000859"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 7200.0,
+      "active_mwh": 25500.0
+    }
+  },
+  {
+    "company_id": "CMP-0098",
+    "company_name": "Purna Hydro & Power Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 11100.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000608",
+      "REC-000609",
+      "REC-000610",
+      "REC-000611"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 11100.0,
+      "active_mwh": 49600.0
+    }
+  },
+  {
+    "company_id": "CMP-0133",
+    "company_name": "Luni Textiles Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 9900.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000798",
+      "REC-000799",
+      "REC-000800",
+      "REC-000801"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 9900.0,
+      "active_mwh": 75900.0
+    }
+  },
+  {
+    "company_id": "CMP-0057",
+    "company_name": "Kosala Technologies Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 1200.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000382",
+      "REC-000383",
+      "REC-000384",
+      "REC-000385"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 1200.0,
+      "active_mwh": 8900.0
+    }
+  },
+  {
+    "company_id": "CMP-0017",
+    "company_name": "Betwa Fertilisers Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 1700.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000125",
+      "REC-000126",
+      "REC-000127",
+      "REC-000128"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 1700.0,
+      "active_mwh": 10100.0
+    }
+  },
+  {
+    "company_id": "CMP-0102",
+    "company_name": "Cheyyar Lifesciences Ltd",
+    "metric": "rec_retirement",
+    "fy": "FY2025",
+    "kind": "rec_unretired",
+    "true_value": 13500.0,
+    "unit": "MWh",
+    "refs": [
+      "REC-000637",
+      "REC-000638",
+      "REC-000639",
+      "REC-000640"
+    ],
+    "table": "re_certificates",
+    "details": {
+      "vintage": 2024,
+      "retired_mwh": 13500.0,
+      "active_mwh": 96100.0
+    }
+  }
+]

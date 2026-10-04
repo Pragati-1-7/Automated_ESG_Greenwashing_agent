@@ -1,0 +1,200 @@
+{"case_id": "BM-001", "template_id": "al_rc_b", "items": [{"kind": "rec", "company_id": "CMP-0021", "vintage": 2024, "what": "retired_mwh", "claimed": 19100.0, "expect": "match"}], "literals": ["19,100"]}
+{"case_id": "BM-002", "template_id": "in_s3_f", "items": [], "literals": []}
+{"case_id": "BM-003", "template_id": "in_bd_d", "items": [], "literals": []}
+{"case_id": "BM-004", "template_id": "al_fat_n", "items": [{"kind": "brsr_value", "company_id": "CMP-0083", "fy": "FY2024", "metric": "fatalities", "claimed": 1.0, "mult": 1.0, "expect": "match"}], "literals": ["1"]}
+{"case_id": "BM-005", "template_id": "ci_ft_half", "items": [{"kind": "brsr_change", "company_id": "CMP-0145", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -50.0, "expect": "mismatch"}], "literals": ["halving"]}
+{"case_id": "BM-006", "template_id": "ci_hp_oc_a", "items": [{"kind": "ocems_count", "company_id": "CMP-0142", "facility_id": null, "fy": "FY2024", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-007", "template_id": "in_fc_e", "items": [], "literals": []}
+{"case_id": "BM-008", "template_id": "al_as_lim2", "items": [{"kind": "assurance", "company_id": "CMP-0024", "fy": "FY2025", "claimed": "limited", "expect": "match"}], "literals": []}
+{"case_id": "BM-009", "template_id": "al_s2_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0036", "fy": "FY2022", "metric": "scope2_tco2e", "claimed": 2.92, "mult": 100000.0, "expect": "match"}], "literals": ["2.92"]}
+{"case_id": "BM-010", "template_id": "al_as_lim", "items": [{"kind": "assurance", "company_id": "CMP-0062", "fy": "FY2023", "claimed": "limited", "expect": "match"}], "literals": []}
+{"case_id": "BM-011", "template_id": "al_ci_yoy", "items": [{"kind": "brsr_change", "company_id": "CMP-0136", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2024", "claimed": -9.5, "expect": "match"}], "literals": ["9.5"]}
+{"case_id": "BM-012", "template_id": "al_s1_c", "items": [{"kind": "brsr_value", "company_id": "CMP-0039", "fy": "FY2023", "metric": "scope1_tco2e", "claimed": 233828.0, "mult": 1.0, "expect": "match"}], "literals": ["2,33,828"]}
+{"case_id": "BM-013", "template_id": "nc_vague_7", "items": [], "literals": []}
+{"case_id": "BM-014", "template_id": "al_ze_d", "items": [{"kind": "ocems_count", "company_id": "CMP-0115", "facility_id": null, "fy": "FY2025", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-015", "template_id": "nc_target_4", "items": [], "literals": []}
+{"case_id": "BM-016", "template_id": "al_re_rise", "items": [{"kind": "brsr_value", "company_id": "CMP-0013", "fy": "FY2021", "metric": "re_pct", "claimed": 10.8, "mult": 1.0, "expect": "match"}, {"kind": "brsr_value", "company_id": "CMP-0013", "fy": "FY2025", "metric": "re_pct", "claimed": 16.2, "mult": 1.0, "expect": "match"}], "literals": ["10.8", "16.2"]}
+{"case_id": "BM-017", "template_id": "nc_vague_10", "items": [], "literals": []}
+{"case_id": "BM-018", "template_id": "ci_uc_re_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0102", "fy": "FY2025", "metric": "re_pct", "claimed": 70.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "rec", "company_id": "CMP-0102", "vintage": 2024, "what": "all_retired", "claimed": true, "expect": "mismatch"}], "literals": ["70"]}
+{"case_id": "BM-019", "template_id": "ci_uc_all_b", "items": [{"kind": "rec", "company_id": "CMP-0072", "vintage": 2024, "what": "all_retired", "claimed": true, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-020", "template_id": "ci_ir_s1_b", "items": [{"kind": "brsr_change", "company_id": "CMP-0082", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -35.0, "expect": "mismatch"}], "literals": ["35"]}
+{"case_id": "BM-021", "template_id": "ci_hp_e", "items": [{"kind": "reg_penalty_inr", "company_id": "CMP-0038", "fy": "FY2024", "claimed": 12500000.0, "expect": "mismatch"}], "literals": ["1.25"]}
+{"case_id": "BM-022", "template_id": "ci_ir_gi", "items": [{"kind": "brsr_change", "company_id": "CMP-0147", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -35.0, "expect": "mismatch"}], "literals": ["35"]}
+{"case_id": "BM-023", "template_id": "nc_target_9", "items": [], "literals": []}
+{"case_id": "BM-024", "template_id": "al_ai_b", "items": [{"kind": "brsr_change", "company_id": "CMP-0085", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -23.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0085", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": 23.0, "expect": "match"}], "literals": ["23", "23"]}
+{"case_id": "BM-025", "template_id": "nc_vague_1", "items": [], "literals": []}
+{"case_id": "BM-026", "template_id": "al_ms_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0035", "fy": "FY2025", "metric": "msme_sourcing_pct", "claimed": 23.0, "mult": 1.0, "expect": "match"}], "literals": ["23"]}
+{"case_id": "BM-027", "template_id": "in_fc_b", "items": [], "literals": []}
+{"case_id": "BM-028", "template_id": "ci_av_c", "items": [{"kind": "brsr_change", "company_id": "CMP-0132", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -22.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0132", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -22.0, "expect": "match"}], "literals": ["22"]}
+{"case_id": "BM-029", "template_id": "al_pt_geo", "items": [{"kind": "alerts", "facility_id": "FAC-0076", "fy": "FY2023", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-030", "template_id": "al_lt_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0089", "fy": "FY2022", "metric": "ltifr", "claimed": 0.71, "mult": 1.0, "expect": "match"}], "literals": ["0.71"]}
+{"case_id": "BM-031", "template_id": "nc_target_11", "items": [], "literals": []}
+{"case_id": "BM-032", "template_id": "al_gi_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0093", "fy": "FY2022", "metric": "ghg_intensity", "claimed": 635.0, "mult": 1.0, "expect": "match"}], "literals": ["635"]}
+{"case_id": "BM-033", "template_id": "al_ww_women", "items": [{"kind": "brsr_value", "company_id": "CMP-0016", "fy": "FY2023", "metric": "women_wage_pct", "claimed": 15.0, "mult": 1.0, "expect": "match"}], "literals": ["15"]}
+{"case_id": "BM-034", "template_id": "nc_target_2", "items": [], "literals": []}
+{"case_id": "BM-035", "template_id": "ci_hp_b", "items": [{"kind": "reg_count", "company_id": "CMP-0066", "fy": "FY2025", "claimed": 0, "penalty_only": true, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-036", "template_id": "al_ze_b", "items": [{"kind": "ocems_count", "company_id": "CMP-0023", "facility_id": null, "fy": "FY2023", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-037", "template_id": "al_rc_a", "items": [{"kind": "rec", "company_id": "CMP-0031", "vintage": 2024, "what": "all_retired", "claimed": true, "expect": "match"}], "literals": []}
+{"case_id": "BM-038", "template_id": "al_ww_yoy", "items": [{"kind": "brsr_change", "company_id": "CMP-0106", "metric": "water_withdrawal_kl", "fy": "FY2025", "baseline_fy": "FY2024", "claimed": 8.5, "expect": "match"}], "literals": ["8.5"]}
+{"case_id": "BM-039", "template_id": "al_s1_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0012", "fy": "FY2024", "metric": "scope1_tco2e", "claimed": 631231.0, "mult": 1.0, "expect": "match"}], "literals": ["631,231"]}
+{"case_id": "BM-040", "template_id": "ci_ir_s1_a", "items": [{"kind": "brsr_change", "company_id": "CMP-0129", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -30.0, "expect": "mismatch"}], "literals": ["30"]}
+{"case_id": "BM-041", "template_id": "nc_vague_16", "items": [], "literals": []}
+{"case_id": "BM-042", "template_id": "ci_ft_netzero", "items": [{"kind": "brsr_value", "company_id": "CMP-0100", "fy": "FY2025", "metric": "scope1_tco2e", "claimed": 0.0, "mult": 1.0, "expect": "mismatch"}], "literals": ["net zero"]}
+{"case_id": "BM-043", "template_id": "ci_ir_en", "items": [{"kind": "brsr_change", "company_id": "CMP-0056", "metric": "energy_gj", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -20.0, "expect": "mismatch"}], "literals": ["20"]}
+{"case_id": "BM-044", "template_id": "nc_vague_17", "items": [], "literals": []}
+{"case_id": "BM-045", "template_id": "ci_hp_oc_d", "items": [{"kind": "ocems_count", "company_id": "CMP-0147", "facility_id": "FAC-0410", "fy": "FY2023", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-046", "template_id": "al_pt_pen_a", "items": [{"kind": "reg_count", "company_id": "CMP-0046", "fy": "FY2024", "claimed": 0, "penalty_only": false, "expect": "match"}], "literals": []}
+{"case_id": "BM-047", "template_id": "in_sw_d", "items": [], "literals": []}
+{"case_id": "BM-048", "template_id": "in_fc_i", "items": [], "literals": []}
+{"case_id": "BM-049", "template_id": "in_s3_c", "items": [], "literals": []}
+{"case_id": "BM-050", "template_id": "ci_ue_gj_tj", "items": [{"kind": "brsr_value", "company_id": "CMP-0058", "fy": "FY2023", "metric": "energy_gj", "claimed": 81304136.0, "mult": 1000.0, "expect": "mismatch"}], "literals": ["81,304,136"]}
+{"case_id": "BM-051", "template_id": "nc_vague_14", "items": [], "literals": []}
+{"case_id": "BM-052", "template_id": "ci_hp_oc_b", "items": [{"kind": "ocems_count", "company_id": "CMP-0074", "facility_id": null, "fy": "FY2024", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-053", "template_id": "ci_ss_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0069", "fy": "FY2024", "metric": "scope1_tco2e", "claimed": 196743.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0069", "fy": "FY2024", "metric": "scope2_tco2e", "claimed": 196743.0, "mult": 1.0, "expect": "match"}], "literals": ["1,96,743"]}
+{"case_id": "BM-054", "template_id": "nc_target_1", "items": [], "literals": []}
+{"case_id": "BM-055", "template_id": "ci_oa_c", "items": [{"kind": "assurance", "company_id": "CMP-0078", "fy": "FY2024", "claimed": "reasonable", "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-056", "template_id": "nc_vague_4", "items": [], "literals": []}
+{"case_id": "BM-057", "template_id": "al_np_c", "items": [{"kind": "reg_count", "company_id": "CMP-0079", "fy": "FY2024", "claimed": 0, "penalty_only": false, "expect": "match"}], "literals": []}
+{"case_id": "BM-058", "template_id": "nc_vague_6", "items": [], "literals": []}
+{"case_id": "BM-059", "template_id": "al_en_rev", "items": [{"kind": "brsr_change", "company_id": "CMP-0044", "metric": "energy_gj", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": 46.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0044", "metric": "revenue_cr", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": 51.0, "expect": "match"}], "literals": ["46", "51"]}
+{"case_id": "BM-060", "template_id": "al_en_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0015", "fy": "FY2024", "metric": "energy_gj", "claimed": 278330.0, "mult": 1.0, "expect": "match"}], "literals": ["2,78,330"]}
+{"case_id": "BM-061", "template_id": "ci_cp_s2_a", "items": [{"kind": "brsr_change", "company_id": "CMP-0053", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -9.6, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0053", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2024", "claimed": -9.6, "expect": "match"}], "literals": ["9.6"]}
+{"case_id": "BM-062", "template_id": "ci_ss_e", "items": [{"kind": "brsr_value", "company_id": "CMP-0080", "fy": "FY2025", "metric": "scope2_tco2e", "claimed": 5974257.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0080", "fy": "FY2025", "metric": "scope1_tco2e", "claimed": 5974257.0, "mult": 1.0, "expect": "match"}], "literals": ["5,974,257"]}
+{"case_id": "BM-063", "template_id": "ci_av_b", "items": [{"kind": "brsr_change", "company_id": "CMP-0133", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -20.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0133", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -20.0, "expect": "match"}], "literals": ["20"]}
+{"case_id": "BM-064", "template_id": "ci_ue_kl_ml_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0050", "fy": "FY2024", "metric": "water_withdrawal_kl", "claimed": 1160.0, "mult": 1.0, "expect": "mismatch"}], "literals": ["1,160"]}
+{"case_id": "BM-065", "template_id": "al_fz_d", "items": [{"kind": "alerts", "facility_id": "FAC-0076", "fy": "FY2023", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-066", "template_id": "ci_uc_re_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0140", "fy": "FY2025", "metric": "re_pct", "claimed": 75.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "rec", "company_id": "CMP-0140", "vintage": 2024, "what": "all_retired", "claimed": true, "expect": "mismatch"}], "literals": ["75"]}
+{"case_id": "BM-067", "template_id": "al_pt_oc_b", "items": [{"kind": "ocems_count", "company_id": "CMP-0116", "facility_id": null, "fy": "FY2023", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-068", "template_id": "al_gi_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0028", "fy": "FY2022", "metric": "ghg_intensity", "claimed": 385.0, "mult": 1.0, "expect": "match"}], "literals": ["385"]}
+{"case_id": "BM-069", "template_id": "in_sw_a", "items": [], "literals": []}
+{"case_id": "BM-070", "template_id": "al_ww_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0048", "fy": "FY2025", "metric": "water_withdrawal_kl", "claimed": 5623013.0, "mult": 1.0, "expect": "match"}], "literals": ["56,23,013"]}
+{"case_id": "BM-071", "template_id": "ci_geo_f", "items": [{"kind": "alerts", "facility_id": "FAC-0186", "fy": "FY2025", "radius_km": 5.0, "what": "ha", "claimed": 2.2, "expect": "mismatch"}], "literals": ["2.2"]}
+{"case_id": "BM-072", "template_id": "al_s2_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0081", "fy": "FY2023", "metric": "scope2_tco2e", "claimed": 128863.0, "mult": 1.0, "expect": "match"}], "literals": ["1,28,863"]}
+{"case_id": "BM-073", "template_id": "in_ck_e", "items": [], "literals": []}
+{"case_id": "BM-074", "template_id": "ci_geo_c", "items": [{"kind": "alerts", "facility_id": "FAC-0099", "fy": "FY2021", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-075", "template_id": "nc_target_3", "items": [], "literals": []}
+{"case_id": "BM-076", "template_id": "ci_oa_a", "items": [{"kind": "assurance", "company_id": "CMP-0111", "fy": "FY2024", "claimed": "reasonable", "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-077", "template_id": "ci_os_fa_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0049", "fy": "FY2023", "metric": "fatalities", "claimed": 0.0, "mult": 1.0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-078", "template_id": "ci_hp_c", "items": [{"kind": "reg_count", "company_id": "CMP-0073", "fy": "FY2025", "claimed": 0, "penalty_only": true, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-079", "template_id": "al_as_none", "items": [{"kind": "assurance", "company_id": "CMP-0030", "fy": "FY2023", "claimed": "none", "expect": "match"}], "literals": []}
+{"case_id": "BM-080", "template_id": "nc_vague_8", "items": [], "literals": []}
+{"case_id": "BM-081", "template_id": "ci_oa_e", "items": [{"kind": "assurance", "company_id": "CMP-0104", "fy": "FY2023", "claimed": "limited", "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-082", "template_id": "ci_oa_d", "items": [{"kind": "assurance", "company_id": "CMP-0019", "fy": "FY2024", "claimed": "assured", "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-083", "template_id": "nc_vague_0", "items": [], "literals": []}
+{"case_id": "BM-084", "template_id": "al_pt_pen_b", "items": [{"kind": "reg_count", "company_id": "CMP-0143", "fy": "FY2025", "claimed": 0, "penalty_only": false, "expect": "match"}], "literals": []}
+{"case_id": "BM-085", "template_id": "ci_bs_2", "items": [{"kind": "brsr_value", "company_id": "CMP-0052", "fy": "FY2020", "metric": "scope1_tco2e", "claimed": 5605227.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0052", "fy": "FY2025", "metric": "scope1_tco2e", "claimed": 3736818.0, "mult": 1.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0052", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -33.0, "expect": "mismatch"}], "literals": ["5,605,227", "3,736,818"]}
+{"case_id": "BM-086", "template_id": "ci_ir_s2", "items": [{"kind": "brsr_change", "company_id": "CMP-0099", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -30.0, "expect": "mismatch"}], "literals": ["30"]}
+{"case_id": "BM-087", "template_id": "ci_av_a", "items": [{"kind": "brsr_change", "company_id": "CMP-0144", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -15.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0144", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -15.0, "expect": "match"}], "literals": ["15"]}
+{"case_id": "BM-088", "template_id": "nc_target_10", "items": [], "literals": []}
+{"case_id": "BM-089", "template_id": "ci_cp_s2_d", "items": [{"kind": "brsr_change", "company_id": "CMP-0034", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -9.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0034", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2024", "claimed": -9.0, "expect": "match"}], "literals": ["9"]}
+{"case_id": "BM-090", "template_id": "ci_oa_b", "items": [{"kind": "assurance", "company_id": "CMP-0091", "fy": "FY2024", "claimed": "reasonable", "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-091", "template_id": "nc_vague_5", "items": [], "literals": []}
+{"case_id": "BM-092", "template_id": "in_wr_d", "items": [], "literals": []}
+{"case_id": "BM-093", "template_id": "al_as_rea", "items": [{"kind": "assurance", "company_id": "CMP-0096", "fy": "FY2025", "claimed": "reasonable", "expect": "match"}], "literals": []}
+{"case_id": "BM-094", "template_id": "nc_target_5", "items": [], "literals": []}
+{"case_id": "BM-095", "template_id": "in_s3_a", "items": [], "literals": []}
+{"case_id": "BM-096", "template_id": "in_fc_c", "items": [], "literals": []}
+{"case_id": "BM-097", "template_id": "ci_ft_re75", "items": [{"kind": "brsr_value", "company_id": "CMP-0026", "fy": "FY2025", "metric": "re_pct", "claimed": 75.0, "mult": 1.0, "expect": "mismatch"}], "literals": ["75"]}
+{"case_id": "BM-098", "template_id": "in_fy_c", "items": [], "literals": []}
+{"case_id": "BM-099", "template_id": "ci_os_lt_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0139", "fy": "FY2024", "metric": "ltifr", "claimed": 0.15, "mult": 1.0, "expect": "mismatch"}], "literals": ["0.15"]}
+{"case_id": "BM-100", "template_id": "ci_cp_s2_b", "items": [{"kind": "brsr_change", "company_id": "CMP-0119", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -17.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0119", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2023", "claimed": -17.0, "expect": "match"}], "literals": ["17"]}
+{"case_id": "BM-101", "template_id": "in_ms_a", "items": [], "literals": []}
+{"case_id": "BM-102", "template_id": "al_fz_c", "items": [{"kind": "alerts", "facility_id": "FAC-0245", "fy": "FY2025", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-103", "template_id": "ci_ue_kl_ml_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0004", "fy": "FY2024", "metric": "water_withdrawal_kl", "claimed": 7632362.0, "mult": 1000.0, "expect": "mismatch"}], "literals": ["7,632,362"]}
+{"case_id": "BM-104", "template_id": "in_wr_a", "items": [], "literals": []}
+{"case_id": "BM-105", "template_id": "in_s3_e", "items": [], "literals": []}
+{"case_id": "BM-106", "template_id": "nc_vague_13", "items": [], "literals": []}
+{"case_id": "BM-107", "template_id": "al_oc_cnt", "items": [{"kind": "ocems_count", "company_id": "CMP-0074", "facility_id": "FAC-0201", "fy": "FY2024", "claimed": 14, "expect": "match"}], "literals": ["14"]}
+{"case_id": "BM-108", "template_id": "in_wr_b", "items": [], "literals": []}
+{"case_id": "BM-109", "template_id": "in_fc_f", "items": [], "literals": []}
+{"case_id": "BM-110", "template_id": "ci_os_lt_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0108", "fy": "FY2023", "metric": "ltifr", "claimed": 0.2, "mult": 1.0, "expect": "mismatch"}], "literals": ["0.20"]}
+{"case_id": "BM-111", "template_id": "ci_os_lt_red", "items": [{"kind": "brsr_change", "company_id": "CMP-0131", "metric": "ltifr", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -30.0, "expect": "mismatch"}], "literals": ["30"]}
+{"case_id": "BM-112", "template_id": "ci_ss_d", "items": [{"kind": "brsr_value", "company_id": "CMP-0076", "fy": "FY2024", "metric": "scope2_tco2e", "claimed": 8482955.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0076", "fy": "FY2024", "metric": "scope1_tco2e", "claimed": 8482955.0, "mult": 1.0, "expect": "match"}], "literals": ["8,482,955"]}
+{"case_id": "BM-113", "template_id": "al_ci_b", "items": [{"kind": "brsr_change", "company_id": "CMP-0137", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -11.0, "expect": "match"}], "literals": ["11"]}
+{"case_id": "BM-114", "template_id": "nc_vague_12", "items": [], "literals": []}
+{"case_id": "BM-115", "template_id": "ci_bs_1", "items": [{"kind": "brsr_value", "company_id": "CMP-0103", "fy": "FY2020", "metric": "scope1_tco2e", "claimed": 8212451.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0103", "fy": "FY2025", "metric": "scope1_tco2e", "claimed": 6317270.0, "mult": 1.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0103", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -23.0, "expect": "mismatch"}], "literals": ["8,212,451", "6,317,270"]}
+{"case_id": "BM-116", "template_id": "in_bd_a", "items": [], "literals": []}
+{"case_id": "BM-117", "template_id": "nc_vague_15", "items": [], "literals": []}
+{"case_id": "BM-118", "template_id": "al_re_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0010", "fy": "FY2022", "metric": "re_pct", "claimed": 13.0, "mult": 1.0, "expect": "match"}], "literals": ["13"]}
+{"case_id": "BM-119", "template_id": "in_bd_c", "items": [], "literals": []}
+{"case_id": "BM-120", "template_id": "in_fy_a", "items": [], "literals": []}
+{"case_id": "BM-121", "template_id": "ci_ir_ww_a", "items": [{"kind": "brsr_change", "company_id": "CMP-0047", "metric": "water_withdrawal_kl", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -15.0, "expect": "mismatch"}], "literals": ["15"]}
+{"case_id": "BM-122", "template_id": "al_ze_a", "items": [{"kind": "ocems_count", "company_id": "CMP-0127", "facility_id": null, "fy": "FY2025", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-123", "template_id": "nc_vague_9", "items": [], "literals": []}
+{"case_id": "BM-124", "template_id": "ci_ss_c", "items": [{"kind": "brsr_value", "company_id": "CMP-0014", "fy": "FY2023", "metric": "scope1_tco2e", "claimed": 787019.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0014", "fy": "FY2023", "metric": "scope2_tco2e", "claimed": 787019.0, "mult": 1.0, "expect": "match"}], "literals": ["787,019"]}
+{"case_id": "BM-125", "template_id": "in_s3_g", "items": [], "literals": []}
+{"case_id": "BM-126", "template_id": "ci_geo_d", "items": [{"kind": "alerts", "facility_id": "FAC-0277", "fy": "FY2025", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-127", "template_id": "al_lt_red", "items": [{"kind": "brsr_change", "company_id": "CMP-0061", "metric": "ltifr", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -25.0, "expect": "match"}], "literals": ["25"]}
+{"case_id": "BM-128", "template_id": "al_ww_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0141", "fy": "FY2022", "metric": "water_withdrawal_kl", "claimed": 7.4, "mult": 100000.0, "expect": "match"}], "literals": ["7.40"]}
+{"case_id": "BM-129", "template_id": "in_wr_c", "items": [], "literals": []}
+{"case_id": "BM-130", "template_id": "ci_hp_oc_e", "items": [{"kind": "ocems_count", "company_id": "CMP-0007", "facility_id": null, "fy": "FY2023", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-131", "template_id": "al_fz_a", "items": [{"kind": "alerts", "facility_id": "FAC-0245", "fy": "FY2025", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-132", "template_id": "ci_bs_3", "items": [{"kind": "brsr_value", "company_id": "CMP-0148", "fy": "FY2020", "metric": "energy_gj", "claimed": 34889764.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0148", "fy": "FY2025", "metric": "energy_gj", "claimed": 26838280.0, "mult": 1.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0148", "metric": "energy_gj", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -23.0, "expect": "mismatch"}], "literals": ["3,48,89,764", "2,68,38,280"]}
+{"case_id": "BM-133", "template_id": "in_sw_c", "items": [], "literals": []}
+{"case_id": "BM-134", "template_id": "ci_hp_oc_c", "items": [{"kind": "ocems_count", "company_id": "CMP-0137", "facility_id": null, "fy": "FY2025", "claimed": 3, "expect": "mismatch"}], "literals": ["3"]}
+{"case_id": "BM-135", "template_id": "ci_hp_a", "items": [{"kind": "reg_count", "company_id": "CMP-0073", "fy": "FY2025", "claimed": 0, "penalty_only": true, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-136", "template_id": "ci_ir_ww_b", "items": [{"kind": "brsr_change", "company_id": "CMP-0095", "metric": "water_withdrawal_kl", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -10.0, "expect": "mismatch"}], "literals": ["10"]}
+{"case_id": "BM-137", "template_id": "in_fy_b", "items": [], "literals": []}
+{"case_id": "BM-138", "template_id": "al_fz0_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0098", "fy": "FY2022", "metric": "fatalities", "claimed": 0.0, "mult": 1.0, "expect": "match"}], "literals": ["zero"]}
+{"case_id": "BM-139", "template_id": "in_ck_c", "items": [], "literals": []}
+{"case_id": "BM-140", "template_id": "ci_uc_vol_a", "items": [{"kind": "rec", "company_id": "CMP-0070", "vintage": 2024, "what": "retired_mwh", "claimed": 37700.0, "expect": "mismatch"}], "literals": ["37,700"]}
+{"case_id": "BM-141", "template_id": "ci_ue_lakh_crore_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0075", "fy": "FY2024", "metric": "scope1_tco2e", "claimed": 0.416, "mult": 100000.0, "expect": "mismatch"}], "literals": ["0.416"]}
+{"case_id": "BM-142", "template_id": "nc_vague_2", "items": [], "literals": []}
+{"case_id": "BM-143", "template_id": "ci_geo_e", "items": [{"kind": "alerts", "facility_id": "FAC-0019", "fy": "FY2022", "radius_km": 5.0, "what": "ha", "claimed": 1.1, "expect": "mismatch"}], "literals": ["1.1"]}
+{"case_id": "BM-144", "template_id": "ci_ft_re50", "items": [{"kind": "brsr_value", "company_id": "CMP-0032", "fy": "FY2025", "metric": "re_pct", "claimed": 50.0, "mult": 1.0, "expect": "mismatch"}], "literals": ["50"]}
+{"case_id": "BM-145", "template_id": "ci_bs_0", "items": [{"kind": "brsr_value", "company_id": "CMP-0105", "fy": "FY2020", "metric": "scope1_tco2e", "claimed": 171.0, "mult": 100000.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0105", "fy": "FY2025", "metric": "scope1_tco2e", "claimed": 142.0, "mult": 100000.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0105", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -17.0, "expect": "mismatch"}], "literals": ["171", "142"]}
+{"case_id": "BM-146", "template_id": "ci_geo_a", "items": [{"kind": "alerts", "facility_id": "FAC-0019", "fy": "FY2023", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-147", "template_id": "al_lt_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0068", "fy": "FY2022", "metric": "ltifr", "claimed": 0.82, "mult": 1.0, "expect": "match"}], "literals": ["0.82"]}
+{"case_id": "BM-148", "template_id": "nc_target_7", "items": [], "literals": []}
+{"case_id": "BM-149", "template_id": "ci_cp_lt", "items": [{"kind": "brsr_change", "company_id": "CMP-0065", "metric": "ltifr", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -21.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0065", "metric": "ltifr", "fy": "FY2025", "baseline_fy": "FY2021", "claimed": -21.0, "expect": "match"}], "literals": ["21"]}
+{"case_id": "BM-150", "template_id": "al_ms_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0043", "fy": "FY2025", "metric": "msme_sourcing_pct", "claimed": 51.0, "mult": 1.0, "expect": "match"}], "literals": ["51"]}
+{"case_id": "BM-151", "template_id": "al_wr_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0150", "fy": "FY2022", "metric": "waste_recovery_pct", "claimed": 83.0, "mult": 1.0, "expect": "match"}], "literals": ["83"]}
+{"case_id": "BM-152", "template_id": "ci_cp_s2_c", "items": [{"kind": "brsr_change", "company_id": "CMP-0022", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -9.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0022", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2024", "claimed": -9.0, "expect": "match"}], "literals": ["9"]}
+{"case_id": "BM-153", "template_id": "in_ck_d", "items": [], "literals": []}
+{"case_id": "BM-154", "template_id": "al_wr_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0124", "fy": "FY2023", "metric": "waste_recovery_pct", "claimed": 43.0, "mult": 1.0, "expect": "match"}], "literals": ["43"]}
+{"case_id": "BM-155", "template_id": "in_fc_g", "items": [], "literals": []}
+{"case_id": "BM-156", "template_id": "nc_vague_11", "items": [], "literals": []}
+{"case_id": "BM-157", "template_id": "in_s3_b", "items": [], "literals": []}
+{"case_id": "BM-158", "template_id": "ci_ir_s1_c", "items": [{"kind": "brsr_change", "company_id": "CMP-0110", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -45.0, "expect": "mismatch"}], "literals": ["45"]}
+{"case_id": "BM-159", "template_id": "al_np_a", "items": [{"kind": "reg_count", "company_id": "CMP-0018", "fy": "FY2022", "claimed": 0, "penalty_only": false, "expect": "match"}], "literals": []}
+{"case_id": "BM-160", "template_id": "in_fc_d", "items": [], "literals": []}
+{"case_id": "BM-161", "template_id": "al_ze_c", "items": [{"kind": "ocems_count", "company_id": "CMP-0067", "facility_id": null, "fy": "FY2025", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-162", "template_id": "nc_vague_3", "items": [], "literals": []}
+{"case_id": "BM-163", "template_id": "in_s3_d", "items": [], "literals": []}
+{"case_id": "BM-164", "template_id": "ci_av_d", "items": [{"kind": "brsr_change", "company_id": "CMP-0033", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -19.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0033", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -19.0, "expect": "match"}], "literals": ["19"]}
+{"case_id": "BM-165", "template_id": "in_ms_b", "items": [], "literals": []}
+{"case_id": "BM-166", "template_id": "ci_ss_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0149", "fy": "FY2024", "metric": "scope1_tco2e", "claimed": 1.71, "mult": 100000.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0149", "fy": "FY2024", "metric": "scope2_tco2e", "claimed": 1.71, "mult": 100000.0, "expect": "match"}], "literals": ["1.71"]}
+{"case_id": "BM-167", "template_id": "al_s2_red", "items": [{"kind": "brsr_change", "company_id": "CMP-0011", "metric": "scope2_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -8.4, "expect": "match"}], "literals": ["8.4"]}
+{"case_id": "BM-168", "template_id": "al_pt_oc_a", "items": [{"kind": "ocems_count", "company_id": "CMP-0051", "facility_id": null, "fy": "FY2024", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-169", "template_id": "al_en_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0109", "fy": "FY2023", "metric": "energy_gj", "claimed": 6.07, "mult": 10000000.0, "expect": "match"}], "literals": ["6.07"]}
+{"case_id": "BM-170", "template_id": "in_ck_a", "items": [], "literals": []}
+{"case_id": "BM-171", "template_id": "ci_uc_all_a", "items": [{"kind": "rec", "company_id": "CMP-0134", "vintage": 2024, "what": "all_retired", "claimed": true, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-172", "template_id": "al_fz_b", "items": [{"kind": "alerts", "facility_id": "FAC-0076", "fy": "FY2023", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "match"}], "literals": []}
+{"case_id": "BM-173", "template_id": "ci_hp_d", "items": [{"kind": "reg_penalty_inr", "company_id": "CMP-0050", "fy": "FY2024", "claimed": 15600000.0, "expect": "mismatch"}], "literals": ["1.56"]}
+{"case_id": "BM-174", "template_id": "al_fz0_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0057", "fy": "FY2023", "metric": "fatalities", "claimed": 0.0, "mult": 1.0, "expect": "match"}], "literals": ["no fatalities"]}
+{"case_id": "BM-175", "template_id": "in_sw_b", "items": [], "literals": []}
+{"case_id": "BM-176", "template_id": "al_re_c", "items": [{"kind": "brsr_value", "company_id": "CMP-0113", "fy": "FY2023", "metric": "re_pct", "claimed": 22.0, "mult": 1.0, "expect": "match"}], "literals": ["22"]}
+{"case_id": "BM-177", "template_id": "ci_uc_vol_b", "items": [{"kind": "rec", "company_id": "CMP-0017", "vintage": 2024, "what": "retired_mwh", "claimed": 11800.0, "expect": "mismatch"}], "literals": ["11,800"]}
+{"case_id": "BM-178", "template_id": "in_bd_b", "items": [], "literals": []}
+{"case_id": "BM-179", "template_id": "al_pen_amt", "items": [{"kind": "reg_penalty_inr", "company_id": "CMP-0042", "fy": "FY2023", "claimed": 98300000.0, "expect": "match"}, {"kind": "reg_count", "company_id": "CMP-0042", "fy": "FY2023", "claimed": 1, "penalty_only": false, "expect": "match"}], "literals": ["9.83"]}
+{"case_id": "BM-180", "template_id": "nc_target_8", "items": [], "literals": []}
+{"case_id": "BM-181", "template_id": "al_ci_a", "items": [{"kind": "brsr_change", "company_id": "CMP-0122", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -15.0, "expect": "match"}], "literals": ["15"]}
+{"case_id": "BM-182", "template_id": "al_ai_a", "items": [{"kind": "brsr_change", "company_id": "CMP-0090", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -19.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0090", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": 21.0, "expect": "match"}], "literals": ["19", "21"]}
+{"case_id": "BM-183", "template_id": "nc_target_0", "items": [], "literals": []}
+{"case_id": "BM-184", "template_id": "in_ck_b", "items": [], "literals": []}
+{"case_id": "BM-185", "template_id": "in_fc_h", "items": [], "literals": []}
+{"case_id": "BM-186", "template_id": "ci_av_e", "items": [{"kind": "brsr_change", "company_id": "CMP-0126", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -20.0, "expect": "mismatch"}, {"kind": "brsr_change", "company_id": "CMP-0126", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -20.0, "expect": "match"}], "literals": ["20"]}
+{"case_id": "BM-187", "template_id": "al_np_b", "items": [{"kind": "reg_count", "company_id": "CMP-0088", "fy": "FY2024", "claimed": 0, "penalty_only": false, "expect": "match"}], "literals": []}
+{"case_id": "BM-188", "template_id": "al_s1_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0027", "fy": "FY2023", "metric": "scope1_tco2e", "claimed": 261523.0, "mult": 1.0, "expect": "match"}], "literals": ["261,523"]}
+{"case_id": "BM-189", "template_id": "in_ms_c", "items": [], "literals": []}
+{"case_id": "BM-190", "template_id": "ci_os_fa_a", "items": [{"kind": "brsr_value", "company_id": "CMP-0086", "fy": "FY2023", "metric": "fatalities", "claimed": 0.0, "mult": 1.0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-191", "template_id": "ci_bs_4", "items": [{"kind": "brsr_value", "company_id": "CMP-0045", "fy": "FY2020", "metric": "water_withdrawal_kl", "claimed": 14014486.0, "mult": 1.0, "expect": "mismatch"}, {"kind": "brsr_value", "company_id": "CMP-0045", "fy": "FY2025", "metric": "water_withdrawal_kl", "claimed": 11678738.0, "mult": 1.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0045", "metric": "water_withdrawal_kl", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -17.0, "expect": "mismatch"}], "literals": ["1,40,14,486", "1,16,78,738"]}
+{"case_id": "BM-192", "template_id": "in_fc_a", "items": [], "literals": []}
+{"case_id": "BM-193", "template_id": "ci_geo_b", "items": [{"kind": "alerts", "facility_id": "FAC-0172", "fy": "FY2022", "radius_km": 5.0, "what": "count", "claimed": 0, "expect": "mismatch"}], "literals": []}
+{"case_id": "BM-194", "template_id": "al_rc_c", "items": [{"kind": "rec", "company_id": "CMP-0008", "vintage": 2024, "what": "all_retired", "claimed": true, "expect": "match"}], "literals": []}
+{"case_id": "BM-195", "template_id": "in_fc_j", "items": [], "literals": []}
+{"case_id": "BM-196", "template_id": "ci_ft_re100", "items": [{"kind": "brsr_value", "company_id": "CMP-0038", "fy": "FY2025", "metric": "re_pct", "claimed": 100.0, "mult": 1.0, "expect": "mismatch"}], "literals": ["100"]}
+{"case_id": "BM-197", "template_id": "nc_target_6", "items": [], "literals": []}
+{"case_id": "BM-198", "template_id": "al_ai_c", "items": [{"kind": "brsr_change", "company_id": "CMP-0077", "metric": "ghg_intensity", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": -19.0, "expect": "match"}, {"kind": "brsr_change", "company_id": "CMP-0077", "metric": "scope1_tco2e", "fy": "FY2025", "baseline_fy": "FY2020", "claimed": 18.0, "expect": "match"}], "literals": ["19", "18"]}
+{"case_id": "BM-199", "template_id": "ci_ue_lakh_crore_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0055", "fy": "FY2024", "metric": "scope1_tco2e", "claimed": 3.08, "mult": 10000000.0, "expect": "mismatch"}], "literals": ["3.08"]}
+{"case_id": "BM-200", "template_id": "al_re_b", "items": [{"kind": "brsr_value", "company_id": "CMP-0007", "fy": "FY2022", "metric": "re_pct", "claimed": 21.0, "mult": 1.0, "expect": "match"}], "literals": ["21"]}

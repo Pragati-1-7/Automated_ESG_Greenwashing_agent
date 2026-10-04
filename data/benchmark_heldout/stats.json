@@ -1,0 +1,102 @@
+{
+  "total": 200,
+  "seed": 777,
+  "n_templates": 200,
+  "by_label": {
+    "ALIGN": 60,
+    "CONTRADICT": 70,
+    "INSUFFICIENT_EVIDENCE": 40,
+    "NOT_CHECKABLE": 30
+  },
+  "by_gw_type": {
+    "none": 72,
+    "vague_claim": 18,
+    "inflated_reduction": 8,
+    "cherry_picked_year": 5,
+    "baseline_shift": 5,
+    "scope_swap": 5,
+    "absolute_vs_intensity": 5,
+    "unit_error": 5,
+    "future_target_as_achievement": 5,
+    "unretired_certificates": 6,
+    "geo_contradiction": 6,
+    "hidden_regulatory_penalty": 10,
+    "overstated_safety": 5,
+    "overstated_assurance": 5,
+    "data_not_disclosed": 40
+  },
+  "by_difficulty": {
+    "hard": 65,
+    "medium": 73,
+    "easy": 62
+  },
+  "by_split": {
+    "train": 140,
+    "test": 60
+  },
+  "label_x_split": {
+    "ALIGN|test": 18,
+    "ALIGN|train": 42,
+    "CONTRADICT|test": 21,
+    "CONTRADICT|train": 49,
+    "INSUFFICIENT_EVIDENCE|test": 12,
+    "INSUFFICIENT_EVIDENCE|train": 28,
+    "NOT_CHECKABLE|test": 9,
+    "NOT_CHECKABLE|train": 21
+  },
+  "label_x_difficulty": {
+    "ALIGN|easy": 22,
+    "ALIGN|hard": 15,
+    "ALIGN|medium": 23,
+    "CONTRADICT|easy": 12,
+    "CONTRADICT|hard": 47,
+    "CONTRADICT|medium": 11,
+    "INSUFFICIENT_EVIDENCE|easy": 10,
+    "INSUFFICIENT_EVIDENCE|hard": 3,
+    "INSUFFICIENT_EVIDENCE|medium": 27,
+    "NOT_CHECKABLE|easy": 18,
+    "NOT_CHECKABLE|medium": 12
+  },
+  "label_x_gw_type": {
+    "ALIGN|none": 60,
+    "CONTRADICT|absolute_vs_intensity": 5,
+    "CONTRADICT|baseline_shift": 5,
+    "CONTRADICT|cherry_picked_year": 5,
+    "CONTRADICT|future_target_as_achievement": 5,
+    "CONTRADICT|geo_contradiction": 6,
+    "CONTRADICT|hidden_regulatory_penalty": 10,
+    "CONTRADICT|inflated_reduction": 8,
+    "CONTRADICT|overstated_assurance": 5,
+    "CONTRADICT|overstated_safety": 5,
+    "CONTRADICT|scope_swap": 5,
+    "CONTRADICT|unit_error": 5,
+    "CONTRADICT|unretired_certificates": 6,
+    "INSUFFICIENT_EVIDENCE|data_not_disclosed": 40,
+    "NOT_CHECKABLE|none": 12,
+    "NOT_CHECKABLE|vague_claim": 18
+  },
+  "by_metric": {
+    "assurance_type": 10,
+    "clinker_factor": 5,
+    "deforestation_ha": 11,
+    "energy_gj": 6,
+    "fatalities": 7,
+    "ghg_intensity": 11,
+    "ltifr": 9,
+    "msme_sourcing_pct": 2,
+    "null": 33,
+    "ocems_exceedances": 13,
+    "re_pct": 13,
+    "rec_retirement": 9,
+    "regulatory_actions": 12,
+    "scope1_tco2e": 27,
+    "scope2_tco2e": 10,
+    "scope3_tco2e": 7,
+    "waste_generated_t": 1,
+    "waste_recovered_t": 2,
+    "water_withdrawal_kl": 10,
+    "women_wage_pct": 2
+  },
+  "distinct_companies": 147,
+  "fictional_company_cases": 10
+}

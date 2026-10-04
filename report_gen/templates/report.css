@@ -1,0 +1,113 @@
+/* Print stylesheet for the synthetic sustainability reports. Fonts: system only. */
+:root{
+  --brand:$brand; --dark:$dark; --mid:$mid; --tint:$tint; --tint2:$tint2; --sec:$sec;
+  --ink:#1f2328; --grey:#6b7280; --rule:#d5d9df;
+  --serif:"Liberation Serif","DejaVu Serif",serif;
+  --sans:"Inter","Liberation Sans","DejaVu Sans",sans-serif;
+}
+@page{
+  size:A4; margin:23mm 18mm 20mm 18mm;
+  @top-left{content:"$hdr_left"; font:600 7.2pt var(--sans); color:var(--grey); border-bottom:0.5pt solid var(--rule); width:55%; padding-bottom:2mm; vertical-align:bottom; text-align:left; letter-spacing:.02em}
+  @top-right{content:"$hdr_right"; font:7.2pt var(--sans); color:var(--grey); border-bottom:0.5pt solid var(--rule); padding-bottom:2mm; vertical-align:bottom; text-align:right; white-space:nowrap}
+  @bottom-left{content:"$ftr_left"; font:7pt var(--sans); color:var(--grey); vertical-align:top; padding-top:3mm}
+  @bottom-right{content:"Page " counter(page) " of " counter(pages); font:600 7.4pt var(--sans); color:var(--dark); vertical-align:top; padding-top:3mm}
+}
+@page cover{margin:0; @top-left{content:none;border:0} @top-right{content:none;border:0} @bottom-left{content:none} @bottom-right{content:none}}
+@page back{margin:0; @top-left{content:none;border:0} @top-right{content:none;border:0} @bottom-left{content:none} @bottom-right{content:none}}
+
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+body{margin:0; font:10.5pt/1.34 var(--serif); color:var(--ink); orphans:3; widows:3}
+p{margin:0 0 2.2mm; text-align:justify; hyphens:none; text-indent:0}
+p + p{text-indent:4.5mm; margin-top:0}
+sup{font:600 6.5pt var(--sans); color:var(--brand); vertical-align:super; line-height:0}
+h2,h3,h4{font-family:var(--sans); color:var(--dark)}
+h3{font-size:10.5pt; margin:4mm 0 1.6mm; break-after:avoid; font-weight:700}
+h3 + p{text-indent:0}
+em{font-style:italic}
+
+/* ---------- cover ---------- */
+.cover{page:cover; position:relative; width:210mm; height:296.6mm; overflow:hidden; break-after:page; color:#fff; background:var(--dark)}
+.cover img.art{position:absolute; inset:0; width:210mm; height:296.6mm}
+.cover .top{position:absolute; left:20mm; top:20mm; right:20mm; font:600 9pt var(--sans); letter-spacing:.18em; text-transform:uppercase}
+.cover .top span{display:inline-block; padding:1.6mm 3.4mm; background:rgba(255,255,255,.14); border:0.5pt solid rgba(255,255,255,.4)}
+.cover .block{position:absolute; left:0; right:0; bottom:0; height:104mm; background:var(--dark)}
+.cover .block:before{content:""; position:absolute; left:20mm; top:-1.6mm; width:46mm; height:3.2mm; background:var(--sec)}
+.cover .ttl{position:absolute; left:20mm; right:24mm; bottom:50mm}
+.cover .kick{font:600 10pt var(--sans); letter-spacing:.16em; text-transform:uppercase; opacity:.85; margin-bottom:5mm}
+.cover h1{font:700 31pt/1.12 var(--sans); margin:0 0 5mm; color:#fff; letter-spacing:-.01em}
+.cover .sub{font:300 15pt/1.3 var(--sans); opacity:.92}
+.cover .meta{position:absolute; left:20mm; right:20mm; bottom:18mm; font:8.5pt/1.5 var(--sans); opacity:.85; border-top:0.5pt solid rgba(255,255,255,.4); padding-top:4mm; display:flex; justify-content:space-between}
+.back{page:back; position:relative; width:210mm; height:296.6mm; overflow:hidden; background:var(--dark); color:#fff; break-before:page}
+.back img{position:absolute; left:0; top:0; width:210mm; opacity:.5}
+.back .txt{position:absolute; left:22mm; right:22mm; bottom:34mm; font:9pt/1.55 var(--sans)}
+.back h2{color:#fff; font:700 20pt var(--sans); margin:0 0 5mm}
+.back .fic{position:absolute; left:22mm; right:22mm; bottom:14mm; font:7.5pt var(--sans); opacity:.8; border-top:0.5pt solid rgba(255,255,255,.4); padding-top:3mm}
+.back p{text-align:left; text-indent:0!important; margin:0 0 2mm}
+
+/* ---------- contents ---------- */
+.toc h1,.chap-head h1{font:700 22pt var(--sans); color:var(--dark); margin:0 0 6mm}
+.toc{break-before:page}
+.toc ol{list-style:none; padding:0; margin:0}
+.toc li{display:flex; align-items:baseline; font:10pt var(--sans); padding:1.55mm 0; border-bottom:0.4pt dotted #b9bec6}
+.toc li .n{width:11mm; color:var(--brand); font-weight:700}
+.toc li .t{flex:1}
+.toc li .pg{width:12mm; text-align:right; color:var(--dark); font-weight:600}
+.toc .grp{font:700 7.6pt var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--grey); margin:5mm 0 1mm; padding:0}
+
+/* ---------- chapters ---------- */
+.chapter{break-before:page}
+.chap-head{margin:0 0 5mm; padding:0 0 3.5mm; border-bottom:2.2pt solid var(--brand); display:flex; gap:6mm; align-items:flex-end}
+.chap-head .num{font:700 40pt/0.9 var(--sans); color:var(--brand); opacity:.9}
+.chap-head .tt{flex:1}
+.chap-head .kick{font:700 7.4pt var(--sans); letter-spacing:.2em; text-transform:uppercase; color:var(--grey); margin-bottom:1.4mm}
+.chap-head h1{font-size:20pt; line-height:1.1; margin:0}
+.chap-head .st{font:italic 10.5pt var(--serif); color:#4b5563; margin-top:1.6mm}
+.cols{column-count:2; column-gap:8mm; column-fill:balance}
+.span,p.stmt,.cols > figure.wide,.cols > .kpis,.cols > .notes{column-span:all}
+p.stmt{margin:2mm 0 3.2mm; padding:2.2mm 4mm; border-left:2.4pt solid var(--sec); background:var(--tint); text-indent:0!important}
+.callout{break-inside:avoid; background:var(--tint); border-top:2.2pt solid var(--brand); padding:3mm 3.6mm 2.4mm; margin:2.6mm 0 3.4mm; font:8.6pt/1.45 var(--sans)}
+.callout h4{margin:0 0 1.4mm; font:700 8.6pt var(--sans); color:var(--dark); text-transform:uppercase; letter-spacing:.06em}
+.callout p{font:8.6pt/1.45 var(--sans); text-align:left; text-indent:0!important; margin:0 0 1.2mm}
+.callout ul{margin:0; padding-left:4mm}
+.callout li{margin:0 0 1mm}
+blockquote.pull{break-inside:avoid; margin:3mm 0 4mm; padding:3mm 0 2.4mm; border-top:1.4pt solid var(--sec); border-bottom:0.5pt solid var(--rule); font:italic 14pt/1.28 var(--serif); color:var(--dark)}
+blockquote.pull cite{display:block; font:600 7.8pt var(--sans); font-style:normal; color:var(--grey); margin-top:2mm; letter-spacing:.04em}
+figure{margin:3mm 0 3.4mm; break-inside:avoid}
+figure img{width:100%; display:block}
+figcaption{font:7.8pt/1.4 var(--sans); color:var(--grey); margin-top:1.6mm}
+figcaption b{color:var(--dark)}
+.kpis{display:flex; gap:3mm; margin:1mm 0 4mm; break-inside:avoid}
+.kpis div{flex:1; background:var(--brand); color:#fff; padding:3mm 3.4mm; font:7.6pt/1.3 var(--sans)}
+.kpis div b{display:block; font:700 15pt/1.15 var(--sans); margin-bottom:.8mm}
+.kpis div:nth-child(even){background:var(--dark)}
+.tbl{break-inside:avoid; margin:2mm 0 4mm}
+.tbl .cap{font:700 8.4pt var(--sans); color:var(--dark); margin-bottom:1.4mm}
+table.data{width:100%; border-collapse:collapse; font:8pt/1.35 var(--sans)}
+table.data th{background:var(--brand); color:#fff; font-weight:600; text-align:left; padding:1.5mm 2mm; border:0}
+table.data td{padding:1mm 2mm; border-bottom:0.4pt solid var(--rule); vertical-align:top}
+table.data tbody tr:nth-child(even) td{background:#f6f7f9}
+table.data td.r,table.data th.r{text-align:right; font-variant-numeric:tabular-nums}
+table.data tr{break-inside:avoid}
+.tbl .src{font:7.2pt/1.4 var(--sans); color:var(--grey); margin-top:1.4mm; text-align:left}
+.notes{border-top:0.5pt solid var(--rule); margin-top:4mm; padding-top:2mm; font:7.4pt/1.4 var(--sans); color:#4b5563; break-inside:avoid}
+.notes ol{margin:0; padding-left:4mm; column-count:2; column-gap:8mm}
+.notes li{margin:0 0 1mm; break-inside:avoid}
+.notes b{font-size:7pt; letter-spacing:.14em; text-transform:uppercase; color:var(--dark)}
+.sign{font:italic 11pt var(--serif); margin-top:4mm}
+.sign b{font:700 9.5pt var(--sans); font-style:normal; display:block; color:var(--dark)}
+.sign span{font:8.4pt var(--sans); font-style:normal; color:var(--grey)}
+.letter{column-count:1}
+.letter p.stmt{margin-left:0}
+.dropcap:first-letter{float:left; font:700 34pt/0.8 var(--sans); color:var(--brand); padding:1mm 2mm 0 0}
+.big{font-size:12pt; line-height:1.4}
+.assur{border:0.8pt solid var(--brand); padding:6mm 7mm; font:9.4pt/1.5 var(--serif)}
+.assur h2{font:700 13pt var(--sans); color:var(--dark); margin:0 0 3mm}
+.assur p{text-indent:0!important; margin-bottom:2.4mm}
+.glos dt{font:700 8.8pt var(--sans); color:var(--dark); margin-top:2mm; break-after:avoid}
+.glos dd{margin:0 0 0 0; font:9.2pt/1.38 var(--serif); text-align:left}
+.gri table.data{font-size:7pt} .gri table.data td{padding:.7mm 1.6mm}
+.gri thead{display:table-header-group}
+.tag{display:inline-block; padding:.2mm 1.6mm; font:600 6.8pt var(--sans); background:var(--tint2); color:var(--dark); border-radius:1mm}
+
+.gri-t{break-inside:auto!important}

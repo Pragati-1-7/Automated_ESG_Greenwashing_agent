@@ -1,0 +1,284 @@
+{
+  "created_at": "2026-10-03T23:31:17+00:00",
+  "split": "test",
+  "n_cases": 60,
+  "overall": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "coverage": 1.0,
+    "citation_precision": 0.897
+  },
+  "per_label": {
+    "ALIGN": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 18
+    },
+    "CONTRADICT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 21
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 12
+    },
+    "NOT_CHECKABLE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 9
+    }
+  },
+  "per_gw_type": {
+    "baseline_shift": {
+      "n": 3,
+      "accuracy": 1.0
+    },
+    "cherry_picked_year": {
+      "n": 2,
+      "accuracy": 1.0
+    },
+    "data_not_disclosed": {
+      "n": 12,
+      "accuracy": 1.0
+    },
+    "future_target_as_achievement": {
+      "n": 4,
+      "accuracy": 1.0
+    },
+    "geo_contradiction": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "hidden_regulatory_penalty": {
+      "n": 2,
+      "accuracy": 1.0
+    },
+    "inflated_reduction": {
+      "n": 3,
+      "accuracy": 1.0
+    },
+    "none": {
+      "n": 21,
+      "accuracy": 1.0
+    },
+    "overstated_assurance": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "overstated_safety": {
+      "n": 2,
+      "accuracy": 1.0
+    },
+    "scope_swap": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "unit_error": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "unretired_certificates": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "vague_claim": {
+      "n": 6,
+      "accuracy": 1.0
+    }
+  },
+  "confusion": {
+    "labels": [
+      "ALIGN",
+      "CONTRADICT",
+      "INSUFFICIENT_EVIDENCE",
+      "NOT_CHECKABLE"
+    ],
+    "matrix": [
+      [
+        18,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        21,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        12,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        9
+      ]
+    ]
+  },
+  "all_cases": {
+    "n": 200,
+    "accuracy": 0.98,
+    "macro_f1": 0.983,
+    "coverage": 1.0,
+    "citation_precision": 0.915
+  },
+  "ablations": [
+    {
+      "name": "full_system",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "coverage": 1.0
+    },
+    {
+      "name": "no_retrieval",
+      "accuracy": 0.35,
+      "macro_f1": 0.345,
+      "coverage": 0.0
+    },
+    {
+      "name": "news_rag_only",
+      "accuracy": 0.45,
+      "macro_f1": 0.478,
+      "coverage": 0.154
+    },
+    {
+      "name": "single_round",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "coverage": 1.0
+    },
+    {
+      "name": "no_relevance_gate",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "coverage": 1.0
+    }
+  ],
+  "engine": {
+    "decision": "jev-1.13.0",
+    "jev_calls": 0,
+    "cache_hits": 3992,
+    "seconds": 26.3
+  },
+  "pdf_eval": {
+    "full_system": [
+      {
+        "report": "vajra",
+        "planted_claims": 16,
+        "extracted": 16,
+        "correct": 16,
+        "company_risk_score": 56.3,
+        "risk_band": "High",
+        "other_claims_verdicts": {
+          "INSUFFICIENT_EVIDENCE": 15,
+          "NOT_CHECKABLE": 17,
+          "CONTRADICT": 2,
+          "ALIGN": 1
+        }
+      },
+      {
+        "report": "sahyadri",
+        "planted_claims": 12,
+        "extracted": 12,
+        "correct": 12,
+        "company_risk_score": 45.0,
+        "risk_band": "Moderate",
+        "other_claims_verdicts": {
+          "INSUFFICIENT_EVIDENCE": 10,
+          "NOT_CHECKABLE": 12,
+          "ALIGN": 7
+        }
+      },
+      {
+        "report": "kaveri",
+        "planted_claims": 12,
+        "extracted": 12,
+        "correct": 12,
+        "company_risk_score": 34.4,
+        "risk_band": "Moderate",
+        "other_claims_verdicts": {
+          "ALIGN": 3,
+          "NOT_CHECKABLE": 10,
+          "INSUFFICIENT_EVIDENCE": 8
+        }
+      },
+      {
+        "report": "aurelia",
+        "planted_claims": 6,
+        "extracted": 6,
+        "correct": 6,
+        "company_risk_score": 23.7,
+        "risk_band": "Low",
+        "other_claims_verdicts": {
+          "INSUFFICIENT_EVIDENCE": 12,
+          "NOT_CHECKABLE": 5
+        }
+      }
+    ],
+    "no_relevance_gate": [
+      {
+        "report": "vajra",
+        "planted_claims": 16,
+        "extracted": 16,
+        "correct": 16,
+        "company_risk_score": 60.5,
+        "risk_band": "High",
+        "other_claims_verdicts": {
+          "CONTRADICT": 5,
+          "NOT_CHECKABLE": 17,
+          "INSUFFICIENT_EVIDENCE": 12,
+          "ALIGN": 1
+        }
+      },
+      {
+        "report": "sahyadri",
+        "planted_claims": 12,
+        "extracted": 12,
+        "correct": 12,
+        "company_risk_score": 45.3,
+        "risk_band": "Moderate",
+        "other_claims_verdicts": {
+          "INSUFFICIENT_EVIDENCE": 11,
+          "NOT_CHECKABLE": 12,
+          "ALIGN": 6
+        }
+      },
+      {
+        "report": "kaveri",
+        "planted_claims": 12,
+        "extracted": 12,
+        "correct": 12,
+        "company_risk_score": 34.4,
+        "risk_band": "Moderate",
+        "other_claims_verdicts": {
+          "ALIGN": 3,
+          "NOT_CHECKABLE": 10,
+          "INSUFFICIENT_EVIDENCE": 8
+        }
+      },
+      {
+        "report": "aurelia",
+        "planted_claims": 6,
+        "extracted": 6,
+        "correct": 6,
+        "company_risk_score": 23.8,
+        "risk_band": "Low",
+        "other_claims_verdicts": {
+          "INSUFFICIENT_EVIDENCE": 12,
+          "NOT_CHECKABLE": 5
+        }
+      }
+    ]
+  }
+}
