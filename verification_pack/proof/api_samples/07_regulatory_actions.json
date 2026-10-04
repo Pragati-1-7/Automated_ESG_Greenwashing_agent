@@ -1,0 +1,40 @@
+{
+  "request": "GET /regulatory/actions?company_id=CMP-0001&fy=FY2025",
+  "status": 200,
+  "response": {
+    "source": "regulatory_actions",
+    "tier": 2,
+    "endpoint": "/regulatory/actions?company_id=CMP-0001&from=2024-04-01&to=2025-03-31",
+    "count": 2,
+    "rows": [
+      {
+        "action_id": "REG-00340",
+        "company_id": "CMP-0001",
+        "facility_id": "FAC-0002",
+        "authority": "NGT",
+        "case_no": "O.A. No. 311/2024 (EZ)",
+        "order_type": "environmental_compensation",
+        "date": "2024-08-14",
+        "penalty_inr": 42000000.0,
+        "status": "paid_under_protest",
+        "summary": "National Green Tribunal (Eastern Zone) directed Vajra Steel & Power Ltd to pay environmental compensation of Rs 4.2 crore for fly-ash dyke breach and repeated stack emission exceedances at the Angul captive power plant."
+      },
+      {
+        "action_id": "REG-00353",
+        "company_id": "CMP-0001",
+        "facility_id": "FAC-0002",
+        "authority": "OSPCB",
+        "case_no": "OSPCB/ANG/SCN/2024/118",
+        "order_type": "show_cause",
+        "date": "2024-11-02",
+        "penalty_inr": 0.0,
+        "status": "reply_filed",
+        "summary": "Odisha State Pollution Control Board show-cause notice for particulate matter exceedances recorded by the online continuous emission monitoring system."
+      }
+    ],
+    "window": {
+      "from": "2024-04-01",
+      "to": "2025-03-31"
+    }
+  }
+}

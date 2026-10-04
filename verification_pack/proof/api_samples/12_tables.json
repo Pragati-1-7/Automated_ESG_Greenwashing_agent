@@ -1,0 +1,68 @@
+{
+  "request": "GET /tables",
+  "status": 200,
+  "response": {
+    "tables": [
+      {
+        "name": "companies",
+        "rows": 150,
+        "tier": null,
+        "description": "Listed-company master (fictional), CIN, sector, HQ"
+      },
+      {
+        "name": "facilities",
+        "rows": 422,
+        "tier": null,
+        "description": "Plants, mines and sites with coordinates and SPCB consent numbers"
+      },
+      {
+        "name": "brsr_filings",
+        "rows": 900,
+        "tier": 1,
+        "description": "SEBI BRSR Core style annual filings FY2020-FY2025"
+      },
+      {
+        "name": "facility_ghg",
+        "rows": 2532,
+        "tier": 1,
+        "description": "Facility-level GHG reporting (CO2, CH4, N2O)"
+      },
+      {
+        "name": "ocems_exceedances",
+        "rows": 2000,
+        "tier": 2,
+        "description": "CPCB online continuous emission monitoring exceedance events"
+      },
+      {
+        "name": "regulatory_actions",
+        "rows": 400,
+        "tier": 2,
+        "description": "NGT, CPCB, state board and SEBI orders and penalties"
+      },
+      {
+        "name": "land_alerts",
+        "rows": 1500,
+        "tier": 3,
+        "description": "GFW-style integrated forest-loss alerts with coordinates"
+      },
+      {
+        "name": "re_certificates",
+        "rows": 932,
+        "tier": 3,
+        "description": "Renewable energy certificate registry (I-REC / REC India)"
+      },
+      {
+        "name": "audited_reports",
+        "rows": 409,
+        "tier": 3,
+        "description": "Independent assurance statements on BRSR Core"
+      },
+      {
+        "name": "news_articles",
+        "rows": 500,
+        "tier": 5,
+        "description": "News wire and company press releases (tier 4 for PR)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "request": "GET /news/search?q=Vajra renewable certificates&company_id=CMP-0001&k=3",
+  "status": 200,
+  "response": {
+    "source": "news_articles",
+    "tier": 5,
+    "endpoint": "/news/search?q=Vajra renewable certificates&company_id=CMP-0001",
+    "count": 3,
+    "rows": [
+      {
+        "kind": "news",
+        "id": "NWS-00361",
+        "company_id": "CMP-0001",
+        "tier": 5,
+        "date": "2025-07-10",
+        "title": "Analysts question Vajra's green power math as most RECs remain unretired",
+        "outlet": "Business Mint India",
+        "text": "MUMBAI: Analysts are questioning the renewable energy claims of Vajra Steel & Power Ltd after registry data showed that most of the certificates it holds for 2024 remain unretired. The registry shows 2.1 million MWh of certificates still active, and only 0.31 million MWh retired.\n\nThe company said in a June press release that half of its electricity in FY2024-25 came from renewable sources, based on renewable energy certificates purchased. Its BRSR filing, however, shows renewable electricity at 18.0% of the total.\n\nRetirement is the step that lets a buyer claim the renewable attribute of a certificate; certificates that remain active can still be sold or transferred. Sustainability analysts said that a claim based on purchased but unretired certificates should not be counted as renewable electricity, and that the filed figure is the number to use.\n\nThe company's head of environment, health and safety said that the company manages its certificate portfolio in line with registry rules and that further retirements would follow. The company's filed Scope 1 emissions were 10,856,000 tCO2e in FY2024-25, against 11,800,000 tCO2e in FY2019-20.\n\nThe BRSR carries limited assurance from Rao & Iyer Assurance LLP, and analysts said that reasonable assurance would give investors more comfort on energy claims.\n\nIndia is the world's second-largest producer of crude steel, and the sector is among the biggest industrial sources of greenhouse gases in the country, with blast furnace and coal-based direct reduced iron routes accounting for most of its footprint.\n\nVajra Steel & Power Ltd is a steel and metals company headquartered in Bhubaneswar, Odisha. It reported turnover of Rs 41,500 crore in FY2024-25 and operates 4 facilities across Odisha. Its shares trade under the listing NSE: VAJRASTL.",
+        "score": 1.0
+      },
+      {
+        "kind": "news",
+        "id": "NWS-00355",
+        "company_id": "CMP-0001",
+        "tier": 4,
+        "date": "2025-06-05",
+        "title": "Vajra Steel powers half its operations with green energy",
+        "outlet": "Vajra Steel & Power Ltd (press release)",
+        "text": "BHUBANESWAR: Vajra Steel & Power Ltd today announced that 50% of the electricity consumed across its operations in FY2024-25 came from renewable sources, a claim the company says is based on renewable energy certificates purchased during the year, along with its growing share of green power contracts.\n\n\"Our customers expect low-carbon steel and we are delivering,\" the company's head of environment, health and safety said in a statement. The company said that it has contracted additional solar and wind capacity and will continue to buy renewable energy certificates to cover its remaining requirement.\n\nThe company said that it will publish detailed numbers in its annual disclosures, and that it remains committed to reducing the emission intensity of its steel production.\n\nThe company operates an integrated steel plant at Jharsuguda, a captive power plant at Angul, a pellet plant at Barbil and an iron ore mine at Keonjhar, all in Odisha.\n\nAbout Vajra Steel & Power Ltd: Vajra Steel & Power Ltd is a NSE-listed (NSE: VAJRASTL) steel and power company headquartered in Bhubaneswar, Odisha.\n\nIndia is the world's second-largest producer of crude steel, and the sector is among the biggest industrial sources of greenhouse gases in the country, with blast furnace and coal-based direct reduced iron routes accounting for most of its footprint.\n\nIn its BRSR for FY2023-24, Vajra Steel reported Scope 1 emissions of 11,050,000 tCO2e, Scope 2 emissions of 1,395,000 tCO2e and a GHG intensity of 311.9 tCO2e per Rs crore of turnover, with 15.5% of its electricity from renewable sources. The disclosure carried limited assurance from Rao & Iyer Assurance LLP.",
+        "score": 0.9932
+      },
+      {
+        "kind": "news",
+        "id": "NWS-00271",
+        "company_id": "CMP-0001",
+        "tier": 5,
+        "date": "2024-08-16",
+        "title": "NGT orders Vajra Steel to pay Rs 4.2 crore over Angul fly-ash breach",
+        "outlet": "The Eastern Ledger",
+        "text": "BHUBANESWAR: The National Green Tribunal's Eastern Zone bench at Kolkata has directed Vajra Steel & Power Ltd to pay environmental compensation of Rs 4.2 crore for a fly-ash dyke breach and repeated stack emission exceedances at its 1,200 MW captive power plant in Angul, Odisha. The order is dated 14 August 2024 and was passed in O.A. No. 311/2024 (EZ).\n\nThe bench found that a breach in the ash dyke at the Angul plant had allowed slurry to flow beyond the plant boundary, and noted that the plant's online monitoring data showed stack emission exceedances on repeated occasions. Applying the polluter pays principle, it asked the Odisha State Pollution Control Board to monitor compliance and report back.\n\nCompany records indicate that Vajra Steel & Power Ltd has paid the amount under protest while it considers its legal options. The company's chief sustainability officer said that the company respects the tribunal, is studying the order and remains committed to compliance at all its sites. The sum is small against turnover of Rs 39,900 crore in FY2023-24, but environmental lawyers said that the finding on repeated exceedances could matter more than the amount.\n\nThe company operates four facilities in Odisha, including an integrated steel plant at Jharsuguda, an iron ore mine in Keonjhar and a pellet plant at Barbil. Its filing for FY2023-24 reported Scope 1 emissions of 11,050,000 tCO2e and Scope 2 emissions of 1,395,000 tCO2e, with 15.5% of electricity from renewable sources.\n\nLocal residents have for years complained about ash and dust around the Angul industrial belt, and the tribunal said that its directions are meant to restore the environment and are not a substitute for any action that the board may take under the Water and Air Acts.",
+        "score": 0.5724
+      }
+    ]
+  }
+}

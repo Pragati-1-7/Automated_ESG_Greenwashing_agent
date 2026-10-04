@@ -1,0 +1,34 @@
+{
+  "request": "GET /sebi/brsr?company_id=CMP-0001&fy=FY2025",
+  "status": 200,
+  "response": {
+    "source": "brsr_filings",
+    "tier": 1,
+    "endpoint": "/sebi/brsr?company_id=CMP-0001&fy=FY2025",
+    "count": 1,
+    "rows": [
+      {
+        "filing_id": "BRSR-CMP-0001-FY2025",
+        "company_id": "CMP-0001",
+        "fy": "FY2025",
+        "revenue_cr": 41500.0,
+        "scope1_tco2e": 10856000.0,
+        "scope2_tco2e": 1380000.0,
+        "ghg_intensity": 294.8,
+        "energy_gj": 155300000.0,
+        "re_pct": 18.0,
+        "water_withdrawal_kl": 72080000.0,
+        "water_discharge_kl": 10200000.0,
+        "waste_generated_t": 7400000.0,
+        "waste_recovered_t": 6838000.0,
+        "ltifr": 0.41,
+        "fatalities": 3,
+        "women_wage_pct": 4.1,
+        "msme_sourcing_pct": 13.5,
+        "assurance_type": "limited",
+        "assurance_provider": "Rao & Iyer Assurance LLP",
+        "filed_on": "2025-07-03"
+      }
+    ]
+  }
+}

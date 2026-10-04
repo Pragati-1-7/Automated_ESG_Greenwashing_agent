@@ -1,0 +1,917 @@
+{
+ "analysis": {
+  "analysis_id": "fixture",
+  "status": "done",
+  "error": null,
+  "source_document": "Demo Cement Ltd Sustainability Report FY2023-24.pdf",
+  "page_count": 48,
+  "created_at": "2026-10-04T09:12:03Z",
+  "finished_at": "2026-10-04T09:12:41Z",
+  "engines": {
+   "decision": "jev-1.13.0",
+   "llm": "mock-deterministic"
+  },
+  "company": {
+   "resolved": true,
+   "company_id": "CMP-0007",
+   "name": "Demo Cement Ltd",
+   "match_score": 0.97,
+   "reason": "Exact legal-name match on cover page and BRSR header."
+  },
+  "summary": {
+   "total_candidates": 214,
+   "total_claims": 3,
+   "checkable_claims": 3,
+   "verdict_counts": {
+    "ALIGN": 1,
+    "CONTRADICT": 1,
+    "INSUFFICIENT_EVIDENCE": 1,
+    "NOT_CHECKABLE": 0
+   },
+   "company_risk_score": 62.0,
+   "risk_band": "High",
+   "top_red_flags": [
+    "C-001",
+    "C-003"
+   ]
+  },
+  "claims": [
+   {
+    "claim_id": "C-001",
+    "text": "We reduced our Scope 1 emissions by 28% in FY2023-24 compared to the FY2021-22 baseline, delivering on our decarbonisation commitment.",
+    "page": 14,
+    "section": "Climate and Emissions",
+    "triage": {
+     "is_claim_prob": 0.97,
+     "action": "implemented",
+     "action_probs": {
+      "implemented": 0.91,
+      "planning": 0.06,
+      "indeterminate": 0.03
+     },
+     "checkable": true,
+     "materiality": 0.88,
+     "vagueness": 0.12,
+     "metric": "scope1_tco2e",
+     "metric_confidence": 0.93,
+     "reason": "Quantified past-tense reduction with explicit baseline and period; verifiable against BRSR Scope 1 disclosure."
+    },
+    "parsed": {
+     "numbers": [
+      {
+       "value": 28,
+       "unit": "%",
+       "raw": "28%"
+      }
+     ],
+     "period": "FY2023-24",
+     "baseline_period": "FY2021-22",
+     "facility_hint": null
+    },
+    "sub_claims": [
+     {
+      "sub_id": "C-001.1",
+      "text": "Scope 1 emissions fell 28% from FY2021-22 to FY2023-24",
+      "metric": "scope1_tco2e",
+      "check_type": "pct_change",
+      "period": "FY2023-24",
+      "baseline_period": "FY2021-22",
+      "claimed_value": -28.0,
+      "sources_planned": [
+       {
+        "source": "brsr_filings",
+        "probability": 0.86
+       },
+       {
+        "source": "facility_ghg",
+        "probability": 0.62
+       },
+       {
+        "source": "news_pr",
+        "probability": 0.18
+       }
+      ],
+      "tool_calls": [
+       {
+        "tool": "query_brsr",
+        "args": {
+         "company_id": "CMP-0007",
+         "metric": "scope1_tco2e",
+         "fy": "FY2021-22"
+        },
+        "status": "ok",
+        "latency_ms": 42,
+        "result_count": 1
+       },
+       {
+        "tool": "query_brsr",
+        "args": {
+         "company_id": "CMP-0007",
+         "metric": "scope1_tco2e",
+         "fy": "FY2023-24"
+        },
+        "status": "ok",
+        "latency_ms": 39,
+        "result_count": 1
+       },
+       {
+        "tool": "query_facility_ghg",
+        "args": {
+         "company_id": "CMP-0007",
+         "fy": "FY2023-24"
+        },
+        "status": "ok",
+        "latency_ms": 57,
+        "result_count": 6
+       }
+      ],
+      "evidence": [
+       {
+        "evidence_id": "E-101",
+        "source": "brsr_filings",
+        "tier": 1,
+        "title": "BRSR FY2021-22: Scope 1 emissions",
+        "snippet": "Total Scope 1 emissions: 4,120,000 tCO2e (FY2021-22).",
+        "endpoint": "/brsr_filings?company_id=CMP-0007&fy=FY2021-22",
+        "data": {
+         "company_id": "CMP-0007",
+         "fy": "FY2021-22",
+         "scope1_tco2e": 4120000
+        },
+        "stance": {
+         "label": "support",
+         "probabilities": {
+          "support": 0.12,
+          "contradict": 0.08,
+          "insufficient": 0.8
+         }
+        }
+       },
+       {
+        "evidence_id": "E-102",
+        "source": "brsr_filings",
+        "tier": 1,
+        "title": "BRSR FY2023-24: Scope 1 emissions",
+        "snippet": "Total Scope 1 emissions: 4,010,000 tCO2e (FY2023-24), a 2.7% decrease versus FY2021-22.",
+        "endpoint": "/brsr_filings?company_id=CMP-0007&fy=FY2023-24",
+        "data": {
+         "company_id": "CMP-0007",
+         "fy": "FY2023-24",
+         "scope1_tco2e": 4010000,
+         "assurance": "limited"
+        },
+        "stance": {
+         "label": "contradict",
+         "probabilities": {
+          "support": 0.03,
+          "contradict": 0.95,
+          "insufficient": 0.02
+         }
+        }
+       },
+       {
+        "evidence_id": "E-103",
+        "source": "facility_ghg",
+        "tier": 1,
+        "title": "Facility-level Scope 1 sum, FY2023-24",
+        "snippet": "Sum of 6 plants: 4,005,300 tCO2e, consistent with BRSR total.",
+        "endpoint": "/facility_ghg?company_id=CMP-0007&fy=FY2023-24",
+        "data": {
+         "plants": 6,
+         "sum_tco2e": 4005300
+        },
+        "stance": {
+         "label": "contradict",
+         "probabilities": {
+          "support": 0.05,
+          "contradict": 0.9,
+          "insufficient": 0.05
+         }
+        }
+       }
+      ],
+      "computations": [
+       {
+        "op": "pct_change",
+        "expression": "(4010000 - 4120000) / 4120000 * 100",
+        "inputs": {
+         "current": 4010000,
+         "baseline": 4120000
+        },
+        "result": -2.67
+       }
+      ],
+      "stance": {
+       "label": "contradict",
+       "probabilities": {
+        "support": 0.03,
+        "contradict": 0.94,
+        "insufficient": 0.03
+       },
+       "confidence": 0.94
+      }
+     }
+    ],
+    "verdict": {
+     "label": "CONTRADICT",
+     "probabilities": {
+      "ALIGN": 0.03,
+      "CONTRADICT": 0.93,
+      "INSUFFICIENT_EVIDENCE": 0.04,
+      "NOT_CHECKABLE": 0.0
+     },
+     "confidence": 0.93,
+     "reasoning": "Reported Scope 1 emissions fell only 2.7% between FY2021-22 and FY2023-24 according to the company's own BRSR filing and facility-level data, far from the claimed 28% reduction."
+    },
+    "risk": {
+     "score": 88.0,
+     "band": "Very High",
+     "components": [
+      {
+       "name": "contradiction_strength",
+       "value": 0.93,
+       "weight": 0.5,
+       "contribution": 0.465,
+       "note": "Tier 1 evidence contradicts claim"
+      },
+      {
+       "name": "materiality",
+       "value": 0.88,
+       "weight": 0.25,
+       "contribution": 0.22,
+       "note": "Headline decarbonisation claim"
+      },
+      {
+       "name": "evidence_quality",
+       "value": 0.95,
+       "weight": 0.15,
+       "contribution": 0.14,
+       "note": "Two Tier 1 sources agree"
+      },
+      {
+       "name": "vagueness_penalty",
+       "value": 0.12,
+       "weight": 0.1,
+       "contribution": 0.012,
+       "note": "Claim is specific"
+      }
+     ]
+    }
+   },
+   {
+    "claim_id": "C-002",
+    "text": "Renewable energy accounted for 62% of our electricity consumption in FY2023-24.",
+    "page": 16,
+    "section": "Energy",
+    "triage": {
+     "is_claim_prob": 0.99,
+     "action": "implemented",
+     "action_probs": {
+      "implemented": 0.95,
+      "planning": 0.03,
+      "indeterminate": 0.02
+     },
+     "checkable": true,
+     "materiality": 0.74,
+     "vagueness": 0.08,
+     "metric": "re_pct",
+     "metric_confidence": 0.96,
+     "reason": "Point-in-time share with a clear period; maps directly to BRSR renewable electricity share."
+    },
+    "parsed": {
+     "numbers": [
+      {
+       "value": 62,
+       "unit": "%",
+       "raw": "62%"
+      }
+     ],
+     "period": "FY2023-24",
+     "baseline_period": null,
+     "facility_hint": null
+    },
+    "sub_claims": [
+     {
+      "sub_id": "C-002.1",
+      "text": "Renewable share of electricity was 62% in FY2023-24",
+      "metric": "re_pct",
+      "check_type": "share",
+      "period": "FY2023-24",
+      "baseline_period": null,
+      "claimed_value": 62.0,
+      "sources_planned": [
+       {
+        "source": "brsr_filings",
+        "probability": 0.91
+       },
+       {
+        "source": "re_certificates",
+        "probability": 0.44
+       }
+      ],
+      "tool_calls": [
+       {
+        "tool": "query_brsr",
+        "args": {
+         "company_id": "CMP-0007",
+         "metric": "re_pct",
+         "fy": "FY2023-24"
+        },
+        "status": "ok",
+        "latency_ms": 36,
+        "result_count": 1
+       },
+       {
+        "tool": "query_re_certificates",
+        "args": {
+         "company_id": "CMP-0007",
+         "fy": "FY2023-24"
+        },
+        "status": "ok",
+        "latency_ms": 51,
+        "result_count": 3
+       }
+      ],
+      "evidence": [
+       {
+        "evidence_id": "E-201",
+        "source": "brsr_filings",
+        "tier": 1,
+        "title": "BRSR FY2023-24: Renewable share",
+        "snippet": "Share of renewable electricity in total electricity consumed: 61.4%.",
+        "endpoint": "/brsr_filings?company_id=CMP-0007&fy=FY2023-24",
+        "data": {
+         "re_pct": 61.4
+        },
+        "stance": {
+         "label": "support",
+         "probabilities": {
+          "support": 0.92,
+          "contradict": 0.03,
+          "insufficient": 0.05
+         }
+        }
+       },
+       {
+        "evidence_id": "E-202",
+        "source": "re_certificates",
+        "tier": 3,
+        "title": "REC retirements FY2023-24",
+        "snippet": "1,820 GWh of RECs retired, covering the reported renewable consumption.",
+        "endpoint": "/re_certificates?company_id=CMP-0007&fy=FY2023-24",
+        "data": {
+         "mwh_retired": 1820000
+        },
+        "stance": {
+         "label": "support",
+         "probabilities": {
+          "support": 0.71,
+          "contradict": 0.04,
+          "insufficient": 0.25
+         }
+        }
+       }
+      ],
+      "computations": [
+       {
+        "op": "abs_diff",
+        "expression": "|62 - 61.4|",
+        "inputs": {
+         "claimed": 62,
+         "reported": 61.4
+        },
+        "result": 0.6
+       }
+      ],
+      "stance": {
+       "label": "support",
+       "probabilities": {
+        "support": 0.9,
+        "contradict": 0.03,
+        "insufficient": 0.07
+       },
+       "confidence": 0.9
+      }
+     }
+    ],
+    "verdict": {
+     "label": "ALIGN",
+     "probabilities": {
+      "ALIGN": 0.9,
+      "CONTRADICT": 0.03,
+      "INSUFFICIENT_EVIDENCE": 0.07,
+      "NOT_CHECKABLE": 0.0
+     },
+     "confidence": 0.9,
+     "reasoning": "BRSR reports 61.4% renewable electricity, within rounding of the claimed 62%, and REC retirements corroborate it."
+    },
+    "risk": {
+     "score": 12.0,
+     "band": "Low",
+     "components": [
+      {
+       "name": "contradiction_strength",
+       "value": 0.03,
+       "weight": 0.5,
+       "contribution": 0.015,
+       "note": "No contradicting evidence"
+      },
+      {
+       "name": "materiality",
+       "value": 0.74,
+       "weight": 0.25,
+       "contribution": 0.185,
+       "note": "Material energy KPI"
+      },
+      {
+       "name": "evidence_quality",
+       "value": 0.9,
+       "weight": 0.15,
+       "contribution": 0.0,
+       "note": "Corroborated"
+      },
+      {
+       "name": "vagueness_penalty",
+       "value": 0.08,
+       "weight": 0.1,
+       "contribution": 0.008,
+       "note": "Specific"
+      }
+     ]
+    }
+   },
+   {
+    "claim_id": "C-003",
+    "text": "We are on track to cut our Scope 3 emissions by 40% by 2030 through supplier engagement.",
+    "page": 21,
+    "section": "Value Chain",
+    "triage": {
+     "is_claim_prob": 0.94,
+     "action": "planning",
+     "action_probs": {
+      "implemented": 0.1,
+      "planning": 0.82,
+      "indeterminate": 0.08
+     },
+     "checkable": true,
+     "materiality": 0.81,
+     "vagueness": 0.35,
+     "metric": "scope3_tco2e",
+     "metric_confidence": 0.84,
+     "reason": "Forward-looking target with a progress implication; Scope 3 is not in any structured source."
+    },
+    "parsed": {
+     "numbers": [
+      {
+       "value": 40,
+       "unit": "%",
+       "raw": "40%"
+      }
+     ],
+     "period": "2030",
+     "baseline_period": null,
+     "facility_hint": null
+    },
+    "sub_claims": [
+     {
+      "sub_id": "C-003.1",
+      "text": "Company is on track for a 40% Scope 3 reduction by 2030",
+      "metric": "scope3_tco2e",
+      "check_type": "other",
+      "period": "2030",
+      "baseline_period": null,
+      "claimed_value": -40.0,
+      "sources_planned": [
+       {
+        "source": "brsr_filings",
+        "probability": 0.55
+       },
+       {
+        "source": "news",
+        "probability": 0.33
+       },
+       {
+        "source": "news_pr",
+        "probability": 0.3
+       }
+      ],
+      "tool_calls": [
+       {
+        "tool": "query_brsr",
+        "args": {
+         "company_id": "CMP-0007",
+         "metric": "scope3_tco2e"
+        },
+        "status": "empty",
+        "latency_ms": 31,
+        "result_count": 0
+       },
+       {
+        "tool": "search_news",
+        "args": {
+         "company": "CMP-0007",
+         "q": "scope 3 supplier engagement"
+        },
+        "status": "ok",
+        "latency_ms": 88,
+        "result_count": 2
+       }
+      ],
+      "evidence": [
+       {
+        "evidence_id": "E-301",
+        "source": "news_pr",
+        "tier": 4,
+        "title": "Press release: Supplier Climate Programme launched",
+        "snippet": "Company launches programme engaging 120 suppliers on emissions disclosure.",
+        "endpoint": "/news?company_id=CMP-0007&kind=pr",
+        "data": {
+         "suppliers": 120
+        },
+        "stance": {
+         "label": "insufficient",
+         "probabilities": {
+          "support": 0.2,
+          "contradict": 0.05,
+          "insufficient": 0.75
+         }
+        }
+       }
+      ],
+      "computations": [],
+      "stance": {
+       "label": "insufficient",
+       "probabilities": {
+        "support": 0.2,
+        "contradict": 0.05,
+        "insufficient": 0.75
+       },
+       "confidence": 0.75
+      }
+     }
+    ],
+    "verdict": {
+     "label": "INSUFFICIENT_EVIDENCE",
+     "probabilities": {
+      "ALIGN": 0.16,
+      "CONTRADICT": 0.06,
+      "INSUFFICIENT_EVIDENCE": 0.78,
+      "NOT_CHECKABLE": 0.0
+     },
+     "confidence": 0.78,
+     "reasoning": "No source reports Scope 3 emissions, so progress against the 2030 target cannot be verified. Only a Tier 4 press release on a supplier programme was found."
+    },
+    "risk": {
+     "score": 46.0,
+     "band": "Moderate",
+     "components": [
+      {
+       "name": "contradiction_strength",
+       "value": 0.06,
+       "weight": 0.5,
+       "contribution": 0.03,
+       "note": "None found"
+      },
+      {
+       "name": "materiality",
+       "value": 0.81,
+       "weight": 0.25,
+       "contribution": 0.2,
+       "note": "Scope 3 is typically the largest footprint"
+      },
+      {
+       "name": "evidence_gap",
+       "value": 0.78,
+       "weight": 0.15,
+       "contribution": 0.12,
+       "note": "No verifiable data"
+      },
+      {
+       "name": "vagueness_penalty",
+       "value": 0.35,
+       "weight": 0.1,
+       "contribution": 0.035,
+       "note": "Forward-looking"
+      }
+     ]
+    }
+   }
+  ],
+  "disclaimer": "This output is an automated screening aid, not a legal or audit opinion. Verify findings against primary sources before relying on them.",
+  "synthetic_notice": "All evidence tables are synthetic and generated for demonstration purposes."
+ },
+ "events": [
+  {
+   "seq": 1,
+   "ts": "2026-10-04T09:12:03Z",
+   "agent": "system",
+   "type": "start",
+   "claim_id": null,
+   "message": "Analysis queued",
+   "data": null
+  },
+  {
+   "seq": 2,
+   "ts": "2026-10-04T09:12:04.300000Z",
+   "agent": "ingest",
+   "type": "start",
+   "claim_id": null,
+   "message": "Parsing PDF (48 pages)",
+   "data": null
+  },
+  {
+   "seq": 3,
+   "ts": "2026-10-04T09:12:05.600000Z",
+   "agent": "ingest",
+   "type": "info",
+   "claim_id": null,
+   "message": "Extracted 214 candidate sentences",
+   "data": {
+    "pages": 48,
+    "candidates": 214
+   }
+  },
+  {
+   "seq": 4,
+   "ts": "2026-10-04T09:12:06.900000Z",
+   "agent": "resolver",
+   "type": "decision",
+   "claim_id": null,
+   "message": "Resolved company: Demo Cement Ltd (score 0.97)",
+   "data": {
+    "company_id": "CMP-0007",
+    "score": 0.97
+   }
+  },
+  {
+   "seq": 5,
+   "ts": "2026-10-04T09:12:08.200000Z",
+   "agent": "extractor",
+   "type": "info",
+   "claim_id": null,
+   "message": "3 claims selected for verification",
+   "data": {
+    "claims": [
+     "C-001",
+     "C-002",
+     "C-003"
+    ]
+   }
+  },
+  {
+   "seq": 6,
+   "ts": "2026-10-04T09:12:09.500000Z",
+   "agent": "triage",
+   "type": "decision",
+   "claim_id": "C-001",
+   "message": "Action: implemented, checkable, metric scope1_tco2e",
+   "data": {
+    "action_probs": {
+     "implemented": 0.91
+    }
+   }
+  },
+  {
+   "seq": 7,
+   "ts": "2026-10-04T09:12:10.800000Z",
+   "agent": "decomposer",
+   "type": "decision",
+   "claim_id": "C-001",
+   "message": "1 sub-claim: pct_change on scope1_tco2e",
+   "data": null
+  },
+  {
+   "seq": 8,
+   "ts": "2026-10-04T09:12:12.100000Z",
+   "agent": "router",
+   "type": "decision",
+   "claim_id": "C-001",
+   "message": "Planned sources: brsr_filings (0.86), facility_ghg (0.62)",
+   "data": null
+  },
+  {
+   "seq": 9,
+   "ts": "2026-10-04T09:12:13.400000Z",
+   "agent": "investigator",
+   "type": "tool_call",
+   "claim_id": "C-001",
+   "message": "query_brsr scope1_tco2e FY2021-22",
+   "data": {
+    "tool": "query_brsr",
+    "args": {
+     "fy": "FY2021-22"
+    }
+   }
+  },
+  {
+   "seq": 10,
+   "ts": "2026-10-04T09:12:14.700000Z",
+   "agent": "investigator",
+   "type": "tool_result",
+   "claim_id": "C-001",
+   "message": "1 row from brsr_filings",
+   "data": {
+    "rows": 1
+   }
+  },
+  {
+   "seq": 11,
+   "ts": "2026-10-04T09:12:16Z",
+   "agent": "investigator",
+   "type": "tool_call",
+   "claim_id": "C-001",
+   "message": "query_brsr scope1_tco2e FY2023-24",
+   "data": {
+    "tool": "query_brsr",
+    "args": {
+     "fy": "FY2023-24"
+    }
+   }
+  },
+  {
+   "seq": 12,
+   "ts": "2026-10-04T09:12:17.300000Z",
+   "agent": "investigator",
+   "type": "tool_result",
+   "claim_id": "C-001",
+   "message": "1 row from brsr_filings",
+   "data": {
+    "rows": 1
+   }
+  },
+  {
+   "seq": 13,
+   "ts": "2026-10-04T09:12:18.600000Z",
+   "agent": "calculator",
+   "type": "info",
+   "claim_id": "C-001",
+   "message": "pct_change = -2.67%",
+   "data": {
+    "expression": "(4010000 - 4120000) / 4120000 * 100"
+   }
+  },
+  {
+   "seq": 14,
+   "ts": "2026-10-04T09:12:19.900000Z",
+   "agent": "judge",
+   "type": "decision",
+   "claim_id": "C-001",
+   "message": "Evidence E-102 contradicts the claim (0.95)",
+   "data": null
+  },
+  {
+   "seq": 15,
+   "ts": "2026-10-04T09:12:21.200000Z",
+   "agent": "verdict",
+   "type": "verdict",
+   "claim_id": "C-001",
+   "message": "CONTRADICT (confidence 0.93)",
+   "data": {
+    "label": "CONTRADICT"
+   }
+  },
+  {
+   "seq": 16,
+   "ts": "2026-10-04T09:12:22.500000Z",
+   "agent": "risk",
+   "type": "info",
+   "claim_id": "C-001",
+   "message": "Risk score 88 (Very High)",
+   "data": null
+  },
+  {
+   "seq": 17,
+   "ts": "2026-10-04T09:12:23.800000Z",
+   "agent": "triage",
+   "type": "decision",
+   "claim_id": "C-002",
+   "message": "Action: implemented, metric re_pct",
+   "data": null
+  },
+  {
+   "seq": 18,
+   "ts": "2026-10-04T09:12:25.100000Z",
+   "agent": "investigator",
+   "type": "tool_call",
+   "claim_id": "C-002",
+   "message": "query_brsr re_pct FY2023-24",
+   "data": {
+    "tool": "query_brsr"
+   }
+  },
+  {
+   "seq": 19,
+   "ts": "2026-10-04T09:12:26.400000Z",
+   "agent": "investigator",
+   "type": "tool_call",
+   "claim_id": "C-002",
+   "message": "query_re_certificates FY2023-24",
+   "data": {
+    "tool": "query_re_certificates"
+   }
+  },
+  {
+   "seq": 20,
+   "ts": "2026-10-04T09:12:27.700000Z",
+   "agent": "judge",
+   "type": "decision",
+   "claim_id": "C-002",
+   "message": "BRSR 61.4% vs claimed 62%: support",
+   "data": null
+  },
+  {
+   "seq": 21,
+   "ts": "2026-10-04T09:12:29Z",
+   "agent": "verdict",
+   "type": "verdict",
+   "claim_id": "C-002",
+   "message": "ALIGN (confidence 0.90)",
+   "data": {
+    "label": "ALIGN"
+   }
+  },
+  {
+   "seq": 22,
+   "ts": "2026-10-04T09:12:30.300000Z",
+   "agent": "triage",
+   "type": "decision",
+   "claim_id": "C-003",
+   "message": "Action: planning, metric scope3_tco2e",
+   "data": null
+  },
+  {
+   "seq": 23,
+   "ts": "2026-10-04T09:12:31.600000Z",
+   "agent": "investigator",
+   "type": "tool_call",
+   "claim_id": "C-003",
+   "message": "query_brsr scope3_tco2e",
+   "data": {
+    "tool": "query_brsr"
+   }
+  },
+  {
+   "seq": 24,
+   "ts": "2026-10-04T09:12:32.900000Z",
+   "agent": "investigator",
+   "type": "tool_result",
+   "claim_id": "C-003",
+   "message": "No rows returned (empty)",
+   "data": {
+    "rows": 0
+   }
+  },
+  {
+   "seq": 25,
+   "ts": "2026-10-04T09:12:34.200000Z",
+   "agent": "investigator",
+   "type": "error",
+   "claim_id": "C-003",
+   "message": "Source news timed out once, retried",
+   "data": {
+    "retry": 1
+   }
+  },
+  {
+   "seq": 26,
+   "ts": "2026-10-04T09:12:35.500000Z",
+   "agent": "verdict",
+   "type": "verdict",
+   "claim_id": "C-003",
+   "message": "INSUFFICIENT_EVIDENCE (confidence 0.78)",
+   "data": {
+    "label": "INSUFFICIENT_EVIDENCE"
+   }
+  },
+  {
+   "seq": 27,
+   "ts": "2026-10-04T09:12:36.800000Z",
+   "agent": "risk",
+   "type": "info",
+   "claim_id": null,
+   "message": "Company risk score 62 (High)",
+   "data": {
+    "score": 62
+   }
+  },
+  {
+   "seq": 28,
+   "ts": "2026-10-04T09:12:38.100000Z",
+   "agent": "reporter",
+   "type": "info",
+   "claim_id": null,
+   "message": "Report generated",
+   "data": null
+  },
+  {
+   "seq": 29,
+   "ts": "2026-10-04T09:12:39.400000Z",
+   "agent": "system",
+   "type": "done",
+   "claim_id": null,
+   "message": "Analysis complete",
+   "data": null
+  }
+ ],
+ "report": "# Technical summary: Demo Cement Ltd\n\n**Company risk score:** 62 / 100 (High)\n\n## Verdicts\n\n| Claim | Page | Verdict | Risk |\n|---|---|---|---|\n| C-001 | 14 | CONTRADICT | 88 |\n| C-002 | 16 | ALIGN | 12 |\n| C-003 | 21 | INSUFFICIENT_EVIDENCE | 46 |\n\n## Red flags\n\n1. **C-001**: claimed 28% Scope 1 reduction, BRSR shows `-2.67%`.\n2. **C-003**: Scope 3 target progress cannot be verified.\n\n## Audit trail\n\n- Evidence E-102 (Tier 1, brsr_filings) contradicts C-001.\n- Evidence E-201 (Tier 1, brsr_filings) supports C-002.\n\n```\npct_change = (4010000 - 4120000) / 4120000 * 100 = -2.67\n```\n"
+}

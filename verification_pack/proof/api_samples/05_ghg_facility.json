@@ -1,0 +1,60 @@
+{
+  "request": "GET /ghg/facility?company_id=CMP-0001&fy=FY2025",
+  "status": 200,
+  "response": {
+    "source": "facility_ghg",
+    "tier": 1,
+    "endpoint": "/ghg/facility?company_id=CMP-0001&fy=FY2025",
+    "count": 4,
+    "rows": [
+      {
+        "row_id": "FGHG-00021",
+        "facility_id": "FAC-0001",
+        "fy": "FY2025",
+        "co2_t": 7532431.6,
+        "ch4_tco2e": 25646.3,
+        "n2o_tco2e": 25574.0,
+        "total_tco2e": 7583651.9,
+        "method": "mass balance",
+        "verified": 1,
+        "facility_name": "Jharsuguda Integrated Steel Plant"
+      },
+      {
+        "row_id": "FGHG-00022",
+        "facility_id": "FAC-0002",
+        "fy": "FY2025",
+        "co2_t": 2684648.8,
+        "ch4_tco2e": 24926.1,
+        "n2o_tco2e": 18137.9,
+        "total_tco2e": 2727712.8,
+        "method": "CEMS",
+        "verified": 1,
+        "facility_name": "Angul Captive Power Plant"
+      },
+      {
+        "row_id": "FGHG-00023",
+        "facility_id": "FAC-0003",
+        "fy": "FY2025",
+        "co2_t": 107844.9,
+        "ch4_tco2e": 492.5,
+        "n2o_tco2e": 353.3,
+        "total_tco2e": 108690.7,
+        "method": "emission factor",
+        "verified": 1,
+        "facility_name": "Keonjhar Iron Ore Mine"
+      },
+      {
+        "row_id": "FGHG-00024",
+        "facility_id": "FAC-0004",
+        "fy": "FY2025",
+        "co2_t": 430465.0,
+        "ch4_tco2e": 2547.6,
+        "n2o_tco2e": 2932.0,
+        "total_tco2e": 435944.6,
+        "method": "emission factor",
+        "verified": 1,
+        "facility_name": "Barbil Pellet Plant"
+      }
+    ]
+  }
+}

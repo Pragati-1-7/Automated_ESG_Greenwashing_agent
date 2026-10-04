@@ -1,0 +1,18 @@
+# Run with data/claims, data/evidence, data/test, data/sample_pdfs MOVED to legacy/v1_data (v2 never reads them)
+# Sun Oct  4 12:12:07 UTC 2026
+benchmark
+cassettes
+models
+reports
+world
+full_system: extraction recall 46/46, verdict accuracy 46/46
+   vajra     16/16 risk=56.3 (High) other={'INSUFFICIENT_EVIDENCE': 15, 'NOT_CHECKABLE': 17, 'CONTRADICT': 2, 'ALIGN': 1}
+   sahyadri  12/12 risk=45.0 (Moderate) other={'INSUFFICIENT_EVIDENCE': 10, 'NOT_CHECKABLE': 12, 'ALIGN': 7}
+   kaveri    12/12 risk=34.4 (Moderate) other={'ALIGN': 3, 'NOT_CHECKABLE': 10, 'INSUFFICIENT_EVIDENCE': 8}
+   aurelia   6/6 risk=23.7 (Low) other={'INSUFFICIENT_EVIDENCE': 12, 'NOT_CHECKABLE': 5}
+no_relevance_gate: extraction recall 46/46, verdict accuracy 46/46
+   vajra     16/16 risk=60.5 (High) other={'CONTRADICT': 5, 'NOT_CHECKABLE': 17, 'INSUFFICIENT_EVIDENCE': 12, 'ALIGN': 1}
+   sahyadri  12/12 risk=45.3 (Moderate) other={'INSUFFICIENT_EVIDENCE': 11, 'NOT_CHECKABLE': 12, 'ALIGN': 6}
+   kaveri    12/12 risk=34.4 (Moderate) other={'ALIGN': 3, 'NOT_CHECKABLE': 10, 'INSUFFICIENT_EVIDENCE': 8}
+   aurelia   6/6 risk=23.8 (Low) other={'INSUFFICIENT_EVIDENCE': 12, 'NOT_CHECKABLE': 5}
+wrote /home/claude/esg/data/benchmark/reports_eval.json

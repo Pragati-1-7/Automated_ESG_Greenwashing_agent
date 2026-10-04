@@ -1,0 +1,68 @@
+{
+  "request": "GET /companies/CMP-0001/facilities",
+  "status": 200,
+  "response": {
+    "source": "facilities",
+    "tier": null,
+    "endpoint": "/companies/CMP-0001/facilities",
+    "count": 4,
+    "rows": [
+      {
+        "facility_id": "FAC-0001",
+        "company_id": "CMP-0001",
+        "name": "Jharsuguda Integrated Steel Plant",
+        "type": "Integrated steel plant",
+        "district": "Jharsuguda",
+        "state": "Odisha",
+        "lat": 21.8554,
+        "lon": 84.0062,
+        "capacity_value": 5.0,
+        "capacity_unit": "MTPA crude steel",
+        "consent_no": "OSPCB/CTO/2022/08486",
+        "forest_adjacent": 0
+      },
+      {
+        "facility_id": "FAC-0002",
+        "company_id": "CMP-0001",
+        "name": "Angul Captive Power Plant",
+        "type": "Coal-fired captive power plant",
+        "district": "Angul",
+        "state": "Odisha",
+        "lat": 20.84,
+        "lon": 85.101,
+        "capacity_value": 1200.0,
+        "capacity_unit": "MW",
+        "consent_no": "OSPCB/CTO/2018/43798",
+        "forest_adjacent": 0
+      },
+      {
+        "facility_id": "FAC-0003",
+        "company_id": "CMP-0001",
+        "name": "Keonjhar Iron Ore Mine",
+        "type": "Open-cast iron ore mine",
+        "district": "Keonjhar",
+        "state": "Odisha",
+        "lat": 21.629,
+        "lon": 85.581,
+        "capacity_value": 12.0,
+        "capacity_unit": "MTPA ore",
+        "consent_no": "OSPCB/CTO/2021/51782",
+        "forest_adjacent": 1
+      },
+      {
+        "facility_id": "FAC-0004",
+        "company_id": "CMP-0001",
+        "name": "Barbil Pellet Plant",
+        "type": "Pellet plant",
+        "district": "Keonjhar",
+        "state": "Odisha",
+        "lat": 22.101,
+        "lon": 85.382,
+        "capacity_value": 6.0,
+        "capacity_unit": "MTPA pellets",
+        "consent_no": "OSPCB/CTO/2016/11440",
+        "forest_adjacent": 0
+      }
+    ]
+  }
+}

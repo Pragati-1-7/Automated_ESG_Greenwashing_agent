@@ -1,0 +1,766 @@
+{
+  "company": {
+    "resolved": true,
+    "company_id": "CMP-0001",
+    "name": "Vajra Steel & Power Ltd",
+    "match_score": 0.93,
+    "reason": "Registry candidate 'Vajra Steel & Power Ltd' (string similarity 1.00); Jev same-entity probability 0.93"
+  },
+  "claim": {
+    "claim_id": "VAJ-06",
+    "text": "Our Keonjhar mining operations caused zero deforestation during FY2024-25.",
+    "page": 0,
+    "section": null,
+    "triage": {
+      "is_claim_prob": 0.99,
+      "action": "implemented",
+      "action_probs": {
+        "indeterminate": 0.0,
+        "implemented": 1.0,
+        "planning": 0.0
+      },
+      "checkable": true,
+      "materiality": 0.7067,
+      "vagueness": 0.16,
+      "metric": "deforestation_ha",
+      "metric_confidence": 0.99,
+      "reason": "Concrete past-performance claim; checkable against external records (p=0.93)"
+    },
+    "parsed": {
+      "numbers": [
+        {
+          "value": 0.0,
+          "unit": null,
+          "raw": "zero"
+        }
+      ],
+      "period": "FY2025",
+      "baseline_period": null,
+      "facility_hint": "Keonjhar"
+    },
+    "sub_claims": [
+      {
+        "sub_id": "VAJ-06.1",
+        "text": "Our Keonjhar mining operations caused zero deforestation during FY2024-25.",
+        "metric": "deforestation_ha",
+        "check_type": "geo",
+        "period": "FY2025",
+        "baseline_period": null,
+        "claimed_value": 0.0,
+        "sources_planned": [
+          {
+            "source": "land_alerts",
+            "probability": 0.94,
+            "selected": true
+          },
+          {
+            "source": "regulatory",
+            "probability": 0.79,
+            "selected": true
+          },
+          {
+            "source": "assurance",
+            "probability": 0.76,
+            "selected": true
+          },
+          {
+            "source": "news",
+            "probability": 0.68,
+            "selected": true
+          },
+          {
+            "source": "brsr",
+            "probability": 0.12,
+            "selected": false
+          },
+          {
+            "source": "facility_ghg",
+            "probability": 0.08,
+            "selected": false
+          },
+          {
+            "source": "ocems",
+            "probability": 0.06,
+            "selected": false
+          },
+          {
+            "source": "rec_registry",
+            "probability": 0.04,
+            "selected": false
+          }
+        ],
+        "tool_calls": [
+          {
+            "tool": "gfw_forest_alerts_near_point",
+            "args": {
+              "lat": 21.629,
+              "lon": 85.581,
+              "fy": "FY2025",
+              "radius_km": 5.0
+            },
+            "status": "ok",
+            "latency_ms": 12,
+            "result_count": 14
+          },
+          {
+            "tool": "regulatory_actions",
+            "args": {
+              "company_id": "CMP-0001"
+            },
+            "status": "ok",
+            "latency_ms": 10,
+            "result_count": 2
+          },
+          {
+            "tool": "assurance_statements",
+            "args": {
+              "company_id": "CMP-0001"
+            },
+            "status": "ok",
+            "latency_ms": 17,
+            "result_count": 4
+          },
+          {
+            "tool": "news_search",
+            "args": {
+              "q": "Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation",
+              "company_id": "CMP-0001",
+              "k": 3,
+              "date_from": "2024-01-01",
+              "date_to": "2025-12-31"
+            },
+            "status": "ok",
+            "latency_ms": 15,
+            "result_count": 3
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "VAJ-06.1-E30",
+            "source": "land_alerts",
+            "tier": 3,
+            "title": "GFW-style integrated forest-loss alerts, FY2025",
+            "snippet": "14 satellite forest-loss alerts within 5 km of Keonjhar Iron Ore Mine (21.629, 85.581) between 2024-04-01 and 2025-03-31, totalling 126.4 hectares (confidence: high 8, highest 4, nominal 2).",
+            "endpoint": "/gfw/alerts/near?lat=21.629&lon=85.581&radius_km=5.0&from=2024-04-01&to=2025-03-31",
+            "data": {
+              "count": 14,
+              "area_ha": 126.4,
+              "radius_km": 5.0,
+              "facility": "Keonjhar Iron Ore Mine",
+              "relevance": 0.92
+            },
+            "stance": {
+              "label": "contradict",
+              "probabilities": {
+                "insufficient": 0.01,
+                "contradict": 0.99,
+                "support": 0.0
+              },
+              "confidence": 0.99
+            }
+          },
+          {
+            "evidence_id": "VAJ-06.1-E11",
+            "source": "regulatory_actions",
+            "tier": 2,
+            "title": "NGT environmental compensation (2024-08-14, O.A. No. 311/2024 (EZ))",
+            "snippet": "Dated 2024-08-14, inside the claim period FY2025 (2024-04-01 to 2025-03-31). National Green Tribunal (Eastern Zone) directed Vajra Steel & Power Ltd to pay environmental compensation of Rs 4.2 crore for fly-ash dyke breach and repeated stack emission exceedances at the Angul captive power plant. Penalty/compensation: Rs 4.20 crore. Status: paid_under_protest.",
+            "endpoint": "/regulatory/actions?company_id=CMP-0001&from=1900-01-01&to=2999-12-31",
+            "data": {
+              "action_id": "REG-00340",
+              "company_id": "CMP-0001",
+              "facility_id": "FAC-0002",
+              "authority": "NGT",
+              "case_no": "O.A. No. 311/2024 (EZ)",
+              "order_type": "environmental_compensation",
+              "date": "2024-08-14",
+              "penalty_inr": 42000000.0,
+              "status": "paid_under_protest",
+              "summary": "National Green Tribunal (Eastern Zone) directed Vajra Steel & Power Ltd to pay environmental compensation of Rs 4.2 crore for fly-ash dyke breach and repeated stack emission exceedances at the Angul captive power plant.",
+              "relevance": 0.03
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.97
+            }
+          },
+          {
+            "evidence_id": "VAJ-06.1-E12",
+            "source": "regulatory_actions",
+            "tier": 2,
+            "title": "OSPCB show cause (2024-11-02, OSPCB/ANG/SCN/2024/118)",
+            "snippet": "Dated 2024-11-02, inside the claim period FY2025 (2024-04-01 to 2025-03-31). Odisha State Pollution Control Board show-cause notice for particulate matter exceedances recorded by the online continuous emission monitoring system. Status: reply_filed.",
+            "endpoint": "/regulatory/actions?company_id=CMP-0001&from=1900-01-01&to=2999-12-31",
+            "data": {
+              "action_id": "REG-00353",
+              "company_id": "CMP-0001",
+              "facility_id": "FAC-0002",
+              "authority": "OSPCB",
+              "case_no": "OSPCB/ANG/SCN/2024/118",
+              "order_type": "show_cause",
+              "date": "2024-11-02",
+              "penalty_inr": 0.0,
+              "status": "reply_filed",
+              "summary": "Odisha State Pollution Control Board show-cause notice for particulate matter exceedances recorded by the online continuous emission monitoring system.",
+              "relevance": 0.03
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.97
+            }
+          },
+          {
+            "evidence_id": "VAJ-06.1-E50",
+            "source": "audited_reports",
+            "tier": 3,
+            "title": "Independent assurance statements on BRSR Core",
+            "snippet": "FY2025: limited assurance by Rao & Iyer Assurance LLP, opinion unmodified. Excerpt: Independent Limited Assurance Report to the Board of Directors of Vajra Steel & Power Ltd. We were engaged by Vajra Steel & Power Ltd (the Company) to perform a limited assurance engagement on the BRSR Core information for the year ended 31 March 2025 (the Sub History: FY2022 limited (Rao & Iyer Assurance LLP); FY2023 limited (Rao & Iyer Assurance LLP); FY2024 limited (Rao & Iyer Assurance LLP); FY2025 limited (Rao & Iyer Assurance LLP).",
+            "endpoint": "/assurance/statements?company_id=CMP-0001",
+            "data": {
+              "period": "FY2025",
+              "assurance_type": "limited",
+              "relevance": 0.3
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.7
+            }
+          },
+          {
+            "evidence_id": "VAJ-06.1-E60",
+            "source": "news_articles",
+            "tier": 5,
+            "title": "Odisha Field Report, 2025-01-22: Villagers near Keonjhar allege fresh forest clearing around iron ore lease",
+            "snippet": "KEONJHAR: Residents of several villages near the iron ore lease of Vajra Steel & Power Ltd in Keonjhar district have alleged fresh forest clearing around the mine, and say that roads and dumps have crept into areas that used to be wooded. Satellite alerts compiled by a local forest-rights collective show about 126 hectares of forest loss within 5 km of the company's Keonjhar mine, across 14 separate alerts, between April 2024 and March 2025.",
+            "endpoint": "/news/search?q=Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation&company_id=CMP-0001",
+            "data": {
+              "article_id": "NWS-00327",
+              "outlet": "Odisha Field Report",
+              "date": "2025-01-22",
+              "retrieval_score": 1.0,
+              "relevance": 0.95
+            },
+            "stance": {
+              "label": "contradict",
+              "probabilities": {
+                "contradict": 1.0,
+                "insufficient": 0.0,
+                "support": 0.0
+              },
+              "confidence": 1.0
+            }
+          },
+          {
+            "evidence_id": "VAJ-06.1-E61",
+            "source": "news_articles",
+            "tier": 4,
+            "title": "Vajra Steel & Power Ltd (press release), 2025-06-05: Vajra Steel powers half its operations with green energy",
+            "snippet": "BHUBANESWAR: Vajra Steel & Power Ltd today announced that 50% of the electricity consumed across its operations in FY2024-25 came from renewable sources, a claim the company says is based on renewable energy certificates purchased during the year, along with its growing share of green power contracts. \"Our customers expect low-carbon steel and we are delivering,\" the company's head of environment, health and safety said in a statement.",
+            "endpoint": "/news/search?q=Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation&company_id=CMP-0001",
+            "data": {
+              "article_id": "NWS-00355",
+              "outlet": "Vajra Steel & Power Ltd (press release)",
+              "date": "2025-06-05",
+              "retrieval_score": 0.6694,
+              "relevance": 0.02
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.98
+            }
+          },
+          {
+            "evidence_id": "VAJ-06.1-E62",
+            "source": "news_articles",
+            "tier": 5,
+            "title": "Odisha Field Report, 2025-09-29: Keonjhar unit anchors Vajra Steel's Odisha operations",
+            "snippet": "KEONJHAR: The Barbil Pellet Plant of Vajra Steel & Power Ltd in Keonjhar, Odisha, has a capacity of 6 MTPA pellets and operates under consent OSPCB/CTO/2016/11440 from the Odisha State Pollution Control Board. Vajra Steel & Power Ltd is a steel and metals company headquartered in Bhubaneswar, Odisha.",
+            "endpoint": "/news/search?q=Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation&company_id=CMP-0001",
+            "data": {
+              "article_id": "NWS-00418",
+              "outlet": "Odisha Field Report",
+              "date": "2025-09-29",
+              "retrieval_score": 0.5942,
+              "relevance": 0.1
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.9
+            }
+          }
+        ],
+        "computations": [
+          {
+            "op": "sum",
+            "expression": "sum of 14 records = 126.4",
+            "inputs": {
+              "forest_loss_ha_n": 14.0
+            },
+            "result": 126.4
+          },
+          {
+            "op": "sum",
+            "expression": "sum of 2 records = 42,000,000",
+            "inputs": {
+              "penalties_inr_n": 2.0
+            },
+            "result": 42000000.0
+          }
+        ],
+        "stance": {
+          "label": "contradict",
+          "probabilities": {
+            "insufficient": 0.0,
+            "support": 0.0,
+            "contradict": 1.0
+          },
+          "confidence": 1.0
+        }
+      }
+    ],
+    "verdict": {
+      "label": "CONTRADICT",
+      "probabilities": {
+        "CONTRADICT": 1.0,
+        "ALIGN": 0.0,
+        "INSUFFICIENT_EVIDENCE": 0.0
+      },
+      "confidence": 1.0,
+      "reasoning": "The retrieved evidence contradicts this claim (decision confidence 100%). VAJ-06.1-E30 (Tier 3 third-party dataset): 14 satellite forest-loss alerts within 5 km of Keonjhar Iron Ore Mine (21.629, 85.581) between 2024-04-01 and 2025-03-31, totalling 126.4 hectares (confidence: high 8, highest 4, nominal 2). VAJ-06.1-E60 (Tier 5 news report): KEONJHAR: Residents of several villages near the iron ore lease of Vajra Steel & Power Ltd in Keonjhar district have alleged fresh forest clearing around the mine, and say that roads and dumps have crept into areas that . sum of 14 records = 126.4. sum of 2 records = 42,000,000."
+    },
+    "risk": {
+      "score": 75.7,
+      "band": "Very High",
+      "components": [
+        {
+          "name": "p_contradict",
+          "value": 1.0,
+          "weight": 1.859,
+          "contribution": 1.859,
+          "note": "Decision-engine probability that external evidence contradicts the claim"
+        },
+        {
+          "name": "p_insufficient",
+          "value": 0.0,
+          "weight": -1.113,
+          "contribution": -0.0,
+          "note": "Probability that nothing external can confirm the claim (unverifiable)"
+        },
+        {
+          "name": "severity",
+          "value": 0.983,
+          "weight": 2.052,
+          "contribution": 2.018,
+          "note": "Decision-engine rating of how serious the discrepancy is"
+        },
+        {
+          "name": "materiality",
+          "value": 0.707,
+          "weight": -1.428,
+          "contribution": -1.009,
+          "note": "How much the claim matters to investors and regulators"
+        },
+        {
+          "name": "vagueness",
+          "value": 0.16,
+          "weight": 1.683,
+          "contribution": 0.269,
+          "note": "Probability the statement is vague, non-falsifiable cheap talk"
+        },
+        {
+          "name": "p_indeterminate",
+          "value": 0.0,
+          "weight": 2.347,
+          "contribution": 0.0,
+          "note": "A3CG: probability the action is indeterminate rhetoric"
+        },
+        {
+          "name": "high_tier_contradiction",
+          "value": 0.0,
+          "weight": 1.159,
+          "contribution": 0.0,
+          "note": "A regulatory filing or regulator record contradicts the claim"
+        },
+        {
+          "name": "bias",
+          "value": 1.0,
+          "weight": -2.003,
+          "contribution": -2.003,
+          "note": "Intercept (fitted)"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2026-10-04T12:13:32.907+00:00",
+      "agent": "resolver",
+      "type": "tool_call",
+      "claim_id": null,
+      "message": "resolve_company(name=Vajra Steel & Power Ltd)",
+      "data": {
+        "tool": "resolve_company",
+        "path": "/companies/resolve",
+        "args": {
+          "name": "Vajra Steel & Power Ltd"
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "ts": "2026-10-04T12:13:32.931+00:00",
+      "agent": "resolver",
+      "type": "tool_result",
+      "claim_id": null,
+      "message": "resolve_company: 5 record(s)",
+      "data": {
+        "count": 5,
+        "endpoint": null
+      }
+    },
+    {
+      "seq": 3,
+      "ts": "2026-10-04T12:13:32.931+00:00",
+      "agent": "resolver",
+      "type": "decision",
+      "claim_id": null,
+      "message": "Resolved to Vajra Steel & Power Ltd",
+      "data": {
+        "report_name": "Vajra Steel & Power Ltd",
+        "candidate": "Vajra Steel & Power Ltd",
+        "similarity": 1.0,
+        "p_same": 0.93
+      }
+    },
+    {
+      "seq": 4,
+      "ts": "2026-10-04T12:13:32.931+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": null,
+      "message": "list_facilities()",
+      "data": {
+        "tool": "list_facilities",
+        "path": "/companies/CMP-0001/facilities",
+        "args": {}
+      }
+    },
+    {
+      "seq": 5,
+      "ts": "2026-10-04T12:13:32.933+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": null,
+      "message": "list_facilities: 4 record(s)",
+      "data": {
+        "count": 4,
+        "endpoint": "/companies/CMP-0001/facilities"
+      }
+    },
+    {
+      "seq": 6,
+      "ts": "2026-10-04T12:13:33.804+00:00",
+      "agent": "triage",
+      "type": "decision",
+      "claim_id": "VAJ-06",
+      "message": "implemented, checkable: Concrete past-performance claim; checkable against external records (p=0.93)",
+      "data": {
+        "action": "implemented",
+        "p_vague": 0.16,
+        "p_checkable": 0.93,
+        "materiality": "significant"
+      }
+    },
+    {
+      "seq": 7,
+      "ts": "2026-10-04T12:13:33.805+00:00",
+      "agent": "decomposer",
+      "type": "start",
+      "claim_id": "VAJ-06",
+      "message": "Decomposing: Our Keonjhar mining operations caused zero deforestation during FY2024-25.",
+      "data": null
+    },
+    {
+      "seq": 8,
+      "ts": "2026-10-04T12:13:33.805+00:00",
+      "agent": "decomposer",
+      "type": "decision",
+      "claim_id": "VAJ-06",
+      "message": "1 atomic sub-claim(s): [geo | deforestation_ha | FY2025] Our Keonjhar mining operations caused zero deforestation dur",
+      "data": {
+        "sub_claims": [
+          {
+            "sub_id": "VAJ-06.1",
+            "metric": "deforestation_ha",
+            "check_type": "geo",
+            "period": "FY2025",
+            "baseline_period": null,
+            "claimed_value": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "seq": 9,
+      "ts": "2026-10-04T12:13:33.806+00:00",
+      "agent": "router",
+      "type": "decision",
+      "claim_id": "VAJ-06",
+      "message": "VAJ-06.1: query land_alerts (0.94), regulatory (0.79), assurance (0.76), news (0.68)",
+      "data": {
+        "plan": [
+          {
+            "source": "land_alerts",
+            "probability": 0.94,
+            "selected": true
+          },
+          {
+            "source": "regulatory",
+            "probability": 0.79,
+            "selected": true
+          },
+          {
+            "source": "assurance",
+            "probability": 0.76,
+            "selected": true
+          },
+          {
+            "source": "news",
+            "probability": 0.68,
+            "selected": true
+          },
+          {
+            "source": "brsr",
+            "probability": 0.12,
+            "selected": false
+          },
+          {
+            "source": "facility_ghg",
+            "probability": 0.08,
+            "selected": false
+          },
+          {
+            "source": "ocems",
+            "probability": 0.06,
+            "selected": false
+          },
+          {
+            "source": "rec_registry",
+            "probability": 0.04,
+            "selected": false
+          }
+        ]
+      }
+    },
+    {
+      "seq": 10,
+      "ts": "2026-10-04T12:13:33.806+00:00",
+      "agent": "investigator",
+      "type": "start",
+      "claim_id": "VAJ-06",
+      "message": "VAJ-06.1: round 1 over land_alerts, regulatory, assurance, news",
+      "data": null
+    },
+    {
+      "seq": 11,
+      "ts": "2026-10-04T12:13:33.806+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-06",
+      "message": "gfw_forest_alerts_near_point(lat=21.629, lon=85.581, fy=FY2025, radius_km=5.0)",
+      "data": {
+        "tool": "gfw_forest_alerts_near_point",
+        "path": "/gfw/alerts/near",
+        "args": {
+          "lat": 21.629,
+          "lon": 85.581,
+          "fy": "FY2025",
+          "radius_km": 5.0
+        }
+      }
+    },
+    {
+      "seq": 12,
+      "ts": "2026-10-04T12:13:33.807+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-06",
+      "message": "regulatory_actions(company_id=CMP-0001)",
+      "data": {
+        "tool": "regulatory_actions",
+        "path": "/regulatory/actions",
+        "args": {
+          "company_id": "CMP-0001"
+        }
+      }
+    },
+    {
+      "seq": 13,
+      "ts": "2026-10-04T12:13:33.808+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-06",
+      "message": "assurance_statements(company_id=CMP-0001)",
+      "data": {
+        "tool": "assurance_statements",
+        "path": "/assurance/statements",
+        "args": {
+          "company_id": "CMP-0001"
+        }
+      }
+    },
+    {
+      "seq": 14,
+      "ts": "2026-10-04T12:13:33.808+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-06",
+      "message": "news_search(q=Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation, company_id=CMP-0001, k=3, date_from=2024-01-01, date_to=2025-12-31)",
+      "data": {
+        "tool": "news_search",
+        "path": "/news/search",
+        "args": {
+          "q": "Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation",
+          "company_id": "CMP-0001",
+          "k": 3,
+          "date_from": "2024-01-01",
+          "date_to": "2025-12-31"
+        }
+      }
+    },
+    {
+      "seq": 15,
+      "ts": "2026-10-04T12:13:33.817+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-06",
+      "message": "regulatory_actions: 2 record(s)",
+      "data": {
+        "count": 2,
+        "endpoint": "/regulatory/actions?company_id=CMP-0001&from=1900-01-01&to=2999-12-31"
+      }
+    },
+    {
+      "seq": 16,
+      "ts": "2026-10-04T12:13:33.818+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-06",
+      "message": "gfw_forest_alerts_near_point: 14 record(s)",
+      "data": {
+        "count": 14,
+        "endpoint": "/gfw/alerts/near?lat=21.629&lon=85.581&radius_km=5.0&from=2024-04-01&to=2025-03-31"
+      }
+    },
+    {
+      "seq": 17,
+      "ts": "2026-10-04T12:13:33.824+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-06",
+      "message": "news_search: 3 record(s)",
+      "data": {
+        "count": 3,
+        "endpoint": "/news/search?q=Vajra Steel Forest-loss alerts near operations Keonjhar mining operations caused zero deforestation&company_id=CMP-0001"
+      }
+    },
+    {
+      "seq": 18,
+      "ts": "2026-10-04T12:13:33.825+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-06",
+      "message": "assurance_statements: 4 record(s)",
+      "data": {
+        "count": 4,
+        "endpoint": "/assurance/statements?company_id=CMP-0001"
+      }
+    },
+    {
+      "seq": 19,
+      "ts": "2026-10-04T12:13:34.327+00:00",
+      "agent": "investigator",
+      "type": "decision",
+      "claim_id": "VAJ-06",
+      "message": "VAJ-06.1: evidence sufficient? p=0.79",
+      "data": {
+        "p_sufficient": 0.79,
+        "round": 1
+      }
+    },
+    {
+      "seq": 20,
+      "ts": "2026-10-04T12:13:34.327+00:00",
+      "agent": "investigator",
+      "type": "info",
+      "claim_id": "VAJ-06",
+      "message": "VAJ-06.1: 7 evidence item(s), 2 calculation(s) after 1 round(s)",
+      "data": null
+    },
+    {
+      "seq": 21,
+      "ts": "2026-10-04T12:13:34.865+00:00",
+      "agent": "judge",
+      "type": "decision",
+      "claim_id": "VAJ-06",
+      "message": "VAJ-06.1: stance contradict (1.00); per evidence: VAJ-06.1-E30=contradict, VAJ-06.1-E11=insufficient, VAJ-06.1-E12=insufficient, VAJ-06.1-E50=insufficient, VAJ-06.1-E60=contradict, VAJ-06.1-E61=insufficient, VAJ-06.1-E62=insufficient",
+      "data": {
+        "stance": {
+          "label": "contradict",
+          "probabilities": {
+            "insufficient": 0.0,
+            "support": 0.0,
+            "contradict": 1.0
+          },
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "seq": 22,
+      "ts": "2026-10-04T12:13:35.461+00:00",
+      "agent": "verdict",
+      "type": "verdict",
+      "claim_id": "VAJ-06",
+      "message": "CONTRADICT (1.00) for: Our Keonjhar mining operations caused zero deforestation during FY2024-25.",
+      "data": {
+        "probabilities": {
+          "CONTRADICT": 1.0,
+          "ALIGN": 0.0,
+          "INSUFFICIENT_EVIDENCE": 0.0
+        },
+        "severity": "severe",
+        "cited": [
+          "VAJ-06.1-E30",
+          "VAJ-06.1-E60"
+        ]
+      }
+    }
+  ]
+}

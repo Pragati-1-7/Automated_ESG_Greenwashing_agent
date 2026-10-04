@@ -1,0 +1,79 @@
+{
+  "request": "GET /registry/rec?company_id=CMP-0001&vintage=2024",
+  "status": 200,
+  "response": {
+    "source": "re_certificates",
+    "tier": 3,
+    "endpoint": "/registry/rec?company_id=CMP-0001&vintage=2024",
+    "count": 7,
+    "rows": [
+      {
+        "cert_id": "REC-000004",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 450000.0,
+        "vintage_year": 2024,
+        "status": "active",
+        "retired_on": null
+      },
+      {
+        "cert_id": "REC-000005",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 540000.0,
+        "vintage_year": 2024,
+        "status": "active",
+        "retired_on": null
+      },
+      {
+        "cert_id": "REC-000006",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 540000.0,
+        "vintage_year": 2024,
+        "status": "active",
+        "retired_on": null
+      },
+      {
+        "cert_id": "REC-000007",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 570000.0,
+        "vintage_year": 2024,
+        "status": "active",
+        "retired_on": null
+      },
+      {
+        "cert_id": "REC-000008",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 95000.0,
+        "vintage_year": 2024,
+        "status": "retired",
+        "retired_on": "2025-01-30"
+      },
+      {
+        "cert_id": "REC-000009",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 105000.0,
+        "vintage_year": 2024,
+        "status": "retired",
+        "retired_on": "2025-01-19"
+      },
+      {
+        "cert_id": "REC-000010",
+        "company_id": "CMP-0001",
+        "registry": "I-REC",
+        "mwh": 110000.0,
+        "vintage_year": 2024,
+        "status": "retired",
+        "retired_on": "2025-03-13"
+      }
+    ],
+    "totals_mwh": {
+      "active": 2100000.0,
+      "retired": 310000.0
+    }
+  }
+}

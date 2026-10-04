@@ -1,0 +1,794 @@
+{
+  "full_system": [
+    {
+      "report": "vajra",
+      "status": "done",
+      "company_resolved": true,
+      "planted_claims": 16,
+      "extracted": 16,
+      "correct": 16,
+      "company_risk_score": 56.3,
+      "risk_band": "High",
+      "other_claims": 35,
+      "other_claims_verdicts": {
+        "INSUFFICIENT_EVIDENCE": 15,
+        "NOT_CHECKABLE": 17,
+        "CONTRADICT": 2,
+        "ALIGN": 1
+      },
+      "claims": [
+        {
+          "id": "VAJ-01",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-02",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "VAJ-03",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-04",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-05",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-06",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-07",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-08",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-09",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-10",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-11",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-12",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-13",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-14",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 0.96
+        },
+        {
+          "id": "VAJ-15",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 0.82
+        },
+        {
+          "id": "VAJ-16",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "report": "sahyadri",
+      "status": "done",
+      "company_resolved": true,
+      "planted_claims": 12,
+      "extracted": 12,
+      "correct": 12,
+      "company_risk_score": 45.0,
+      "risk_band": "Moderate",
+      "other_claims": 29,
+      "other_claims_verdicts": {
+        "INSUFFICIENT_EVIDENCE": 10,
+        "NOT_CHECKABLE": 12,
+        "ALIGN": 7
+      },
+      "claims": [
+        {
+          "id": "SAH-01",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-02",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-03",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "SAH-04",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.93
+        },
+        {
+          "id": "SAH-05",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.95
+        },
+        {
+          "id": "SAH-06",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-07",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-08",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-09",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "SAH-10",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-11",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-12",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "report": "kaveri",
+      "status": "done",
+      "company_resolved": true,
+      "planted_claims": 12,
+      "extracted": 12,
+      "correct": 12,
+      "company_risk_score": 34.4,
+      "risk_band": "Moderate",
+      "other_claims": 21,
+      "other_claims_verdicts": {
+        "ALIGN": 3,
+        "NOT_CHECKABLE": 10,
+        "INSUFFICIENT_EVIDENCE": 8
+      },
+      "claims": [
+        {
+          "id": "KAV-01",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-02",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-03",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-04",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-05",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-06",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-07",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.97
+        },
+        {
+          "id": "KAV-08",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.9
+        },
+        {
+          "id": "KAV-09",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.81
+        },
+        {
+          "id": "KAV-10",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-11",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-12",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "report": "aurelia",
+      "status": "done",
+      "company_resolved": false,
+      "planted_claims": 6,
+      "extracted": 6,
+      "correct": 6,
+      "company_risk_score": 23.7,
+      "risk_band": "Low",
+      "other_claims": 17,
+      "other_claims_verdicts": {
+        "INSUFFICIENT_EVIDENCE": 12,
+        "NOT_CHECKABLE": 5
+      },
+      "claims": [
+        {
+          "id": "AUR-01",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-02",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-03",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-04",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-05",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-06",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 0.77
+        }
+      ]
+    }
+  ],
+  "no_relevance_gate": [
+    {
+      "report": "vajra",
+      "status": "done",
+      "company_resolved": true,
+      "planted_claims": 16,
+      "extracted": 16,
+      "correct": 16,
+      "company_risk_score": 60.5,
+      "risk_band": "High",
+      "other_claims": 35,
+      "other_claims_verdicts": {
+        "CONTRADICT": 5,
+        "NOT_CHECKABLE": 17,
+        "INSUFFICIENT_EVIDENCE": 12,
+        "ALIGN": 1
+      },
+      "claims": [
+        {
+          "id": "VAJ-01",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-02",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "VAJ-03",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-04",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-05",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-06",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-07",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-08",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-09",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-10",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-11",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-12",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-13",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "VAJ-14",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "VAJ-15",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 0.82
+        },
+        {
+          "id": "VAJ-16",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "report": "sahyadri",
+      "status": "done",
+      "company_resolved": true,
+      "planted_claims": 12,
+      "extracted": 12,
+      "correct": 12,
+      "company_risk_score": 45.3,
+      "risk_band": "Moderate",
+      "other_claims": 29,
+      "other_claims_verdicts": {
+        "INSUFFICIENT_EVIDENCE": 11,
+        "NOT_CHECKABLE": 12,
+        "ALIGN": 6
+      },
+      "claims": [
+        {
+          "id": "SAH-01",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "SAH-02",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-03",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "SAH-04",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.82
+        },
+        {
+          "id": "SAH-05",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.97
+        },
+        {
+          "id": "SAH-06",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-07",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-08",
+          "expected": "CONTRADICT",
+          "predicted": "CONTRADICT",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-09",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-10",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "SAH-11",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 0.98
+        },
+        {
+          "id": "SAH-12",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "report": "kaveri",
+      "status": "done",
+      "company_resolved": true,
+      "planted_claims": 12,
+      "extracted": 12,
+      "correct": 12,
+      "company_risk_score": 34.4,
+      "risk_band": "Moderate",
+      "other_claims": 21,
+      "other_claims_verdicts": {
+        "ALIGN": 3,
+        "NOT_CHECKABLE": 10,
+        "INSUFFICIENT_EVIDENCE": 8
+      },
+      "claims": [
+        {
+          "id": "KAV-01",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-02",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-03",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-04",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-05",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-06",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-07",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-08",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.96
+        },
+        {
+          "id": "KAV-09",
+          "expected": "ALIGN",
+          "predicted": "ALIGN",
+          "correct": true,
+          "confidence": 0.8
+        },
+        {
+          "id": "KAV-10",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-11",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "KAV-12",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "report": "aurelia",
+      "status": "done",
+      "company_resolved": false,
+      "planted_claims": 6,
+      "extracted": 6,
+      "correct": 6,
+      "company_risk_score": 23.8,
+      "risk_band": "Low",
+      "other_claims": 17,
+      "other_claims_verdicts": {
+        "INSUFFICIENT_EVIDENCE": 12,
+        "NOT_CHECKABLE": 5
+      },
+      "claims": [
+        {
+          "id": "AUR-01",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-02",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 0.96
+        },
+        {
+          "id": "AUR-03",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-04",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 1.0
+        },
+        {
+          "id": "AUR-05",
+          "expected": "INSUFFICIENT_EVIDENCE",
+          "predicted": "INSUFFICIENT_EVIDENCE",
+          "correct": true,
+          "confidence": 0.99
+        },
+        {
+          "id": "AUR-06",
+          "expected": "NOT_CHECKABLE",
+          "predicted": "NOT_CHECKABLE",
+          "correct": true,
+          "confidence": 0.77
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+company_id,cin,name,short_name,aliases,sector,hq_city,hq_state,listing,market_cap_band
+CMP-0001,L27100OR1998PLC005512,Vajra Steel & Power Ltd,Vajra Steel,"[""Vajra Steel"", ""Vajra Steel and Power"", ""VSPL""]",Steel,Bhubaneswar,Odisha,NSE: VAJRASTL,Large
+CMP-0002,L26942MH2001PLC131870,Sahyadri Cement Industries Ltd,Sahyadri Cement,"[""Sahyadri Cement"", ""SCIL"", ""Sahyadri Cements""]",Cement,Pune,Maharashtra,NSE: SAHYCEM,Mid
+CMP-0003,L17111TZ1985PLC001647,Kaveri Threads & Textiles Ltd,Kaveri Threads,"[""Kaveri Threads"", ""Kaveri Textiles"", ""KTTL""]",Textiles,Coimbatore,Tamil Nadu,NSE: KAVERITEX,Small
+CMP-0004,L27100WB1981PLC241425,Surasena Steel & Alloys Ltd,Surasena Steel,"[""Surasena Steel"", ""Surasena Steel & Alloys"", ""SSAL""]",Steel,Kolkata,West Bengal,"NSE, BSE: SURASSTL",Small
+CMP-0005,L13111UP1990PLC088782,Jaintia Weaves Ltd,Jaintia Weaves,"[""Jaintia Weaves"", ""JWL""]",Textiles,Kanpur,Uttar Pradesh,NSE: JAINTTEX,Small
+CMP-0006,L27106CT1992PLC401563,Loktak Sponge & Steel Ltd,Loktak Sponge,"[""Loktak Sponge"", ""Loktak Sponge & Steel"", ""LSSL""]",Steel,Raipur,Chhattisgarh,NSE: LOKTASTL,Small
+CMP-0007,L20211WB1981PLC333510,Subansiri Agrochem Ltd,Subansiri Agrochem,"[""Subansiri Agrochem"", ""SAL""]",Chemicals,Kolkata,West Bengal,NSE: SUBANCHM,Small
+CMP-0008,L29302HR1969PLC185107,Pandya Tyres Ltd,Pandya Tyres,"[""Pandya Tyres"", ""PTL""]",Automotive,Gurugram,Haryana,NSE: PANDYAUT,Small
+CMP-0009,L35101WB1990PLC178591,Hoysala Power Ltd,Hoysala Power,"[""Hoysala Power"", ""HPL""]",Power,Kolkata,West Bengal,NSE: HOYSAPWR,Mid
+CMP-0010,L20119GJ1986PLC284397,Kim Fertilisers Ltd,Kim Fertilisers,"[""Kim Fertilisers"", ""KFL""]",Chemicals,Ahmedabad,Gujarat,NSE: KIMCHM,Large
+CMP-0011,L62020TG2003PLC145032,Kuru Technologies Ltd,Kuru Technologies,"[""Kuru Technologies"", ""KTL""]",IT Services,Hyderabad,Telangana,"NSE, BSE: KURUITS",Mid
+CMP-0012,L07291KA1995PLC473868,Dibang Mining & Minerals Ltd,Dibang Mining,"[""Dibang Mining"", ""Dibang Mining & Minerals"", ""DMML""]",Mining,Bengaluru,Karnataka,NSE: DIBANMIN,Mid
+CMP-0013,L26942TN1964PLC275103,Brahmani Cement Ltd,Brahmani Cement,"[""Brahmani Cement"", ""BCL""]",Cement,Chennai,Tamil Nadu,NSE: BRAHMCEM,Small
+CMP-0014,L20121TN1967PLC333444,Nagarjuna Agrochem Ltd,Nagarjuna Agrochem,"[""Nagarjuna Agrochem"", ""NAL""]",Chemicals,Chennai,Tamil Nadu,"NSE, BSE: NAGARCHM",Large
+CMP-0015,L29301MH1987PLC414166,Kongu Forgings Ltd,Kongu Forgings,"[""Kongu Forgings"", ""KFL""]",Automotive,Mumbai,Maharashtra,NSE: KONGUAUT,Small
+CMP-0016,L10611HR1994PLC125448,Barak Consumer Products Ltd,Barak Consumer,"[""Barak Consumer"", ""Barak Consumer Products"", ""BCPL""]",FMCG,Gurugram,Haryana,NSE: BARAKFMC,Large
+CMP-0017,L20121TG1995PLC230000,Betwa Fertilisers Ltd,Betwa Fertilisers,"[""Betwa Fertilisers"", ""BFL""]",Chemicals,Hyderabad,Telangana,NSE: BETWACHM,Small
+CMP-0018,L13121UP1982PLC308052,Girnar Fabrics Ltd,Girnar Fabrics,"[""Girnar Fabrics"", ""GFL""]",Textiles,Kanpur,Uttar Pradesh,"NSE, BSE: GIRNATEX",Large
+CMP-0019,U29302MH1969PLC084199,Bhagirathi Forgings Ltd,Bhagirathi Forgings,"[""Bhagirathi Forgings"", ""BFL""]",Automotive,Aurangabad,Maharashtra,Unlisted,Large
+CMP-0020,L62013WB2004PLC368701,Tapti Systems Ltd,Tapti Systems,"[""Tapti Systems"", ""TSL""]",IT Services,Kolkata,West Bengal,"NSE, BSE: TAPTIITS",Small
+CMP-0021,L62020KA1964PLC357884,Bhavani Infotech Ltd,Bhavani Infotech,"[""Bhavani Infotech"", ""BIL""]",IT Services,Bengaluru,Karnataka,NSE: BHAVAITS,Small
+CMP-0022,L29301MH1982PLC219524,Ujjain Autotech Ltd,Ujjain Autotech,"[""Ujjain Autotech"", ""UAL""]",Automotive,Mumbai,Maharashtra,"NSE, BSE: UJJAIAUT",Small
+CMP-0023,L24119GJ1996PLC422589,Matsya Fertilisers Ltd,Matsya Fertilisers,"[""Matsya Fertilisers"", ""MFL""]",Chemicals,Bharuch,Gujarat,"NSE, BSE: MATSYCHM",Small
+CMP-0024,L26943KA1970PLC169805,Vikramaditya Cement Works Ltd,Vikramaditya Cement,"[""Vikramaditya Cement"", ""Vikramaditya Cement Works"", ""VCWL""]",Cement,Bengaluru,Karnataka,NSE: VIKRACEM,Large
+CMP-0025,L62013WB1987PLC311725,Tunga Digital Services Ltd,Tunga Digital,"[""Tunga Digital"", ""Tunga Digital Services"", ""TDSL""]",IT Services,Kolkata,West Bengal,NSE: TUNGAITS,Small
+CMP-0026,L21002MH1964PLC211116,Khandesh Formulations Ltd,Khandesh Formulations,"[""Khandesh Formulations"", ""KFL""]",Pharmaceuticals,Pune,Maharashtra,"NSE, BSE: KHANDPHR",Small
+CMP-0027,L07291OR2007PLC397239,Chenab Ores Ltd,Chenab Ores,"[""Chenab Ores"", ""COL""]",Mining,Bhubaneswar,Odisha,NSE: CHENAMIN,Mid
+CMP-0028,L27100WB2003PLC226162,Palar Rolling Mills Ltd,Palar Rolling,"[""Palar Rolling"", ""Palar Rolling Mills"", ""PRML""]",Steel,Kolkata,West Bengal,NSE: PALARSTL,Mid
+CMP-0029,L21001KA1973PLC040720,Gandak Laboratories Ltd,Gandak Laboratories,"[""Gandak Laboratories"", ""GLL""]",Pharmaceuticals,Bengaluru,Karnataka,NSE: GANDAPHR,Large
+CMP-0030,L26943MP2001PLC009710,Saurashtra Cement Ltd,Saurashtra Cement,"[""Saurashtra Cement"", ""SCL""]",Cement,Bhopal,Madhya Pradesh,NSE: SAURACEM,Mid
+CMP-0031,L40101UP1962PLC089840,Bundela Renewable Power Ltd,Bundela Renewable,"[""Bundela Renewable"", ""Bundela Renewable Power"", ""BRPL""]",Power,Lucknow,Uttar Pradesh,NSE: BUNDEPWR,Large
+CMP-0032,L35101MH2012PLC049499,Hindon Green Power Ltd,Hindon Green,"[""Hindon Green"", ""Hindon Green Power"", ""HGPL""]",Power,Mumbai,Maharashtra,NSE: HINDOPWR,Mid
+CMP-0033,L13121TN1967PLC335705,Sindh Weaves Ltd,Sindh Weaves,"[""Sindh Weaves"", ""SWL""]",Textiles,Coimbatore,Tamil Nadu,NSE: SINDHTEX,Mid
+CMP-0034,L29104MH1988PLC473241,Bastar Castings Ltd,Bastar Castings,"[""Bastar Castings"", ""BCL""]",Automotive,Aurangabad,Maharashtra,NSE: BASTAAUT,Mid
+CMP-0035,L07291MH2012PLC130483,Vindhya Manganese & Minerals Ltd,Vindhya Manganese,"[""Vindhya Manganese"", ""Vindhya Manganese & Minerals"", ""VMML""]",Mining,Nagpur,Maharashtra,NSE: VINDHMIN,Mid
+CMP-0036,L05101CT1995PLC304975,Wainganga Minerals Ltd,Wainganga Minerals,"[""Wainganga Minerals"", ""WML""]",Mining,Raipur,Chhattisgarh,NSE: WAINGMIN,Mid
+CMP-0037,L29302MH1989PLC430336,Gomti Castings Ltd,Gomti Castings,"[""Gomti Castings"", ""GCL""]",Automotive,Aurangabad,Maharashtra,NSE: GOMTIAUT,Mid
+CMP-0038,L29104UP1994PLC062840,Khasi Forgings Ltd,Khasi Forgings,"[""Khasi Forgings"", ""KFL""]",Automotive,Noida,Uttar Pradesh,NSE: KHASIAUT,Mid
+CMP-0039,L20119TN1980PLC436013,Trikuta Agrochem Ltd,Trikuta Agrochem,"[""Trikuta Agrochem"", ""TAL""]",Chemicals,Chennai,Tamil Nadu,NSE: TRIKUCHM,Small
+CMP-0040,L72200UP1983PLC203544,Meru Cloud Solutions Ltd,Meru Cloud,"[""Meru Cloud"", ""Meru Cloud Solutions"", ""MCSL""]",IT Services,Noida,Uttar Pradesh,NSE: MERUITS,Small
+CMP-0041,L27106MH2003PLC366631,Banas Ispat Ltd,Banas Ispat,"[""Banas Ispat"", ""BIL""]",Steel,Mumbai,Maharashtra,NSE: BANASSTL,Small
+CMP-0042,U29302TN1992PLC216695,Ao Autotech Ltd,Ao Autotech,"[""Ao Autotech"", ""AAL""]",Automotive,Coimbatore,Tamil Nadu,Unlisted,Mid
+CMP-0043,L13121TN1968PLC267888,Mandakini Spinning Mills Ltd,Mandakini Spinning,"[""Mandakini Spinning"", ""Mandakini Spinning Mills"", ""MSML""]",Textiles,Madurai,Tamil Nadu,NSE: MANDATEX,Mid
+CMP-0044,L15499MP2005PLC475845,Ghataprabha Dairy Ltd,Ghataprabha Dairy,"[""Ghataprabha Dairy"", ""GDL""]",FMCG,Indore,Madhya Pradesh,NSE: GHATAFMC,Mid
+CMP-0045,L35101GJ1996PLC150754,Braj Green Power Ltd,Braj Green,"[""Braj Green"", ""Braj Green Power"", ""BGPL""]",Power,Ahmedabad,Gujarat,"NSE, BSE: BRAJPWR",Small
+CMP-0046,L15499HR1993PLC144323,Zanskar Beverages Ltd,Zanskar Beverages,"[""Zanskar Beverages"", ""ZBL""]",FMCG,Gurugram,Haryana,NSE: ZANSKFMC,Mid
+CMP-0047,L17111TN1968PLC156496,Wardha Textiles Ltd,Wardha Textiles,"[""Wardha Textiles"", ""WTL""]",Textiles,Coimbatore,Tamil Nadu,NSE: WARDHTEX,Small
+CMP-0048,L35101DL1968PLC299316,Arjuna Renewable Power Ltd,Arjuna Renewable,"[""Arjuna Renewable"", ""Arjuna Renewable Power"", ""ARPL""]",Power,New Delhi,Delhi,NSE: ARJUNPWR,Small
+CMP-0049,L10799UP1985PLC140609,Avanti Foods Ltd,Avanti Foods,"[""Avanti Foods"", ""AFL""]",FMCG,Noida,Uttar Pradesh,NSE: AVANTFMC,Mid
+CMP-0050,U29104TN1981PLC268841,Malwa Motors Ltd,Malwa Motors,"[""Malwa Motors"", ""MML""]",Automotive,Chennai,Tamil Nadu,Unlisted,Mid
+CMP-0051,L21001MH1996PLC029046,Penganga API Industries Ltd,Penganga API,"[""Penganga API"", ""Penganga API Industries"", ""PAIL""]",Pharmaceuticals,Mumbai,Maharashtra,"NSE, BSE: PENGAPHR",Mid
+CMP-0052,L26941CT1989PLC038657,Dandaka Cements Ltd,Dandaka Cements,"[""Dandaka Cements"", ""DCL""]",Cement,Raipur,Chhattisgarh,NSE: DANDACEM,Mid
+CMP-0053,L29301HR1991PLC384296,Nilgiri Auto Ancillaries Ltd,Nilgiri Auto,"[""Nilgiri Auto"", ""Nilgiri Auto Ancillaries"", ""NAAL""]",Automotive,Faridabad,Haryana,NSE: NILGIAUT,Mid
+CMP-0054,L62011KA1970PLC323543,Mewar InfoSystems Ltd,Mewar InfoSystems,"[""Mewar InfoSystems"", ""MIL""]",IT Services,Bengaluru,Karnataka,"NSE, BSE: MEWARITS",Small
+CMP-0055,L20119TN1972PLC417547,Gondwana Polymers Ltd,Gondwana Polymers,"[""Gondwana Polymers"", ""GPL""]",Chemicals,Chennai,Tamil Nadu,NSE: GONDWCHM,Small
+CMP-0056,L21002GJ2009PLC370803,Kathiawar Drugs & Pharmaceuticals Ltd,Kathiawar Drugs,"[""Kathiawar Drugs"", ""Kathiawar Drugs & Pharmaceuticals"", ""KDPL""]",Pharmaceuticals,Vadodara,Gujarat,NSE: KATHIPHR,Mid
+CMP-0057,L62020KA1994PLC143391,Kosala Technologies Ltd,Kosala Technologies,"[""Kosala Technologies"", ""KTL""]",IT Services,Bengaluru,Karnataka,NSE: KOSALITS,Small
+CMP-0058,L40101TN1992PLC141162,Sabarmati Energy Ltd,Sabarmati Energy,"[""Sabarmati Energy"", ""SEL""]",Power,Chennai,Tamil Nadu,NSE: SABARPWR,Small
+CMP-0059,L24129WB1992PLC411580,Kosi Specialty Chemicals Ltd,Kosi Specialty,"[""Kosi Specialty"", ""Kosi Specialty Chemicals"", ""KSCL""]",Chemicals,Kolkata,West Bengal,NSE: KOSICHM,Small
+CMP-0060,L20231HR1998PLC007362,Anga Beverages Ltd,Anga Beverages,"[""Anga Beverages"", ""ABL""]",FMCG,Gurugram,Haryana,NSE: ANGAFMC,Large
+CMP-0061,L10501TN2005PLC039933,Kamboja Dairy Ltd,Kamboja Dairy,"[""Kamboja Dairy"", ""KDL""]",FMCG,Chennai,Tamil Nadu,NSE: KAMBOFMC,Small
+CMP-0062,L26943MP1975PLC431411,Garhwal Cement Ltd,Garhwal Cement,"[""Garhwal Cement"", ""GCL""]",Cement,Bhopal,Madhya Pradesh,NSE: GARHWCEM,Small
+CMP-0063,L40101DL1993PLC184853,Pataliputra Hydro & Power Ltd,Pataliputra Hydro,"[""Pataliputra Hydro"", ""Pataliputra Hydro & Power"", ""PHPL""]",Power,New Delhi,Delhi,"NSE, BSE: PATALPWR",Mid
+CMP-0064,U62011UP1980PLC284620,Vamsadhara Digital Services Ltd,Vamsadhara Digital,"[""Vamsadhara Digital"", ""Vamsadhara Digital Services"", ""VDSL""]",IT Services,Noida,Uttar Pradesh,Unlisted,Small
+CMP-0065,L08101JH1995PLC247772,Chola Resources Ltd,Chola Resources,"[""Chola Resources"", ""CRL""]",Mining,Ranchi,Jharkhand,"NSE, BSE: CHOLAMIN",Small
+CMP-0066,L21002MH2011PLC448729,Karna Formulations Ltd,Karna Formulations,"[""Karna Formulations"", ""KFL""]",Pharmaceuticals,Pune,Maharashtra,NSE: KARNAPHR,Mid
+CMP-0067,L27106WB1977PLC383341,Marwar Special Steels Ltd,Marwar Special,"[""Marwar Special"", ""Marwar Special Steels"", ""MSSL""]",Steel,Kolkata,West Bengal,"NSE, BSE: MARWASTL",Mid
+CMP-0068,U07210OR1997PLC348825,Ghaghara Manganese & Minerals Ltd,Ghaghara Manganese,"[""Ghaghara Manganese"", ""Ghaghara Manganese & Minerals"", ""GMML""]",Mining,Bhubaneswar,Odisha,Unlisted,Mid
+CMP-0069,L07100JH1998PLC446646,Pinaka Mining Industries Ltd,Pinaka Mining,"[""Pinaka Mining"", ""Pinaka Mining Industries"", ""PMIL""]",Mining,Ranchi,Jharkhand,NSE: PINAKMIN,Small
+CMP-0070,U72200HR1998PLC354421,Narmada Software Ltd,Narmada Software,"[""Narmada Software"", ""NSL""]",IT Services,Gurugram,Haryana,Unlisted,Mid
+CMP-0071,L13121HR2000PLC322944,Orsang Textiles Ltd,Orsang Textiles,"[""Orsang Textiles"", ""OTL""]",Textiles,Panipat,Haryana,NSE: ORSANTEX,Mid
+CMP-0072,L13111PB1979PLC062369,Himavan Denim Ltd,Himavan Denim,"[""Himavan Denim"", ""HDL""]",Textiles,Ludhiana,Punjab,NSE: HIMAVTEX,Small
+CMP-0073,L35101KA1999PLC170569,Apatani Green Power Ltd,Apatani Green,"[""Apatani Green"", ""Apatani Green Power"", ""AGPL""]",Power,Bengaluru,Karnataka,NSE: APATAPWR,Mid
+CMP-0074,L21002GJ1969PLC143533,Konark API Industries Ltd,Konark API,"[""Konark API"", ""Konark API Industries"", ""KAIL""]",Pharmaceuticals,Vadodara,Gujarat,NSE: KONARPHR,Small
+CMP-0075,L27100MH1969PLC053798,Pavan Ispat Ltd,Pavan Ispat,"[""Pavan Ispat"", ""PIL""]",Steel,Mumbai,Maharashtra,NSE: PAVANSTL,Mid
+CMP-0076,L40101TG1985PLC237325,Garuda Energy Ltd,Garuda Energy,"[""Garuda Energy"", ""GEL""]",Power,Hyderabad,Telangana,NSE: GARUDPWR,Large
+CMP-0077,L20119TN1984PLC126362,Rajgir Fertilisers Ltd,Rajgir Fertilisers,"[""Rajgir Fertilisers"", ""RFL""]",Chemicals,Chennai,Tamil Nadu,NSE: RAJGICHM,Small
+CMP-0078,L20119MH1999PLC377344,Arkavathi Dyes & Pigments Ltd,Arkavathi Dyes,"[""Arkavathi Dyes"", ""Arkavathi Dyes & Pigments"", ""ADPL""]",Chemicals,Pune,Maharashtra,NSE: ARKAVCHM,Small
+CMP-0079,L13111UP1989PLC452358,Kishkindha Textiles Ltd,Kishkindha Textiles,"[""Kishkindha Textiles"", ""KTL""]",Textiles,Kanpur,Uttar Pradesh,NSE: KISHKTEX,Small
+CMP-0080,L35102WB2001PLC076210,Gundar Renewable Power Ltd,Gundar Renewable,"[""Gundar Renewable"", ""Gundar Renewable Power"", ""GRPL""]",Power,Kolkata,West Bengal,NSE: GUNDAPWR,Large
+CMP-0081,L26941MP2009PLC329453,Hampi Cement Industries Ltd,Hampi Cement,"[""Hampi Cement"", ""Hampi Cement Industries"", ""HCIL""]",Cement,Bhopal,Madhya Pradesh,NSE: HAMPICEM,Small
+CMP-0082,L26941RJ1966PLC234824,Agni Cement Ltd,Agni Cement,"[""Agni Cement"", ""ACL""]",Cement,Jaipur,Rajasthan,"NSE, BSE: AGNICEM",Small
+CMP-0083,L26941TN1969PLC272615,Aryavarta Cement Works Ltd,Aryavarta Cement,"[""Aryavarta Cement"", ""Aryavarta Cement Works"", ""ACWL""]",Cement,Chennai,Tamil Nadu,NSE: ARYAVCEM,Large
+CMP-0084,L29301KA1995PLC134727,Prithvi Auto Components Ltd,Prithvi Auto,"[""Prithvi Auto"", ""Prithvi Auto Components"", ""PACL""]",Automotive,Bengaluru,Karnataka,NSE: PRITHAUT,Large
+CMP-0085,L21003AP2005PLC035408,Damanganga Biopharma Ltd,Damanganga Biopharma,"[""Damanganga Biopharma"", ""DBL""]",Pharmaceuticals,Visakhapatnam,Andhra Pradesh,"NSE, BSE: DAMANPHR",Mid
+CMP-0086,L29302TN1978PLC425692,Terai Axles & Drivetrains Ltd,Terai Axles,"[""Terai Axles"", ""Terai Axles & Drivetrains"", ""TADL""]",Automotive,Coimbatore,Tamil Nadu,NSE: TERAIAUT,Mid
+CMP-0087,L10611WB2001PLC159638,Mahananda Biscuits & Snacks Ltd,Mahananda Biscuits,"[""Mahananda Biscuits"", ""Mahananda Biscuits & Snacks"", ""MBSL""]",FMCG,Kolkata,West Bengal,NSE: MAHANFMC,Small
+CMP-0088,L13131GJ1971PLC237985,Sharda Cotton Mills Ltd,Sharda Cotton,"[""Sharda Cotton"", ""Sharda Cotton Mills"", ""SCML""]",Textiles,Ahmedabad,Gujarat,NSE: SHARDTEX,Mid
+CMP-0089,U27106OR2011PLC107483,Vidarbha Iron & Steel Works Ltd,Vidarbha Iron,"[""Vidarbha Iron"", ""Vidarbha Iron & Steel Works"", ""VISWL""]",Steel,Bhubaneswar,Odisha,Unlisted,Small
+CMP-0090,L24129TN1970PLC433640,Chera Dyes & Pigments Ltd,Chera Dyes,"[""Chera Dyes"", ""Chera Dyes & Pigments"", ""CDPL""]",Chemicals,Chennai,Tamil Nadu,NSE: CHERACHM,Small
+CMP-0091,L13131HR1997PLC460683,Vidisha Cotton Mills Ltd,Vidisha Cotton,"[""Vidisha Cotton"", ""Vidisha Cotton Mills"", ""VCML""]",Textiles,Panipat,Haryana,NSE: VIDISTEX,Small
+CMP-0092,L26941MP1970PLC042839,Indravati Concrete & Cement Ltd,Indravati Concrete,"[""Indravati Concrete"", ""Indravati Concrete & Cement"", ""ICCL""]",Cement,Bhopal,Madhya Pradesh,NSE: INDRACEM,Small
+CMP-0093,L26942RJ1969PLC326943,Naga Cements Ltd,Naga Cements,"[""Naga Cements"", ""NCL""]",Cement,Jaipur,Rajasthan,"NSE, BSE: NAGACEM",Small
+CMP-0094,L13121HR1971PLC469540,Kakatiya Weaves Ltd,Kakatiya Weaves,"[""Kakatiya Weaves"", ""KWL""]",Textiles,Panipat,Haryana,"NSE, BSE: KAKATTEX",Small
+CMP-0095,L62011HR1976PLC380635,Spiti Infotech Ltd,Spiti Infotech,"[""Spiti Infotech"", ""SIL""]",IT Services,Gurugram,Haryana,NSE: SPITIITS,Mid
+CMP-0096,L13111MH1976PLC014350,Nalanda Textiles Ltd,Nalanda Textiles,"[""Nalanda Textiles"", ""NTL""]",Textiles,Mumbai,Maharashtra,NSE: NALANTEX,Large
+CMP-0097,L62011TG1994PLC441275,Subarnarekha Technologies Ltd,Subarnarekha Technologies,"[""Subarnarekha Technologies"", ""STL""]",IT Services,Hyderabad,Telangana,NSE: SUBARITS,Mid
+CMP-0098,L40101KA2002PLC112458,Purna Hydro & Power Ltd,Purna Hydro,"[""Purna Hydro"", ""Purna Hydro & Power"", ""PHPL""]",Power,Bengaluru,Karnataka,NSE: PURNAPWR,Small
+CMP-0099,L21003AP1963PLC096998,Vellar Pharma Ltd,Vellar Pharma,"[""Vellar Pharma"", ""VPL""]",Pharmaceuticals,Visakhapatnam,Andhra Pradesh,NSE: VELLAPHR,Mid
+CMP-0100,L27100TG1996PLC165047,Vayu Metallics Ltd,Vayu Metallics,"[""Vayu Metallics"", ""VML""]",Steel,Hyderabad,Telangana,NSE: VAYUSTL,Small
+CMP-0101,L10501TN2010PLC212231,Zeliang Dairy Ltd,Zeliang Dairy,"[""Zeliang Dairy"", ""ZDL""]",FMCG,Chennai,Tamil Nadu,NSE: ZELIAFMC,Small
+CMP-0102,L21003HP1995PLC326476,Cheyyar Lifesciences Ltd,Cheyyar Lifesciences,"[""Cheyyar Lifesciences"", ""CLL""]",Pharmaceuticals,Baddi,Himachal Pradesh,"NSE, BSE: CHEYYPHR",Large
+CMP-0103,L27104JH1996PLC178166,Takshashila Metallics Ltd,Takshashila Metallics,"[""Takshashila Metallics"", ""TML""]",Steel,Jamshedpur,Jharkhand,NSE: TAKSHSTL,Mid
+CMP-0104,L35101MH1962PLC443221,Purvaghat Hydro & Power Ltd,Purvaghat Hydro,"[""Purvaghat Hydro"", ""Purvaghat Hydro & Power"", ""PHPL""]",Power,Mumbai,Maharashtra,NSE: PURVAPWR,Large
+CMP-0105,U35101KA1963PLC221446,Musi Renewable Power Ltd,Musi Renewable,"[""Musi Renewable"", ""Musi Renewable Power"", ""MRPL""]",Power,Bengaluru,Karnataka,Unlisted,Mid
+CMP-0106,L10501UP1974PLC331153,Tungabhadra Consumer Products Ltd,Tungabhadra Consumer,"[""Tungabhadra Consumer"", ""Tungabhadra Consumer Products"", ""TCPL""]",FMCG,Lucknow,Uttar Pradesh,"NSE, BSE: TUNGAFMC",Small
+CMP-0107,U20231MH1997PLC236439,Kailash Consumer Products Ltd,Kailash Consumer,"[""Kailash Consumer"", ""Kailash Consumer Products"", ""KCPL""]",FMCG,Pune,Maharashtra,Unlisted,Mid
+CMP-0108,U10501MH1963PLC467370,Gandhara Biscuits & Snacks Ltd,Gandhara Biscuits,"[""Gandhara Biscuits"", ""Gandhara Biscuits & Snacks"", ""GBSL""]",FMCG,Mumbai,Maharashtra,Unlisted,Mid
+CMP-0109,L26943KA1989PLC411659,Jorhat Cements Ltd,Jorhat Cements,"[""Jorhat Cements"", ""JCL""]",Cement,Bengaluru,Karnataka,NSE: JORHACEM,Large
+CMP-0110,L05101WB1969PLC488839,Sharavathi Ores Ltd,Sharavathi Ores,"[""Sharavathi Ores"", ""SOL""]",Mining,Kolkata,West Bengal,"NSE, BSE: SHARAMIN",Mid
+CMP-0111,L72200WB1972PLC330412,Vijaya Technologies Ltd,Vijaya Technologies,"[""Vijaya Technologies"", ""VTL""]",IT Services,Kolkata,West Bengal,NSE: VIJAYITS,Large
+CMP-0112,L08101TG1968PLC479887,Malaprabha Resources Ltd,Malaprabha Resources,"[""Malaprabha Resources"", ""MRL""]",Mining,Hyderabad,Telangana,NSE: MALAPMIN,Mid
+CMP-0113,L24119TN1977PLC298648,Sema Chemicals Ltd,Sema Chemicals,"[""Sema Chemicals"", ""SCL""]",Chemicals,Chennai,Tamil Nadu,NSE: SEMACHM,Mid
+CMP-0114,L21002PB2005PLC041042,Awadh API Industries Ltd,Awadh API,"[""Awadh API"", ""Awadh API Industries"", ""AAIL""]",Pharmaceuticals,Mohali,Punjab,NSE: AWADHPHR,Mid
+CMP-0115,L27104OR1986PLC346464,Noyyal Sponge & Steel Ltd,Noyyal Sponge,"[""Noyyal Sponge"", ""Noyyal Sponge & Steel"", ""NSSL""]",Steel,Rourkela,Odisha,NSE: NOYYASTL,Mid
+CMP-0116,L07291KA2002PLC037684,Parvati Coal & Minerals Ltd,Parvati Coal,"[""Parvati Coal"", ""Parvati Coal & Minerals"", ""PCML""]",Mining,Bengaluru,Karnataka,NSE: PARVAMIN,Small
+CMP-0117,L72200TG1995PLC134038,Himagiri Cloud Solutions Ltd,Himagiri Cloud,"[""Himagiri Cloud"", ""Himagiri Cloud Solutions"", ""HCSL""]",IT Services,Hyderabad,Telangana,NSE: HIMAGITS,Mid
+CMP-0118,L62013HR1983PLC342218,Rushikulya Digital Services Ltd,Rushikulya Digital,"[""Rushikulya Digital"", ""Rushikulya Digital Services"", ""RDSL""]",IT Services,Gurugram,Haryana,NSE: RUSHIITS,Mid
+CMP-0119,L27106JH1991PLC030530,Mahakoshal Rolling Mills Ltd,Mahakoshal Rolling,"[""Mahakoshal Rolling"", ""Mahakoshal Rolling Mills"", ""MRML""]",Steel,Jamshedpur,Jharkhand,NSE: MAHAKSTL,Small
+CMP-0120,L10799MP1965PLC083832,Hirakud Home Care Ltd,Hirakud Home,"[""Hirakud Home"", ""Hirakud Home Care"", ""HHCL""]",FMCG,Indore,Madhya Pradesh,"NSE, BSE: HIRAKFMC",Large
+CMP-0121,L13131TN1986PLC248598,Garo Textiles Ltd,Garo Textiles,"[""Garo Textiles"", ""GTL""]",Textiles,Madurai,Tamil Nadu,NSE: GAROTEX,Small
+CMP-0122,L20211GJ1974PLC130406,Vaigai Polymers Ltd,Vaigai Polymers,"[""Vaigai Polymers"", ""VPL""]",Chemicals,Vadodara,Gujarat,NSE: VAIGACHM,Small
+CMP-0123,L27104WB1995PLC363252,Ajanta Special Steels Ltd,Ajanta Special,"[""Ajanta Special"", ""Ajanta Special Steels"", ""ASSL""]",Steel,Kolkata,West Bengal,NSE: AJANTSTL,Large
+CMP-0124,U20211MH1979PLC333897,Giri Fertilisers Ltd,Giri Fertilisers,"[""Giri Fertilisers"", ""GFL""]",Chemicals,Pune,Maharashtra,Unlisted,Small
+CMP-0125,L21002MH1982PLC091557,Chedi API Industries Ltd,Chedi API,"[""Chedi API"", ""Chedi API Industries"", ""CAIL""]",Pharmaceuticals,Pune,Maharashtra,"NSE, BSE: CHEDIPHR",Mid
+CMP-0126,L29301UP1978PLC469141,Tawi Motors Ltd,Tawi Motors,"[""Tawi Motors"", ""TML""]",Automotive,Noida,Uttar Pradesh,NSE: TAWIAUT,Small
+CMP-0127,L05101RJ2011PLC163284,Maurya Mining Industries Ltd,Maurya Mining,"[""Maurya Mining"", ""Maurya Mining Industries"", ""MMIL""]",Mining,Jaipur,Rajasthan,"NSE, BSE: MAURYMIN",Small
+CMP-0128,L07210KA1972PLC433917,Zuari Mining & Minerals Ltd,Zuari Mining,"[""Zuari Mining"", ""Zuari Mining & Minerals"", ""ZMML""]",Mining,Bengaluru,Karnataka,NSE: ZUARIMIN,Large
+CMP-0129,L08101JH1989PLC293341,Kangra Minerals Ltd,Kangra Minerals,"[""Kangra Minerals"", ""KML""]",Mining,Ranchi,Jharkhand,NSE: KANGRMIN,Small
+CMP-0130,U21002HP1994PLC290672,Utkal API Industries Ltd,Utkal API,"[""Utkal API"", ""Utkal API Industries"", ""UAIL""]",Pharmaceuticals,Baddi,Himachal Pradesh,Unlisted,Small
+CMP-0131,U29302MH1982PLC192482,Chilika Auto Components Ltd,Chilika Auto,"[""Chilika Auto"", ""Chilika Auto Components"", ""CACL""]",Automotive,Mumbai,Maharashtra,Unlisted,Mid
+CMP-0132,L20231WB1996PLC089497,Dhauli Foods Ltd,Dhauli Foods,"[""Dhauli Foods"", ""DFL""]",FMCG,Kolkata,West Bengal,"NSE, BSE: DHAULFMC",Large
+CMP-0133,L17111TN2006PLC401948,Luni Textiles Ltd,Luni Textiles,"[""Luni Textiles"", ""LTL""]",Textiles,Coimbatore,Tamil Nadu,NSE: LUNITEX,Mid
+CMP-0134,L35102MH2006PLC066971,Vatsa Energy Ltd,Vatsa Energy,"[""Vatsa Energy"", ""VEL""]",Power,Mumbai,Maharashtra,"NSE, BSE: VATSAPWR",Large
+CMP-0135,L26942TN2005PLC460910,Kuki Cement Industries Ltd,Kuki Cement,"[""Kuki Cement"", ""Kuki Cement Industries"", ""KCIL""]",Cement,Chennai,Tamil Nadu,NSE: KUKICEM,Mid
+CMP-0136,L62011WB1994PLC238696,Karbi Digital Services Ltd,Karbi Digital,"[""Karbi Digital"", ""Karbi Digital Services"", ""KDSL""]",IT Services,Kolkata,West Bengal,"NSE, BSE: KARBIITS",Small
+CMP-0137,L27106CT1983PLC063609,Mahi Steel & Alloys Ltd,Mahi Steel,"[""Mahi Steel"", ""Mahi Steel & Alloys"", ""MSAL""]",Steel,Raipur,Chhattisgarh,NSE: MAHISTL,Small
+CMP-0138,U21002MH1999PLC332159,Tons Laboratories Ltd,Tons Laboratories,"[""Tons Laboratories"", ""TLL""]",Pharmaceuticals,Mumbai,Maharashtra,Unlisted,Small
+CMP-0139,L29104MH2009PLC463090,Netravati Axles & Drivetrains Ltd,Netravati Axles,"[""Netravati Axles"", ""Netravati Axles & Drivetrains"", ""NADL""]",Automotive,Aurangabad,Maharashtra,NSE: NETRAAUT,Small
+CMP-0140,L10501HR2011PLC029751,Teesta Foods Ltd,Teesta Foods,"[""Teesta Foods"", ""TFL""]",FMCG,Gurugram,Haryana,NSE: TEESTFMC,Mid
+CMP-0141,L05101JH1989PLC135456,Manjira Resources Ltd,Manjira Resources,"[""Manjira Resources"", ""MRL""]",Mining,Ranchi,Jharkhand,NSE: MANJIMIN,Small
+CMP-0142,L35101MH1968PLC184461,Drona Energy Ltd,Drona Energy,"[""Drona Energy"", ""DEL""]",Power,Mumbai,Maharashtra,NSE: DRONAPWR,Small
+CMP-0143,L07100JH1995PLC093623,Varuna Ores Ltd,Varuna Ores,"[""Varuna Ores"", ""VOL""]",Mining,Ranchi,Jharkhand,"NSE, BSE: VARUNMIN",Mid
+CMP-0144,L21002PB1962PLC214269,Kumaon Formulations Ltd,Kumaon Formulations,"[""Kumaon Formulations"", ""KFL""]",Pharmaceuticals,Mohali,Punjab,NSE: KUMAOPHR,Small
+CMP-0145,L10501TN1962PLC172852,Rohilkhand Personal Care Ltd,Rohilkhand Personal,"[""Rohilkhand Personal"", ""Rohilkhand Personal Care"", ""RPCL""]",FMCG,Chennai,Tamil Nadu,"NSE, BSE: ROHILFMC",Mid
+CMP-0146,L21001MH1996PLC146040,Sabri Laboratories Ltd,Sabri Laboratories,"[""Sabri Laboratories"", ""SLL""]",Pharmaceuticals,Mumbai,Maharashtra,NSE: SABRIPHR,Small
+CMP-0147,L24119TN1966PLC220366,Satpura Polymers Ltd,Satpura Polymers,"[""Satpura Polymers"", ""SPL""]",Chemicals,Chennai,Tamil Nadu,"NSE, BSE: SATPUCHM",Large
+CMP-0148,L27104KA1978PLC360143,Alaknanda Rolling Mills Ltd,Alaknanda Rolling,"[""Alaknanda Rolling"", ""Alaknanda Rolling Mills"", ""ARML""]",Steel,Bengaluru,Karnataka,NSE: ALAKNSTL,Small
+CMP-0149,L26941MH1975PLC107460,Sundarban Concrete & Cement Ltd,Sundarban Concrete,"[""Sundarban Concrete"", ""Sundarban Concrete & Cement"", ""SCCL""]",Cement,Mumbai,Maharashtra,NSE: SUNDACEM,Small
+CMP-0150,L26942CT2001PLC456531,Beas Concrete & Cement Ltd,Beas Concrete,"[""Beas Concrete"", ""Beas Concrete & Cement"", ""BCCL""]",Cement,Raipur,Chhattisgarh,NSE: BEASCEM,Small

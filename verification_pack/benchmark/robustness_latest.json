@@ -1,0 +1,567 @@
+{
+  "A_heldout_benchmark": {
+    "n": 172,
+    "dropped_overlap": 28,
+    "overall": {
+      "accuracy": 0.977,
+      "macro_f1": 0.984,
+      "coverage": 1.0,
+      "citation_precision": 0.896
+    },
+    "per_label": {
+      "ALIGN": {
+        "precision": 1.0,
+        "recall": 0.932,
+        "f1": 0.965,
+        "support": 59
+      },
+      "CONTRADICT": {
+        "precision": 0.943,
+        "recall": 1.0,
+        "f1": 0.971,
+        "support": 66
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 39
+      },
+      "NOT_CHECKABLE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      }
+    },
+    "per_gw_type": {
+      "absolute_vs_intensity": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "baseline_shift": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "cherry_picked_year": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "data_not_disclosed": {
+        "n": 39,
+        "accuracy": 1.0
+      },
+      "future_target_as_achievement": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "geo_contradiction": {
+        "n": 6,
+        "accuracy": 1.0
+      },
+      "hidden_regulatory_penalty": {
+        "n": 10,
+        "accuracy": 1.0
+      },
+      "inflated_reduction": {
+        "n": 8,
+        "accuracy": 1.0
+      },
+      "none": {
+        "n": 62,
+        "accuracy": 0.935
+      },
+      "overstated_assurance": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "overstated_safety": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "scope_swap": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "unit_error": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "unretired_certificates": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "vague_claim": {
+        "n": 5,
+        "accuracy": 1.0
+      }
+    },
+    "confusion": {
+      "labels": [
+        "ALIGN",
+        "CONTRADICT",
+        "INSUFFICIENT_EVIDENCE",
+        "NOT_CHECKABLE"
+      ],
+      "matrix": [
+        [
+          55,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          66,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          39,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8
+        ]
+      ]
+    },
+    "errors": [
+      {
+        "case_id": "BM-026",
+        "label": "ALIGN",
+        "pred": "CONTRADICT",
+        "gw_type": "none"
+      },
+      {
+        "case_id": "BM-159",
+        "label": "ALIGN",
+        "pred": "CONTRADICT",
+        "gw_type": "none"
+      },
+      {
+        "case_id": "BM-181",
+        "label": "ALIGN",
+        "pred": "CONTRADICT",
+        "gw_type": "none"
+      },
+      {
+        "case_id": "BM-182",
+        "label": "ALIGN",
+        "pred": "CONTRADICT",
+        "gw_type": "none"
+      }
+    ]
+  },
+  "B_handwritten_stress": {
+    "n": 24,
+    "correct": 23,
+    "accuracy": 0.958,
+    "rows": [
+      {
+        "id": "ST-01",
+        "company": "Surasena Steel & Alloys Ltd",
+        "claim": "Over five years our emissions per crore of revenue have come down by roughly 14%.",
+        "expected": "ALIGN",
+        "predicted": "CONTRADICT",
+        "confidence": 0.69,
+        "resolved": true,
+        "stresses": "paraphrase, implicit baseline (intensity 342.1 -> 294.8 = -13.8%)",
+        "correct": false
+      },
+      {
+        "id": "ST-02",
+        "company": "Surasena Steel and Alloys Limited",
+        "claim": "Scope 1 emissions stood at 11.18 lakh tCO2e in FY2024-25.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.99,
+        "resolved": true,
+        "stresses": "name variant + lakh unit (1,117,901 t)",
+        "correct": true
+      },
+      {
+        "id": "ST-03",
+        "company": "Loktak Sponge & Steel Ltd",
+        "claim": "Not a single life was lost at work across our sites in the year ended 31 March 2025.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "negated phrasing, date phrasing (FY2025 fatalities = 1)",
+        "correct": true
+      },
+      {
+        "id": "ST-04",
+        "company": "Dibang Mining & Minerals Ltd",
+        "claim": "None of our units was asked by any regulator to shut operations during FY2024-25.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "paraphrased closure direction (CPCB closure 2024-07-19)",
+        "correct": true
+      },
+      {
+        "id": "ST-05",
+        "company": "Surasena Steel & Alloys Ltd",
+        "claim": "We received no notices or penalties from environmental regulators in FY2024-25.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.96,
+        "resolved": true,
+        "stresses": "true negative (0 actions in FY2025)",
+        "correct": true
+      },
+      {
+        "id": "ST-06",
+        "company": "Subansiri Agrochem Ltd",
+        "claim": "We have cut purchased-electricity emissions by a third since FY2020.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "word number 'a third' (Scope 2 -3.4%)",
+        "correct": true
+      },
+      {
+        "id": "ST-07",
+        "company": "Subansiri Agrochem Ltd",
+        "claim": "Purchased-electricity (Scope 2) emissions were 3% lower in FY2025 than in FY2020.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.54,
+        "resolved": true,
+        "stresses": "paraphrased metric name (Scope 2 -3.4%)",
+        "correct": true
+      },
+      {
+        "id": "ST-08",
+        "company": "Pandya Tyres Ltd",
+        "claim": "Close to 31 per cent of the power we used in FY2025 came from renewable sources.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.99,
+        "resolved": true,
+        "stresses": "'per cent', hedged rounding (30.6%)",
+        "correct": true
+      },
+      {
+        "id": "ST-09",
+        "company": "Pandya Tyres Ltd",
+        "claim": "Nearly half of our electricity in FY2025 was renewable.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "word number 'half' (30.6%)",
+        "correct": true
+      },
+      {
+        "id": "ST-10",
+        "company": "Kim Fertilisers Ltd",
+        "claim": "Kim Fertilisers maintained a spotless compliance record throughout FY2024-25.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "figurative wording (3 actions in FY2025)",
+        "correct": true
+      },
+      {
+        "id": "ST-11",
+        "company": "Pandya Tyres Ltd",
+        "claim": "Pandya Tyres' Scope 1 emissions were 2,272,700 tCO2e in FY2025.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "another company's figure (actual 15,856)",
+        "correct": true
+      },
+      {
+        "id": "ST-12",
+        "company": "Kim Fertilisers Ltd",
+        "claim": "Our Scope 1 emissions were 22.7 lakh tCO2e in FY2025.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.99,
+        "resolved": true,
+        "stresses": "lakh unit (2,272,700 t)",
+        "correct": true
+      },
+      {
+        "id": "ST-13",
+        "company": "Kuru Technologies Ltd",
+        "claim": "We sourced 58.6% of our electricity from renewables in FY2025 and recorded zero fatalities.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.99,
+        "resolved": true,
+        "stresses": "compound, both parts true",
+        "correct": true
+      },
+      {
+        "id": "ST-14",
+        "company": "Dibang Mining & Minerals Ltd",
+        "claim": "Renewables met 16.4% of our electricity needs in FY2025, and we recorded zero fatalities.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "compound, one part false (1 fatality)",
+        "correct": true
+      },
+      {
+        "id": "ST-15",
+        "company": "Jaintia Weaves Ltd",
+        "claim": "Our employee engagement score rose to 82% in FY2025.",
+        "expected": "INSUFFICIENT_EVIDENCE",
+        "predicted": "INSUFFICIENT_EVIDENCE",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "metric no source carries",
+        "correct": true
+      },
+      {
+        "id": "ST-16",
+        "company": "Brahmani Cement Ltd",
+        "claim": "Scope 3 emissions from purchased goods fell 12% in FY2025.",
+        "expected": "INSUFFICIENT_EVIDENCE",
+        "predicted": "INSUFFICIENT_EVIDENCE",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "Scope 3 not in any source",
+        "correct": true
+      },
+      {
+        "id": "ST-17",
+        "company": "Nagarjuna Agrochem Ltd",
+        "claim": "We strive to minimise our environmental footprint wherever practicable.",
+        "expected": "NOT_CHECKABLE",
+        "predicted": "NOT_CHECKABLE",
+        "confidence": 0.75,
+        "resolved": true,
+        "stresses": "hedged cheap talk",
+        "correct": true
+      },
+      {
+        "id": "ST-18",
+        "company": "Kongu Forgings Ltd",
+        "claim": "By FY2030 we will halve our freshwater withdrawal.",
+        "expected": "NOT_CHECKABLE",
+        "predicted": "NOT_CHECKABLE",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "future target",
+        "correct": true
+      },
+      {
+        "id": "ST-19",
+        "company": "Surasena Power Ltd",
+        "claim": "We recorded zero fatalities in FY2025.",
+        "expected": "INSUFFICIENT_EVIDENCE",
+        "predicted": "INSUFFICIENT_EVIDENCE",
+        "confidence": 1.0,
+        "resolved": false,
+        "stresses": "look-alike name: shares the distinctive token of a DB company but is a different firm",
+        "correct": true
+      },
+      {
+        "id": "ST-20",
+        "company": "Dibang Mining & Minerals Ltd",
+        "claim": "No closure directions were issued to us in FY2023-24.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.95,
+        "resolved": true,
+        "stresses": "period trap (closure exists, but in FY2025)",
+        "correct": true
+      },
+      {
+        "id": "ST-21",
+        "company": "Kongu Forgings Ltd",
+        "claim": "Water withdrawal was limited to 1.72 lakh kL in FY2025.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.97,
+        "resolved": true,
+        "stresses": "lakh kL (171,848 kL)",
+        "correct": true
+      },
+      {
+        "id": "ST-22",
+        "company": "Jaintia Weaves Ltd",
+        "claim": "Water withdrawal was 435,929 litres in FY2025.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 0.5,
+        "resolved": true,
+        "stresses": "unit trap: number right, unit 1000x wrong (435,929 kL)",
+        "correct": true
+      },
+      {
+        "id": "ST-23",
+        "company": "Dibang Mining & Minerals Ltd",
+        "claim": "Emission intensity fell 22% between FY2020 and FY2025.",
+        "expected": "ALIGN",
+        "predicted": "ALIGN",
+        "confidence": 0.96,
+        "resolved": true,
+        "stresses": "intensity true (-21.8%)",
+        "correct": true
+      },
+      {
+        "id": "ST-24",
+        "company": "Dibang Mining & Minerals Ltd",
+        "claim": "Absolute Scope 1 emissions fell 22% between FY2020 and FY2025.",
+        "expected": "CONTRADICT",
+        "predicted": "CONTRADICT",
+        "confidence": 1.0,
+        "resolved": true,
+        "stresses": "absolute vs intensity (absolute +3.8%)",
+        "correct": true
+      }
+    ]
+  },
+  "C_bad_inputs": [
+    {
+      "file": "blank_scanned_report.pdf",
+      "status": "error",
+      "error": "IngestError: No extractable text found (the PDF may be scanned images).",
+      "claims": 0,
+      "verdicts": null,
+      "company_resolved": null
+    },
+    {
+      "file": "corrupted_not_a_real_pdf.pdf",
+      "status": "error",
+      "error": "IngestError: Could not open PDF: Failed to open file '/home/claude/esg/legacy/v1_data/sample_pdfs/edge_cases/corrupted_not_a_real_pdf.pdf' as type pdf.",
+      "claims": 0,
+      "verdicts": null,
+      "company_resolved": null
+    },
+    {
+      "file": "large_multi_page_report.pdf",
+      "status": "done",
+      "error": null,
+      "claims": 0,
+      "verdicts": {
+        "ALIGN": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "NOT_CHECKABLE": 0
+      },
+      "company_resolved": false
+    },
+    {
+      "file": "renamed_sample_report.pdf",
+      "status": "done",
+      "error": null,
+      "claims": 9,
+      "verdicts": {
+        "ALIGN": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT_EVIDENCE": 7,
+        "NOT_CHECKABLE": 2
+      },
+      "company_resolved": false
+    },
+    {
+      "file": "unrelated_content.pdf",
+      "status": "done",
+      "error": null,
+      "claims": 0,
+      "verdicts": {
+        "ALIGN": 0,
+        "CONTRADICT": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "NOT_CHECKABLE": 0
+      },
+      "company_resolved": false
+    }
+  ],
+  "D_engine_consistency": {
+    "questions": 8,
+    "identical_label_all_3_runs": 8,
+    "max_probability_spread": 0.08,
+    "detail": [
+      {
+        "labels": [
+          "contradict",
+          "contradict",
+          "contradict"
+        ],
+        "p_spread": 0.0
+      },
+      {
+        "labels": [
+          "support",
+          "support",
+          "support"
+        ],
+        "p_spread": 0.0
+      },
+      {
+        "labels": [
+          "contradict",
+          "contradict",
+          "contradict"
+        ],
+        "p_spread": 0.0
+      },
+      {
+        "labels": [
+          "contradict",
+          "contradict",
+          "contradict"
+        ],
+        "p_spread": 0.0
+      },
+      {
+        "labels": [
+          "support",
+          "support",
+          "support"
+        ],
+        "p_spread": 0.08
+      },
+      {
+        "labels": [
+          "support",
+          "support",
+          "support"
+        ],
+        "p_spread": 0.0
+      },
+      {
+        "labels": [
+          "contradict",
+          "contradict",
+          "contradict"
+        ],
+        "p_spread": 0.0
+      },
+      {
+        "labels": [
+          "contradict",
+          "contradict",
+          "contradict"
+        ],
+        "p_spread": 0.0
+      }
+    ]
+  },
+  "E_cold_run_cost": {
+    "report": "kaveri_threads_brsr_fy2025.pdf (28 pages)",
+    "seconds": 33.0,
+    "jev_calls": 450,
+    "jev_input_tokens": 376528,
+    "approx_cost_usd_at_0.05_per_M_input": 0.0188,
+    "status": "done"
+  }
+}

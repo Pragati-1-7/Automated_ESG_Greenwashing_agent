@@ -1,0 +1,185 @@
+{
+  "request": "GET /gfw/alerts/near?lat=21.629&lon=85.581&radius_km=5&fy=FY2025",
+  "status": 200,
+  "response": {
+    "source": "land_alerts",
+    "tier": 3,
+    "endpoint": "/gfw/alerts/near?lat=21.629&lon=85.581&radius_km=5.0&from=2024-04-01&to=2025-03-31",
+    "count": 14,
+    "rows": [
+      {
+        "alert_id": "LA-001227",
+        "lat": 21.59346,
+        "lon": 85.56778,
+        "alert_date": "2024-04-10",
+        "area_ha": 16.7,
+        "confidence": "high",
+        "source": "GLAD-L",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 4.18,
+        "distance_from_point_km": 4.18
+      },
+      {
+        "alert_id": "LA-001305",
+        "lat": 21.62869,
+        "lon": 85.5996,
+        "alert_date": "2024-07-01",
+        "area_ha": 1.9,
+        "confidence": "high",
+        "source": "GLAD-S2",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 1.92,
+        "distance_from_point_km": 1.92
+      },
+      {
+        "alert_id": "LA-001309",
+        "lat": 21.60214,
+        "lon": 85.55797,
+        "alert_date": "2024-07-03",
+        "area_ha": 5.2,
+        "confidence": "highest",
+        "source": "RADD",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 3.82,
+        "distance_from_point_km": 3.82
+      },
+      {
+        "alert_id": "LA-001315",
+        "lat": 21.66388,
+        "lon": 85.58323,
+        "alert_date": "2024-07-11",
+        "area_ha": 2.6,
+        "confidence": "high",
+        "source": "GLAD-L",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 3.89,
+        "distance_from_point_km": 3.89
+      },
+      {
+        "alert_id": "LA-001339",
+        "lat": 21.61707,
+        "lon": 85.57147,
+        "alert_date": "2024-08-20",
+        "area_ha": 19.9,
+        "confidence": "high",
+        "source": "RADD",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 1.65,
+        "distance_from_point_km": 1.65
+      },
+      {
+        "alert_id": "LA-001360",
+        "lat": 21.63192,
+        "lon": 85.59682,
+        "alert_date": "2024-09-20",
+        "area_ha": 23.0,
+        "confidence": "high",
+        "source": "GLAD-L",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 1.67,
+        "distance_from_point_km": 1.67
+      },
+      {
+        "alert_id": "LA-001372",
+        "lat": 21.65728,
+        "lon": 85.5838,
+        "alert_date": "2024-10-05",
+        "area_ha": 14.0,
+        "confidence": "highest",
+        "source": "GLAD-S2",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 3.16,
+        "distance_from_point_km": 3.16
+      },
+      {
+        "alert_id": "LA-001426",
+        "lat": 21.62037,
+        "lon": 85.56584,
+        "alert_date": "2024-12-21",
+        "area_ha": 3.5,
+        "confidence": "high",
+        "source": "GLAD-S2",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 1.84,
+        "distance_from_point_km": 1.84
+      },
+      {
+        "alert_id": "LA-001432",
+        "lat": 21.60139,
+        "lon": 85.5666,
+        "alert_date": "2024-12-25",
+        "area_ha": 11.8,
+        "confidence": "highest",
+        "source": "GLAD-L",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 3.41,
+        "distance_from_point_km": 3.41
+      },
+      {
+        "alert_id": "LA-001460",
+        "lat": 21.63344,
+        "lon": 85.54682,
+        "alert_date": "2025-02-05",
+        "area_ha": 3.9,
+        "confidence": "nominal",
+        "source": "GLAD-L",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 3.57,
+        "distance_from_point_km": 3.57
+      },
+      {
+        "alert_id": "LA-001463",
+        "lat": 21.6514,
+        "lon": 85.58515,
+        "alert_date": "2025-02-11",
+        "area_ha": 16.0,
+        "confidence": "nominal",
+        "source": "GLAD-S2",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 2.53,
+        "distance_from_point_km": 2.53
+      },
+      {
+        "alert_id": "LA-001467",
+        "lat": 21.62187,
+        "lon": 85.61805,
+        "alert_date": "2025-02-15",
+        "area_ha": 3.7,
+        "confidence": "highest",
+        "source": "RADD",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 3.91,
+        "distance_from_point_km": 3.91
+      },
+      {
+        "alert_id": "LA-001477",
+        "lat": 21.60442,
+        "lon": 85.61497,
+        "alert_date": "2025-02-28",
+        "area_ha": 1.6,
+        "confidence": "high",
+        "source": "RADD",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 4.45,
+        "distance_from_point_km": 4.45
+      },
+      {
+        "alert_id": "LA-001483",
+        "lat": 21.58998,
+        "lon": 85.57514,
+        "alert_date": "2025-03-05",
+        "area_ha": 2.6,
+        "confidence": "high",
+        "source": "RADD",
+        "nearest_facility_id": "FAC-0003",
+        "distance_km": 4.38,
+        "distance_from_point_km": 4.38
+      }
+    ],
+    "total_area_ha": 126.4,
+    "window": {
+      "from": "2024-04-01",
+      "to": "2025-03-31"
+    }
+  }
+}

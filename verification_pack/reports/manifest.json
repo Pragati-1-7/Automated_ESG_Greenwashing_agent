@@ -1,0 +1,230 @@
+[
+  {
+    "key": "vajra",
+    "filename": "vajra_steel_sr_fy2025.pdf",
+    "title": "Sustainability Report FY2024-25: Forging a Greener Future",
+    "company": "Vajra Steel & Power Ltd",
+    "company_id": "CMP-0001",
+    "profile": "greenwasher",
+    "pages": 27,
+    "claims": [
+      {
+        "id": "VAJ-01",
+        "page": 4
+      },
+      {
+        "id": "VAJ-02",
+        "page": 9
+      },
+      {
+        "id": "VAJ-03",
+        "page": 10
+      },
+      {
+        "id": "VAJ-04",
+        "page": 10
+      },
+      {
+        "id": "VAJ-05",
+        "page": 11
+      },
+      {
+        "id": "VAJ-06",
+        "page": 13
+      },
+      {
+        "id": "VAJ-07",
+        "page": 14
+      },
+      {
+        "id": "VAJ-08",
+        "page": 14
+      },
+      {
+        "id": "VAJ-09",
+        "page": 15
+      },
+      {
+        "id": "VAJ-10",
+        "page": 15
+      },
+      {
+        "id": "VAJ-11",
+        "page": 12
+      },
+      {
+        "id": "VAJ-12",
+        "page": 16
+      },
+      {
+        "id": "VAJ-13",
+        "page": 21
+      },
+      {
+        "id": "VAJ-14",
+        "page": 19
+      },
+      {
+        "id": "VAJ-15",
+        "page": 4
+      },
+      {
+        "id": "VAJ-16",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "key": "sahyadri",
+    "filename": "sahyadri_cement_iar_fy2025.pdf",
+    "title": "Integrated Annual Report FY2024-25: Building Responsibly",
+    "company": "Sahyadri Cement Industries Ltd",
+    "company_id": "CMP-0002",
+    "profile": "mixed",
+    "pages": 28,
+    "claims": [
+      {
+        "id": "SAH-01",
+        "page": 4
+      },
+      {
+        "id": "SAH-02",
+        "page": 9
+      },
+      {
+        "id": "SAH-03",
+        "page": 12
+      },
+      {
+        "id": "SAH-04",
+        "page": 14
+      },
+      {
+        "id": "SAH-05",
+        "page": 13
+      },
+      {
+        "id": "SAH-06",
+        "page": 15
+      },
+      {
+        "id": "SAH-07",
+        "page": 14
+      },
+      {
+        "id": "SAH-08",
+        "page": 16
+      },
+      {
+        "id": "SAH-09",
+        "page": 21
+      },
+      {
+        "id": "SAH-10",
+        "page": 9
+      },
+      {
+        "id": "SAH-11",
+        "page": 11
+      },
+      {
+        "id": "SAH-12",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "key": "kaveri",
+    "filename": "kaveri_threads_brsr_fy2025.pdf",
+    "title": "BRSR and Impact Report FY2024-25: Woven with Care",
+    "company": "Kaveri Threads & Textiles Ltd",
+    "company_id": "CMP-0003",
+    "profile": "honest",
+    "pages": 28,
+    "claims": [
+      {
+        "id": "KAV-01",
+        "page": 9
+      },
+      {
+        "id": "KAV-02",
+        "page": 9
+      },
+      {
+        "id": "KAV-03",
+        "page": 11
+      },
+      {
+        "id": "KAV-04",
+        "page": 11
+      },
+      {
+        "id": "KAV-05",
+        "page": 16
+      },
+      {
+        "id": "KAV-06",
+        "page": 15
+      },
+      {
+        "id": "KAV-07",
+        "page": 14
+      },
+      {
+        "id": "KAV-08",
+        "page": 9
+      },
+      {
+        "id": "KAV-09",
+        "page": 21
+      },
+      {
+        "id": "KAV-10",
+        "page": 19
+      },
+      {
+        "id": "KAV-11",
+        "page": 8
+      },
+      {
+        "id": "KAV-12",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "key": "aurelia",
+    "filename": "aurelia_renewables_sr_2025.pdf",
+    "title": "Sustainability Report 2024-25: Powering Tomorrow",
+    "company": "Aurelia Renewables Pvt Ltd",
+    "company_id": null,
+    "profile": "unknown_company",
+    "pages": 23,
+    "claims": [
+      {
+        "id": "AUR-01",
+        "page": 9
+      },
+      {
+        "id": "AUR-02",
+        "page": 9
+      },
+      {
+        "id": "AUR-03",
+        "page": 12
+      },
+      {
+        "id": "AUR-04",
+        "page": 10
+      },
+      {
+        "id": "AUR-05",
+        "page": 11
+      },
+      {
+        "id": "AUR-06",
+        "page": 4
+      }
+    ]
+  }
+]

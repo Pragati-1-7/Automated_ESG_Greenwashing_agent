@@ -1,0 +1,93 @@
+{
+  "request": "GET /companies/resolve?name=Aurelia Renewables Pvt Ltd",
+  "status": 200,
+  "response": {
+    "query": "Aurelia Renewables Pvt Ltd",
+    "candidates": [
+      {
+        "company_id": "CMP-0031",
+        "cin": "L40101UP1962PLC089840",
+        "name": "Bundela Renewable Power Ltd",
+        "short_name": "Bundela Renewable",
+        "aliases": [
+          "Bundela Renewable",
+          "Bundela Renewable Power",
+          "BRPL"
+        ],
+        "sector": "Power",
+        "hq_city": "Lucknow",
+        "hq_state": "Uttar Pradesh",
+        "listing": "NSE: BUNDEPWR",
+        "market_cap_band": "Large",
+        "match_score": 0.4
+      },
+      {
+        "company_id": "CMP-0048",
+        "cin": "L35101DL1968PLC299316",
+        "name": "Arjuna Renewable Power Ltd",
+        "short_name": "Arjuna Renewable",
+        "aliases": [
+          "Arjuna Renewable",
+          "Arjuna Renewable Power",
+          "ARPL"
+        ],
+        "sector": "Power",
+        "hq_city": "New Delhi",
+        "hq_state": "Delhi",
+        "listing": "NSE: ARJUNPWR",
+        "market_cap_band": "Small",
+        "match_score": 0.382
+      },
+      {
+        "company_id": "CMP-0105",
+        "cin": "U35101KA1963PLC221446",
+        "name": "Musi Renewable Power Ltd",
+        "short_name": "Musi Renewable",
+        "aliases": [
+          "Musi Renewable",
+          "Musi Renewable Power",
+          "MRPL"
+        ],
+        "sector": "Power",
+        "hq_city": "Bengaluru",
+        "hq_state": "Karnataka",
+        "listing": "Unlisted",
+        "market_cap_band": "Mid",
+        "match_score": 0.375
+      },
+      {
+        "company_id": "CMP-0080",
+        "cin": "L35102WB2001PLC076210",
+        "name": "Gundar Renewable Power Ltd",
+        "short_name": "Gundar Renewable",
+        "aliases": [
+          "Gundar Renewable",
+          "Gundar Renewable Power",
+          "GRPL"
+        ],
+        "sector": "Power",
+        "hq_city": "Kolkata",
+        "hq_state": "West Bengal",
+        "listing": "NSE: GUNDAPWR",
+        "market_cap_band": "Large",
+        "match_score": 0.353
+      },
+      {
+        "company_id": "CMP-0129",
+        "cin": "L08101JH1989PLC293341",
+        "name": "Kangra Minerals Ltd",
+        "short_name": "Kangra Minerals",
+        "aliases": [
+          "Kangra Minerals",
+          "KML"
+        ],
+        "sector": "Mining",
+        "hq_city": "Ranchi",
+        "hq_state": "Jharkhand",
+        "listing": "NSE: KANGRMIN",
+        "market_cap_band": "Small",
+        "match_score": 0.273
+      }
+    ]
+  }
+}

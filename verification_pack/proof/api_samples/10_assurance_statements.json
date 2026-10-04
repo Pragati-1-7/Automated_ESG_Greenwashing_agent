@@ -1,0 +1,23 @@
+{
+  "request": "GET /assurance/statements?company_id=CMP-0001&fy=FY2025",
+  "status": 200,
+  "response": {
+    "source": "audited_reports",
+    "tier": 3,
+    "endpoint": "/assurance/statements?company_id=CMP-0001&fy=FY2025",
+    "count": 1,
+    "rows": [
+      {
+        "report_id": "AUD-CMP-0001-FY2025",
+        "company_id": "CMP-0001",
+        "fy": "FY2025",
+        "auditor": "Rao & Iyer Assurance LLP",
+        "assurance_type": "limited",
+        "opinion": "unmodified",
+        "scope_covered": "BRSR Core: GHG footprint, energy, water, waste management and safety indicators",
+        "qualified_items": null,
+        "text": "Independent Limited Assurance Report to the Board of Directors of Vajra Steel & Power Ltd. We were engaged by Vajra Steel & Power Ltd (the Company) to perform a limited assurance engagement on the BRSR Core information for the year ended 31 March 2025 (the Subject Matter Information), as reported in its BRSR. The scope of our engagement covered BRSR Core: GHG footprint, energy, water, waste management and safety indicators.\n\nManagement is responsible for preparing the Subject Matter Information under the SEBI BRSR Core framework and for related internal controls. Our responsibility is to express a limited assurance conclusion. We performed the engagement in accordance with SAE 3000 and the ICAI Guidance Note on Reporting on BRSR Core, which are consistent with ISAE 3000 (Revised), and complied with the applicable independence and quality control requirements.\n\nA limited assurance engagement is substantially less in extent than a reasonable assurance engagement. Our procedures comprised inquiries of management, analytical procedures, a visit to Angul Captive Power Plant, and testing of a sample of supporting records. We reconciled reported Scope 1 emissions of 10,856,000 tCO2e and Scope 2 emissions of 1,380,000 tCO2e to the underlying calculation workbooks.\n\nConclusion: based on our procedures, nothing has come to our attention that causes us to believe that the Subject Matter Information for FY2024-25 is not prepared, in all material respects, in accordance with the BRSR Core framework.\n\nInherent limitations apply to non-financial data and emission estimates. This report is intended solely for the Board of Directors and for submission to the stock exchanges. Rao & Iyer Assurance LLP, Chartered Accountants."
+      }
+    ]
+  }
+}

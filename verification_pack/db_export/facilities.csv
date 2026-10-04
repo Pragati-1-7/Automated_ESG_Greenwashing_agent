@@ -1,0 +1,423 @@
+facility_id,company_id,name,type,district,state,lat,lon,capacity_value,capacity_unit,consent_no,forest_adjacent
+FAC-0001,CMP-0001,Jharsuguda Integrated Steel Plant,Integrated steel plant,Jharsuguda,Odisha,21.8554,84.0062,5.0,MTPA crude steel,OSPCB/CTO/2022/08486,0
+FAC-0002,CMP-0001,Angul Captive Power Plant,Coal-fired captive power plant,Angul,Odisha,20.84,85.101,1200.0,MW,OSPCB/CTO/2018/43798,0
+FAC-0003,CMP-0001,Keonjhar Iron Ore Mine,Open-cast iron ore mine,Keonjhar,Odisha,21.629,85.581,12.0,MTPA ore,OSPCB/CTO/2021/51782,1
+FAC-0004,CMP-0001,Barbil Pellet Plant,Pellet plant,Keonjhar,Odisha,22.101,85.382,6.0,MTPA pellets,OSPCB/CTO/2016/11440,0
+FAC-0005,CMP-0002,Chandrapur Integrated Cement Plant,Integrated cement plant,Chandrapur,Maharashtra,19.9615,79.2961,6.5,MTPA cement,MPCB/CTO/2018/48672,0
+FAC-0006,CMP-0002,Gulbarga Cement Works,Integrated cement plant,Kalaburagi,Karnataka,17.3297,76.8343,4.0,MTPA cement,KSPCB/CTO/2018/47652,0
+FAC-0007,CMP-0002,Raigad Grinding Unit,Grinding unit,Raigad,Maharashtra,18.5158,73.1822,2.0,MTPA cement,MPCB/CTO/2019/90656,0
+FAC-0008,CMP-0002,Rajura Limestone Mine,Limestone mine,Chandrapur,Maharashtra,19.779,79.365,8.0,MTPA limestone,MPCB/CTO/2019/76508,0
+FAC-0009,CMP-0003,Coimbatore Spinning Mill,Spinning mill,Coimbatore,Tamil Nadu,11.0168,76.9558,220000.0,spindles,TNPCB/CTO/2017/66025,0
+FAC-0010,CMP-0003,Tiruppur Processing Unit (ZLD),Dyeing and processing unit,Tiruppur,Tamil Nadu,11.1085,77.3411,60.0,tonnes fabric/day,TNPCB/CTO/2021/28709,0
+FAC-0011,CMP-0003,Tirunelveli Captive Wind Farm,Captive wind farm,Tirunelveli,Tamil Nadu,8.7139,77.7567,40.0,MW,TNPCB/CTO/2014/42543,0
+FAC-0012,CMP-0004,Medinipur Integrated Steel Plant,Integrated steel plant,Paschim Medinipur,West Bengal,22.3843,87.3028,2.1,MTPA crude steel,WBPCB/CTO/2018/51043,1
+FAC-0013,CMP-0004,Giridih Captive Power Plant,Coal-fired captive power plant,Giridih,Jharkhand,24.2594,86.3094,390.0,MW,JSPCB/CTO/2020/21073,1
+FAC-0014,CMP-0004,Medinipur Rolling Mill,Rolling mill,Paschim Medinipur,West Bengal,22.4189,87.2292,0.7,MTPA,WBPCB/CTO/2021/18529,0
+FAC-0015,CMP-0004,Medinipur Sponge Iron Plant,Sponge iron plant,Paschim Medinipur,West Bengal,22.3213,87.2737,2550.0,tpd DRI,WBPCB/CTO/2021/07195,0
+FAC-0016,CMP-0005,Karur Spinning Mill,Spinning mill,Karur,Tamil Nadu,11.0716,78.141,67000.0,spindles,TNPCB/CTO/2015/49899,0
+FAC-0017,CMP-0005,Bathinda Weaving Unit,Weaving unit,Bathinda,Punjab,30.1603,74.8931,380.0,looms,PPCB/CTO/2019/57271,0
+FAC-0018,CMP-0005,Sonbhadra Processing Unit,Dyeing and processing unit,Sonbhadra,Uttar Pradesh,24.6704,83.171,110.0,tonnes fabric/day,UPPCB/CTO/2021/14754,0
+FAC-0019,CMP-0006,Surguja Integrated Steel Plant,Integrated steel plant,Surguja,Chhattisgarh,23.0891,83.0996,5.3,MTPA crude steel,CECB/CTO/2023/85349,1
+FAC-0020,CMP-0006,Morbi Captive Power Plant,Coal-fired captive power plant,Morbi,Gujarat,22.724,70.9019,680.0,MW,GPCB/CTO/2017/13329,0
+FAC-0021,CMP-0006,Raipur Rolling Mill,Rolling mill,Raipur,Chhattisgarh,21.2848,81.6988,1.4,MTPA,CECB/CTO/2020/27430,0
+FAC-0022,CMP-0006,Durg Iron Ore Mine,Open-cast iron ore mine,Durg,Chhattisgarh,21.0751,81.1485,7.0,MTPA ore,CECB/CTO/2023/32872,0
+FAC-0023,CMP-0007,Haldia Chemical Complex,Chemical complex,Purba Medinipur,West Bengal,22.1978,88.0251,765000.0,tpa,WBPCB/CTO/2015/93089,0
+FAC-0024,CMP-0007,Bankura Fertiliser Plant,Fertiliser plant,Bankura,West Bengal,23.2321,87.1904,202000.0,tpa urea,WBPCB/CTO/2021/42725,0
+FAC-0025,CMP-0008,Sonbhadra Components Plant,Auto components plant,Sonbhadra,Uttar Pradesh,24.594,82.98,6.0,mn units/yr,UPPCB/CTO/2015/83622,0
+FAC-0026,CMP-0008,Faridabad Foundry,Foundry and forging unit,Faridabad,Haryana,28.5474,77.2288,47000.0,tpa castings,HSPCB/CTO/2018/07143,0
+FAC-0027,CMP-0009,Nellore Wind Farm,Wind farm,Nellore,Andhra Pradesh,14.4527,79.8963,520.0,MW,APPCB/CTO/2017/47483,0
+FAC-0028,CMP-0009,Khordha Hydro Power Station,Hydro power station,Khordha,Odisha,20.2971,85.7645,760.0,MW,OSPCB/CTO/2019/58155,0
+FAC-0029,CMP-0009,Udaipur Biomass Power Plant,Biomass power plant,Udaipur,Rajasthan,24.4793,73.651,58.0,MW,RSPCB/CTO/2015/80507,0
+FAC-0030,CMP-0010,Peddapalli Chemical Complex,Chemical complex,Peddapalli,Telangana,18.6489,79.5919,1103000.0,tpa,TSPCB/CTO/2018/44164,0
+FAC-0031,CMP-0010,Sangareddy Fertiliser Plant,Fertiliser plant,Sangareddy,Telangana,17.5301,77.9365,245000.0,tpa urea,TSPCB/CTO/2015/88608,0
+FAC-0032,CMP-0010,Jamnagar Dyes Unit,Dyes and pigments unit,Jamnagar,Gujarat,22.477,70.0214,170.0,tpd,GPCB/CTO/2023/03747,0
+FAC-0033,CMP-0011,Khammam Technology Campus,IT campus,Khammam,Telangana,17.279,80.2605,3000.0,seats,TSPCB/CTO/2021/35905,0
+FAC-0034,CMP-0011,Salem Delivery Centre,Delivery centre,Salem,Tamil Nadu,11.6252,78.2998,6420.0,seats,TNPCB/CTO/2021/08650,0
+FAC-0035,CMP-0012,Ranchi Coal Mine,Open-cast coal mine,Ranchi,Jharkhand,23.3671,85.4187,4.0,MTPA coal,JSPCB/CTO/2022/42014,0
+FAC-0036,CMP-0012,Belagavi Coal Washery,Coal washery,Belagavi,Karnataka,15.9107,74.5555,10.0,MTPA,KSPCB/CTO/2023/89591,0
+FAC-0037,CMP-0012,Bharuch Bauxite Mine,Bauxite mine,Bharuch,Gujarat,21.7249,73.1068,2.9,MTPA ore,GPCB/CTO/2014/41386,0
+FAC-0038,CMP-0013,Raichur Integrated Cement Plant,Integrated cement plant,Raichur,Karnataka,16.2101,77.407,5.9,MTPA cement,KSPCB/CTO/2017/37819,0
+FAC-0039,CMP-0013,Karur Cement Works,Integrated cement plant,Karur,Tamil Nadu,10.9143,78.1393,4.0,MTPA cement,TNPCB/CTO/2014/40004,0
+FAC-0040,CMP-0013,Salem Captive Power Plant,Captive power plant,Salem,Tamil Nadu,11.6013,78.259,80.0,MW,TNPCB/CTO/2022/18994,0
+FAC-0041,CMP-0014,Krishnagiri Chemical Complex,Chemical complex,Krishnagiri,Tamil Nadu,12.8327,77.7771,125000.0,tpa,TNPCB/CTO/2019/47462,0
+FAC-0042,CMP-0014,Karur Specialty Chemicals Plant,Specialty chemicals plant,Karur,Tamil Nadu,10.8317,78.1387,87000.0,tpa,TNPCB/CTO/2014/35543,0
+FAC-0043,CMP-0014,Erode Fertiliser Plant,Fertiliser plant,Erode,Tamil Nadu,11.4226,77.6057,339000.0,tpa urea,TNPCB/CTO/2021/62511,0
+FAC-0044,CMP-0015,Amreli Components Plant,Auto components plant,Amreli,Gujarat,21.5587,71.0758,6.0,mn units/yr,GPCB/CTO/2018/24513,0
+FAC-0045,CMP-0015,Aurangabad Axle Unit,Machining and axle unit,Aurangabad,Maharashtra,19.7593,75.3915,19.0,mn units/yr,MPCB/CTO/2020/34456,0
+FAC-0046,CMP-0016,Panipat Food Processing Plant,Food processing plant,Panipat,Haryana,29.2697,77.0116,1520.0,tpd,HSPCB/CTO/2023/85633,0
+FAC-0047,CMP-0016,Hisar Oil Refinery Unit,Edible oil refinery,Hisar,Haryana,29.2851,75.6213,1700.0,tpd,HSPCB/CTO/2017/85897,0
+FAC-0048,CMP-0017,Hyderabad Chemical Complex,Chemical complex,Hyderabad,Telangana,17.4199,78.4178,1175000.0,tpa,TSPCB/CTO/2016/56095,0
+FAC-0049,CMP-0017,Hyderabad Fertiliser Plant,Fertiliser plant,Hyderabad,Telangana,17.4201,78.6047,1293000.0,tpa urea,TSPCB/CTO/2019/47916,0
+FAC-0050,CMP-0018,Kolhapur Spinning Mill,Spinning mill,Kolhapur,Maharashtra,16.7011,74.1288,255000.0,spindles,MPCB/CTO/2016/72220,0
+FAC-0051,CMP-0018,Lucknow Processing Unit,Dyeing and processing unit,Lucknow,Uttar Pradesh,26.882,80.8672,100.0,tonnes fabric/day,UPPCB/CTO/2022/03309,0
+FAC-0052,CMP-0018,Lalitpur Garment Unit,Garment manufacturing unit,Lalitpur,Uttar Pradesh,24.6902,78.4913,4.0,mn pieces/yr,UPPCB/CTO/2023/65856,0
+FAC-0053,CMP-0019,Amreli Components Plant,Auto components plant,Amreli,Gujarat,21.7351,71.1074,21.0,mn units/yr,GPCB/CTO/2017/70120,0
+FAC-0054,CMP-0019,Kolhapur Foundry,Foundry and forging unit,Kolhapur,Maharashtra,16.6336,74.317,128000.0,tpa castings,MPCB/CTO/2018/62366,0
+FAC-0055,CMP-0019,Ratnagiri Axle Unit,Machining and axle unit,Ratnagiri,Maharashtra,17.1067,73.4088,13.0,mn units/yr,MPCB/CTO/2017/56934,0
+FAC-0056,CMP-0020,Mangaluru Technology Campus,IT campus,Dakshina Kannada,Karnataka,12.8728,74.8794,10000.0,seats,KSPCB/CTO/2014/75295,0
+FAC-0057,CMP-0020,Belagavi Delivery Centre,Delivery centre,Belagavi,Karnataka,15.7414,74.5994,7750.0,seats,KSPCB/CTO/2022/67992,0
+FAC-0058,CMP-0020,Ballari Data Centre,Data centre,Ballari,Karnataka,15.2228,76.8062,7.0,MW IT load,KSPCB/CTO/2016/12797,0
+FAC-0059,CMP-0021,Faridabad Technology Campus,IT campus,Faridabad,Haryana,28.4717,77.377,23000.0,seats,HSPCB/CTO/2016/67591,0
+FAC-0060,CMP-0021,Khammam Data Centre,Data centre,Khammam,Telangana,17.2309,80.1128,16.0,MW IT load,TSPCB/CTO/2016/45250,0
+FAC-0061,CMP-0021,Tumakuru Delivery Centre,Delivery centre,Tumakuru,Karnataka,13.2893,77.1974,1580.0,seats,KSPCB/CTO/2018/27195,0
+FAC-0062,CMP-0022,Solapur Components Plant,Auto components plant,Solapur,Maharashtra,17.7259,75.9514,22.0,mn units/yr,MPCB/CTO/2023/95598,0
+FAC-0063,CMP-0022,Nashik Foundry,Foundry and forging unit,Nashik,Maharashtra,19.8625,73.7309,118000.0,tpa castings,MPCB/CTO/2016/40326,0
+FAC-0064,CMP-0022,Gurugram Axle Unit,Machining and axle unit,Gurugram,Haryana,28.4247,76.9983,3.0,mn units/yr,HSPCB/CTO/2015/03221,0
+FAC-0065,CMP-0023,Bhavnagar Chemical Complex,Chemical complex,Bhavnagar,Gujarat,21.7286,72.1476,313000.0,tpa,GPCB/CTO/2023/13345,0
+FAC-0066,CMP-0023,Bhavnagar Captive Power Plant,Captive power plant,Bhavnagar,Gujarat,21.7115,72.2259,110.0,MW,GPCB/CTO/2020/58946,0
+FAC-0067,CMP-0024,Raichur Integrated Cement Plant,Integrated cement plant,Raichur,Karnataka,16.3486,77.3275,5.0,MTPA cement,KSPCB/CTO/2019/90932,0
+FAC-0068,CMP-0024,Ballari Captive Power Plant,Captive power plant,Ballari,Karnataka,15.1575,77.0216,90.0,MW,KSPCB/CTO/2019/33498,0
+FAC-0069,CMP-0024,Mangaluru Limestone Mine,Limestone mine,Dakshina Kannada,Karnataka,12.8775,74.9075,4.0,MTPA limestone,KSPCB/CTO/2014/88174,0
+FAC-0070,CMP-0024,Solan Cement Works,Integrated cement plant,Solan,Himachal Pradesh,30.9572,77.1979,3.3,MTPA cement,HPSPCB/CTO/2019/96876,0
+FAC-0071,CMP-0025,Aurangabad Technology Campus,IT campus,Aurangabad,Maharashtra,19.9953,75.269,3000.0,seats,MPCB/CTO/2021/42631,0
+FAC-0072,CMP-0025,Solapur Delivery Centre,Delivery centre,Solapur,Maharashtra,17.5157,75.834,7150.0,seats,MPCB/CTO/2019/40791,0
+FAC-0073,CMP-0026,Nagpur API Plant,API manufacturing plant,Nagpur,Maharashtra,21.0315,79.1452,3200.0,tpa,MPCB/CTO/2016/64576,0
+FAC-0074,CMP-0026,Solan R&D Centre,R&D and pilot plant,Solan,Himachal Pradesh,30.9408,77.2407,7000.0,sq m,HPSPCB/CTO/2020/59203,0
+FAC-0075,CMP-0027,Rourkela Coal Mine,Open-cast coal mine,Rourkela,Odisha,22.3594,84.9023,4.0,MTPA coal,OSPCB/CTO/2019/39498,0
+FAC-0076,CMP-0027,Sundargarh Bauxite Mine,Bauxite mine,Sundargarh,Odisha,22.2083,83.9163,4.9,MTPA ore,OSPCB/CTO/2015/45599,1
+FAC-0077,CMP-0027,Kalahandi Iron Ore Mine,Open-cast iron ore mine,Kalahandi,Odisha,19.8572,83.1644,4.0,MTPA ore,OSPCB/CTO/2019/38980,1
+FAC-0078,CMP-0028,Ballari Integrated Steel Plant,Integrated steel plant,Ballari,Karnataka,15.2181,76.9382,3.3,MTPA crude steel,KSPCB/CTO/2021/45239,1
+FAC-0079,CMP-0028,Nellore Captive Power Plant,Coal-fired captive power plant,Nellore,Andhra Pradesh,14.3372,80.1373,750.0,MW,APPCB/CTO/2019/22550,0
+FAC-0080,CMP-0028,Durgapur Sponge Iron Plant,Sponge iron plant,Paschim Bardhaman,West Bengal,23.6634,87.2697,770.0,tpd DRI,WBPCB/CTO/2019/95801,0
+FAC-0081,CMP-0028,Jajpur Iron Ore Mine,Open-cast iron ore mine,Jajpur,Odisha,20.7548,86.2228,7.0,MTPA ore,OSPCB/CTO/2021/38973,0
+FAC-0082,CMP-0029,Ahmedabad API Plant,API manufacturing plant,Ahmedabad,Gujarat,22.9187,72.594,4190.0,tpa,GPCB/CTO/2021/76172,0
+FAC-0083,CMP-0029,Rudrapur Biologics Facility,Biologics facility,Udham Singh Nagar,Uttarakhand,28.9181,79.4556,100.0,kL fermentation,UKPCB/CTO/2021/51341,0
+FAC-0084,CMP-0030,Katni Integrated Cement Plant,Integrated cement plant,Katni,Madhya Pradesh,23.8427,80.4693,6.8,MTPA cement,MPPCB/CTO/2018/64906,0
+FAC-0085,CMP-0030,Indore Cement Works,Integrated cement plant,Indore,Madhya Pradesh,22.8448,75.8789,2.3,MTPA cement,MPPCB/CTO/2018/58578,0
+FAC-0086,CMP-0030,Erode Limestone Mine,Limestone mine,Erode,Tamil Nadu,11.3063,77.784,9.0,MTPA limestone,TNPCB/CTO/2016/37716,0
+FAC-0087,CMP-0031,Thoothukudi Solar Park,Solar park,Thoothukudi,Tamil Nadu,8.7777,77.9832,310.0,MWp,TNPCB/CTO/2019/18872,0
+FAC-0088,CMP-0031,Krishnagiri Wind Farm,Wind farm,Krishnagiri,Tamil Nadu,12.6692,77.8298,440.0,MW,TNPCB/CTO/2021/95440,0
+FAC-0089,CMP-0031,Mirzapur Biomass Power Plant,Biomass power plant,Mirzapur,Uttar Pradesh,25.0209,82.5474,44.0,MW,UPPCB/CTO/2018/83147,0
+FAC-0090,CMP-0032,Nashik Thermal Power Station,Coal-fired thermal power plant,Nashik,Maharashtra,20.0394,73.8204,3840.0,MW,MPCB/CTO/2023/64084,0
+FAC-0091,CMP-0032,Kothagudem Solar Park,Solar park,Bhadradri Kothagudem,Telangana,17.4791,80.705,830.0,MWp,TSPCB/CTO/2023/46902,0
+FAC-0092,CMP-0033,Madurai Spinning Mill,Spinning mill,Madurai,Tamil Nadu,9.8661,78.2185,237000.0,spindles,TNPCB/CTO/2014/36805,0
+FAC-0093,CMP-0033,Chennai Processing Unit,Dyeing and processing unit,Chennai,Tamil Nadu,12.9751,80.1657,50.0,tonnes fabric/day,TNPCB/CTO/2015/55306,0
+FAC-0094,CMP-0034,Kolhapur Components Plant,Auto components plant,Kolhapur,Maharashtra,16.7681,74.1183,29.0,mn units/yr,MPCB/CTO/2018/55980,0
+FAC-0095,CMP-0034,Solapur Assembly Plant,Vehicle assembly plant,Solapur,Maharashtra,17.6815,76.0244,310.0,k vehicles/yr,MPCB/CTO/2019/94488,0
+FAC-0096,CMP-0035,Khordha Coal Mine,Open-cast coal mine,Khordha,Odisha,20.2068,85.6,4.0,MTPA coal,OSPCB/CTO/2015/20180,0
+FAC-0097,CMP-0035,North Goa Iron Ore Mine,Open-cast iron ore mine,North Goa,Goa,15.621,73.8023,14.0,MTPA ore,GSPCB/CTO/2022/49219,0
+FAC-0098,CMP-0036,Jabalpur Coal Mine,Open-cast coal mine,Jabalpur,Madhya Pradesh,23.243,79.8412,13.0,MTPA coal,MPPCB/CTO/2017/34436,0
+FAC-0099,CMP-0036,Korba Iron Ore Mine,Open-cast iron ore mine,Korba,Chhattisgarh,22.2256,82.7552,2.0,MTPA ore,CECB/CTO/2019/02822,1
+FAC-0100,CMP-0037,Noida Components Plant,Auto components plant,Gautam Buddha Nagar,Uttar Pradesh,28.6429,77.4053,13.0,mn units/yr,UPPCB/CTO/2021/52572,0
+FAC-0101,CMP-0037,Krishnagiri Foundry,Foundry and forging unit,Krishnagiri,Tamil Nadu,12.7754,77.8444,143000.0,tpa castings,TNPCB/CTO/2019/47560,0
+FAC-0102,CMP-0037,Aurangabad Axle Unit,Machining and axle unit,Aurangabad,Maharashtra,20.0052,75.4413,19.0,mn units/yr,MPCB/CTO/2018/60727,0
+FAC-0103,CMP-0038,Mirzapur Components Plant,Auto components plant,Mirzapur,Uttar Pradesh,25.2738,82.6549,14.0,mn units/yr,UPPCB/CTO/2018/93080,0
+FAC-0104,CMP-0038,Meerut Foundry,Foundry and forging unit,Meerut,Uttar Pradesh,28.8514,77.835,76000.0,tpa castings,UPPCB/CTO/2018/33413,0
+FAC-0105,CMP-0039,Ariyalur Chemical Complex,Chemical complex,Ariyalur,Tamil Nadu,11.25,79.1476,969000.0,tpa,TNPCB/CTO/2014/28978,0
+FAC-0106,CMP-0039,Chennai Fertiliser Plant,Fertiliser plant,Chennai,Tamil Nadu,13.0569,80.1591,404000.0,tpa urea,TNPCB/CTO/2018/59315,0
+FAC-0107,CMP-0040,Ghaziabad Technology Campus,IT campus,Ghaziabad,Uttar Pradesh,28.7308,77.4628,22000.0,seats,UPPCB/CTO/2017/35770,0
+FAC-0108,CMP-0040,Mirzapur Delivery Centre,Delivery centre,Mirzapur,Uttar Pradesh,25.1667,82.4991,3750.0,seats,UPPCB/CTO/2019/88833,0
+FAC-0109,CMP-0040,Peddapalli Data Centre,Data centre,Peddapalli,Telangana,18.638,79.5365,55.0,MW IT load,TSPCB/CTO/2018/25281,0
+FAC-0110,CMP-0041,Ratnagiri Integrated Steel Plant,Integrated steel plant,Ratnagiri,Maharashtra,17.058,73.3782,4.0,MTPA crude steel,MPCB/CTO/2021/95768,0
+FAC-0111,CMP-0041,Aurangabad Captive Power Plant,Coal-fired captive power plant,Aurangabad,Maharashtra,19.9327,75.2479,430.0,MW,MPCB/CTO/2022/46926,0
+FAC-0112,CMP-0041,Durg Iron Ore Mine,Open-cast iron ore mine,Durg,Chhattisgarh,21.2167,81.3527,8.0,MTPA ore,CECB/CTO/2014/37548,0
+FAC-0113,CMP-0041,Howrah Sponge Iron Plant,Sponge iron plant,Howrah,West Bengal,22.5996,88.3698,2900.0,tpd DRI,WBPCB/CTO/2018/76936,0
+FAC-0114,CMP-0042,Sonbhadra Components Plant,Auto components plant,Sonbhadra,Uttar Pradesh,24.6858,83.0741,9.0,mn units/yr,UPPCB/CTO/2020/14149,0
+FAC-0115,CMP-0042,Thane Assembly Plant,Vehicle assembly plant,Thane,Maharashtra,19.2248,72.8428,210.0,k vehicles/yr,MPCB/CTO/2015/88908,0
+FAC-0116,CMP-0042,Karur Foundry,Foundry and forging unit,Karur,Tamil Nadu,11.0104,77.9546,121000.0,tpa castings,TNPCB/CTO/2017/87686,0
+FAC-0117,CMP-0043,Gurugram Spinning Mill,Spinning mill,Gurugram,Haryana,28.3774,77.0358,120000.0,spindles,HSPCB/CTO/2014/21615,0
+FAC-0118,CMP-0043,Salem Processing Unit,Dyeing and processing unit,Salem,Tamil Nadu,11.5452,78.0301,20.0,tonnes fabric/day,TNPCB/CTO/2020/77886,0
+FAC-0119,CMP-0044,Raichur Food Processing Plant,Food processing plant,Raichur,Karnataka,16.1427,77.2299,310.0,tpd,KSPCB/CTO/2017/71930,0
+FAC-0120,CMP-0044,Ahmedabad Personal Care Plant,Personal care manufacturing plant,Ahmedabad,Gujarat,22.9762,72.6272,56000.0,tpa,GPCB/CTO/2014/68249,0
+FAC-0121,CMP-0044,Belagavi Dairy Plant,Dairy plant,Belagavi,Karnataka,15.9664,74.5742,760.0,klpd,KSPCB/CTO/2021/51936,0
+FAC-0122,CMP-0045,Thane Thermal Power Station,Coal-fired thermal power plant,Thane,Maharashtra,19.2341,72.8814,3570.0,MW,MPCB/CTO/2014/83934,0
+FAC-0123,CMP-0045,Morbi Wind Farm,Wind farm,Morbi,Gujarat,22.8835,70.8197,340.0,MW,GPCB/CTO/2017/52013,0
+FAC-0124,CMP-0045,Morbi Gas Power Plant,Gas-based power plant,Morbi,Gujarat,22.8349,70.8592,410.0,MW,GPCB/CTO/2023/64647,0
+FAC-0125,CMP-0046,Haridwar Food Processing Plant,Food processing plant,Haridwar,Uttarakhand,30.0211,78.1213,2640.0,tpd,UKPCB/CTO/2014/93714,0
+FAC-0126,CMP-0046,Panipat Oil Refinery Unit,Edible oil refinery,Panipat,Haryana,29.3776,77.1129,930.0,tpd,HSPCB/CTO/2023/56773,0
+FAC-0127,CMP-0046,Faridabad Dairy Plant,Dairy plant,Faridabad,Haryana,28.3693,77.2145,900.0,klpd,HSPCB/CTO/2022/59359,0
+FAC-0128,CMP-0047,Surat Spinning Mill,Spinning mill,Surat,Gujarat,21.1486,72.726,212000.0,spindles,GPCB/CTO/2022/84607,0
+FAC-0129,CMP-0047,Lalitpur Weaving Unit,Weaving unit,Lalitpur,Uttar Pradesh,24.8104,78.417,1360.0,looms,UPPCB/CTO/2017/79158,0
+FAC-0130,CMP-0047,Chennai Processing Unit,Dyeing and processing unit,Chennai,Tamil Nadu,13.1,80.1897,60.0,tonnes fabric/day,TNPCB/CTO/2021/04407,0
+FAC-0131,CMP-0048,Chennai Thermal Power Station,Coal-fired thermal power plant,Chennai,Tamil Nadu,13.0697,80.244,2360.0,MW,TNPCB/CTO/2021/60657,0
+FAC-0132,CMP-0048,Krishnagiri Solar Park,Solar park,Krishnagiri,Tamil Nadu,12.7971,77.799,250.0,MWp,TNPCB/CTO/2014/26674,0
+FAC-0133,CMP-0048,Salem Gas Power Plant,Gas-based power plant,Salem,Tamil Nadu,11.6089,78.1753,300.0,MW,TNPCB/CTO/2023/76831,0
+FAC-0134,CMP-0048,Madurai Gas Power Plant,Gas-based power plant,Madurai,Tamil Nadu,9.86,78.095,1280.0,MW,TNPCB/CTO/2015/04498,0
+FAC-0135,CMP-0049,Agra Food Processing Plant,Food processing plant,Agra,Uttar Pradesh,27.2917,77.9118,2520.0,tpd,UPPCB/CTO/2023/69192,0
+FAC-0136,CMP-0049,Mirzapur Packaging Centre,Distribution and packaging centre,Mirzapur,Uttar Pradesh,25.0289,82.4721,75000.0,tpa,UPPCB/CTO/2020/40608,0
+FAC-0137,CMP-0049,Sonbhadra Dairy Plant,Dairy plant,Sonbhadra,Uttar Pradesh,24.5523,82.9852,980.0,klpd,UPPCB/CTO/2018/87579,0
+FAC-0138,CMP-0050,Madurai Components Plant,Auto components plant,Madurai,Tamil Nadu,9.9027,78.2109,12.0,mn units/yr,TNPCB/CTO/2022/34236,0
+FAC-0139,CMP-0050,Salem Foundry,Foundry and forging unit,Salem,Tamil Nadu,11.7969,78.1025,118000.0,tpa castings,TNPCB/CTO/2016/09009,0
+FAC-0140,CMP-0051,Thane API Plant,API manufacturing plant,Thane,Maharashtra,19.2456,72.869,2790.0,tpa,MPCB/CTO/2022/43075,0
+FAC-0141,CMP-0051,Kolhapur Biologics Facility,Biologics facility,Kolhapur,Maharashtra,16.5989,74.2074,220.0,kL fermentation,MPCB/CTO/2020/84088,0
+FAC-0142,CMP-0051,Thane Formulation Plant,Formulation plant,Thane,Maharashtra,19.2052,72.9143,5720.0,mn tablets/yr,MPCB/CTO/2014/59851,0
+FAC-0143,CMP-0052,Durg Integrated Cement Plant,Integrated cement plant,Durg,Chhattisgarh,21.3305,81.2105,4.2,MTPA cement,CECB/CTO/2020/90995,0
+FAC-0144,CMP-0052,Solan Cement Works,Integrated cement plant,Solan,Himachal Pradesh,31.0099,77.1433,2.8,MTPA cement,HPSPCB/CTO/2022/30963,0
+FAC-0145,CMP-0052,Durg Grinding Unit,Grinding unit,Durg,Chhattisgarh,21.1202,81.2679,2.0,MTPA cement,CECB/CTO/2018/25985,0
+FAC-0146,CMP-0053,Gurugram Components Plant,Auto components plant,Gurugram,Haryana,28.5619,76.9024,28.0,mn units/yr,HSPCB/CTO/2019/44247,0
+FAC-0147,CMP-0053,Sonipat Foundry,Foundry and forging unit,Sonipat,Haryana,28.9646,76.9219,116000.0,tpa castings,HSPCB/CTO/2021/15006,0
+FAC-0148,CMP-0054,Mangaluru Technology Campus,IT campus,Dakshina Kannada,Karnataka,12.9067,74.9038,22000.0,seats,KSPCB/CTO/2018/42677,0
+FAC-0149,CMP-0054,Thoothukudi Data Centre,Data centre,Thoothukudi,Tamil Nadu,8.7774,78.2498,53.0,MW IT load,TNPCB/CTO/2023/27844,0
+FAC-0150,CMP-0054,Hisar Delivery Centre,Delivery centre,Hisar,Haryana,29.0804,75.6679,3250.0,seats,HSPCB/CTO/2016/44482,0
+FAC-0151,CMP-0055,Karur Chemical Complex,Chemical complex,Karur,Tamil Nadu,10.8188,78.1481,62000.0,tpa,TNPCB/CTO/2023/78906,0
+FAC-0152,CMP-0055,Chennai Dyes Unit,Dyes and pigments unit,Chennai,Tamil Nadu,13.0358,80.1483,170.0,tpd,TNPCB/CTO/2020/52564,0
+FAC-0153,CMP-0056,Jamnagar API Plant,API manufacturing plant,Jamnagar,Gujarat,22.3816,70.108,3350.0,tpa,GPCB/CTO/2014/75228,0
+FAC-0154,CMP-0056,Solan Formulation Plant,Formulation plant,Solan,Himachal Pradesh,30.9732,77.0135,1900.0,mn tablets/yr,HPSPCB/CTO/2019/65447,0
+FAC-0155,CMP-0057,Mysuru Technology Campus,IT campus,Mysuru,Karnataka,12.3866,76.5631,5000.0,seats,KSPCB/CTO/2017/13890,0
+FAC-0156,CMP-0057,Pune Data Centre,Data centre,Pune,Maharashtra,18.6155,73.7887,11.0,MW IT load,MPCB/CTO/2017/44429,0
+FAC-0157,CMP-0057,Belagavi Delivery Centre,Delivery centre,Belagavi,Karnataka,15.8418,74.6016,6500.0,seats,KSPCB/CTO/2016/93550,0
+FAC-0158,CMP-0058,Karur Thermal Power Station,Coal-fired thermal power plant,Karur,Tamil Nadu,10.8977,78.1096,1180.0,MW,TNPCB/CTO/2017/59778,0
+FAC-0159,CMP-0058,Haridwar Hydro Power Station,Hydro power station,Haridwar,Uttarakhand,29.8813,78.0596,730.0,MW,UKPCB/CTO/2021/37243,0
+FAC-0160,CMP-0058,Madurai Gas Power Plant,Gas-based power plant,Madurai,Tamil Nadu,9.8042,78.0958,1410.0,MW,TNPCB/CTO/2019/07317,0
+FAC-0161,CMP-0059,Kolkata Chemical Complex,Chemical complex,Kolkata,West Bengal,22.6574,88.4042,1070000.0,tpa,WBPCB/CTO/2020/66475,0
+FAC-0162,CMP-0059,Ratnagiri Captive Power Plant,Captive power plant,Ratnagiri,Maharashtra,16.9705,73.3471,110.0,MW,MPCB/CTO/2016/83437,0
+FAC-0163,CMP-0059,Haldia Fertiliser Plant,Fertiliser plant,Purba Medinipur,West Bengal,22.0555,88.0465,1266000.0,tpa urea,WBPCB/CTO/2014/05381,0
+FAC-0164,CMP-0060,Hisar Food Processing Plant,Food processing plant,Hisar,Haryana,29.0465,75.8628,2170.0,tpd,HSPCB/CTO/2021/16426,0
+FAC-0165,CMP-0060,Ghaziabad Personal Care Plant,Personal care manufacturing plant,Ghaziabad,Uttar Pradesh,28.6939,77.3569,108000.0,tpa,UPPCB/CTO/2022/72754,0
+FAC-0166,CMP-0061,Krishnagiri Food Processing Plant,Food processing plant,Krishnagiri,Tamil Nadu,12.7721,77.7443,280.0,tpd,TNPCB/CTO/2023/40673,0
+FAC-0167,CMP-0061,Thane Packaging Centre,Distribution and packaging centre,Thane,Maharashtra,19.2424,72.9589,14000.0,tpa,MPCB/CTO/2018/52746,0
+FAC-0168,CMP-0062,Sirmaur Integrated Cement Plant,Integrated cement plant,Sirmaur,Himachal Pradesh,30.4813,77.5406,2.3,MTPA cement,HPSPCB/CTO/2016/62023,0
+FAC-0169,CMP-0062,Chittorgarh Captive Power Plant,Captive power plant,Chittorgarh,Rajasthan,25.0218,74.6289,110.0,MW,RSPCB/CTO/2017/61497,0
+FAC-0170,CMP-0062,Thane Grinding Unit,Grinding unit,Thane,Maharashtra,19.1567,73.0791,2.9,MTPA cement,MPCB/CTO/2022/99938,0
+FAC-0171,CMP-0062,Indore Cement Works,Integrated cement plant,Indore,Madhya Pradesh,22.7087,75.7611,7.0,MTPA cement,MPPCB/CTO/2020/11464,0
+FAC-0172,CMP-0063,Chaibasa Thermal Power Station,Coal-fired thermal power plant,West Singhbhum,Jharkhand,22.5257,85.852,3050.0,MW,JSPCB/CTO/2020/17497,1
+FAC-0173,CMP-0063,Nagpur Wind Farm,Wind farm,Nagpur,Maharashtra,21.0531,79.1203,80.0,MW,MPCB/CTO/2021/18914,0
+FAC-0174,CMP-0064,Kanpur Technology Campus,IT campus,Kanpur Nagar,Uttar Pradesh,26.4741,80.2083,7000.0,seats,UPPCB/CTO/2014/84291,0
+FAC-0175,CMP-0064,Mirzapur Data Centre,Data centre,Mirzapur,Uttar Pradesh,25.2738,82.5913,12.0,MW IT load,UPPCB/CTO/2023/54381,0
+FAC-0176,CMP-0064,Meerut Delivery Centre,Delivery centre,Meerut,Uttar Pradesh,29.0039,77.6068,2010.0,seats,UPPCB/CTO/2022/85642,0
+FAC-0177,CMP-0065,Jamshedpur Coal Mine,Open-cast coal mine,East Singhbhum,Jharkhand,22.9417,86.0828,15.0,MTPA coal,JSPCB/CTO/2016/72080,0
+FAC-0178,CMP-0065,Indore Manganese Mine,Manganese mine,Indore,Madhya Pradesh,22.7115,75.9049,1.7,MTPA ore,MPPCB/CTO/2015/98589,0
+FAC-0179,CMP-0065,Nalgonda Coal Washery,Coal washery,Nalgonda,Telangana,16.9607,79.3866,10.0,MTPA,TSPCB/CTO/2018/11148,0
+FAC-0180,CMP-0066,Nashik API Plant,API manufacturing plant,Nashik,Maharashtra,20.0581,73.9071,4320.0,tpa,MPCB/CTO/2021/71227,0
+FAC-0181,CMP-0066,Nashik R&D Centre,R&D and pilot plant,Nashik,Maharashtra,19.8657,73.6761,18000.0,sq m,MPCB/CTO/2018/17681,0
+FAC-0182,CMP-0066,Pune Biologics Facility,Biologics facility,Pune,Maharashtra,18.4338,73.9962,270.0,kL fermentation,MPCB/CTO/2015/34117,0
+FAC-0183,CMP-0067,Howrah Integrated Steel Plant,Integrated steel plant,Howrah,West Bengal,22.5486,88.1525,1.1,MTPA crude steel,WBPCB/CTO/2017/27000,0
+FAC-0184,CMP-0067,Howrah Captive Power Plant,Coal-fired captive power plant,Howrah,West Bengal,22.5055,88.1473,140.0,MW,WBPCB/CTO/2023/19145,0
+FAC-0185,CMP-0067,North Goa Iron Ore Mine,Open-cast iron ore mine,North Goa,Goa,15.435,73.8923,11.0,MTPA ore,GSPCB/CTO/2014/15428,0
+FAC-0186,CMP-0068,Kalahandi Coal Mine,Open-cast coal mine,Kalahandi,Odisha,19.778,83.1434,12.0,MTPA coal,OSPCB/CTO/2016/59497,1
+FAC-0187,CMP-0068,Rourkela Manganese Mine,Manganese mine,Rourkela,Odisha,22.1205,84.9158,0.5,MTPA ore,OSPCB/CTO/2018/24013,0
+FAC-0188,CMP-0069,Raipur Coal Mine,Open-cast coal mine,Raipur,Chhattisgarh,21.1056,81.6626,15.0,MTPA coal,CECB/CTO/2019/35830,0
+FAC-0189,CMP-0069,Ramgarh Bauxite Mine,Bauxite mine,Ramgarh,Jharkhand,23.7239,85.5833,5.3,MTPA ore,JSPCB/CTO/2021/93494,0
+FAC-0190,CMP-0069,Dhanbad Beneficiation Plant,Beneficiation plant,Dhanbad,Jharkhand,23.8925,86.5449,5.0,MTPA ore,JSPCB/CTO/2020/42737,0
+FAC-0191,CMP-0069,South Goa Coal Washery,Coal washery,South Goa,Goa,15.3894,73.944,4.0,MTPA,GSPCB/CTO/2018/94280,0
+FAC-0192,CMP-0070,Khammam Technology Campus,IT campus,Khammam,Telangana,17.1445,80.2585,15000.0,seats,TSPCB/CTO/2018/07729,0
+FAC-0193,CMP-0070,Faridabad Delivery Centre,Delivery centre,Faridabad,Haryana,28.5039,77.366,5500.0,seats,HSPCB/CTO/2023/57660,0
+FAC-0194,CMP-0071,Ratnagiri Spinning Mill,Spinning mill,Ratnagiri,Maharashtra,17.0768,73.4065,102000.0,spindles,MPCB/CTO/2020/16540,0
+FAC-0195,CMP-0071,Faridabad Garment Unit,Garment manufacturing unit,Faridabad,Haryana,28.305,77.4433,15.0,mn pieces/yr,HSPCB/CTO/2021/60882,0
+FAC-0196,CMP-0072,Ludhiana Spinning Mill,Spinning mill,Ludhiana,Punjab,31.0367,75.9915,65000.0,spindles,PPCB/CTO/2019/72852,0
+FAC-0197,CMP-0072,Mohali Garment Unit,Garment manufacturing unit,Mohali,Punjab,30.7651,76.8227,4.0,mn pieces/yr,PPCB/CTO/2016/48918,0
+FAC-0198,CMP-0072,Mohali Processing Unit,Dyeing and processing unit,Mohali,Punjab,30.5974,76.6033,80.0,tonnes fabric/day,PPCB/CTO/2018/45769,0
+FAC-0199,CMP-0073,Bengaluru Solar Park,Solar park,Bengaluru Urban,Karnataka,12.8757,77.501,260.0,MWp,KSPCB/CTO/2016/93025,0
+FAC-0200,CMP-0073,Ballari Biomass Power Plant,Biomass power plant,Ballari,Karnataka,15.0498,76.8915,34.0,MW,KSPCB/CTO/2014/12555,0
+FAC-0201,CMP-0074,Morbi API Plant,API manufacturing plant,Morbi,Gujarat,22.8005,70.9251,2850.0,tpa,GPCB/CTO/2019/29446,0
+FAC-0202,CMP-0074,Valsad Formulation Plant,Formulation plant,Valsad,Gujarat,20.4525,73.0473,5220.0,mn tablets/yr,GPCB/CTO/2023/29582,0
+FAC-0203,CMP-0074,Amreli R&D Centre,R&D and pilot plant,Amreli,Gujarat,21.5672,71.3129,38000.0,sq m,GPCB/CTO/2023/53604,0
+FAC-0204,CMP-0075,Aurangabad Integrated Steel Plant,Integrated steel plant,Aurangabad,Maharashtra,19.9338,75.3049,4.6,MTPA crude steel,MPCB/CTO/2019/98759,0
+FAC-0205,CMP-0075,Dhanbad Iron Ore Mine,Open-cast iron ore mine,Dhanbad,Jharkhand,23.8404,86.4296,13.0,MTPA ore,JSPCB/CTO/2021/96949,0
+FAC-0206,CMP-0075,Nagpur Captive Power Plant,Coal-fired captive power plant,Nagpur,Maharashtra,21.1441,78.9714,210.0,MW,MPCB/CTO/2016/64096,0
+FAC-0207,CMP-0076,Mirzapur Thermal Power Station,Coal-fired thermal power plant,Mirzapur,Uttar Pradesh,25.1331,82.4207,2940.0,MW,UPPCB/CTO/2023/51867,0
+FAC-0208,CMP-0076,Rudrapur Hydro Power Station,Hydro power station,Udham Singh Nagar,Uttarakhand,29.0728,79.378,460.0,MW,UKPCB/CTO/2018/50634,0
+FAC-0209,CMP-0076,Koraput Hydro Power Station,Hydro power station,Koraput,Odisha,18.7592,82.8187,140.0,MW,OSPCB/CTO/2014/93997,1
+FAC-0210,CMP-0076,Sirmaur Hydro Power Station,Hydro power station,Sirmaur,Himachal Pradesh,30.686,77.4069,370.0,MW,HPSPCB/CTO/2017/46832,0
+FAC-0211,CMP-0077,Haldia Chemical Complex,Chemical complex,Purba Medinipur,West Bengal,22.0833,88.1874,329000.0,tpa,WBPCB/CTO/2017/65220,0
+FAC-0212,CMP-0077,Haldia Captive Power Plant,Captive power plant,Purba Medinipur,West Bengal,22.1604,88.1342,100.0,MW,WBPCB/CTO/2015/98297,0
+FAC-0213,CMP-0077,Chennai Dyes Unit,Dyes and pigments unit,Chennai,Tamil Nadu,13.0144,80.3887,120.0,tpd,TNPCB/CTO/2014/27561,0
+FAC-0214,CMP-0078,Nashik Chemical Complex,Chemical complex,Nashik,Maharashtra,19.9095,73.7843,850000.0,tpa,MPCB/CTO/2015/82027,0
+FAC-0215,CMP-0078,Pune Specialty Chemicals Plant,Specialty chemicals plant,Pune,Maharashtra,18.6102,73.9997,234000.0,tpa,MPCB/CTO/2023/40335,0
+FAC-0216,CMP-0079,Agra Spinning Mill,Spinning mill,Agra,Uttar Pradesh,27.2443,77.988,233000.0,spindles,UPPCB/CTO/2023/33404,0
+FAC-0217,CMP-0079,Mirzapur Weaving Unit,Weaving unit,Mirzapur,Uttar Pradesh,25.0906,82.6779,710.0,looms,UPPCB/CTO/2020/05070,0
+FAC-0218,CMP-0079,Vadodara Processing Unit,Dyeing and processing unit,Vadodara,Gujarat,22.1613,73.2756,40.0,tonnes fabric/day,GPCB/CTO/2016/88798,0
+FAC-0219,CMP-0080,Krishnagiri Thermal Power Station,Coal-fired thermal power plant,Krishnagiri,Tamil Nadu,12.806,77.9007,1780.0,MW,TNPCB/CTO/2020/41358,0
+FAC-0220,CMP-0080,Salem Gas Power Plant,Gas-based power plant,Salem,Tamil Nadu,11.5697,78.2712,1120.0,MW,TNPCB/CTO/2015/78185,0
+FAC-0221,CMP-0080,Jodhpur Solar Park,Solar park,Jodhpur,Rajasthan,26.2612,73.0773,570.0,MWp,RSPCB/CTO/2020/71904,0
+FAC-0222,CMP-0081,Dhar Integrated Cement Plant,Integrated cement plant,Dhar,Madhya Pradesh,22.6258,75.3871,3.0,MTPA cement,MPPCB/CTO/2019/88508,0
+FAC-0223,CMP-0081,Belagavi Cement Works,Integrated cement plant,Belagavi,Karnataka,15.8101,74.5563,5.8,MTPA cement,KSPCB/CTO/2023/73532,0
+FAC-0224,CMP-0081,Katni Captive Power Plant,Captive power plant,Katni,Madhya Pradesh,23.9586,80.3271,30.0,MW,MPPCB/CTO/2019/59617,0
+FAC-0225,CMP-0081,Srikakulam Limestone Mine,Limestone mine,Srikakulam,Andhra Pradesh,18.3178,83.9706,8.0,MTPA limestone,APPCB/CTO/2021/94137,0
+FAC-0226,CMP-0082,Nagaur Integrated Cement Plant,Integrated cement plant,Nagaur,Rajasthan,27.2635,73.8407,1.9,MTPA cement,RSPCB/CTO/2017/05215,0
+FAC-0227,CMP-0082,Solapur Cement Works,Integrated cement plant,Solapur,Maharashtra,17.696,75.872,2.4,MTPA cement,MPCB/CTO/2016/54466,0
+FAC-0228,CMP-0082,Chittorgarh Grinding Unit,Grinding unit,Chittorgarh,Rajasthan,24.8437,74.5239,1.6,MTPA cement,RSPCB/CTO/2022/10599,0
+FAC-0229,CMP-0082,Dhar Limestone Mine,Limestone mine,Dhar,Madhya Pradesh,22.5902,75.2578,7.0,MTPA limestone,MPPCB/CTO/2017/27676,0
+FAC-0230,CMP-0083,Salem Integrated Cement Plant,Integrated cement plant,Salem,Tamil Nadu,11.703,78.109,4.0,MTPA cement,TNPCB/CTO/2017/33279,0
+FAC-0231,CMP-0083,Thoothukudi Grinding Unit,Grinding unit,Thoothukudi,Tamil Nadu,8.879,77.9963,2.1,MTPA cement,TNPCB/CTO/2017/77011,0
+FAC-0232,CMP-0083,Sangareddy Cement Works,Integrated cement plant,Sangareddy,Telangana,17.6247,77.9922,3.2,MTPA cement,TSPCB/CTO/2022/77178,0
+FAC-0233,CMP-0084,Ahmedabad Components Plant,Auto components plant,Ahmedabad,Gujarat,22.9499,72.6995,29.0,mn units/yr,GPCB/CTO/2018/20434,0
+FAC-0234,CMP-0084,Raichur Foundry,Foundry and forging unit,Raichur,Karnataka,16.0544,77.452,65000.0,tpa castings,KSPCB/CTO/2017/07153,0
+FAC-0235,CMP-0085,Nellore API Plant,API manufacturing plant,Nellore,Andhra Pradesh,14.3547,79.9,1130.0,tpa,APPCB/CTO/2017/64456,0
+FAC-0236,CMP-0085,Anantapur R&D Centre,R&D and pilot plant,Anantapur,Andhra Pradesh,14.5806,77.59,14000.0,sq m,APPCB/CTO/2018/60832,0
+FAC-0237,CMP-0085,Surat Formulation Plant,Formulation plant,Surat,Gujarat,21.3168,72.9343,2990.0,mn tablets/yr,GPCB/CTO/2015/76918,0
+FAC-0238,CMP-0086,Karur Components Plant,Auto components plant,Karur,Tamil Nadu,10.948,78.1455,8.0,mn units/yr,TNPCB/CTO/2023/85314,0
+FAC-0239,CMP-0086,Madurai Foundry,Foundry and forging unit,Madurai,Tamil Nadu,10.0767,78.1344,70000.0,tpa castings,TNPCB/CTO/2015/27621,0
+FAC-0240,CMP-0087,Howrah Food Processing Plant,Food processing plant,Howrah,West Bengal,22.5891,88.2803,1400.0,tpd,WBPCB/CTO/2016/21871,0
+FAC-0241,CMP-0087,Kolkata Dairy Plant,Dairy plant,Kolkata,West Bengal,22.6026,88.4325,530.0,klpd,WBPCB/CTO/2022/85418,0
+FAC-0242,CMP-0087,Sonipat Oil Refinery Unit,Edible oil refinery,Sonipat,Haryana,28.9406,76.9757,1740.0,tpd,HSPCB/CTO/2016/24549,0
+FAC-0243,CMP-0088,Ludhiana Spinning Mill,Spinning mill,Ludhiana,Punjab,30.8365,75.8507,135000.0,spindles,PPCB/CTO/2015/87519,0
+FAC-0244,CMP-0088,Valsad Captive Wind Farm,Captive wind farm,Valsad,Gujarat,20.4575,73.0238,16.0,MW,GPCB/CTO/2015/62982,0
+FAC-0245,CMP-0089,Dhenkanal Integrated Steel Plant,Integrated steel plant,Dhenkanal,Odisha,20.6869,85.5618,0.8,MTPA crude steel,OSPCB/CTO/2021/73139,1
+FAC-0246,CMP-0089,Rourkela Captive Power Plant,Coal-fired captive power plant,Rourkela,Odisha,22.2095,84.8284,620.0,MW,OSPCB/CTO/2016/40088,0
+FAC-0247,CMP-0089,Koraput Iron Ore Mine,Open-cast iron ore mine,Koraput,Odisha,18.9526,82.729,10.0,MTPA ore,OSPCB/CTO/2015/49876,1
+FAC-0248,CMP-0090,Erode Chemical Complex,Chemical complex,Erode,Tamil Nadu,11.2559,77.7897,943000.0,tpa,TNPCB/CTO/2019/23927,0
+FAC-0249,CMP-0090,Hyderabad Specialty Chemicals Plant,Specialty chemicals plant,Hyderabad,Telangana,17.3519,78.5718,161000.0,tpa,TSPCB/CTO/2023/39308,0
+FAC-0250,CMP-0091,Morbi Spinning Mill,Spinning mill,Morbi,Gujarat,22.7998,70.863,133000.0,spindles,GPCB/CTO/2019/20618,0
+FAC-0251,CMP-0091,Vadodara Captive Wind Farm,Captive wind farm,Vadodara,Gujarat,22.338,73.1082,51.0,MW,GPCB/CTO/2018/53966,0
+FAC-0252,CMP-0092,Dhar Integrated Cement Plant,Integrated cement plant,Dhar,Madhya Pradesh,22.721,75.2291,6.8,MTPA cement,MPPCB/CTO/2020/37697,0
+FAC-0253,CMP-0092,Jhalawar Limestone Mine,Limestone mine,Jhalawar,Rajasthan,24.7308,76.0812,9.0,MTPA limestone,RSPCB/CTO/2019/65897,0
+FAC-0254,CMP-0092,Neemuch Grinding Unit,Grinding unit,Neemuch,Madhya Pradesh,24.3653,74.9922,2.3,MTPA cement,MPPCB/CTO/2022/38203,0
+FAC-0255,CMP-0093,Nagpur Integrated Cement Plant,Integrated cement plant,Nagpur,Maharashtra,21.1746,78.9907,3.3,MTPA cement,MPCB/CTO/2015/50161,0
+FAC-0256,CMP-0093,Solapur Cement Works,Integrated cement plant,Solapur,Maharashtra,17.7129,75.8886,2.4,MTPA cement,MPCB/CTO/2017/56420,0
+FAC-0257,CMP-0093,Solan Grinding Unit,Grinding unit,Solan,Himachal Pradesh,30.7906,77.2086,1.7,MTPA cement,HPSPCB/CTO/2014/96488,0
+FAC-0258,CMP-0093,Udaipur Captive Power Plant,Captive power plant,Udaipur,Rajasthan,24.6583,73.7489,110.0,MW,RSPCB/CTO/2020/29976,0
+FAC-0259,CMP-0094,Sonipat Spinning Mill,Spinning mill,Sonipat,Haryana,28.9795,77.105,95000.0,spindles,HSPCB/CTO/2023/84457,0
+FAC-0260,CMP-0094,Gurugram Weaving Unit,Weaving unit,Gurugram,Haryana,28.4599,76.9996,1190.0,looms,HSPCB/CTO/2022/35586,0
+FAC-0261,CMP-0095,Hisar Technology Campus,IT campus,Hisar,Haryana,29.0516,75.588,12000.0,seats,HSPCB/CTO/2016/45525,0
+FAC-0262,CMP-0095,Hisar Data Centre,Data centre,Hisar,Haryana,29.0866,75.7177,9.0,MW IT load,HSPCB/CTO/2018/91897,0
+FAC-0263,CMP-0095,Khammam Delivery Centre,Delivery centre,Khammam,Telangana,17.3974,80.239,1200.0,seats,TSPCB/CTO/2021/36281,0
+FAC-0264,CMP-0096,Ariyalur Spinning Mill,Spinning mill,Ariyalur,Tamil Nadu,11.1935,79.1293,266000.0,spindles,TNPCB/CTO/2016/60773,0
+FAC-0265,CMP-0096,Amreli Weaving Unit,Weaving unit,Amreli,Gujarat,21.7267,71.1054,650.0,looms,GPCB/CTO/2018/42138,0
+FAC-0266,CMP-0096,Kolhapur Processing Unit,Dyeing and processing unit,Kolhapur,Maharashtra,16.8092,74.1088,110.0,tonnes fabric/day,MPCB/CTO/2019/50899,0
+FAC-0267,CMP-0097,Khammam Technology Campus,IT campus,Khammam,Telangana,17.3868,80.2238,19000.0,seats,TSPCB/CTO/2015/87180,0
+FAC-0268,CMP-0097,Peddapalli Data Centre,Data centre,Peddapalli,Telangana,18.6085,79.4968,18.0,MW IT load,TSPCB/CTO/2016/56822,0
+FAC-0269,CMP-0098,Dhanbad Thermal Power Station,Coal-fired thermal power plant,Dhanbad,Jharkhand,23.8031,86.3395,1430.0,MW,JSPCB/CTO/2016/29534,0
+FAC-0270,CMP-0098,Bengaluru Hydro Power Station,Hydro power station,Bengaluru Urban,Karnataka,12.8875,77.5225,270.0,MW,KSPCB/CTO/2014/49677,0
+FAC-0271,CMP-0098,Raichur Gas Power Plant,Gas-based power plant,Raichur,Karnataka,16.1576,77.3372,400.0,MW,KSPCB/CTO/2022/40522,0
+FAC-0272,CMP-0098,Solapur Wind Farm,Wind farm,Solapur,Maharashtra,17.6569,75.8657,560.0,MW,MPCB/CTO/2019/66733,0
+FAC-0273,CMP-0099,Krishna API Plant,API manufacturing plant,Krishna,Andhra Pradesh,16.0549,81.0647,3260.0,tpa,APPCB/CTO/2020/12915,0
+FAC-0274,CMP-0099,Nellore R&D Centre,R&D and pilot plant,Nellore,Andhra Pradesh,14.4089,80.0332,13000.0,sq m,APPCB/CTO/2021/42910,0
+FAC-0275,CMP-0100,Raigarh Integrated Steel Plant,Integrated steel plant,Raigarh,Chhattisgarh,21.7828,83.3046,5.7,MTPA crude steel,CECB/CTO/2019/81552,1
+FAC-0276,CMP-0100,Raipur Iron Ore Mine,Open-cast iron ore mine,Raipur,Chhattisgarh,21.2515,81.775,10.0,MTPA ore,CECB/CTO/2022/44950,0
+FAC-0277,CMP-0100,Raigarh Captive Power Plant,Coal-fired captive power plant,Raigarh,Chhattisgarh,22.0109,83.3508,640.0,MW,CECB/CTO/2017/99888,1
+FAC-0278,CMP-0100,Surguja Sponge Iron Plant,Sponge iron plant,Surguja,Chhattisgarh,23.1522,83.3212,2690.0,tpd DRI,CECB/CTO/2018/14958,0
+FAC-0279,CMP-0101,Chennai Food Processing Plant,Food processing plant,Chennai,Tamil Nadu,12.993,80.2298,700.0,tpd,TNPCB/CTO/2019/31823,0
+FAC-0280,CMP-0101,Chennai Dairy Plant,Dairy plant,Chennai,Tamil Nadu,13.1413,80.3349,250.0,klpd,TNPCB/CTO/2022/38276,0
+FAC-0281,CMP-0102,Morbi API Plant,API manufacturing plant,Morbi,Gujarat,22.9201,70.8342,2690.0,tpa,GPCB/CTO/2022/26590,0
+FAC-0282,CMP-0102,Sirmaur Biologics Facility,Biologics facility,Sirmaur,Himachal Pradesh,30.471,77.3915,90.0,kL fermentation,HPSPCB/CTO/2016/44586,0
+FAC-0283,CMP-0102,Dehradun R&D Centre,R&D and pilot plant,Dehradun,Uttarakhand,30.3678,78.0661,38000.0,sq m,UKPCB/CTO/2021/39317,0
+FAC-0284,CMP-0103,Latehar Integrated Steel Plant,Integrated steel plant,Latehar,Jharkhand,23.8672,84.6036,3.8,MTPA crude steel,JSPCB/CTO/2015/06734,1
+FAC-0285,CMP-0103,Sundargarh Captive Power Plant,Coal-fired captive power plant,Sundargarh,Odisha,22.217,84.075,780.0,MW,OSPCB/CTO/2018/51027,1
+FAC-0286,CMP-0103,Dhanbad Pellet Plant,Pellet plant,Dhanbad,Jharkhand,23.8919,86.3468,4.1,MTPA pellets,JSPCB/CTO/2014/15932,0
+FAC-0287,CMP-0104,Nashik Wind Farm,Wind farm,Nashik,Maharashtra,20.1443,73.7919,440.0,MW,MPCB/CTO/2017/29948,0
+FAC-0288,CMP-0104,Dehradun Hydro Power Station,Hydro power station,Dehradun,Uttarakhand,30.1792,78.0452,190.0,MW,UKPCB/CTO/2019/95165,0
+FAC-0289,CMP-0105,Udaipur Thermal Power Station,Coal-fired thermal power plant,Udaipur,Rajasthan,24.6802,73.7681,2960.0,MW,RSPCB/CTO/2022/74401,0
+FAC-0290,CMP-0105,Belagavi Gas Power Plant,Gas-based power plant,Belagavi,Karnataka,15.8109,74.4493,850.0,MW,KSPCB/CTO/2018/06295,0
+FAC-0291,CMP-0105,Bokaro Gas Power Plant,Gas-based power plant,Bokaro,Jharkhand,23.6229,86.2501,1410.0,MW,JSPCB/CTO/2018/94434,0
+FAC-0292,CMP-0106,Meerut Food Processing Plant,Food processing plant,Meerut,Uttar Pradesh,28.8318,77.7361,1870.0,tpd,UPPCB/CTO/2022/04523,0
+FAC-0293,CMP-0106,Lucknow Oil Refinery Unit,Edible oil refinery,Lucknow,Uttar Pradesh,26.7643,80.9954,550.0,tpd,UPPCB/CTO/2016/09976,0
+FAC-0294,CMP-0106,Salem Dairy Plant,Dairy plant,Salem,Tamil Nadu,11.6511,78.0849,1090.0,klpd,TNPCB/CTO/2021/22625,0
+FAC-0295,CMP-0107,Kolhapur Food Processing Plant,Food processing plant,Kolhapur,Maharashtra,16.8397,74.1957,340.0,tpd,MPCB/CTO/2015/58009,0
+FAC-0296,CMP-0107,Aurangabad Packaging Centre,Distribution and packaging centre,Aurangabad,Maharashtra,20.001,75.3627,47000.0,tpa,MPCB/CTO/2016/85296,0
+FAC-0297,CMP-0107,Haldia Personal Care Plant,Personal care manufacturing plant,Purba Medinipur,West Bengal,22.0131,88.1825,132000.0,tpa,WBPCB/CTO/2017/46828,0
+FAC-0298,CMP-0108,Nagpur Food Processing Plant,Food processing plant,Nagpur,Maharashtra,21.2898,79.2241,270.0,tpd,MPCB/CTO/2021/04082,0
+FAC-0299,CMP-0108,Valsad Packaging Centre,Distribution and packaging centre,Valsad,Gujarat,20.488,73.0153,68000.0,tpa,GPCB/CTO/2018/94690,0
+FAC-0300,CMP-0109,Ballari Integrated Cement Plant,Integrated cement plant,Ballari,Karnataka,15.0782,77.063,6.6,MTPA cement,KSPCB/CTO/2020/77835,0
+FAC-0301,CMP-0109,Bengaluru Captive Power Plant,Captive power plant,Bengaluru Urban,Karnataka,12.8772,77.5872,110.0,MW,KSPCB/CTO/2023/48103,0
+FAC-0302,CMP-0109,Belagavi Cement Works,Integrated cement plant,Belagavi,Karnataka,15.8038,74.401,6.0,MTPA cement,KSPCB/CTO/2017/73136,0
+FAC-0303,CMP-0110,Jamshedpur Coal Mine,Open-cast coal mine,East Singhbhum,Jharkhand,22.8714,86.0808,12.0,MTPA coal,JSPCB/CTO/2019/02553,0
+FAC-0304,CMP-0110,Belagavi Iron Ore Mine,Open-cast iron ore mine,Belagavi,Karnataka,15.8786,74.3644,4.0,MTPA ore,KSPCB/CTO/2018/80845,0
+FAC-0305,CMP-0110,Tumakuru Manganese Mine,Manganese mine,Tumakuru,Karnataka,13.2887,77.1246,1.2,MTPA ore,KSPCB/CTO/2016/20720,0
+FAC-0306,CMP-0111,Ratnagiri Technology Campus,IT campus,Ratnagiri,Maharashtra,16.9555,73.3657,22000.0,seats,MPCB/CTO/2016/63880,0
+FAC-0307,CMP-0111,Nashik Data Centre,Data centre,Nashik,Maharashtra,20.0809,73.8375,58.0,MW IT load,MPCB/CTO/2023/52581,0
+FAC-0308,CMP-0112,Satna Coal Mine,Open-cast coal mine,Satna,Madhya Pradesh,24.6842,80.757,4.0,MTPA coal,MPPCB/CTO/2014/80601,0
+FAC-0309,CMP-0112,Ganjam Bauxite Mine,Bauxite mine,Ganjam,Odisha,19.5004,84.9176,7.4,MTPA ore,OSPCB/CTO/2022/31794,0
+FAC-0310,CMP-0112,Koppal Iron Ore Mine,Open-cast iron ore mine,Koppal,Karnataka,15.4466,76.2961,15.0,MTPA ore,KSPCB/CTO/2017/82771,0
+FAC-0311,CMP-0112,Dhanbad Beneficiation Plant,Beneficiation plant,Dhanbad,Jharkhand,23.8645,86.3166,3.0,MTPA ore,JSPCB/CTO/2015/04238,0
+FAC-0312,CMP-0113,Chennai Chemical Complex,Chemical complex,Chennai,Tamil Nadu,12.9387,80.1755,450000.0,tpa,TNPCB/CTO/2014/45671,0
+FAC-0313,CMP-0113,Chennai Specialty Chemicals Plant,Specialty chemicals plant,Chennai,Tamil Nadu,13.1715,80.4081,27000.0,tpa,TNPCB/CTO/2021/92926,0
+FAC-0314,CMP-0113,Chennai Captive Power Plant,Captive power plant,Chennai,Tamil Nadu,13.2136,80.2898,50.0,MW,TNPCB/CTO/2017/83829,0
+FAC-0315,CMP-0114,Valsad API Plant,API manufacturing plant,Valsad,Gujarat,20.4634,72.8243,2510.0,tpa,GPCB/CTO/2018/72848,0
+FAC-0316,CMP-0114,Bengaluru Biologics Facility,Biologics facility,Bengaluru Urban,Karnataka,13.0662,77.509,190.0,kL fermentation,KSPCB/CTO/2017/14912,0
+FAC-0317,CMP-0115,Khordha Integrated Steel Plant,Integrated steel plant,Khordha,Odisha,20.2315,85.6894,1.0,MTPA crude steel,OSPCB/CTO/2019/63645,0
+FAC-0318,CMP-0115,Koraput Iron Ore Mine,Open-cast iron ore mine,Koraput,Odisha,18.7113,82.8468,12.0,MTPA ore,OSPCB/CTO/2021/76066,0
+FAC-0319,CMP-0115,Jajpur Rolling Mill,Rolling mill,Jajpur,Odisha,20.823,86.4512,1.8,MTPA,OSPCB/CTO/2017/61546,0
+FAC-0320,CMP-0116,Balaghat Coal Mine,Open-cast coal mine,Balaghat,Madhya Pradesh,21.6921,80.1041,17.0,MTPA coal,MPPCB/CTO/2018/70512,0
+FAC-0321,CMP-0116,Mysuru Coal Washery,Coal washery,Mysuru,Karnataka,12.3092,76.7119,4.0,MTPA,KSPCB/CTO/2014/69452,0
+FAC-0322,CMP-0117,Peddapalli Technology Campus,IT campus,Peddapalli,Telangana,18.6711,79.4361,18000.0,seats,TSPCB/CTO/2020/10457,0
+FAC-0323,CMP-0117,Nagpur Data Centre,Data centre,Nagpur,Maharashtra,21.0031,79.2093,10.0,MW IT load,MPCB/CTO/2019/49293,0
+FAC-0324,CMP-0117,Sangareddy Delivery Centre,Delivery centre,Sangareddy,Telangana,17.6998,78.1795,3870.0,seats,TSPCB/CTO/2021/63742,0
+FAC-0325,CMP-0118,Gurugram Technology Campus,IT campus,Gurugram,Haryana,28.535,77.0727,10000.0,seats,HSPCB/CTO/2023/47286,0
+FAC-0326,CMP-0118,Ariyalur Data Centre,Data centre,Ariyalur,Tamil Nadu,11.0961,79.1223,19.0,MW IT load,TNPCB/CTO/2023/21716,0
+FAC-0327,CMP-0119,Chaibasa Integrated Steel Plant,Integrated steel plant,West Singhbhum,Jharkhand,22.5854,85.7204,1.3,MTPA crude steel,JSPCB/CTO/2021/92377,0
+FAC-0328,CMP-0119,Ranchi Sponge Iron Plant,Sponge iron plant,Ranchi,Jharkhand,23.2237,85.3405,2120.0,tpd DRI,JSPCB/CTO/2020/97755,0
+FAC-0329,CMP-0119,Latehar Captive Power Plant,Coal-fired captive power plant,Latehar,Jharkhand,23.7912,84.5997,400.0,MW,JSPCB/CTO/2022/43628,0
+FAC-0330,CMP-0119,Hazaribagh Rolling Mill,Rolling mill,Hazaribagh,Jharkhand,23.9636,85.5075,1.7,MTPA,JSPCB/CTO/2023/18835,0
+FAC-0331,CMP-0120,Ludhiana Food Processing Plant,Food processing plant,Ludhiana,Punjab,30.8756,75.7615,2090.0,tpd,PPCB/CTO/2015/57570,0
+FAC-0332,CMP-0120,Ludhiana Oil Refinery Unit,Edible oil refinery,Ludhiana,Punjab,30.9774,75.734,1640.0,tpd,PPCB/CTO/2022/54673,0
+FAC-0333,CMP-0121,Nagaur Spinning Mill,Spinning mill,Nagaur,Rajasthan,27.2295,73.8646,299000.0,spindles,RSPCB/CTO/2019/46006,0
+FAC-0334,CMP-0121,Belagavi Processing Unit,Dyeing and processing unit,Belagavi,Karnataka,15.8042,74.6101,70.0,tonnes fabric/day,KSPCB/CTO/2021/58916,0
+FAC-0335,CMP-0121,Chennai Garment Unit,Garment manufacturing unit,Chennai,Tamil Nadu,13.1488,80.4106,14.0,mn pieces/yr,TNPCB/CTO/2014/16113,0
+FAC-0336,CMP-0122,Guntur Chemical Complex,Chemical complex,Guntur,Andhra Pradesh,16.3224,80.3131,211000.0,tpa,APPCB/CTO/2022/98021,0
+FAC-0337,CMP-0122,Jamnagar Specialty Chemicals Plant,Specialty chemicals plant,Jamnagar,Gujarat,22.4397,70.1868,64000.0,tpa,GPCB/CTO/2015/54844,0
+FAC-0338,CMP-0123,Aurangabad Integrated Steel Plant,Integrated steel plant,Aurangabad,Maharashtra,19.8596,75.4585,6.0,MTPA crude steel,MPCB/CTO/2017/81740,0
+FAC-0339,CMP-0123,Medinipur Pellet Plant,Pellet plant,Paschim Medinipur,West Bengal,22.4777,87.2886,6.8,MTPA pellets,WBPCB/CTO/2021/48606,0
+FAC-0340,CMP-0123,Koraput Iron Ore Mine,Open-cast iron ore mine,Koraput,Odisha,18.9074,82.709,9.0,MTPA ore,OSPCB/CTO/2023/18114,0
+FAC-0341,CMP-0123,Bankura Sponge Iron Plant,Sponge iron plant,Bankura,West Bengal,23.3102,87.0703,1680.0,tpd DRI,WBPCB/CTO/2014/95339,0
+FAC-0342,CMP-0124,Ratnagiri Chemical Complex,Chemical complex,Ratnagiri,Maharashtra,16.8591,73.4273,957000.0,tpa,MPCB/CTO/2015/15405,0
+FAC-0343,CMP-0124,Nashik Dyes Unit,Dyes and pigments unit,Nashik,Maharashtra,20.141,73.9164,100.0,tpd,MPCB/CTO/2016/76603,0
+FAC-0344,CMP-0124,Aurangabad Fertiliser Plant,Fertiliser plant,Aurangabad,Maharashtra,19.8787,75.2975,683000.0,tpa urea,MPCB/CTO/2017/94485,0
+FAC-0345,CMP-0125,Thane API Plant,API manufacturing plant,Thane,Maharashtra,19.0667,72.9661,2870.0,tpa,MPCB/CTO/2018/64930,0
+FAC-0346,CMP-0125,Rudrapur Biologics Facility,Biologics facility,Udham Singh Nagar,Uttarakhand,28.9793,79.2869,70.0,kL fermentation,UKPCB/CTO/2021/07994,0
+FAC-0347,CMP-0125,Peddapalli Formulation Plant,Formulation plant,Peddapalli,Telangana,18.7014,79.4589,5740.0,mn tablets/yr,TSPCB/CTO/2022/42831,0
+FAC-0348,CMP-0126,Kanpur Components Plant,Auto components plant,Kanpur Nagar,Uttar Pradesh,26.3474,80.3054,11.0,mn units/yr,UPPCB/CTO/2019/85790,0
+FAC-0349,CMP-0126,Koppal Foundry,Foundry and forging unit,Koppal,Karnataka,15.38,76.0182,84000.0,tpa castings,KSPCB/CTO/2015/48231,0
+FAC-0350,CMP-0126,Lalitpur Axle Unit,Machining and axle unit,Lalitpur,Uttar Pradesh,24.6783,78.3178,10.0,mn units/yr,UPPCB/CTO/2017/27337,0
+FAC-0351,CMP-0127,Raipur Coal Mine,Open-cast coal mine,Raipur,Chhattisgarh,21.1128,81.6553,8.0,MTPA coal,CECB/CTO/2022/08798,0
+FAC-0352,CMP-0127,Kalahandi Manganese Mine,Manganese mine,Kalahandi,Odisha,19.7671,83.235,1.0,MTPA ore,OSPCB/CTO/2016/68318,0
+FAC-0353,CMP-0128,Jamshedpur Coal Mine,Open-cast coal mine,East Singhbhum,Jharkhand,22.8073,86.16,18.0,MTPA coal,JSPCB/CTO/2021/32514,0
+FAC-0354,CMP-0128,Mangaluru Beneficiation Plant,Beneficiation plant,Dakshina Kannada,Karnataka,12.9711,74.7869,11.0,MTPA ore,KSPCB/CTO/2014/48205,0
+FAC-0355,CMP-0129,Ranchi Coal Mine,Open-cast coal mine,Ranchi,Jharkhand,23.4485,85.229,18.0,MTPA coal,JSPCB/CTO/2020/43494,0
+FAC-0356,CMP-0129,South Goa Iron Ore Mine,Open-cast iron ore mine,South Goa,Goa,15.3199,74.059,8.0,MTPA ore,GSPCB/CTO/2023/80924,0
+FAC-0357,CMP-0129,Dhenkanal Beneficiation Plant,Beneficiation plant,Dhenkanal,Odisha,20.5838,85.6387,10.0,MTPA ore,OSPCB/CTO/2023/16430,0
+FAC-0358,CMP-0130,Sirmaur API Plant,API manufacturing plant,Sirmaur,Himachal Pradesh,30.6705,77.509,2260.0,tpa,HPSPCB/CTO/2018/21316,0
+FAC-0359,CMP-0130,Sirmaur Biologics Facility,Biologics facility,Sirmaur,Himachal Pradesh,30.7084,77.564,80.0,kL fermentation,HPSPCB/CTO/2017/34599,0
+FAC-0360,CMP-0131,Aurangabad Components Plant,Auto components plant,Aurangabad,Maharashtra,20.027,75.3393,22.0,mn units/yr,MPCB/CTO/2019/25840,0
+FAC-0361,CMP-0131,Thane Foundry,Foundry and forging unit,Thane,Maharashtra,19.3455,72.9249,89000.0,tpa castings,MPCB/CTO/2014/60459,0
+FAC-0362,CMP-0131,Pune Assembly Plant,Vehicle assembly plant,Pune,Maharashtra,18.3996,73.889,130.0,k vehicles/yr,MPCB/CTO/2020/73802,0
+FAC-0363,CMP-0132,Bankura Food Processing Plant,Food processing plant,Bankura,West Bengal,23.3303,87.0789,2310.0,tpd,WBPCB/CTO/2014/39257,0
+FAC-0364,CMP-0132,Haldia Packaging Centre,Distribution and packaging centre,Purba Medinipur,West Bengal,22.1109,88.0973,22000.0,tpa,WBPCB/CTO/2014/30953,0
+FAC-0365,CMP-0132,Bankura Personal Care Plant,Personal care manufacturing plant,Bankura,West Bengal,23.3143,87.1545,139000.0,tpa,WBPCB/CTO/2018/71492,0
+FAC-0366,CMP-0133,Thane Spinning Mill,Spinning mill,Thane,Maharashtra,19.0688,72.8782,60000.0,spindles,MPCB/CTO/2021/25328,0
+FAC-0367,CMP-0133,Thoothukudi Processing Unit,Dyeing and processing unit,Thoothukudi,Tamil Nadu,8.7557,78.0734,90.0,tonnes fabric/day,TNPCB/CTO/2018/56024,0
+FAC-0368,CMP-0133,Nagaur Weaving Unit,Weaving unit,Nagaur,Rajasthan,27.2689,73.6806,1360.0,looms,RSPCB/CTO/2020/83736,0
+FAC-0369,CMP-0134,Khammam Solar Park,Solar park,Khammam,Telangana,17.1636,80.1675,500.0,MWp,TSPCB/CTO/2021/14680,0
+FAC-0370,CMP-0134,Koppal Wind Farm,Wind farm,Koppal,Karnataka,15.3337,76.0265,150.0,MW,KSPCB/CTO/2023/55549,0
+FAC-0371,CMP-0134,Dehradun Hydro Power Station,Hydro power station,Dehradun,Uttarakhand,30.4498,78.0764,480.0,MW,UKPCB/CTO/2019/23636,0
+FAC-0372,CMP-0135,Ariyalur Integrated Cement Plant,Integrated cement plant,Ariyalur,Tamil Nadu,11.2121,78.9597,3.8,MTPA cement,TNPCB/CTO/2015/79968,0
+FAC-0373,CMP-0135,Salem Cement Works,Integrated cement plant,Salem,Tamil Nadu,11.5686,78.1976,5.0,MTPA cement,TNPCB/CTO/2019/39562,0
+FAC-0374,CMP-0135,Salem Grinding Unit,Grinding unit,Salem,Tamil Nadu,11.8094,78.0227,1.3,MTPA cement,TNPCB/CTO/2014/05574,0
+FAC-0375,CMP-0136,Salem Technology Campus,IT campus,Salem,Tamil Nadu,11.5797,78.0211,10000.0,seats,TNPCB/CTO/2017/30136,0
+FAC-0376,CMP-0136,Mangaluru Delivery Centre,Delivery centre,Dakshina Kannada,Karnataka,13.018,74.7599,2880.0,seats,KSPCB/CTO/2020/75669,0
+FAC-0377,CMP-0136,Ballari Data Centre,Data centre,Ballari,Karnataka,15.0891,76.794,50.0,MW IT load,KSPCB/CTO/2017/03359,0
+FAC-0378,CMP-0137,Ballari Integrated Steel Plant,Integrated steel plant,Ballari,Karnataka,15.1988,76.9353,4.8,MTPA crude steel,KSPCB/CTO/2017/65334,0
+FAC-0379,CMP-0137,Mangaluru Captive Power Plant,Coal-fired captive power plant,Dakshina Kannada,Karnataka,12.7948,74.8227,690.0,MW,KSPCB/CTO/2019/46945,0
+FAC-0380,CMP-0137,Bastar Pellet Plant,Pellet plant,Bastar,Chhattisgarh,19.0822,82.0588,5.4,MTPA pellets,CECB/CTO/2016/13463,0
+FAC-0381,CMP-0138,Ratnagiri API Plant,API manufacturing plant,Ratnagiri,Maharashtra,16.9428,73.3263,2270.0,tpa,MPCB/CTO/2018/92059,0
+FAC-0382,CMP-0138,Peddapalli R&D Centre,R&D and pilot plant,Peddapalli,Telangana,18.6221,79.4441,5000.0,sq m,TSPCB/CTO/2017/31104,0
+FAC-0383,CMP-0138,Nagpur Formulation Plant,Formulation plant,Nagpur,Maharashtra,21.2868,79.199,7640.0,mn tablets/yr,MPCB/CTO/2016/90444,0
+FAC-0384,CMP-0139,Thane Components Plant,Auto components plant,Thane,Maharashtra,19.3289,72.9165,9.0,mn units/yr,MPCB/CTO/2021/15758,0
+FAC-0385,CMP-0139,Ballari Foundry,Foundry and forging unit,Ballari,Karnataka,15.0841,76.8832,71000.0,tpa castings,KSPCB/CTO/2015/21002,0
+FAC-0386,CMP-0139,Thane Assembly Plant,Vehicle assembly plant,Thane,Maharashtra,19.2895,72.9464,200.0,k vehicles/yr,MPCB/CTO/2015/75241,0
+FAC-0387,CMP-0140,Sonipat Food Processing Plant,Food processing plant,Sonipat,Haryana,29.077,76.9912,2160.0,tpd,HSPCB/CTO/2021/72890,0
+FAC-0388,CMP-0140,Haridwar Dairy Plant,Dairy plant,Haridwar,Uttarakhand,30.0406,78.0331,230.0,klpd,UKPCB/CTO/2015/79315,0
+FAC-0389,CMP-0140,Haridwar Packaging Centre,Distribution and packaging centre,Haridwar,Uttarakhand,30.0357,78.2904,88000.0,tpa,UKPCB/CTO/2023/48808,0
+FAC-0390,CMP-0141,Ramgarh Coal Mine,Open-cast coal mine,Ramgarh,Jharkhand,23.7283,85.3773,6.0,MTPA coal,JSPCB/CTO/2016/26058,0
+FAC-0391,CMP-0141,Chaibasa Beneficiation Plant,Beneficiation plant,West Singhbhum,Jharkhand,22.6724,85.9401,3.0,MTPA ore,JSPCB/CTO/2019/78946,0
+FAC-0392,CMP-0141,Kalahandi Manganese Mine,Manganese mine,Kalahandi,Odisha,19.8798,83.2236,1.8,MTPA ore,OSPCB/CTO/2022/94361,0
+FAC-0393,CMP-0141,Chaibasa Coal Washery,Coal washery,West Singhbhum,Jharkhand,22.4047,85.8677,7.0,MTPA,JSPCB/CTO/2014/25653,0
+FAC-0394,CMP-0142,Nashik Thermal Power Station,Coal-fired thermal power plant,Nashik,Maharashtra,19.9862,73.7043,2380.0,MW,MPCB/CTO/2016/66741,0
+FAC-0395,CMP-0142,Thane Gas Power Plant,Gas-based power plant,Thane,Maharashtra,19.325,72.8835,950.0,MW,MPCB/CTO/2023/37044,0
+FAC-0396,CMP-0142,Thane Gas Power Plant II,Gas-based power plant,Thane,Maharashtra,19.2117,72.9239,1000.0,MW,MPCB/CTO/2018/29194,0
+FAC-0397,CMP-0142,Sundargarh Hydro Power Station,Hydro power station,Sundargarh,Odisha,22.2697,83.9967,540.0,MW,OSPCB/CTO/2021/44055,0
+FAC-0398,CMP-0143,Giridih Coal Mine,Open-cast coal mine,Giridih,Jharkhand,24.3007,86.3702,3.0,MTPA coal,JSPCB/CTO/2023/31020,0
+FAC-0399,CMP-0143,Hazaribagh Iron Ore Mine,Open-cast iron ore mine,Hazaribagh,Jharkhand,23.8487,85.4668,11.0,MTPA ore,JSPCB/CTO/2019/87081,0
+FAC-0400,CMP-0144,Krishna API Plant,API manufacturing plant,Krishna,Andhra Pradesh,16.1659,81.1465,1590.0,tpa,APPCB/CTO/2016/77870,0
+FAC-0401,CMP-0144,Anantapur Biologics Facility,Biologics facility,Anantapur,Andhra Pradesh,14.5744,77.6025,210.0,kL fermentation,APPCB/CTO/2020/44929,0
+FAC-0402,CMP-0144,Krishna Formulation Plant,Formulation plant,Krishna,Andhra Pradesh,16.2443,81.0049,5310.0,mn tablets/yr,APPCB/CTO/2015/76005,0
+FAC-0403,CMP-0145,Namakkal Food Processing Plant,Food processing plant,Namakkal,Tamil Nadu,11.1878,78.2298,2700.0,tpd,TNPCB/CTO/2016/18451,0
+FAC-0404,CMP-0145,Salem Oil Refinery Unit,Edible oil refinery,Salem,Tamil Nadu,11.638,78.2091,1450.0,tpd,TNPCB/CTO/2019/89757,0
+FAC-0405,CMP-0145,Durgapur Dairy Plant,Dairy plant,Paschim Bardhaman,West Bengal,23.4436,87.2194,1210.0,klpd,WBPCB/CTO/2022/17877,0
+FAC-0406,CMP-0146,Haridwar API Plant,API manufacturing plant,Haridwar,Uttarakhand,30.0918,78.1618,2930.0,tpa,UKPCB/CTO/2023/13240,0
+FAC-0407,CMP-0146,Aurangabad R&D Centre,R&D and pilot plant,Aurangabad,Maharashtra,20.0009,75.4729,16000.0,sq m,MPCB/CTO/2022/87639,0
+FAC-0408,CMP-0146,Thane Biologics Facility,Biologics facility,Thane,Maharashtra,19.2595,73.0106,260.0,kL fermentation,MPCB/CTO/2020/64921,0
+FAC-0409,CMP-0147,Ariyalur Chemical Complex,Chemical complex,Ariyalur,Tamil Nadu,11.0692,79.0841,332000.0,tpa,TNPCB/CTO/2022/28611,0
+FAC-0410,CMP-0147,Krishnagiri Captive Power Plant,Captive power plant,Krishnagiri,Tamil Nadu,12.8513,77.8364,150.0,MW,TNPCB/CTO/2018/58687,0
+FAC-0411,CMP-0147,Namakkal Fertiliser Plant,Fertiliser plant,Namakkal,Tamil Nadu,11.0941,78.1594,335000.0,tpa urea,TNPCB/CTO/2022/72093,0
+FAC-0412,CMP-0148,Mysuru Integrated Steel Plant,Integrated steel plant,Mysuru,Karnataka,12.3031,76.7896,3.1,MTPA crude steel,KSPCB/CTO/2015/80524,0
+FAC-0413,CMP-0148,Koraput Rolling Mill,Rolling mill,Koraput,Odisha,18.7867,82.6152,1.8,MTPA,OSPCB/CTO/2014/12099,0
+FAC-0414,CMP-0148,Ballari Iron Ore Mine,Open-cast iron ore mine,Ballari,Karnataka,15.1122,76.7762,14.0,MTPA ore,KSPCB/CTO/2023/66755,0
+FAC-0415,CMP-0148,Nellore Pellet Plant,Pellet plant,Nellore,Andhra Pradesh,14.5881,80.0354,1.7,MTPA pellets,APPCB/CTO/2023/24327,0
+FAC-0416,CMP-0149,Thane Integrated Cement Plant,Integrated cement plant,Thane,Maharashtra,19.1901,72.9803,5.8,MTPA cement,MPCB/CTO/2021/39159,0
+FAC-0417,CMP-0149,Ratnagiri Cement Works,Integrated cement plant,Ratnagiri,Maharashtra,17.079,73.4383,6.2,MTPA cement,MPCB/CTO/2021/28983,0
+FAC-0418,CMP-0149,Jamnagar Grinding Unit,Grinding unit,Jamnagar,Gujarat,22.5299,69.9576,1.4,MTPA cement,GPCB/CTO/2020/73082,0
+FAC-0419,CMP-0149,Sirmaur Captive Power Plant,Captive power plant,Sirmaur,Himachal Pradesh,30.484,77.5616,40.0,MW,HPSPCB/CTO/2016/29999,0
+FAC-0420,CMP-0150,Bilaspur Integrated Cement Plant,Integrated cement plant,Bilaspur,Chhattisgarh,22.1643,82.0084,5.8,MTPA cement,CECB/CTO/2018/02734,0
+FAC-0421,CMP-0150,Durg Captive Power Plant,Captive power plant,Durg,Chhattisgarh,21.3126,81.4013,110.0,MW,CECB/CTO/2018/25288,0
+FAC-0422,CMP-0150,Bastar Cement Works,Integrated cement plant,Bastar,Chhattisgarh,19.1008,81.884,2.8,MTPA cement,CECB/CTO/2014/47978,0

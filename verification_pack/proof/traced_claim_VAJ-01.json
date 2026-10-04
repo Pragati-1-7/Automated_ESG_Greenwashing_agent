@@ -1,0 +1,800 @@
+{
+  "company": {
+    "resolved": true,
+    "company_id": "CMP-0001",
+    "name": "Vajra Steel & Power Ltd",
+    "match_score": 0.93,
+    "reason": "Registry candidate 'Vajra Steel & Power Ltd' (string similarity 1.00); Jev same-entity probability 0.93"
+  },
+  "claim": {
+    "claim_id": "VAJ-01",
+    "text": "We have reduced our absolute Scope 1 emissions by 40% against our FY2020 baseline.",
+    "page": 0,
+    "section": null,
+    "triage": {
+      "is_claim_prob": 0.99,
+      "action": "implemented",
+      "action_probs": {
+        "implemented": 1.0,
+        "indeterminate": 0.0,
+        "planning": 0.0
+      },
+      "checkable": true,
+      "materiality": 0.7567,
+      "vagueness": 0.13,
+      "metric": "scope1_tco2e",
+      "metric_confidence": 1.0,
+      "reason": "Concrete past-performance claim; checkable against external records (p=0.84)"
+    },
+    "parsed": {
+      "numbers": [
+        {
+          "value": 40.0,
+          "unit": "%",
+          "raw": "40%"
+        }
+      ],
+      "period": null,
+      "baseline_period": "FY2020",
+      "facility_hint": null
+    },
+    "sub_claims": [
+      {
+        "sub_id": "VAJ-01.1",
+        "text": "We have reduced our absolute Scope 1 emissions by 40% against our FY2020 baseline.",
+        "metric": "scope1_tco2e",
+        "check_type": "pct_change",
+        "period": "FY2025",
+        "baseline_period": "FY2020",
+        "claimed_value": 40.0,
+        "sources_planned": [
+          {
+            "source": "facility_ghg",
+            "probability": 0.94,
+            "selected": true
+          },
+          {
+            "source": "brsr",
+            "probability": 0.9,
+            "selected": true
+          },
+          {
+            "source": "assurance",
+            "probability": 0.86,
+            "selected": true
+          },
+          {
+            "source": "news",
+            "probability": 0.84,
+            "selected": true
+          },
+          {
+            "source": "ocems",
+            "probability": 0.55,
+            "selected": true
+          },
+          {
+            "source": "regulatory",
+            "probability": 0.29,
+            "selected": false
+          },
+          {
+            "source": "rec_registry",
+            "probability": 0.12,
+            "selected": false
+          },
+          {
+            "source": "land_alerts",
+            "probability": 0.1,
+            "selected": false
+          }
+        ],
+        "tool_calls": [
+          {
+            "tool": "facility_ghg_registry",
+            "args": {
+              "company_id": "CMP-0001"
+            },
+            "status": "ok",
+            "latency_ms": 6,
+            "result_count": 24
+          },
+          {
+            "tool": "sebi_brsr_filings",
+            "args": {
+              "company_id": "CMP-0001"
+            },
+            "status": "ok",
+            "latency_ms": 7,
+            "result_count": 6
+          },
+          {
+            "tool": "assurance_statements",
+            "args": {
+              "company_id": "CMP-0001"
+            },
+            "status": "ok",
+            "latency_ms": 8,
+            "result_count": 4
+          },
+          {
+            "tool": "news_search",
+            "args": {
+              "q": "Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline",
+              "company_id": "CMP-0001",
+              "k": 3,
+              "date_from": "2024-01-01",
+              "date_to": "2025-12-31"
+            },
+            "status": "ok",
+            "latency_ms": 151,
+            "result_count": 3
+          },
+          {
+            "tool": "cpcb_ocems_exceedances",
+            "args": {
+              "company_id": "CMP-0001",
+              "fy": "FY2025"
+            },
+            "status": "ok",
+            "latency_ms": 8,
+            "result_count": 37
+          }
+        ],
+        "evidence": [
+          {
+            "evidence_id": "VAJ-01.1-E2",
+            "source": "facility_ghg",
+            "tier": 1,
+            "title": "Facility GHG registry, sum over 4 facilities",
+            "snippet": "Sum of facility-level direct (Scope 1) emissions, tCO2e: FY2020 11,800,000; FY2021 11,650,000; FY2022 11,900,000; FY2023 11,400,000; FY2024 11,050,000; FY2025 10,856,000.",
+            "endpoint": "/ghg/facility?company_id=CMP-0001",
+            "data": {
+              "by_fy": {
+                "FY2020": 11800000.0,
+                "FY2021": 11650000.0,
+                "FY2022": 11899999.999999998,
+                "FY2023": 11400000.0,
+                "FY2024": 11049999.999999998,
+                "FY2025": 10855999.999999998
+              },
+              "period": "FY2025",
+              "relevance": 0.97
+            },
+            "stance": {
+              "label": "contradict",
+              "probabilities": {
+                "insufficient": 0.0,
+                "contradict": 1.0,
+                "support": 0.0
+              },
+              "confidence": 1.0
+            }
+          },
+          {
+            "evidence_id": "VAJ-01.1-E1",
+            "source": "brsr_filings",
+            "tier": 1,
+            "title": "SEBI BRSR Core filing, Vajra Steel & Power Ltd (FY2025, filed 2025-07-03)",
+            "snippet": "Scope 1 GHG emissions (tCO2e) as filed: FY2020 11,800,000; FY2021 11,650,000; FY2022 11,900,000; FY2023 11,400,000; FY2024 11,050,000; FY2025 10,856,000. Turnover (Rs crore) as filed: FY2020 28,000; FY2021 26,500; FY2022 33,800; FY2023 37,200; FY2024 39,900; FY2025 41,500.",
+            "endpoint": "/sebi/brsr?company_id=CMP-0001",
+            "data": {
+              "metric": "scope1_tco2e",
+              "period": "FY2025",
+              "current": 10856000.0,
+              "baseline": 11800000.0,
+              "relevance": 0.98
+            },
+            "stance": {
+              "label": "contradict",
+              "probabilities": {
+                "insufficient": 0.0,
+                "contradict": 1.0,
+                "support": 0.0
+              },
+              "confidence": 1.0
+            }
+          },
+          {
+            "evidence_id": "VAJ-01.1-E50",
+            "source": "audited_reports",
+            "tier": 3,
+            "title": "Independent assurance statements on BRSR Core",
+            "snippet": "FY2025: limited assurance by Rao & Iyer Assurance LLP, opinion unmodified. Excerpt: Independent Limited Assurance Report to the Board of Directors of Vajra Steel & Power Ltd. We were engaged by Vajra Steel & Power Ltd (the Company) to perform a limited assurance engagement on the BRSR Core information for the year ended 31 March 2025 (the Sub History: FY2022 limited (Rao & Iyer Assurance LLP); FY2023 limited (Rao & Iyer Assurance LLP); FY2024 limited (Rao & Iyer Assurance LLP); FY2025 limited (Rao & Iyer Assurance LLP).",
+            "endpoint": "/assurance/statements?company_id=CMP-0001",
+            "data": {
+              "period": "FY2025",
+              "assurance_type": "limited",
+              "relevance": 0.62
+            },
+            "stance": {
+              "label": "contradict",
+              "probabilities": {
+                "insufficient": 0.09,
+                "contradict": 0.91,
+                "support": 0.0
+              },
+              "confidence": 0.86
+            }
+          },
+          {
+            "evidence_id": "VAJ-01.1-E60",
+            "source": "news_articles",
+            "tier": 4,
+            "title": "Vajra Steel & Power Ltd (press release), 2025-06-05: Vajra Steel powers half its operations with green energy",
+            "snippet": "BHUBANESWAR: Vajra Steel & Power Ltd today announced that 50% of the electricity consumed across its operations in FY2024-25 came from renewable sources, a claim the company says is based on renewable energy certificates purchased during the year, along with its growing share of green power contracts. In its BRSR for FY2023-24, Vajra Steel reported Scope 1 emissions of 11,050,000 tCO2e, Scope 2 emissions of 1,395,000 tCO2e and a GHG intensity of 311.9 tCO2e per Rs crore of turnover, with 15.5% of its electricity from renewable sources.",
+            "endpoint": "/news/search?q=Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline&company_id=CMP-0001",
+            "data": {
+              "article_id": "NWS-00355",
+              "outlet": "Vajra Steel & Power Ltd (press release)",
+              "date": "2025-06-05",
+              "retrieval_score": 1.0,
+              "relevance": 0.18
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.82
+            }
+          },
+          {
+            "evidence_id": "VAJ-01.1-E61",
+            "source": "news_articles",
+            "tier": 5,
+            "title": "Business Mint India, 2025-08-17: MSME sourcing at Vajra Steel rises to 13.5%",
+            "snippet": "BHUBANESWAR: Vajra Steel & Power Ltd sourced 13.5% of its input material from micro, small and medium enterprises in FY2024-25, compared with 11.0% in FY2019-20, its BRSR shows. In its BRSR for FY2024-25, Vajra Steel reported Scope 1 emissions of 10,856,000 tCO2e, Scope 2 emissions of 1,380,000 tCO2e and a GHG intensity of 294.8 tCO2e per Rs crore of turnover, with 18.0% of its electricity from renewable sources.",
+            "endpoint": "/news/search?q=Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline&company_id=CMP-0001",
+            "data": {
+              "article_id": "NWS-00378",
+              "outlet": "Business Mint India",
+              "date": "2025-08-17",
+              "retrieval_score": 0.985,
+              "relevance": 0.53
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "contradict": 0.01,
+                "support": 0.0,
+                "insufficient": 0.99
+              },
+              "confidence": 0.98
+            }
+          },
+          {
+            "evidence_id": "VAJ-01.1-E62",
+            "source": "news_articles",
+            "tier": 5,
+            "title": "Capital Pulse India, 2025-07-18: Vajra Steel BRSR at a glance: FY2024-25",
+            "snippet": "BHUBANESWAR: Vajra Steel & Power Ltd filed its Business Responsibility and Sustainability Report for FY2024-25 on 3 July 2025. Emissions: Scope 1 of 10,856,000 tCO2e, Scope 2 of 1,380,000 tCO2e, intensity of 294.8 tCO2e per Rs crore.",
+            "endpoint": "/news/search?q=Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline&company_id=CMP-0001",
+            "data": {
+              "article_id": "NWS-00365",
+              "outlet": "Capital Pulse India",
+              "date": "2025-07-18",
+              "retrieval_score": 0.894,
+              "relevance": 0.77
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "contradict": 0.02,
+                "support": 0.01,
+                "insufficient": 0.97
+              },
+              "confidence": 0.95
+            }
+          },
+          {
+            "evidence_id": "VAJ-01.1-E3",
+            "source": "ocems_exceedances",
+            "tier": 2,
+            "title": "CPCB OCEMS exceedance log, FY2025",
+            "snippet": "37 emission-limit exceedance events recorded by online continuous monitoring between 2024-04-01 and 2025-03-31: PM 23, SO2 14. Facilities: Angul Captive Power Plant (37). Worst: SO2 1193.7 mg/Nm3 against a limit of 600.0 on 2024-10-10.",
+            "endpoint": "/cpcb/ocems/exceedances?company_id=CMP-0001&from=2024-04-01&to=2025-03-31",
+            "data": {
+              "count": 37,
+              "period": "FY2025",
+              "relevance": 0.34
+            },
+            "stance": {
+              "label": "insufficient",
+              "probabilities": {
+                "support": 0.0,
+                "contradict": 0.0,
+                "insufficient": 1.0
+              },
+              "confidence": 0.66
+            }
+          }
+        ],
+        "computations": [
+          {
+            "op": "pct_change",
+            "expression": "(10,856,000 - 11,800,000) / 11,800,000 x 100 = -8.0%",
+            "inputs": {
+              "facility_scope1_baseline": 11800000.0,
+              "facility_scope1_current": 10855999.999999998
+            },
+            "result": -8.0
+          },
+          {
+            "op": "relative_gap",
+            "expression": "(claimed -40 - filed -8) / 8 x 100 = -400.0%",
+            "inputs": {
+              "claimed": -40.0,
+              "filed": -8.0
+            },
+            "result": -400.0
+          },
+          {
+            "op": "sum",
+            "expression": "sum of 37 records = 37",
+            "inputs": {
+              "exceedances_n": 37.0
+            },
+            "result": 37.0
+          }
+        ],
+        "stance": {
+          "label": "contradict",
+          "probabilities": {
+            "contradict": 1.0,
+            "insufficient": 0.0,
+            "support": 0.0
+          },
+          "confidence": 1.0
+        }
+      }
+    ],
+    "verdict": {
+      "label": "CONTRADICT",
+      "probabilities": {
+        "CONTRADICT": 1.0,
+        "INSUFFICIENT_EVIDENCE": 0.0,
+        "ALIGN": 0.0
+      },
+      "confidence": 1.0,
+      "reasoning": "The retrieved evidence contradicts this claim (decision confidence 100%). VAJ-01.1-E2 (Tier 1 regulatory filing): Sum of facility-level direct (Scope 1) emissions, tCO2e: FY2020 11,800,000; FY2021 11,650,000; FY2022 11,900,000; FY2023 11,400,000; FY2024 11,050,000; FY2025 10,856,000. VAJ-01.1-E1 (Tier 1 regulatory filing): Scope 1 GHG emissions (tCO2e) as filed: FY2020 11,800,000; FY2021 11,650,000; FY2022 11,900,000; FY2023 11,400,000; FY2024 11,050,000; FY2025 10,856,000. Turnover (Rs crore) as filed: FY2020 28,000; FY2021 26,500; FY2022. VAJ-01.1-E50 (Tier 3 third-party dataset): FY2025: limited assurance by Rao & Iyer Assurance LLP, opinion unmodified. Excerpt: Independent Limited Assurance Report to the Board of Directors of Vajra Steel & Power Ltd. We were engaged by Vajra Steel & Power Ltd (t. (10,856,000 - 11,800,000) / 11,800,000 x 100 = -8.0%. (claimed -40 - filed -8) / 8 x 100 = -400.0%. sum of 37 records = 37."
+    },
+    "risk": {
+      "score": 89.6,
+      "band": "Very High",
+      "components": [
+        {
+          "name": "p_contradict",
+          "value": 1.0,
+          "weight": 1.859,
+          "contribution": 1.859,
+          "note": "Decision-engine probability that external evidence contradicts the claim"
+        },
+        {
+          "name": "p_insufficient",
+          "value": 0.0,
+          "weight": -1.113,
+          "contribution": -0.0,
+          "note": "Probability that nothing external can confirm the claim (unverifiable)"
+        },
+        {
+          "name": "severity",
+          "value": 0.973,
+          "weight": 2.052,
+          "contribution": 1.997,
+          "note": "Decision-engine rating of how serious the discrepancy is"
+        },
+        {
+          "name": "materiality",
+          "value": 0.757,
+          "weight": -1.428,
+          "contribution": -1.08,
+          "note": "How much the claim matters to investors and regulators"
+        },
+        {
+          "name": "vagueness",
+          "value": 0.13,
+          "weight": 1.683,
+          "contribution": 0.219,
+          "note": "Probability the statement is vague, non-falsifiable cheap talk"
+        },
+        {
+          "name": "p_indeterminate",
+          "value": 0.0,
+          "weight": 2.347,
+          "contribution": 0.0,
+          "note": "A3CG: probability the action is indeterminate rhetoric"
+        },
+        {
+          "name": "high_tier_contradiction",
+          "value": 1.0,
+          "weight": 1.159,
+          "contribution": 1.159,
+          "note": "A regulatory filing or regulator record contradicts the claim"
+        },
+        {
+          "name": "bias",
+          "value": 1.0,
+          "weight": -2.003,
+          "contribution": -2.003,
+          "note": "Intercept (fitted)"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "ts": "2026-10-04T12:13:29.643+00:00",
+      "agent": "resolver",
+      "type": "tool_call",
+      "claim_id": null,
+      "message": "resolve_company(name=Vajra Steel & Power Ltd)",
+      "data": {
+        "tool": "resolve_company",
+        "path": "/companies/resolve",
+        "args": {
+          "name": "Vajra Steel & Power Ltd"
+        }
+      }
+    },
+    {
+      "seq": 2,
+      "ts": "2026-10-04T12:13:29.910+00:00",
+      "agent": "resolver",
+      "type": "tool_result",
+      "claim_id": null,
+      "message": "resolve_company: 5 record(s)",
+      "data": {
+        "count": 5,
+        "endpoint": null
+      }
+    },
+    {
+      "seq": 3,
+      "ts": "2026-10-04T12:13:29.910+00:00",
+      "agent": "resolver",
+      "type": "decision",
+      "claim_id": null,
+      "message": "Resolved to Vajra Steel & Power Ltd",
+      "data": {
+        "report_name": "Vajra Steel & Power Ltd",
+        "candidate": "Vajra Steel & Power Ltd",
+        "similarity": 1.0,
+        "p_same": 0.93
+      }
+    },
+    {
+      "seq": 4,
+      "ts": "2026-10-04T12:13:29.910+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": null,
+      "message": "list_facilities()",
+      "data": {
+        "tool": "list_facilities",
+        "path": "/companies/CMP-0001/facilities",
+        "args": {}
+      }
+    },
+    {
+      "seq": 5,
+      "ts": "2026-10-04T12:13:29.912+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": null,
+      "message": "list_facilities: 4 record(s)",
+      "data": {
+        "count": 4,
+        "endpoint": "/companies/CMP-0001/facilities"
+      }
+    },
+    {
+      "seq": 6,
+      "ts": "2026-10-04T12:13:31.043+00:00",
+      "agent": "triage",
+      "type": "decision",
+      "claim_id": "VAJ-01",
+      "message": "implemented, checkable: Concrete past-performance claim; checkable against external records (p=0.84)",
+      "data": {
+        "action": "implemented",
+        "p_vague": 0.13,
+        "p_checkable": 0.84,
+        "materiality": "significant"
+      }
+    },
+    {
+      "seq": 7,
+      "ts": "2026-10-04T12:13:31.047+00:00",
+      "agent": "decomposer",
+      "type": "start",
+      "claim_id": "VAJ-01",
+      "message": "Decomposing: We have reduced our absolute Scope 1 emissions by 40% against our FY2020 baseline.",
+      "data": null
+    },
+    {
+      "seq": 8,
+      "ts": "2026-10-04T12:13:31.048+00:00",
+      "agent": "decomposer",
+      "type": "decision",
+      "claim_id": "VAJ-01",
+      "message": "1 atomic sub-claim(s): [pct_change | scope1_tco2e | FY2025] We have reduced our absolute Scope 1 emissions by 40% agains",
+      "data": {
+        "sub_claims": [
+          {
+            "sub_id": "VAJ-01.1",
+            "metric": "scope1_tco2e",
+            "check_type": "pct_change",
+            "period": "FY2025",
+            "baseline_period": "FY2020",
+            "claimed_value": 40.0
+          }
+        ]
+      }
+    },
+    {
+      "seq": 9,
+      "ts": "2026-10-04T12:13:31.049+00:00",
+      "agent": "router",
+      "type": "decision",
+      "claim_id": "VAJ-01",
+      "message": "VAJ-01.1: query facility_ghg (0.94), brsr (0.90), assurance (0.86), news (0.84), ocems (0.55)",
+      "data": {
+        "plan": [
+          {
+            "source": "facility_ghg",
+            "probability": 0.94,
+            "selected": true
+          },
+          {
+            "source": "brsr",
+            "probability": 0.9,
+            "selected": true
+          },
+          {
+            "source": "assurance",
+            "probability": 0.86,
+            "selected": true
+          },
+          {
+            "source": "news",
+            "probability": 0.84,
+            "selected": true
+          },
+          {
+            "source": "ocems",
+            "probability": 0.55,
+            "selected": true
+          },
+          {
+            "source": "regulatory",
+            "probability": 0.29,
+            "selected": false
+          },
+          {
+            "source": "rec_registry",
+            "probability": 0.12,
+            "selected": false
+          },
+          {
+            "source": "land_alerts",
+            "probability": 0.1,
+            "selected": false
+          }
+        ]
+      }
+    },
+    {
+      "seq": 10,
+      "ts": "2026-10-04T12:13:31.049+00:00",
+      "agent": "investigator",
+      "type": "start",
+      "claim_id": "VAJ-01",
+      "message": "VAJ-01.1: round 1 over facility_ghg, brsr, assurance, news, ocems",
+      "data": null
+    },
+    {
+      "seq": 11,
+      "ts": "2026-10-04T12:13:31.049+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-01",
+      "message": "facility_ghg_registry(company_id=CMP-0001)",
+      "data": {
+        "tool": "facility_ghg_registry",
+        "path": "/ghg/facility",
+        "args": {
+          "company_id": "CMP-0001"
+        }
+      }
+    },
+    {
+      "seq": 12,
+      "ts": "2026-10-04T12:13:31.050+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-01",
+      "message": "sebi_brsr_filings(company_id=CMP-0001)",
+      "data": {
+        "tool": "sebi_brsr_filings",
+        "path": "/sebi/brsr",
+        "args": {
+          "company_id": "CMP-0001"
+        }
+      }
+    },
+    {
+      "seq": 13,
+      "ts": "2026-10-04T12:13:31.050+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-01",
+      "message": "assurance_statements(company_id=CMP-0001)",
+      "data": {
+        "tool": "assurance_statements",
+        "path": "/assurance/statements",
+        "args": {
+          "company_id": "CMP-0001"
+        }
+      }
+    },
+    {
+      "seq": 14,
+      "ts": "2026-10-04T12:13:31.051+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-01",
+      "message": "news_search(q=Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline, company_id=CMP-0001, k=3, date_from=2024-01-01, date_to=2025-12-31)",
+      "data": {
+        "tool": "news_search",
+        "path": "/news/search",
+        "args": {
+          "q": "Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline",
+          "company_id": "CMP-0001",
+          "k": 3,
+          "date_from": "2024-01-01",
+          "date_to": "2025-12-31"
+        }
+      }
+    },
+    {
+      "seq": 15,
+      "ts": "2026-10-04T12:13:31.051+00:00",
+      "agent": "investigator",
+      "type": "tool_call",
+      "claim_id": "VAJ-01",
+      "message": "cpcb_ocems_exceedances(company_id=CMP-0001, fy=FY2025)",
+      "data": {
+        "tool": "cpcb_ocems_exceedances",
+        "path": "/cpcb/ocems/exceedances",
+        "args": {
+          "company_id": "CMP-0001",
+          "fy": "FY2025"
+        }
+      }
+    },
+    {
+      "seq": 16,
+      "ts": "2026-10-04T12:13:31.056+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-01",
+      "message": "facility_ghg_registry: 24 record(s)",
+      "data": {
+        "count": 24,
+        "endpoint": "/ghg/facility?company_id=CMP-0001"
+      }
+    },
+    {
+      "seq": 17,
+      "ts": "2026-10-04T12:13:31.057+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-01",
+      "message": "sebi_brsr_filings: 6 record(s)",
+      "data": {
+        "count": 6,
+        "endpoint": "/sebi/brsr?company_id=CMP-0001"
+      }
+    },
+    {
+      "seq": 18,
+      "ts": "2026-10-04T12:13:31.058+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-01",
+      "message": "assurance_statements: 4 record(s)",
+      "data": {
+        "count": 4,
+        "endpoint": "/assurance/statements?company_id=CMP-0001"
+      }
+    },
+    {
+      "seq": 19,
+      "ts": "2026-10-04T12:13:31.060+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-01",
+      "message": "cpcb_ocems_exceedances: 37 record(s)",
+      "data": {
+        "count": 37,
+        "endpoint": "/cpcb/ocems/exceedances?company_id=CMP-0001&from=2024-04-01&to=2025-03-31"
+      }
+    },
+    {
+      "seq": 20,
+      "ts": "2026-10-04T12:13:31.202+00:00",
+      "agent": "investigator",
+      "type": "tool_result",
+      "claim_id": "VAJ-01",
+      "message": "news_search: 3 record(s)",
+      "data": {
+        "count": 3,
+        "endpoint": "/news/search?q=Vajra Steel Scope 1 GHG emissions reduced absolute Scope emissions against baseline&company_id=CMP-0001"
+      }
+    },
+    {
+      "seq": 21,
+      "ts": "2026-10-04T12:13:31.787+00:00",
+      "agent": "investigator",
+      "type": "decision",
+      "claim_id": "VAJ-01",
+      "message": "VAJ-01.1: evidence sufficient? p=0.94",
+      "data": {
+        "p_sufficient": 0.94,
+        "round": 1
+      }
+    },
+    {
+      "seq": 22,
+      "ts": "2026-10-04T12:13:31.787+00:00",
+      "agent": "investigator",
+      "type": "info",
+      "claim_id": "VAJ-01",
+      "message": "VAJ-01.1: 7 evidence item(s), 3 calculation(s) after 1 round(s)",
+      "data": null
+    },
+    {
+      "seq": 23,
+      "ts": "2026-10-04T12:13:32.359+00:00",
+      "agent": "judge",
+      "type": "decision",
+      "claim_id": "VAJ-01",
+      "message": "VAJ-01.1: stance contradict (1.00); per evidence: VAJ-01.1-E2=contradict, VAJ-01.1-E1=contradict, VAJ-01.1-E50=contradict, VAJ-01.1-E60=insufficient, VAJ-01.1-E61=insufficient, VAJ-01.1-E62=insufficient, VAJ-01.1-E3=insufficient",
+      "data": {
+        "stance": {
+          "label": "contradict",
+          "probabilities": {
+            "contradict": 1.0,
+            "insufficient": 0.0,
+            "support": 0.0
+          },
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "seq": 24,
+      "ts": "2026-10-04T12:13:32.903+00:00",
+      "agent": "verdict",
+      "type": "verdict",
+      "claim_id": "VAJ-01",
+      "message": "CONTRADICT (1.00) for: We have reduced our absolute Scope 1 emissions by 40% against our FY2020 baseline.",
+      "data": {
+        "probabilities": {
+          "CONTRADICT": 1.0,
+          "INSUFFICIENT_EVIDENCE": 0.0,
+          "ALIGN": 0.0
+        },
+        "severity": "severe",
+        "cited": [
+          "VAJ-01.1-E2",
+          "VAJ-01.1-E1",
+          "VAJ-01.1-E50"
+        ]
+      }
+    }
+  ]
+}

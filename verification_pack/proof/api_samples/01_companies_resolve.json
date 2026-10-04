@@ -1,0 +1,94 @@
+{
+  "request": "GET /companies/resolve?name=Vajra Steel & Power Limited",
+  "status": 200,
+  "response": {
+    "query": "Vajra Steel & Power Limited",
+    "candidates": [
+      {
+        "company_id": "CMP-0001",
+        "cin": "L27100OR1998PLC005512",
+        "name": "Vajra Steel & Power Ltd",
+        "short_name": "Vajra Steel",
+        "aliases": [
+          "Vajra Steel",
+          "Vajra Steel and Power",
+          "VSPL"
+        ],
+        "sector": "Steel",
+        "hq_city": "Bhubaneswar",
+        "hq_state": "Odisha",
+        "listing": "NSE: VAJRASTL",
+        "market_cap_band": "Large",
+        "match_score": 1.0
+      },
+      {
+        "company_id": "CMP-0045",
+        "cin": "L35101GJ1996PLC150754",
+        "name": "Braj Green Power Ltd",
+        "short_name": "Braj Green",
+        "aliases": [
+          "Braj Green",
+          "Braj Green Power",
+          "BGPL"
+        ],
+        "sector": "Power",
+        "hq_city": "Ahmedabad",
+        "hq_state": "Gujarat",
+        "listing": "NSE, BSE: BRAJPWR",
+        "market_cap_band": "Small",
+        "match_score": 0.324
+      },
+      {
+        "company_id": "CMP-0098",
+        "cin": "L40101KA2002PLC112458",
+        "name": "Purna Hydro & Power Ltd",
+        "short_name": "Purna Hydro",
+        "aliases": [
+          "Purna Hydro",
+          "Purna Hydro & Power",
+          "PHPL"
+        ],
+        "sector": "Power",
+        "hq_city": "Bengaluru",
+        "hq_state": "Karnataka",
+        "listing": "NSE: PURNAPWR",
+        "market_cap_band": "Small",
+        "match_score": 0.31
+      },
+      {
+        "company_id": "CMP-0137",
+        "cin": "L27106CT1983PLC063609",
+        "name": "Mahi Steel & Alloys Ltd",
+        "short_name": "Mahi Steel",
+        "aliases": [
+          "Mahi Steel",
+          "Mahi Steel & Alloys",
+          "MSAL"
+        ],
+        "sector": "Steel",
+        "hq_city": "Raipur",
+        "hq_state": "Chhattisgarh",
+        "listing": "NSE: MAHISTL",
+        "market_cap_band": "Small",
+        "match_score": 0.31
+      },
+      {
+        "company_id": "CMP-0004",
+        "cin": "L27100WB1981PLC241425",
+        "name": "Surasena Steel & Alloys Ltd",
+        "short_name": "Surasena Steel",
+        "aliases": [
+          "Surasena Steel",
+          "Surasena Steel & Alloys",
+          "SSAL"
+        ],
+        "sector": "Steel",
+        "hq_city": "Kolkata",
+        "hq_state": "West Bengal",
+        "listing": "NSE, BSE: SURASSTL",
+        "market_cap_band": "Small",
+        "match_score": 0.304
+      }
+    ]
+  }
+}
