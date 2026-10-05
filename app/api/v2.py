@@ -156,7 +156,14 @@ def get_report(analysis_id: str) -> dict:
         raise HTTPException(404, "Unknown analysis")
     if r.analysis.status != "done":
         raise HTTPException(409, f"Analysis is {r.analysis.status}")
-    return {"markdown": r.report_md}
+    # Re-render from the stored analysis + events so older runs get the current report layout.
+    try:
+        from app.agents.reporter import render
+        from app.llm.providers import get_llm
+        md = render(r.analysis, r.sink.events, get_llm())
+    except Exception:  # noqa: BLE001
+        md = r.report_md
+    return {"markdown": md}
 
 
 @router.get("/analyses/{analysis_id}/events")

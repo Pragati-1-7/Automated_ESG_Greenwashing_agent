@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { getJson, url, useBackend } from "../../lib/v2api";
 import { isFixtureMode } from "../../lib/route";
-import { Markdown } from "../../lib/markdown";
+import ReportView from "./ReportView";
 import type { AgentEvent, Analysis } from "../../lib/v2types";
 import sample from "../../fixtures/sampleAnalysis.json";
 import { Timeline } from "./Timeline";
@@ -195,10 +195,8 @@ export function AnalysisPage({ id }: { id: string }) {
         ))}
 
       {tab === "report" &&
-        (report !== null ? (
-          <div className="panel">
-            <Markdown source={report} />
-          </div>
+        (a?.status === "done" && a.summary ? (
+          <ReportView a={a} markdown={report} events={events} />
         ) : reportErr ? (
           <ErrorBox message={reportErr} />
         ) : a?.status === "done" ? (
